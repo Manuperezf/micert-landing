@@ -3,7 +3,7 @@ export default function Home() {
     <>
       <nav>
         <div className="wrap nav-row">
-          <a className="brand" href="#"><span className="seal"></span>MiCert</a>
+          <a className="brand" href="#"><img className="logo" src="/logo.svg" alt="MiCert" /></a>
           <div className="nav-links">
             <a href="#como">Cómo funciona</a>
             <a href="#planes">Planes</a>
@@ -264,7 +264,7 @@ export default function Home() {
 
       <footer>
         <div className="wrap foot">
-          <a className="brand" href="#"><span className="seal"></span>MiCert</a>
+          <a className="brand" href="#"><img className="logo" src="/logo.svg" alt="MiCert" /></a>
           <div className="fr">
             <a href="#como">Cómo funciona</a><a href="#planes">Planes</a><a href="#contacto">Contacto</a>
             <span>·</span><span>Hecho en Chile</span><span>© 2026 micert.cl</span>
