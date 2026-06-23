@@ -208,8 +208,15 @@ export default function Home() {
               <a className="btn ghost" href="#contacto">Solicita una demo</a>
             </div>
           </div>
+          <div className="demo-band">
+            <div className="demo-band-copy">
+              <span className="eyebrow">Demo sin costo</span>
+              <h3>Pruébalo con 5 certificados antes de decidir</h3>
+              <p>Emite certificados reales con tus plantillas, sin tarjeta de crédito. Tras tu solicitud, activamos la cuenta y te enviamos las credenciales.</p>
+            </div>
+            <a className="btn primary" href="#contacto">Solicita tu demo</a>
+          </div>
           <div className="plans-foot">
-            <span><b>Demo gratis:</b> 10 certificados para probar el flujo, sin tarjeta.</span>
             <span><b>Packs adicionales:</b> 25, 50 o 100 certificados, vigencia 6 meses.</span>
             <span><b>¿Más volumen?</b> Plan a medida para alto volumen e integraciones.</span>
           </div>
@@ -246,7 +253,7 @@ export default function Home() {
             <details name="faq"><summary>¿Cómo se valida un certificado? <span className="pm">+</span></summary><p>Cada certificado lleva un QR y un código corto. Al escanearlo o ingresar el código se abre una página pública con el estado actual y los datos del curso. No hace falta crear cuenta.</p></details>
             <details name="faq"><summary>¿Sirve para auditorías de SENCE? <span className="pm">+</span></summary><p>MiCert está pensado con la trazabilidad en mente: nada se borra. Los cursos se archivan, los certificados se anulan y la vigencia queda fija desde la emisión. Tienes un registro claro de qué se emitió, a quién y cuándo.</p></details>
             <details name="faq"><summary>¿Qué pasa si emito un certificado con un error? <span className="pm">+</span></summary><p>Lo anulas. La anulación es definitiva y queda registrada; luego emites el corregido. La página de verificación deja de mostrar el anulado como válido al instante.</p></details>
-            <details name="faq"><summary>¿Cuánto cuesta? <span className="pm">+</span></summary><p>Tres planes según el volumen mensual: Básico ($29.990 + IVA, 80 certificados), Estándar ($49.990 + IVA, 200) y Pro ($89.990 + IVA, 500). Además, una demo gratis de 10 certificados para partir.</p></details>
+            <details name="faq"><summary>¿Cuánto cuesta? <span className="pm">+</span></summary><p>Tres planes según el volumen mensual: Básico ($29.990 + IVA, 80 certificados), Estándar ($49.990 + IVA, 200) y Pro ($89.990 + IVA, 500). Además, una demo sin costo de 5 certificados para partir.</p></details>
           </div>
         </div>
       </section>
