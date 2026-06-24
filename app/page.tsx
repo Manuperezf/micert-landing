@@ -29,10 +29,10 @@ export default function Home() {
           <div className="mock">
             <div className="mock-bar" aria-hidden="true"><i></i><i></i><i></i></div>
             <div className="cert">
-              <h4>Manejo de extintores</h4>
+              <h4>RCP y primeros auxilios</h4>
               <div className="sub">Prevención de riesgos · 16 horas cronológicas</div>
               <div className="cert-row">
-                <div className="cert-meta">Otorgado a<br/><b>María Fernanda Soto Reyes</b><br/>RUT 16.482.903-4<br/>Emitido el 12 de junio de 2026</div>
+                <div className="cert-meta">Otorgado a<br/><b>Manuel Herrera Contreras</b><br/>RUT 19.919.577-8<br/>Emitido el 24 de junio de 2026</div>
                 <div className="qr-wrap">
                   <img className="qr-img" src="/qr-demo.png" alt="Código QR para verificar un certificado de demostración" />
                   <span className="qr-hint">Escanéame ✓</span>
@@ -40,7 +40,7 @@ export default function Home() {
               </div>
             </div>
             <div className="verify" aria-hidden="true">
-              <div className="vleft"><span className="badge ok"><span className="dot"></span>Vigente</span><span className="vcode">ED12-837B-D96F</span></div>
+              <div className="vleft"><span className="badge ok"><span className="dot"></span>Vigente</span><span className="vcode">1B88-400F-3893</span></div>
               <span className="vcode">Verificado</span>
             </div>
           </div>

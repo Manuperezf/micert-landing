@@ -25,7 +25,7 @@
   /* LOGO: reemplazar .seal por <img class="logo" src="/logo.svg" alt="MiCert"> cuando lo tengas */
   .seal{width:24px;height:24px;border-radius:7px;background:var(--azul);position:relative;flex:none}
   .seal::after{content:"";position:absolute;inset:0;margin:auto;width:10px;height:5px;border-left:2px solid #fff;border-bottom:2px solid #fff;transform:rotate(-45deg) translate(1px,-1px)}
-  .logo{height:26px;width:auto;display:block}
+  .logo{height:30px;width:auto;display:block}
   .nav-links{display:flex;gap:30px;align-items:center}
   .nav-links a{color:var(--muted);font-size:14.5px}
   .nav-links a:hover{color:var(--ink)}
