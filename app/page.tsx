@@ -34,7 +34,7 @@ export default function Home() {
               <div className="cert-row">
                 <div className="cert-meta">Otorgado a<br/><b>María Fernanda Soto Reyes</b><br/>RUT 16.482.903-4<br/>Emitido el 12 de junio de 2026</div>
                 <div className="qr-wrap">
-                  <img className="qr-img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASIAAAEiCAIAAADS3EjhAAAFFklEQVR4nO3dQW7bMBBA0broXXL/4+Q0ytYrog37MZTy3l6W4uiDCw/I13Vdv4DS7+kHgOeTGeRkBjmZQU5mkJMZ5GQGOZlBTmaQkxnkZAY5mUFOZpCTGeRkBjmZQU5mkJMZ5GQGuT87F398fPyv5zjE5+fnt69dfxs7n3zmfde8G++sZpCTGeRkBjmZQU5mkJMZ5GQGOZlBTmaQ25oCWZuaP1jbmU44c86j0/29z3s31qxmkJMZ5GQGOZlBTmaQkxnkZAY5mUFOZpALp0DWul/c77j7xfqZnzdfsva8d8NqBjmZQU5mkJMZ5GQGOZlBTmaQkxnkZAa5sSmQn2Y9fzA19zD1VD+N1QxyMoOczCAnM8jJDHIyg5zMICczyMkMcqZA/sGZ55ic+VS8s5pBTmaQkxnkZAY5mUFOZpCTGeRkBjmZQW5sCuR5swvdiTA799355Kn/0fPeDasZ5GQGOZlBTmaQkxnkZAY5mUFOZpCTGeTCKZDnnSeyM2+x82109+2uXXveu7FmNYOczCAnM8jJDHIyg5zMICczyMkMcjKD3NYUyPP2bOh0MyI7uvt6N95ZzSAnM8jJDHIyg5zMICczyMkMcjKDnMwgtzUF0u0V0bnjMz9vguTMfUS6/77VDHIyg5zMICczyMkMcjKDnMwgJzPIyQxyr+u6Rm48dbrK1JzH1PTJmd/VmSfCmAKBG5MZ5GQGOZlBTmaQkxnkZAY5mUFOZpAL9wLpPnlqJ4md+565y8iZdmaAdq7t3jqrGeRkBjmZQU5mkJMZ5GQGOZlBTmaQkxnktqZAdkxNRZy5F8jaHZ/5zPtOna1jNYOczCAnM8jJDHIyg5zMICczyMkMcjKD3NgUyNRUxJlnkazt7FHRfVfPO7WnYzWDnMwgJzPIyQxyMoOczCAnM8jJDHIyg1w4BXLmrMYdZxe6c0y6M1Cmdt1Y6/7eNasZ5GQGOZlBTmaQkxnkZAY5mUFOZpCTGeRuuRdI98lnzi6cOU/T3ffMfWJ2PtlqBjmZQU5mkJMZ5GQGOZlBTmaQkxnkZAa5sSmQtTvu2LFjao+KM8+L2bl26hSbNasZ5GQGOZlBTmaQkxnkZAY5mUFOZpCTGeRe13V9++Kp2YWpX/rvuCfHmbub7Jg642aH1QxyMoOczCAnM8jJDHIyg5zMICczyMkMcltTID9NN2HQTWOcOROzduYkxw6rGeRkBjmZQU5mkJMZ5GQGOZlBTmaQkxnktk6EueNOEmvrCYMz5w92nqqbEbnjJEf3zFYzyMkMcjKDnMwgJzPIyQxyMoOczCAnM8htTYGs3fGX/qn7Tp3bMrUHyZm6Z7aaQU5mkJMZ5GQGOZlBTmaQkxnkZAY5mUEunAJZM3/w96ZmRNbO3AnmzD1IrGaQkxnkZAY5mUFOZpCTGeRkBjmZQU5mkBubAuHdzuzCzozIzlTEzhRIN43RTcw4EQaOJjPIyQxyMoOczCAnM8jJDHIyg5zMIGcK5AjdJMfUJ3e6SY5udxOrGeRkBjmZQU5mkJMZ5GQGOZlBTmaQkxnkxqZAnnduyx1PSOmu7dzxzbGaQU5mkJMZ5GQGOZlBTmaQkxnkZAY5mUEunAI5c4Zgx9TpKjufPPVUd/yuOlYzyMkMcjKDnMwgJzPIyQxyMoOczCAnM8i9ruuafgZ4OKsZ5GQGOZlBTmaQkxnkZAY5mUFOZpCTGeRkBjmZQU5mkJMZ5GQGOZlBTmaQkxnkZAY5mUHuC77AaJiU1/Q9AAAAAElFTkSuQmCC" alt="Código QR para verificar un certificado de demostración" />
+                  <img className="qr-img" src="/qr-demo.png" alt="Código QR para verificar un certificado de demostración" />
                   <span className="qr-hint">Escanéame ✓</span>
                 </div>
               </div>
@@ -51,8 +51,7 @@ export default function Home() {
         <div className="wrap">
           <div className="shot">
             <div className="chrome"><i></i><i></i><i></i><span className="addr">app.micert.cl</span></div>
-            {/* REEMPLAZAR por: <img src="/landing/panel-principal.png" alt="Panel principal de MiCert" /> */}
-            <div className="ph wide"><span className="lbl">Captura 1 · Panel principal</span><span className="dim">dashboard con métricas y certificados recientes · ~1440×810</span></div>
+            <img src="/pantalla_dashboard_web.png" alt="Panel principal de MiCert" />
           </div>
         </div>
       </section>
@@ -82,17 +81,17 @@ export default function Home() {
             <div className="step">
               <span className="n">Paso 01</span><h3>Importa desde Excel</h3>
               <p>Sube la planilla con RUT, nombre, correo y calificación. MiCert prepara un certificado por participante.</p>
-              <div className="shot"><div className="ph step"><span className="lbl">Captura 2 · Importar Excel</span><span className="dim">~960×720</span></div></div>
+              <div className="shot"><img src="/importar_alumnos_web.png" alt="Importar participantes desde Excel" /></div>
             </div>
             <div className="step">
               <span className="n">Paso 02</span><h3>Diseña una vez</h3>
               <p>Editor visual con campos arrastrables, firmas y QR. Defines el formato y lo reutilizas en cada curso.</p>
-              <div className="shot"><div className="ph step"><span className="lbl">Captura 3 · Editor de diseño</span><span className="dim">~960×720</span></div></div>
+              <div className="shot"><img src="/diseno_certificados_web.png" alt="Editor de diseño de certificados" /></div>
             </div>
             <div className="step">
               <span className="n">Paso 03</span><h3>Emite a todo el curso</h3>
               <p>Generas los certificados de una vez. Descarga individual en PDF o el curso completo en un ZIP.</p>
-              <div className="shot"><div className="ph step"><span className="lbl">Captura 4 · Certificados emitidos</span><span className="dim">~960×720</span></div></div>
+              <div className="shot"><img src="/certificados_emitidos_web.png" alt="Certificados emitidos" /></div>
             </div>
           </div>
         </div>
