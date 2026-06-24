@@ -1,19 +1,10 @@
+import Footer from "./components/Footer";
+import Nav from "./components/Nav";
+
 export default function Home() {
   return (
     <>
-      <nav>
-        <div className="wrap nav-row">
-          <a className="brand" href="#"><img className="logo" src="/logo.svg" alt="MiCert" /></a>
-          <div className="nav-links">
-            <a href="#como">Cómo funciona</a>
-            <a href="#planes">Planes</a>
-          </div>
-          <div className="nav-cta">
-            <a className="btn ghost" href="https://micert.vercel.app/" target="_blank" rel="noopener">Ver la demo</a>
-            <a className="btn primary" href="#contacto">Solicita una demo</a>
-          </div>
-        </div>
-      </nav>
+      <Nav />
 
       <header className="hero">
         <div className="wrap hero-grid">
@@ -268,34 +259,7 @@ export default function Home() {
         </div>
       </section>
 
-      <footer>
-        <div className="wrap foot">
-          <div className="foot-brand">
-            <a className="brand" href="#"><img className="logo" src="/logo.svg" alt="MiCert" /></a>
-            <p className="foot-tag">Certificados digitales verificables para OTEC.</p>
-          </div>
-          <div className="foot-cols">
-            <div className="foot-col">
-              <h4>Producto</h4>
-              <a href="#como">Cómo funciona</a>
-              <a href="#planes">Planes</a>
-            </div>
-            <div className="foot-col">
-              <h4>Empresa</h4>
-              <a href="#contacto">Contacto</a>
-            </div>
-            <div className="foot-col">
-              <h4>Legal</h4>
-              <a href="/privacidad">Privacidad</a>
-              <a href="/terminos">Términos y Condiciones</a>
-            </div>
-          </div>
-        </div>
-        <div className="wrap foot-bottom">
-          <span>© 2026 MiCert. Todos los derechos reservados.</span>
-          <span>Hecho en Chile</span>
-        </div>
-      </footer>
+      <Footer />
     </>
   );
 }

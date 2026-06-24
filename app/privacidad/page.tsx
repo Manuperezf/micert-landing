@@ -1,3 +1,6 @@
+import Footer from "../components/Footer";
+import Nav from "../components/Nav";
+
 export const metadata = {
   title: "Política de Privacidad · MiCert",
   description:
@@ -10,11 +13,6 @@ export default function PrivacidadPage() {
     <div className="legal-page">
       <style>{`
         .legal-page{background:#ffffff;color:#262626;font-family:var(--font-inter-tight),system-ui,sans-serif;line-height:1.6}
-        .legal-bar{border-bottom:1px solid #e6e4da;background:#ffffff}
-        .legal-bar .inner{max-width:820px;margin:0 auto;padding:18px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px}
-        .legal-bar img{height:26px;width:auto;display:block}
-        .legal-bar a.back{color:#65645d;font-size:14px;text-decoration:none}
-        .legal-bar a.back:hover{color:#262626}
         .legal-wrap{max-width:820px;margin:0 auto;padding:40px 20px 80px}
         .legal-wrap h1{font-size:32px;line-height:1.2;margin:0 0 6px;letter-spacing:-.01em}
         .legal-wrap .updated{color:#9a9890;font-size:14px;margin:0 0 28px}
@@ -26,16 +24,9 @@ export default function PrivacidadPage() {
         .legal-wrap a{color:#0c59f2}
         .legal-summary{background:#f2f1e9;border:1px solid #e6e4da;border-radius:14px;padding:22px 24px;margin:0 0 32px}
         .legal-summary h2{margin-top:0}
-        .legal-foot{border-top:1px solid #e6e4da;color:#9a9890;font-size:13px;text-align:center;padding:28px 20px}
-        .legal-foot a{color:#65645d}
       `}</style>
 
-      <div className="legal-bar">
-        <div className="inner">
-          <a href="/"><img src="/logo.svg" alt="MiCert" /></a>
-          <a className="back" href="/">← Volver al inicio</a>
-        </div>
-      </div>
+      <Nav />
 
       <div className="legal-wrap">
         <h1>Política de Privacidad</h1>
@@ -154,9 +145,7 @@ export default function PrivacidadPage() {
         <p style={{ marginTop: 28, color: "#65645d" }}>Al usar MiCert, el titular confirma que ha leído, comprendido y aceptado esta Política de Privacidad en su totalidad.</p>
       </div>
 
-      <div className="legal-foot">
-        © 2026 MiCert Digital SpA · <a href="/terminos">Términos y Condiciones</a> · Hecho en Chile
-      </div>
+      <Footer />
     </div>
   );
 }
