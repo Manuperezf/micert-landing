@@ -30,7 +30,7 @@ export default function Home() {
             <div className="mock-bar" aria-hidden="true"><i></i><i></i><i></i></div>
             <div className="cert">
               <h4>RCP y primeros auxilios</h4>
-              <div className="sub">Prevención de riesgos · 16 horas cronológicas</div>
+              <div className="sub">40 horas cronológicas</div>
               <div className="cert-row">
                 <div className="cert-meta">Otorgado a<br/><b>Manuel Herrera Contreras</b><br/>RUT 19.919.577-8<br/>Emitido el 24 de junio de 2026</div>
                 <div className="qr-wrap">
