@@ -1,5 +1,7 @@
 import Link from "next/link";
 import DemoBanner from "./DemoBanner";
+import ArticleShare from "./ArticleShare";
+import ArticleFeedback from "./ArticleFeedback";
 import type { ResourceArticle } from "../lib/recursos";
 import { getRelatedArticles } from "../lib/recursos";
 
@@ -9,7 +11,6 @@ type ArticleLayoutProps = {
 
 export default function ArticleLayout({ article }: ArticleLayoutProps) {
   const related = getRelatedArticles(article.slug);
-  const authorInitial = article.author.trim().charAt(0);
 
   return (
     <article className="article-page">
@@ -22,13 +23,7 @@ export default function ArticleLayout({ article }: ArticleLayoutProps) {
         </header>
 
         <div className="article-byline-row">
-          <div className="article-byline-left">
-            <span className="article-avatar" aria-hidden="true">
-              {authorInitial}
-            </span>
-            <span className="article-author-name">{article.author}</span>
-          </div>
-          <div className="article-byline-right">
+          <div className="article-byline-meta">
             <span>{article.tipo}</span>
             <span className="article-byline-sep" aria-hidden="true">
               ·
@@ -96,6 +91,9 @@ export default function ArticleLayout({ article }: ArticleLayoutProps) {
                 <Link href="/precios">planes y precios</Link>.
               </p>
             </div>
+
+            <ArticleShare slug={article.slug} />
+            <ArticleFeedback />
           </div>
         </div>
 
