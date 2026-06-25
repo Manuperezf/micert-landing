@@ -13,7 +13,7 @@ export default function Home() {
             <h1>Emite certificados verificables en minutos, no en horas.</h1>
             <p className="lead">MiCert convierte tu lista de Excel en certificados digitales con código QR único, listos para validar. Sin PDF editables, sin diseño manual, sin conocimientos técnicos.</p>
             <div className="actions">
-              <a className="btn primary" href="/demo">Solicita una demo</a>
+              <a className="btn primary" href="/demo">Agenda una demo</a>
             </div>
           </div>
           <div className="mock">
@@ -170,7 +170,7 @@ export default function Home() {
                 <li><span className="ck">✓</span>Emisión masiva e historial</li>
                 <li><span className="ck">✓</span>1 usuario administrador</li>
               </ul>
-              <a className="btn ghost" href="/demo">Solicita una demo</a>
+              <a className="btn ghost" href="/demo">Agenda una demo</a>
             </div>
             <div className="plan featured">
               <span className="tier">Estándar · recomendado</span>
@@ -182,7 +182,7 @@ export default function Home() {
                 <li><span className="ck">✓</span>Vigencia y anulación por lote</li>
                 <li><span className="ck">✓</span>Varios usuarios del equipo</li>
               </ul>
-              <a className="btn" href="/demo">Pedir demo →</a>
+              <a className="btn" href="/demo">Agenda una demo</a>
             </div>
             <div className="plan">
               <span className="tier">Pro</span>
@@ -194,7 +194,7 @@ export default function Home() {
                 <li><span className="ck">✓</span>Reportes y trazabilidad</li>
                 <li><span className="ck">✓</span>Soporte por correo</li>
               </ul>
-              <a className="btn ghost" href="/demo">Solicita una demo</a>
+              <a className="btn ghost" href="/demo">Agenda una demo</a>
             </div>
           </div>
           <div className="demo-band">
@@ -203,7 +203,7 @@ export default function Home() {
               <h3>Pruébalo con 5 certificados antes de decidir</h3>
               <p>Emite certificados reales con tus plantillas, sin tarjeta de crédito. Tras tu solicitud, activamos la cuenta y te enviamos las credenciales.</p>
             </div>
-            <a className="btn primary" href="/demo">Solicita tu demo</a>
+            <a className="btn primary" href="/demo">Agenda una demo</a>
           </div>
           <div className="plans-foot">
             <span><b>Packs adicionales:</b> 25, 50 o 100 certificados, vigencia 6 meses.</span>
@@ -252,7 +252,7 @@ export default function Home() {
           <h2>Empieza a emitir con confianza.</h2>
           <p>Te mostramos MiCert con un curso real y resolvemos tus dudas en una llamada corta.</p>
           <div className="actions">
-            <a className="btn primary" href="/demo">Solicita una demo</a>
+            <a className="btn primary" href="/demo">Agenda una demo</a>
           </div>
         </div>
       </section>
