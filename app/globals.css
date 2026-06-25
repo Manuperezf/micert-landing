@@ -241,6 +241,7 @@
 .resource-filter-pills button.active{background:var(--bone);border-color:var(--line-strong);color:var(--muted);font-weight:500}
 
 .resource-feed{padding-bottom:72px}
+.resource-feed--after-hero{padding-top:40px}
 .resource-empty{color:var(--muted);font-size:15px;padding:32px 0}
 .resource-empty-reset{background:none;border:none;padding:0;color:var(--azul);cursor:pointer;font:inherit;text-decoration:underline}
 
@@ -259,7 +260,8 @@
 .resource-tag{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;font-weight:500;color:var(--faint);background:none;padding:0;border:none;border-radius:0;width:auto}
 .article-related-card .resource-tag{margin-bottom:10px}
 
-.resource-demo,.article-demo{padding-bottom:0}
+.resource-demo{margin-bottom:64px;padding-bottom:0}
+.article-demo{margin-top:60px;margin-bottom:64px;padding-bottom:0}
 @media(max-width:900px){
   .resource-list-row{grid-template-columns:1fr;gap:20px;padding:28px 0}
   .resource-list-thumb{max-height:160px;order:-1}
