@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import Script from "next/script";
 import { Inter_Tight, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -43,6 +44,22 @@ export default function RootLayout({
       <body>
         {children}
         <GoogleAnalytics gaId="G-V9KQKJL8X7" />
+        <Script
+          id="brevo-conversations"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `(function(d, w, c) {
+      w.BrevoConversationsID = '6a3d246c2595ac86c80bcbb1';
+      w[c] = w[c] || function() {
+          (w[c].q = w[c].q || []).push(arguments);
+      };
+      var s = d.createElement('script');
+      s.async = true;
+      s.src = 'https://conversations-widget.brevo.com/brevo-conversations.js';
+      if (d.head) d.head.appendChild(s);
+  })(document, window, 'BrevoConversations');`,
+          }}
+        />
       </body>
     </html>
   );
