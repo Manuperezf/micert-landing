@@ -98,27 +98,27 @@ export default function ArticleLayout({ article }: ArticleLayoutProps) {
             </div>
           </div>
         </div>
-      </div>
 
-      <section className="article-related article-shell">
-        <h2>Sigue leyendo</h2>
-        <div className="article-related-grid">
-          {related.map((item) => (
-            <Link
-              key={item.slug}
-              href={`/recursos/${item.slug}`}
-              className="article-related-card"
-            >
-              <span className="resource-tag">{item.tipo}</span>
-              <h3>{item.title}</h3>
-              <p>{item.excerpt}</p>
-            </Link>
-          ))}
+        <section className="article-related">
+          <h2>Sigue leyendo</h2>
+          <div className="article-related-grid">
+            {related.map((item) => (
+              <Link
+                key={item.slug}
+                href={`/recursos/${item.slug}`}
+                className="article-related-card"
+              >
+                <span className="resource-tag">{item.tipo}</span>
+                <h3>{item.title}</h3>
+                <p>{item.excerpt}</p>
+              </Link>
+            ))}
+          </div>
+        </section>
+
+        <div className="article-demo">
+          <DemoBanner />
         </div>
-      </section>
-
-      <div className="article-shell article-demo">
-        <DemoBanner />
       </div>
     </article>
   );

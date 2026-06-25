@@ -7,7 +7,7 @@
     --radius:14px; --maxw:1120px;
   }
   *{box-sizing:border-box;margin:0;padding:0}
-  html,body{overflow-x:hidden}
+  html,body{overflow-x:clip}
   html{scroll-behavior:smooth}
   body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased;letter-spacing:-0.01em}
   a{color:inherit;text-decoration:none}
@@ -266,21 +266,21 @@
 .resource-tag{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;font-weight:500;color:var(--faint);background:none;padding:0;border:none;border-radius:0;width:auto}
 .resource-card-body .resource-tag,.resource-card-featured .resource-card-body .resource-tag,.article-related-card .resource-tag{margin-bottom:10px}
 
-.resource-demo,.article-demo{padding-bottom:80px}
+.resource-demo,.article-demo{padding-bottom:0}
 @media(max-width:900px){
   .resource-card-featured-link{grid-template-columns:1fr}
   .resource-card-featured .resource-card-body{padding:24px}
   .resource-grid{grid-template-columns:1fr}
 }
 
-.article-page{padding-bottom:0;overflow:visible}
-.article-shell{max-width:1100px;margin:0;padding:0 32px}
-.article-header{padding:48px 0 32px}
+.article-page{padding:48px 0 0;overflow:visible}
+.article-shell{max-width:1100px;margin:0 auto;padding:0 32px;overflow:visible}
+.article-header{padding:0 0 32px}
 .article-header-grid{display:grid;grid-template-columns:55% 40%;gap:5%;align-items:start}
-.article-header h1{font-size:clamp(36px,3.8vw,44px);line-height:1.12;letter-spacing:-.025em;margin:0;font-weight:600}
+.article-header h1{font-size:clamp(28px,3.2vw,34px);line-height:1.15;letter-spacing:-.025em;margin:0;font-weight:600}
 .article-deck{font-size:16px;line-height:1.6;color:var(--muted);margin:0}
 
-.article-byline-row{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:18px 0 36px;border-top:1px solid var(--line)}
+.article-byline-row{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:18px 0 40px;border-top:1px solid var(--line);margin-bottom:0}
 .article-byline-left{display:flex;align-items:center;gap:12px;min-width:0}
 .article-avatar{width:40px;height:40px;border-radius:50%;background:var(--bone);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:600;color:var(--muted);flex-shrink:0;text-transform:uppercase}
 .article-author-name{font-size:15px;font-weight:500;color:var(--ink);letter-spacing:-.01em}
@@ -288,15 +288,15 @@
 .article-byline-right time{white-space:nowrap}
 
 .article-layout{display:grid;grid-template-columns:180px minmax(0,640px);gap:48px;align-items:start;padding-bottom:72px;overflow:visible}
-.article-toc{position:sticky;top:96px;align-self:start;height:fit-content;max-height:calc(100vh - 108px);overflow-y:auto;padding-top:2px}
+.article-toc{position:sticky;top:96px;align-self:start;height:fit-content;overflow:visible;padding-top:2px}
 .article-toc-title{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--faint);font-weight:600;margin-bottom:14px}
-.article-toc ol{list-style:none;display:grid;gap:10px}
+.article-toc ol{list-style:none;display:grid;gap:10px;margin:0;padding:0}
 .article-toc a{font-size:14px;color:var(--muted);line-height:1.45}
 .article-toc a:hover{color:var(--ink)}
-.article-toc-links{margin-top:24px;padding-top:20px;border-top:1px solid var(--line);display:grid;gap:8px}
+.article-toc-links{margin-top:20px;padding:0;border:none;display:grid;gap:8px}
 .article-toc-links a{font-size:14px;color:var(--azul)}
 
-.article-content{max-width:640px;width:100%}
+.article-content{max-width:640px;width:100%;overflow:visible}
 .article-content section{padding:40px 0;border-top:1px solid var(--line)}
 .article-content section:first-child{border-top:none;padding-top:0}
 .article-content h2{font-size:22px;font-weight:500;margin-bottom:16px;letter-spacing:-.02em;line-height:1.25;text-align:left}
@@ -306,13 +306,14 @@
 .article-inline-cta p{margin:0;color:var(--muted);font-size:15px;line-height:1.6}
 .article-inline-cta a{color:var(--azul);font-weight:500}
 
-.article-related{padding:64px 0 56px;border-top:1px solid var(--line)}
+.article-related{padding:64px 0 0;border-top:1px solid var(--line)}
 .article-related h2{font-size:clamp(24px,3vw,32px);margin-bottom:32px;text-align:left}
-.article-related-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;max-width:1100px}
+.article-related-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px}
 .article-related-card{border:1px solid var(--line);border-radius:var(--radius);padding:24px;background:#fff;transition:.15s;display:block}
 .article-related-card:hover{border-color:var(--line-strong);transform:none}
 .article-related-card h3{font-size:17px;margin:12px 0 10px;line-height:1.25}
 .article-related-card p{color:var(--muted);font-size:14px;margin:0;line-height:1.5}
+.article-demo{margin-bottom:64px;padding-bottom:0}
 .article-table-wrap{margin:0 0 14px;overflow-x:auto;-webkit-overflow-scrolling:touch}
 .article-table{width:100%;border-collapse:collapse;font-size:14.5px;line-height:1.45}
 .article-table th,.article-table td{padding:12px 14px;border:1px solid var(--line);text-align:left;vertical-align:top}
@@ -324,12 +325,13 @@
 .article-table thead th:first-child{border-top-left-radius:10px}
 .article-table thead th:last-child{border-top-right-radius:10px}
 @media(max-width:900px){
-  .article-shell{padding:0 20px}
-  .article-header{padding:36px 0 24px}
+  .article-shell{padding:0 24px}
+  .article-page{padding-top:32px}
+  .article-header{padding:0 0 24px}
   .article-header-grid{grid-template-columns:1fr;gap:16px}
-  .article-byline-row{flex-direction:column;align-items:flex-start;gap:14px;padding-bottom:28px}
+  .article-byline-row{flex-direction:column;align-items:flex-start;gap:14px;padding-bottom:32px}
   .article-layout{grid-template-columns:1fr;gap:28px}
-  .article-toc{position:static;border-bottom:1px solid var(--line);padding-bottom:24px;max-height:none;overflow:visible}
+  .article-toc{position:static;padding-bottom:0;max-height:none}
   .article-content{max-width:none}
   .article-related-grid{grid-template-columns:1fr}
   .article-table{font-size:13.5px}
