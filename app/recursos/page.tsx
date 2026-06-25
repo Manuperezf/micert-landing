@@ -2,15 +2,14 @@ import type { Metadata } from "next";
 import Footer from "../components/Footer";
 import Nav from "../components/Nav";
 import RecursosFeed from "../components/RecursosFeed";
+import { RECURSOS_HUB_METADATA } from "../lib/recursos";
 
 export const metadata: Metadata = {
-  title: "Recursos para los OTEC · MiCert",
-  description:
-    "Guías sobre software para los OTEC, certificados con QR, alternativas a Excel y preparación para auditorías SENCE.",
+  title: RECURSOS_HUB_METADATA.title,
+  description: RECURSOS_HUB_METADATA.description,
   openGraph: {
-    title: "Recursos para los OTEC · MiCert",
-    description:
-      "Artículos sobre emisión de certificados, verificación QR y cumplimiento para los OTEC.",
+    title: RECURSOS_HUB_METADATA.title,
+    description: RECURSOS_HUB_METADATA.description,
     url: "https://micert.cl/recursos",
   },
 };

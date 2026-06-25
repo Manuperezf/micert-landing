@@ -307,8 +307,20 @@
 .article-related-card:hover{border-color:var(--azul-soft);transform:translateY(-2px)}
 .article-related-card h3{font-size:17px;margin:12px 0 10px;line-height:1.25}
 .article-related-card p{color:var(--muted);font-size:14px;margin:0;line-height:1.5}
+.article-table-wrap{margin:0 0 14px;overflow-x:auto;-webkit-overflow-scrolling:touch}
+.article-table{width:100%;border-collapse:collapse;font-size:14.5px;line-height:1.45}
+.article-table th,.article-table td{padding:12px 14px;border:1px solid var(--line);text-align:left;vertical-align:top}
+.article-table thead th{background:var(--bone);font-size:12.5px;font-weight:600;color:var(--muted);letter-spacing:.02em}
+.article-table tbody th{font-weight:500;color:var(--ink)}
+.article-table tbody td{color:var(--muted)}
+.article-table tbody tr:first-child td,.article-table tbody tr:first-child th{border-top:none}
+.article-table tbody td:first-child,.article-table tbody th:first-child{font-weight:500;color:var(--ink);min-width:11rem}
+.article-table thead th:first-child{border-top-left-radius:10px}
+.article-table thead th:last-child{border-top-right-radius:10px}
 @media(max-width:900px){
   .article-layout{grid-template-columns:1fr;gap:28px}
   .article-toc{position:static;border-bottom:1px solid var(--line);padding-bottom:24px}
   .article-related-grid{grid-template-columns:1fr}
+  .article-table{font-size:13.5px}
+  .article-table th,.article-table td{padding:10px 12px}
 }

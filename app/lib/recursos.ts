@@ -1,10 +1,16 @@
 export type ResourceTipo = "Producto" | "Comparativa" | "Normativa" | "Caso";
 export type ResourceTema = "QR" | "SENCE" | "NCh 2728" | "Excel";
 
+export type ArticleTable = {
+  headers: string[];
+  rows: string[][];
+};
+
 export type ArticleSection = {
   id: string;
   title: string;
-  paragraphs: string[];
+  paragraphs?: string[];
+  table?: ArticleTable;
 };
 
 export type ResourceArticle = {
@@ -17,6 +23,7 @@ export type ResourceArticle = {
   date: string;
   dateISO: string;
   featured?: boolean;
+  relatedSlugs?: string[];
   metaTitle: string;
   metaDescription: string;
   sections: ArticleSection[];
@@ -36,60 +43,55 @@ export const RESOURCE_TEMAS: ResourceTema[] = [
   "Excel",
 ];
 
+export const RECURSOS_HUB_METADATA = {
+  title: "Recursos de certificación digital para OTEC | MiCert",
+  description:
+    "Guías, comparativas y normativa para emitir certificados verificables con QR y dejar atrás el PDF editable en tu OTEC.",
+};
+
 export const RESOURCE_ARTICLES: ResourceArticle[] = [
   {
     slug: "software-para-otec",
     tipo: "Producto",
     temas: ["Excel", "SENCE"],
-    title: "Software para los OTEC: qué evaluar antes de emitir certificados",
+    title: "Software para OTEC que emite certificados con QR verificable",
     excerpt:
-      "No todos los sistemas resuelven lo mismo. Estas son las capacidades que un OTEC debería exigir antes de migrar la emisión de certificados.",
+      "Carga tu Excel, diseña el certificado una vez y emite documentos con un código QR único que cualquiera puede validar. Pensado para los OTEC que todavía dependen del PDF editable.",
     author: "Equipo MiCert",
     date: "20 de junio de 2026",
     dateISO: "2026-06-20",
     featured: true,
-    metaTitle: "Software para los OTEC: guía de evaluación | MiCert",
+    relatedSlugs: ["certificados-qr-otec", "alternativa-excel-canva"],
+    metaTitle: "Software para OTEC: certificados con QR | MiCert",
     metaDescription:
-      "Qué debe incluir un software de certificados para los OTEC: emisión masiva, QR verificable, trazabilidad SENCE y control de vigencia.",
+      "Plataforma chilena para que los OTEC emitan certificados digitales con QR verificable desde Excel, sin conocimientos técnicos. Agenda una demo.",
     sections: [
       {
-        id: "problema-pdf",
-        title: "El PDF editable ya no alcanza",
+        id: "el-problema",
+        title: "El problema",
         paragraphs: [
-          "Muchos OTEC siguen emitiendo certificados en PDF armados a mano. El formato se ve bien, pero cualquier persona con un editor puede alterar nombre, fecha o nota. Eso debilita la confianza del alumno, del cliente corporativo y del auditor.",
-          "Un software para los OTEC no debería limitarse a generar un archivo bonito. Debe entregar un documento verificable, con trazabilidad de emisión y un registro que resista una revisión de SENCE.",
+          "El certificado en PDF editable es un riesgo. Se modifica en dos clics, no tiene cómo comprobarse y, cuando llega una auditoría, no existe forma rápida de demostrar qué se emitió, a quién y cuándo. La emisión manual además consume horas administrativas por cada curso.",
         ],
       },
       {
-        id: "emision-masiva",
-        title: "Emisión masiva desde Excel",
+        id: "como-funciona",
+        title: "Cómo funciona",
         paragraphs: [
-          "El flujo real de un OTEC parte por una planilla: RUT, nombre, correo y calificación del curso. Si el sistema obliga a cargar participante por participante, el ahorro de tiempo desaparece.",
-          "MiCert importa la lista completa y prepara un certificado por alumno en segundos. El diseño se define una vez y se reutiliza en cada curso, sin volver a maquetar en Canva o Word.",
+          "MiCert reemplaza ese flujo por uno trazable y verificable. Importas desde Excel: subes la planilla con RUT, nombre, email y calificación, y se genera un certificado por participante. Diseñas una vez: el editor te deja configurar los campos del certificado —nombre, RUT, curso, código, QR y firmas— y se aplica a todo el curso. Cada certificado lleva un QR único que apunta a una página de verificación pública. El alumno descarga su PDF y puede sumarlo a su perfil de LinkedIn, con tu OTEC como emisor.",
         ],
       },
       {
-        id: "verificacion-qr",
-        title: "Verificación pública con QR",
+        id: "por-que-importa",
+        title: "Por qué importa para un OTEC",
         paragraphs: [
-          "Cada certificado debe llevar un código único que cualquiera pueda validar sin crear cuenta. Al escanear el QR o ingresar el código corto, se abre una página con el estado actual: vigente, por vencer, vencido o anulado.",
-          "El emisor visible es el OTEC, no la plataforma. Eso refuerza la marca de la organización frente a alumnos y empresas mandantes.",
+          "Menos tiempo administrativo por curso. Un certificado que no se puede falsificar sin que se note. Trazabilidad para auditoría: los certificados se revocan, nunca se borran, así queda historial. Y todo sin instalar nada ni saber de tecnología, porque funciona en el navegador.",
         ],
       },
       {
-        id: "trazabilidad",
-        title: "Trazabilidad para auditorías",
+        id: "que-no-es-micert",
+        title: "Qué no es MiCert",
         paragraphs: [
-          "En una auditoría de SENCE no basta con mostrar archivos sueltos. Se necesita saber qué se emitió, a quién, cuándo y con qué vigencia. Si hubo anulaciones, deben quedar registradas de forma definitiva.",
-          "Un buen software conserva el historial completo: cursos archivados, certificados revocados y reglas de vigencia congeladas al momento de la emisión.",
-        ],
-      },
-      {
-        id: "que-pedir",
-        title: "Qué pedir en una demo",
-        paragraphs: [
-          "Antes de contratar, pide ver el flujo completo con un curso real: importación desde Excel, revisión previa, emisión masiva y verificación pública del QR.",
-          "Revisa también los planes según el volumen mensual de certificados de tu OTEC. Puedes comparar opciones en nuestra página de precios o volver al hub de recursos para seguir leyendo.",
+          "MiCert no es un LMS y no gestiona el contenido de tus cursos. Hace una cosa y la hace bien: emitir, diseñar y validar certificados.",
         ],
       },
     ],
@@ -98,46 +100,36 @@ export const RESOURCE_ARTICLES: ResourceArticle[] = [
     slug: "certificados-qr-otec",
     tipo: "Producto",
     temas: ["QR", "NCh 2728"],
-    title: "Certificados con QR para los OTEC: validación sin fricción",
+    title: "Certificados digitales con QR que cualquiera puede verificar",
     excerpt:
-      "Cómo un código QR único convierte el certificado en un documento verificable en línea, alineado con buenas prácticas de autenticidad.",
+      "Cada certificado que emites con MiCert lleva un código único y un QR que apunta a una página de verificación pública. El alumno, su empleador o un auditor confirman la autenticidad en segundos.",
     author: "Equipo MiCert",
     date: "18 de junio de 2026",
     dateISO: "2026-06-18",
-    metaTitle: "Certificados con QR para los OTEC | MiCert",
+    relatedSlugs: ["software-para-otec", "auditoria-sence"],
+    metaTitle: "Certificados digitales con QR para OTEC | MiCert",
     metaDescription:
-      "Por qué los OTEC usan certificados con QR verificable: validación pública, estado en tiempo real y respaldo ante auditorías.",
+      "Emite certificados con código único y verificación pública por QR. Importa desde Excel, diseña una vez y entrega un PDF validable.",
     sections: [
       {
-        id: "que-resuelve",
-        title: "Qué resuelve un certificado con QR",
+        id: "como-funciona",
+        title: "Cómo funciona",
         paragraphs: [
-          "Un certificado impreso o en PDF puede copiarse y editarse. Un QR enlazado a una página de verificación demuestra que el documento corresponde a un registro real emitido por el OTEC.",
-          "Quien recibe el certificado escanea el código desde el celular y ve de inmediato si sigue vigente, sin llamar a secretaría ni pedir confirmación por correo.",
+          "Tres pasos. Cargas tu Excel con RUT, nombre, email y calificación, un certificado por fila. Diseñas el certificado en el editor, configurando los campos: nombre, RUT, curso, código, QR y firmas. Emites y entregas: se genera el PDF de cada participante con su QR único, listo para descargar.",
         ],
       },
       {
-        id: "pagina-verificacion",
-        title: "La página de verificación",
+        id: "que-hace-unico",
+        title: "Qué hace único a cada certificado",
         paragraphs: [
-          "MiCert genera una URL pública por certificado con un código corto legible. La página muestra participante, curso, horas, fecha de emisión y validez. Si el certificado fue anulado, el estado cambia al instante.",
-          "También incluye un acceso directo para agregar el logro a LinkedIn, lo que facilita que el alumno comparta una credencial respaldada.",
+          "Un código único asociado al certificado, imposible de duplicar sin que el sistema lo detecte. Un QR de verificación pública que lleva a una página donde se confirma quién lo emitió y a quién. Y el botón \"Agregar a LinkedIn\", con el que el alumno suma el certificado a su perfil figurando tu OTEC como emisor.",
         ],
       },
       {
-        id: "nch-2728",
-        title: "Relación con la NCh 2728",
+        id: "el-contraste",
+        title: "El contraste",
         paragraphs: [
-          "La norma chilena NCh 2728 define requisitos para documentos con código bidimensional. Aunque cada OTEC debe asegurar el cumplimiento de su propio proceso, un QR único por certificado es la base técnica para validación externa.",
-          "La clave no es solo imprimir un cuadrado: es que el código apunte a un registro confiable controlado por quien emitió el documento.",
-        ],
-      },
-      {
-        id: "implementacion",
-        title: "Cómo implementarlo en tu OTEC",
-        paragraphs: [
-          "El QR se incorpora en el diseño del certificado una sola vez. Desde ahí, cada emisión genera su propio código sin intervención manual.",
-          "Si quieres ver el flujo en acción, agenda una demo. También puedes revisar los planes disponibles según el volumen de certificados que emite tu organización.",
+          "Un PDF editable se modifica en dos clics y no tiene cómo comprobarse. Un certificado de MiCert tiene una fuente de verdad: la página de verificación. Si alguien altera el PDF, la verificación lo delata.",
         ],
       },
     ],
@@ -146,46 +138,50 @@ export const RESOURCE_ARTICLES: ResourceArticle[] = [
     slug: "alternativa-excel-canva",
     tipo: "Comparativa",
     temas: ["Excel"],
-    title: "MiCert frente a Excel + Canva: cuándo conviene cada enfoque",
+    title:
+      "Excel, Word y Canva hacen el certificado bonito. No lo hacen verificable.",
     excerpt:
-      "Muchos OTEC parten con planillas y diseños manuales. Comparamos ese flujo con una plataforma de emisión y verificación dedicada.",
+      "Si hoy armas tus certificados a mano, ya tienes la materia prima: tu planilla de Excel. MiCert la toma y la convierte en certificados con QR que se pueden validar.",
     author: "Equipo MiCert",
     date: "15 de junio de 2026",
     dateISO: "2026-06-15",
-    metaTitle: "Alternativa a Excel y Canva para certificados OTEC | MiCert",
+    relatedSlugs: ["software-para-otec", "certificados-qr-otec"],
+    metaTitle: "¿Certificados en Excel, Word o Canva? | MiCert",
     metaDescription:
-      "Comparativa entre emitir certificados con Excel y Canva versus una plataforma con emisión masiva, QR y trazabilidad para los OTEC.",
+      "Excel, Word y Canva no verifican ni dejan rastro. MiCert emite certificados con QR validable desde tu misma planilla. Compara y agenda una demo.",
     sections: [
       {
-        id: "flujo-manual",
-        title: "El flujo manual que conoces",
+        id: "la-comparacion",
+        title: "La comparación",
+        table: {
+          headers: ["", "Excel / Word / Canva", "MiCert"],
+          rows: [
+            ["Diseño del certificado", "Sí", "Sí, con editor de campos"],
+            ["Desde tu Excel", "Lo escribes a mano", "Importación masiva"],
+            ["Código único por certificado", "No", "Sí"],
+            ["QR de verificación", "No", "Sí"],
+            ["Página pública de validación", "No", "Sí"],
+            [
+              "Trazabilidad para auditoría",
+              "No",
+              "Sí (revocación con historial)",
+            ],
+            ["Se puede editar sin dejar rastro", "Sí", "No"],
+          ],
+        },
+      },
+      {
+        id: "por-que-cuesta-caro",
+        title: "Por qué el método manual te cuesta caro",
         paragraphs: [
-          "El esquema clásico: exportar alumnos desde Excel, abrir una plantilla en Canva o Word, reemplazar nombre por nombre, exportar PDF y enviar por correo. Funciona para cursos pequeños, pero no escala.",
-          "Cada error de tipeo obliga a rehacer archivos. No hay un registro central ni forma simple de demostrar qué versión es la válida si alguien edita el PDF.",
+          "No es solo el tiempo de armar cada certificado uno por uno. Es que cuando un empleador o un auditor te pide comprobar que un certificado es real, no tienes cómo. Con MiCert, la prueba es el QR.",
         ],
       },
       {
-        id: "donde-falla",
-        title: "Dónde falla en auditoría",
+        id: "lo-honesto",
+        title: "Lo honesto",
         paragraphs: [
-          "Ante SENCE o un cliente corporativo, un ZIP de PDFs no prueba integridad. Tampoco puedes anular un certificado erróneo sin generar confusión sobre cuál archivo hizo circular el alumno.",
-          "La verificación depende de que alguien en el OTEC confirme manualmente, lo que consume tiempo y deja espacio a errores.",
-        ],
-      },
-      {
-        id: "flujo-micert",
-        title: "El flujo con MiCert",
-        paragraphs: [
-          "Sigues usando Excel como punto de partida, pero la planilla alimenta la emisión masiva. El diseño vive en la plataforma y cada certificado sale con QR y código único.",
-          "Si hay un error, anulas el documento incorrecto —de forma definitiva y trazable— y emites el corregido. La página de verificación deja de mostrar el anulado como válido.",
-        ],
-      },
-      {
-        id: "cuando-migrar",
-        title: "Cuándo tiene sentido migrar",
-        paragraphs: [
-          "Si emites más de un curso al mes, si tienes varios diseños o si ya viviste un susto en auditoría, el costo de seguir manual supera el de una herramienta dedicada.",
-          "Puedes probar con una demo de 5 certificados sin tarjeta de crédito. Revisa también los planes según tu volumen o explora más artículos en el hub de recursos.",
+          "Si lo único que necesitas es un diploma decorativo para imprimir, Canva te sobra. MiCert es para los OTEC que necesitan que sus certificados se puedan comprobar.",
         ],
       },
     ],
@@ -194,46 +190,43 @@ export const RESOURCE_ARTICLES: ResourceArticle[] = [
     slug: "auditoria-sence",
     tipo: "Normativa",
     temas: ["SENCE"],
-    title: "Auditoría SENCE: qué documentación exige un OTEC",
+    title: "Cuando llega la auditoría SENCE, el PDF editable no te respalda",
     excerpt:
-      "Qué suelen revisar los auditores, cómo preparar la trazabilidad de certificados y qué papel juega la emisión digital.",
+      "Un PDF que cualquiera puede modificar no es evidencia. Así te da MiCert la trazabilidad para demostrar qué emitiste, a quién y cuándo.",
     author: "Equipo MiCert",
     date: "12 de junio de 2026",
     dateISO: "2026-06-12",
-    metaTitle: "Auditoría SENCE para los OTEC: guía de trazabilidad | MiCert",
+    relatedSlugs: ["alternativa-excel-canva", "certificados-qr-otec"],
+    metaTitle: "Certificados verificables para auditoría SENCE | MiCert",
     metaDescription:
-      "Cómo preparar la documentación de certificados para una auditoría SENCE: registro de emisiones, vigencia, anulaciones y verificación.",
+      "Demuestra qué emitiste, a quién y cuándo. MiCert da trazabilidad y QR verificable a los certificados de tu OTEC. Agenda una demo.",
     sections: [
       {
-        id: "que-revisan",
-        title: "Qué revisan en una auditoría",
+        id: "el-problema",
+        title: "El problema",
         paragraphs: [
-          "Los auditores buscan coherencia entre lo declarado en el curso y lo entregado al participante: quiénes asistieron, qué certificados se emitieron, con qué fecha y bajo qué reglas de vigencia.",
-          "No alcanza con mostrar carpetas desordenadas. Se espera un registro ordenado que permita rastrear cada certificado hasta su origen.",
+          "El certificado en PDF editable se modifica en dos clics y no tiene cómo comprobarse. Cuando llega una auditoría, no existe forma rápida de demostrar qué se emitió, a quién y bajo qué curso. Eso vuelve la auditoría un problema de papeleo y de credibilidad.",
         ],
       },
       {
-        id: "riesgos-comunes",
-        title: "Riesgos con certificados editables",
+        id: "que-cambia",
+        title: "Qué cambia con MiCert",
         paragraphs: [
-          "PDFs sin respaldo central son difíciles de defender. Si dos versiones circulan del mismo alumno, el OTEC no puede demostrar cuál es la oficial sin un sistema de registro.",
-          "La anulación informal —borrar un archivo o reenviar otro— no deja huella auditable. Eso es un punto débil frecuente en revisiones.",
+          "Cada certificado queda registrado con un código único y un QR de verificación pública. La autenticidad no depende de tu palabra: cualquiera la confirma escaneando. Y el historial es inmutable, porque los certificados se revocan, no se borran.",
         ],
       },
       {
-        id: "trazabilidad-digital",
-        title: "Trazabilidad con emisión digital",
+        id: "que-demuestras",
+        title: "Qué demuestras",
         paragraphs: [
-          "Una plataforma de certificados mantiene el historial de emisiones, cambios de estado y anulaciones. La vigencia queda fijada al momento de emitir, y cada documento tiene un identificador verificable.",
-          "MiCert está pensado para que los OTEC puedan responder preguntas concretas: qué se emitió, a quién, cuándo y si sigue vigente o fue revocado.",
+          "En un solo lugar ves todo lo que emitiste, en vez de buscar archivos sueltos por correo y carpetas. Esa es la diferencia entre reconstruir evidencia a mano y mostrar una fuente de verdad.",
         ],
       },
       {
-        id: "como-prepararse",
-        title: "Cómo prepararse antes de la visita",
+        id: "por-que-aplica",
+        title: "Por qué aplica a tu OTEC",
         paragraphs: [
-          "Centraliza la emisión en un solo sistema, define reglas de vigencia por curso y evita certificados fuera de la plataforma. Practica mostrar la verificación por QR como prueba de autenticidad.",
-          "Si quieres validar el flujo con tu equipo, agenda una demo. Los planes por volumen están en la página de precios; más guías en el hub de recursos.",
+          "MiCert no te certifica ante SENCE ni es un sello oficial; es la herramienta que te deja demostrar lo que hiciste cuando te lo piden. Eso vale para cualquier OTEC que emita certificados.",
         ],
       },
     ],
@@ -250,6 +243,13 @@ export function getRelatedArticles(
 ): ResourceArticle[] {
   const current = getArticleBySlug(slug);
   if (!current) return [];
+
+  if (current.relatedSlugs?.length) {
+    return current.relatedSlugs
+      .map((s) => getArticleBySlug(s))
+      .filter((a): a is ResourceArticle => !!a)
+      .slice(0, limit);
+  }
 
   return RESOURCE_ARTICLES.filter((a) => a.slug !== slug)
     .sort((a, b) => {

@@ -7,6 +7,11 @@ export type Plan = {
   featured?: boolean;
 };
 
+export const PLANS_PAGE = {
+  heading: "Planes simples, según cuántos certificados emites",
+  subheading: "Sin instalación ni costos ocultos. Pagas por volumen de emisión.",
+};
+
 export const PLANS: Plan[] = [
   {
     id: "basico",
@@ -46,3 +51,17 @@ export const PLANS: Plan[] = [
     ],
   },
 ];
+
+export const DEMO_BLOCK = {
+  eyebrow: "Demo sin costo · 5 certificados",
+  title: "Pruébalo con 5 certificados antes de decidir",
+  description:
+    "Emite certificados reales con tus plantillas, sin tarjeta de crédito. Tras tu solicitud, activamos la cuenta y te enviamos las credenciales.",
+  cta: "Solicitar demo",
+};
+
+export const PRECIOS_METADATA = {
+  title: "Planes y precios — Software de certificados OTEC | MiCert",
+  description:
+    "Conoce los planes de MiCert para emitir certificados con QR en tu OTEC. Demo sin costo de 5 certificados, sin tarjeta. Agenda una demo.",
+};

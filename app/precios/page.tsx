@@ -3,15 +3,14 @@ import Footer from "../components/Footer";
 import Nav from "../components/Nav";
 import DemoBanner from "../components/DemoBanner";
 import PlansGrid from "../components/PlansGrid";
+import { PLANS_PAGE, PRECIOS_METADATA } from "../lib/plans";
 
 export const metadata: Metadata = {
-  title: "Precios y planes · MiCert",
-  description:
-    "Planes para los OTEC según volumen mensual de certificados: Básico, Estándar y Pro. Demo sin costo con 5 certificados, sin tarjeta de crédito.",
+  title: PRECIOS_METADATA.title,
+  description: PRECIOS_METADATA.description,
   openGraph: {
-    title: "Precios y planes · MiCert",
-    description:
-      "Planes para los OTEC según volumen mensual de certificados. Prueba MiCert con 5 certificados antes de decidir.",
+    title: PRECIOS_METADATA.title,
+    description: PRECIOS_METADATA.description,
     url: "https://micert.cl/precios",
   },
 };
@@ -24,11 +23,8 @@ export default function PreciosPage() {
       <header className="hero hero-compact">
         <div className="wrap">
           <span className="eyebrow">Planes</span>
-          <h1>Precios simples para los OTEC</h1>
-          <p className="lead">
-            Elige el volumen mensual que necesitas. Todos los planes incluyen
-            verificación por QR, emisión masiva e historial completo.
-          </p>
+          <h1>{PLANS_PAGE.heading}</h1>
+          <p className="lead">{PLANS_PAGE.subheading}</p>
         </div>
       </header>
 

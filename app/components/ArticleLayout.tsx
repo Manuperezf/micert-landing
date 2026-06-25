@@ -50,7 +50,31 @@ export default function ArticleLayout({ article }: ArticleLayoutProps) {
           {article.sections.map((section) => (
             <section key={section.id} id={section.id}>
               <h2>{section.title}</h2>
-              {section.paragraphs.map((paragraph, i) => (
+              {section.table && (
+                <div className="article-table-wrap">
+                  <table className="article-table">
+                    <thead>
+                      <tr>
+                        {section.table.headers.map((header) => (
+                          <th key={header || "feature"} scope="col">
+                            {header}
+                          </th>
+                        ))}
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {section.table.rows.map((row, i) => (
+                        <tr key={i}>
+                          {row.map((cell, j) => (
+                            <td key={j}>{cell}</td>
+                          ))}
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              )}
+              {section.paragraphs?.map((paragraph, i) => (
                 <p key={i}>{paragraph}</p>
               ))}
             </section>

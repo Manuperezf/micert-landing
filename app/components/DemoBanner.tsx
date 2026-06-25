@@ -1,16 +1,15 @@
+import { DEMO_BLOCK } from "../lib/plans";
+
 export default function DemoBanner() {
   return (
     <div className="demo-band">
       <div className="demo-band-copy">
-        <span className="eyebrow">Demo sin costo · 5 certificados</span>
-        <h3>Pruébalo antes de decidir</h3>
-        <p>
-          Emite certificados reales con tus plantillas, sin tarjeta de crédito.
-          Tras tu solicitud, activamos la cuenta y te enviamos las credenciales.
-        </p>
+        <span className="eyebrow">{DEMO_BLOCK.eyebrow}</span>
+        <h3>{DEMO_BLOCK.title}</h3>
+        <p>{DEMO_BLOCK.description}</p>
       </div>
       <a className="btn primary" href="/demo">
-        Agenda una demo
+        {DEMO_BLOCK.cta}
       </a>
     </div>
   );
