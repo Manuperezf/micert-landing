@@ -5,7 +5,6 @@ import {
   RESOURCE_ARTICLES,
   RESOURCE_TEMAS,
   RESOURCE_TIPOS,
-  getFeaturedArticle,
   type ResourceTema,
   type ResourceTipo,
 } from "../lib/recursos";
@@ -16,8 +15,6 @@ export default function RecursosFeed() {
   const [tipo, setTipo] = useState<ResourceTipo | "">("");
   const [tema, setTema] = useState<ResourceTema | "">("");
 
-  const featured = getFeaturedArticle();
-
   const filtered = useMemo(() => {
     return RESOURCE_ARTICLES.filter((article) => {
       if (tipo && article.tipo !== tipo) return false;
@@ -25,16 +22,6 @@ export default function RecursosFeed() {
       return true;
     });
   }, [tipo, tema]);
-
-  const showFeatured =
-    featured &&
-    filtered.some((a) => a.slug === featured.slug) &&
-    !tipo &&
-    !tema;
-
-  const list = showFeatured
-    ? filtered.filter((a) => a.slug !== featured.slug)
-    : filtered;
 
   return (
     <>
@@ -102,13 +89,9 @@ export default function RecursosFeed() {
           </p>
         )}
 
-        {showFeatured && featured && (
-          <ResourceCard article={featured} featured />
-        )}
-
-        {list.length > 0 && (
-          <div className="resource-grid">
-            {list.map((article) => (
+        {filtered.length > 0 && (
+          <div className="resource-list">
+            {filtered.map((article) => (
               <ResourceCard key={article.slug} article={article} />
             ))}
           </div>
