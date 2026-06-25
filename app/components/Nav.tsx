@@ -8,7 +8,6 @@ export default function Nav() {
           <a href="/#planes">Planes</a>
         </div>
         <div className="nav-cta">
-          <a className="btn ghost" href="https://micert.vercel.app/" target="_blank" rel="noopener">Ver la demo</a>
           <a className="btn primary" href="/demo">Solicita una demo</a>
         </div>
       </div>

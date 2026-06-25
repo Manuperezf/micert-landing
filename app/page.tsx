@@ -14,7 +14,6 @@ export default function Home() {
             <p className="lead">MiCert convierte tu lista de Excel en certificados digitales con código QR único, listos para validar. Sin PDF editables, sin diseño manual, sin conocimientos técnicos.</p>
             <div className="actions">
               <a className="btn primary" href="/demo">Solicita una demo</a>
-              <a className="btn link" href="https://micert.vercel.app/" target="_blank" rel="noopener">Ver la demo en vivo <span className="arr">→</span></a>
             </div>
           </div>
           <div className="mock">
@@ -183,7 +182,7 @@ export default function Home() {
                 <li><span className="ck">✓</span>Vigencia y anulación por lote</li>
                 <li><span className="ck">✓</span>Varios usuarios del equipo</li>
               </ul>
-              <a className="btn" href="#contacto">Pedir demo →</a>
+              <a className="btn" href="/demo">Pedir demo →</a>
             </div>
             <div className="plan">
               <span className="tier">Pro</span>
@@ -254,7 +253,6 @@ export default function Home() {
           <p>Te mostramos MiCert con un curso real y resolvemos tus dudas en una llamada corta.</p>
           <div className="actions">
             <a className="btn primary" href="/demo">Solicita una demo</a>
-            <a className="btn ghost" href="https://micert.vercel.app/" target="_blank" rel="noopener">Ver la demo en vivo</a>
           </div>
         </div>
       </section>
