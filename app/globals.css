@@ -290,7 +290,7 @@
 .article-toc ol{list-style:none;display:grid;gap:10px;margin:0;padding:0}
 .article-toc a{font-size:14px;color:var(--muted);line-height:1.45}
 .article-toc a:hover{color:var(--ink)}
-.article-toc-links{margin-top:16px;padding-top:16px;border-top:1px solid var(--line);display:grid;gap:8px}
+.article-toc-links{margin-top:16px;padding-top:0;border:none;display:grid;gap:8px}
 .article-toc-links a{font-size:14px;color:var(--azul)}
 
 .article-content{max-width:640px;width:100%;overflow:visible}
@@ -299,12 +299,13 @@
 .article-content h2{font-size:22px;font-weight:500;margin-bottom:16px;letter-spacing:-.02em;line-height:1.25;text-align:left}
 .article-content p{color:var(--muted);font-size:16px;margin:0 0 14px;line-height:1.65}
 .article-content p:last-child{margin-bottom:0}
-.article-inline-cta{margin-top:40px;padding:22px 24px;background:var(--bone);border:1px solid var(--line);border-radius:12px}
-.article-inline-cta p{margin:0;color:var(--muted);font-size:15px;line-height:1.6}
+.article-inline-cta{margin-top:40px;padding:22px 24px;background:var(--bone);border:1px solid var(--line);border-radius:12px;text-align:center}
+.article-inline-cta p{margin:0;color:var(--muted);font-size:15px;line-height:1.6;text-align:center}
 .article-inline-cta a{color:var(--azul);font-weight:500}
 
 .article-share{margin-top:48px;padding-top:40px;border-top:1px solid var(--line);text-align:center}
-.article-share-title{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);font-weight:600;margin:0 0 20px}
+.article-share-title{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--faint);font-weight:500;margin:0 0 20px}
+.article-content .article-share-title{font-size:12px;color:var(--faint);line-height:1.4}
 .article-share-row{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:12px}
 .article-share-btn{width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:#fff;color:var(--muted);display:inline-flex;align-items:center;justify-content:center;cursor:pointer;transition:.15s;font-family:var(--sans);padding:0}
 .article-share-btn:hover{border-color:var(--line-strong);color:var(--ink)}
