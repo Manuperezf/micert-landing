@@ -9,88 +9,98 @@ type ArticleLayoutProps = {
 
 export default function ArticleLayout({ article }: ArticleLayoutProps) {
   const related = getRelatedArticles(article.slug);
+  const authorInitial = article.author.trim().charAt(0);
 
   return (
     <article className="article-page">
-      <header className="article-header wrap">
-        <div className="article-meta">
-          <Link href="/recursos" className="article-back">
-            ← Recursos
-          </Link>
-          <span className="resource-tag">{article.tipo}</span>
-        </div>
-        <h1>{article.title}</h1>
-        <p className="lead article-deck">{article.excerpt}</p>
-        <div className="article-byline">
-          <span>{article.author}</span>
-          <span className="article-byline-sep">·</span>
-          <time dateTime={article.dateISO}>{article.date}</time>
-        </div>
-      </header>
-
-      <div className="article-layout wrap">
-        <aside className="article-toc" aria-label="En esta entrada">
-          <p className="article-toc-title">En esta entrada</p>
-          <nav>
-            <ol>
-              {article.sections.map((section) => (
-                <li key={section.id}>
-                  <a href={`#${section.id}`}>{section.title}</a>
-                </li>
-              ))}
-            </ol>
-          </nav>
-          <div className="article-toc-links">
-            <Link href="/precios">Ver precios</Link>
-            <Link href="/recursos">Más recursos</Link>
+      <div className="article-shell">
+        <header className="article-header">
+          <div className="article-header-grid">
+            <h1>{article.title}</h1>
+            <p className="article-deck">{article.excerpt}</p>
           </div>
-        </aside>
+        </header>
 
-        <div className="article-content">
-          {article.sections.map((section) => (
-            <section key={section.id} id={section.id}>
-              <h2>{section.title}</h2>
-              {section.table && (
-                <div className="article-table-wrap">
-                  <table className="article-table">
-                    <thead>
-                      <tr>
-                        {section.table.headers.map((header) => (
-                          <th key={header || "feature"} scope="col">
-                            {header}
-                          </th>
-                        ))}
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {section.table.rows.map((row, i) => (
-                        <tr key={i}>
-                          {row.map((cell, j) => (
-                            <td key={j}>{cell}</td>
+        <div className="article-byline-row">
+          <div className="article-byline-left">
+            <span className="article-avatar" aria-hidden="true">
+              {authorInitial}
+            </span>
+            <span className="article-author-name">{article.author}</span>
+          </div>
+          <div className="article-byline-right">
+            <span>{article.tipo}</span>
+            <span className="article-byline-sep" aria-hidden="true">
+              ·
+            </span>
+            <time dateTime={article.dateISO}>{article.date}</time>
+          </div>
+        </div>
+
+        <div className="article-layout">
+          <aside className="article-toc" aria-label="En esta entrada">
+            <p className="article-toc-title">En esta entrada</p>
+            <nav>
+              <ol>
+                {article.sections.map((section) => (
+                  <li key={section.id}>
+                    <a href={`#${section.id}`}>{section.title}</a>
+                  </li>
+                ))}
+              </ol>
+            </nav>
+            <div className="article-toc-links">
+              <Link href="/precios">Ver precios</Link>
+              <Link href="/recursos">Más recursos</Link>
+            </div>
+          </aside>
+
+          <div className="article-content">
+            {article.sections.map((section) => (
+              <section key={section.id} id={section.id}>
+                <h2>{section.title}</h2>
+                {section.table && (
+                  <div className="article-table-wrap">
+                    <table className="article-table">
+                      <thead>
+                        <tr>
+                          {section.table.headers.map((header) => (
+                            <th key={header || "feature"} scope="col">
+                              {header}
+                            </th>
                           ))}
                         </tr>
-                      ))}
-                    </tbody>
-                  </table>
-                </div>
-              )}
-              {section.paragraphs?.map((paragraph, i) => (
-                <p key={i}>{paragraph}</p>
-              ))}
-            </section>
-          ))}
+                      </thead>
+                      <tbody>
+                        {section.table.rows.map((row, i) => (
+                          <tr key={i}>
+                            {row.map((cell, j) => (
+                              <td key={j}>{cell}</td>
+                            ))}
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                )}
+                {section.paragraphs?.map((paragraph, i) => (
+                  <p key={i}>{paragraph}</p>
+                ))}
+              </section>
+            ))}
 
-          <div className="article-inline-cta">
-            <p>
-              ¿Quieres ver cómo funciona con un curso real?{" "}
-              <Link href="/demo">Agenda una demo</Link> o revisa los{" "}
-              <Link href="/precios">planes y precios</Link>.
-            </p>
+            <div className="article-inline-cta">
+              <p>
+                ¿Quieres ver cómo funciona con un curso real?{" "}
+                <Link href="/demo">Agenda una demo</Link> o revisa los{" "}
+                <Link href="/precios">planes y precios</Link>.
+              </p>
+            </div>
           </div>
         </div>
       </div>
 
-      <section className="article-related wrap">
+      <section className="article-related article-shell">
         <h2>Sigue leyendo</h2>
         <div className="article-related-grid">
           {related.map((item) => (
@@ -107,7 +117,7 @@ export default function ArticleLayout({ article }: ArticleLayoutProps) {
         </div>
       </section>
 
-      <div className="wrap article-demo">
+      <div className="article-shell article-demo">
         <DemoBanner />
       </div>
     </article>
