@@ -32,6 +32,10 @@ export default function DemoPage() {
         .demo-point .n{flex:0 0 auto;width:26px;height:26px;border-radius:8px;background:#eaf0fe;color:#0c59f2;font-size:13px;font-weight:600;display:flex;align-items:center;justify-content:center;margin-top:2px}
         .demo-point h3{margin:0 0 3px;font-size:16px}
         .demo-point p{margin:0;color:#65645d;font-size:14.5px}
+        .demo-calendar{margin-top:24px;padding-top:24px;border-top:1px solid #e6e4da}
+        .demo-calendar p{margin:0 0 16px;color:#65645d;font-size:14.5px}
+        .demo-calendar a{display:inline-block;background:#0c59f2;color:#fff;padding:12px 20px;border-radius:10px;text-decoration:none;font-weight:600}
+        .demo-calendar a:hover{background:#0a4cd6}
         .demo-formcard{background:#ffffff;border:1px solid #e6e4da;border-radius:16px;padding:28px;box-shadow:0 1px 2px rgba(0,0,0,.03)}
         .demo-formcard h2{margin:0 0 6px;font-size:20px;letter-spacing:-.01em}
         .demo-formcard p.sub{margin:0 0 20px;color:#65645d;font-size:14.5px}
@@ -76,6 +80,16 @@ export default function DemoPage() {
                     <p>Registro claro de lo emitido, pensado para los requisitos de SENCE.</p>
                   </div>
                 </div>
+              </div>
+              <div className="demo-calendar">
+                <p>¿Prefieres agendar directo? Reserva un horario en el calendario.</p>
+                <a
+                  href="https://calendar.app.google/VdE3Wcow15CF1uzR7"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Reservar un horario
+                </a>
               </div>
             </div>
 
