@@ -34,7 +34,7 @@ export default function PreciosPage() {
           <DemoBanner />
           <div className="plans-foot">
             <span>
-              <b>Packs adicionales:</b> 25, 50 o 100 certificados, vigencia 6
+              <b>Packs adicionales:</b> 25, 50 o 100 certificados, vigencia 3
               meses.
             </span>
             <span>

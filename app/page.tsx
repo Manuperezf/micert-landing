@@ -206,7 +206,7 @@ export default function Home() {
             <a className="btn primary" href="/demo">Agenda una demo</a>
           </div>
           <div className="plans-foot">
-            <span><b>Packs adicionales:</b> 25, 50 o 100 certificados, vigencia 6 meses.</span>
+            <span><b>Packs adicionales:</b> 25, 50 o 100 certificados, vigencia 3 meses.</span>
             <span><b>¿Más volumen?</b> Plan a medida para alto volumen e integraciones.</span>
           </div>
         </div>
