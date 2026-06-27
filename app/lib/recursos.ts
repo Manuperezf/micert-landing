@@ -475,6 +475,112 @@ export const RESOURCE_ARTICLES: ResourceArticle[] = [
       },
     ],
   },
+  {
+    slug: "detectar-certificados-otec-falsos",
+    tipo: "Normativa",
+    temas: ["SENCE", "QR"],
+    title:
+      "Cómo detectar un certificado OTEC falso (y cómo evitar que falsifiquen los tuyos)",
+    excerpt:
+      "Un certificado falso se ve igual de bien que uno real: ese es justamente el problema. Si necesitas comprobar la autenticidad de uno, o eres un OTEC que no quiere que falsifiquen los suyos, esta guía es para ti.",
+    author: "Equipo MiCert",
+    date: "22 de junio de 2026",
+    dateISO: "2026-06-22",
+    featured: false,
+    relatedSlugs: ["certificados-qr-otec", "auditoria-sence"],
+    metaTitle: "Cómo detectar un certificado OTEC falso en Chile | MiCert",
+    metaDescription:
+      "Guía práctica para saber si un certificado de un OTEC es auténtico o falso: las señales de alerta y la forma confiable de verificarlo en segundos.",
+    sections: [
+      {
+        id: "por-que-circulan-certificados-falsos",
+        title: "Por qué circulan certificados OTEC falsos",
+        paragraphs: [
+          "La falsificación de certificados de capacitación es un problema conocido en Chile, sobre todo en sectores donde un certificado abre o cierra la puerta a un trabajo: construcción, minería, seguridad privada, salud. Cuando un documento vale un puesto, aparece el incentivo para falsificarlo.",
+          "El terreno fértil es el formato editable. La mayoría de los certificados todavía circulan como PDF, y un PDF se modifica en pocos clics. Tomar uno legítimo y cambiarle el nombre, la nota o la fecha es trivial, y el resultado se ve idéntico al original. Por eso el problema golpea a dos partes a la vez: a quien recibe un certificado y necesita confiar en él, y al OTEC cuyo nombre termina en un documento que no emitió.",
+        ],
+      },
+      {
+        id: "senales-de-alerta",
+        title: "Las señales de alerta de un certificado dudoso",
+        paragraphs: [
+          "Si tienes un certificado en la mano y quieres evaluar su autenticidad, estas son las pistas que conviene revisar. Ninguna es definitiva por sí sola, pero juntas dibujan un patrón.",
+          "No hay forma de verificarlo. Es la señal más importante. Si el certificado no ofrece ninguna manera de comprobar su autenticidad —ni un código, ni un QR, ni una página donde validarlo— estás obligado a creer solo en cómo se ve. Eso no es respaldo.",
+          "El QR no lleva a ninguna parte. Algunos falsos incluyen un QR decorativo que no abre nada, o que lleva a una página genérica sin datos del certificado. Un QR válido debería abrir una verificación con la información del documento.",
+          "Inconsistencias en los datos. Nombres mal escritos, fechas que no calzan con la duración del curso, formatos que cambian dentro del mismo documento. Los certificados emitidos por sistema son consistentes; los editados a mano suelen tener pequeños descalces.",
+          "El OTEC no aparece en los registros. Los OTEC en Chile están en el registro de SENCE. Si el organismo que supuestamente emitió el certificado no figura, es una bandera roja.",
+        ],
+      },
+      {
+        id: "verificar-a-ojo-no-alcanza",
+        title: 'El problema de fondo: verificar "a ojo" no alcanza',
+        paragraphs: [
+          "Acá está el punto que todas las señales anteriores tienen en común: revisar la apariencia de un documento es poco confiable, porque la apariencia es justamente lo que un falsificador copia bien. Un certificado bien falsificado pasa cualquier inspección visual.",
+          "La inspección a ojo sirve para descartar los falsos torpes, pero no para confirmar que uno es auténtico. Para eso hace falta otra cosa: poder contrastar el documento contra una fuente que el falsificador no controla.",
+        ],
+      },
+      {
+        id: "forma-confiable-de-comprobar",
+        title: "La forma confiable de comprobar: verificar el origen",
+        paragraphs: [
+          "La única manera sólida de confirmar un certificado es verificar su origen, no su apariencia. Es decir, comprobar contra el registro del OTEC que lo emitió si ese certificado existe, a quién corresponde y para qué curso.",
+          "Ahí es donde el código QR de verificación cambia las reglas. Un certificado verificable lleva un código único asociado a una página de verificación pública: al escanearlo, no estás mirando el documento, estás consultando la fuente. Si los datos coinciden, es auténtico. Si no hay coincidencia, no importa lo bien que se vea el papel. La apariencia deja de ser el criterio.",
+        ],
+      },
+      {
+        id: "si-eres-un-otec",
+        title: "Si eres un OTEC: cómo evitar que falsifiquen los tuyos",
+        paragraphs: [
+          "La defensa contra la falsificación no es un papel más difícil de copiar —cualquier diseño se replica—. Es emitir certificados que se puedan comprobar contra una fuente que tú controlas.",
+          "Con MiCert, cada certificado que emite tu OTEC lleva un código único y un QR que apunta a tu página de verificación pública. Si alguien toma uno de tus certificados y le cambia los datos, la verificación lo delata: muestra la información original que emitiste, o no encuentra coincidencia. El falsificador puede copiar el diseño, pero no puede falsificar el registro. Y como cada emisión queda guardada y los certificados se revocan en vez de borrarse, siempre hay un historial contra el cual contrastar.",
+        ],
+      },
+      {
+        id: "que-hacer-si-detectas-uno-falso",
+        title: "Qué hacer si detectas uno falso",
+        paragraphs: [
+          "Si confirmaste que un certificado es falso, lo razonable es no validarlo y, según el contexto, avisar al OTEC supuestamente emisor —que tiene interés en saber que están usando su nombre— y a la parte que lo presentó. Para un empleador, dejar registro de la verificación protege a la empresa. Para un OTEC, detectar a tiempo que circulan falsos a su nombre permite reaccionar antes de que el daño reputacional crezca.",
+        ],
+      },
+      {
+        id: "preguntas-frecuentes",
+        title: "Preguntas frecuentes",
+        faq: [
+          {
+            question: "¿Cómo sé si un certificado de un OTEC es falso?",
+            answer:
+              "La forma confiable es verificar su origen, no su apariencia. Si el certificado tiene un código o QR de verificación, compruébalo: debe abrir una página con los datos del documento. Si no ofrece ninguna forma de validarse, no hay cómo confirmar que es auténtico.",
+          },
+          {
+            question: "¿Un certificado en PDF se puede falsificar fácilmente?",
+            answer:
+              "Sí. Un PDF editable se modifica en pocos clics, y el resultado se ve idéntico al original. Por eso la apariencia no basta para confirmar autenticidad.",
+          },
+          {
+            question: "¿Sirve revisar el certificado a simple vista?",
+            answer:
+              "Solo para descartar los falsos más torpes. Un certificado bien falsificado pasa la inspección visual, así que mirar el documento no alcanza para confirmar que es real.",
+          },
+          {
+            question: "¿Qué es una página de verificación de certificados?",
+            answer:
+              "Es una página pública a la que apunta el QR del certificado, donde se confirma contra el registro del OTEC si el documento existe y a quién corresponde. Verifica el origen, no la imagen.",
+          },
+          {
+            question:
+              "Soy un OTEC: ¿cómo evito que falsifiquen mis certificados?",
+            answer:
+              "Emitiendo certificados verificables. Si cada certificado tiene un código único y una página de verificación que tú controlas, alterar el documento no sirve: la verificación muestra los datos originales o no encuentra coincidencia.",
+          },
+          {
+            question: "¿Dónde compruebo si un OTEC está acreditado?",
+            answer:
+              "Los OTEC en Chile figuran en el registro de SENCE. Si el organismo emisor no aparece, es una señal de alerta sobre el certificado.",
+          },
+        ],
+      },
+    ],
+  },
 ];
 
 export function getArticleBySlug(slug: string): ResourceArticle | undefined {
