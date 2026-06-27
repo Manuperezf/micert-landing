@@ -9,6 +9,7 @@ export default function Nav() {
           <a href="/recursos">Recursos</a>
         </div>
         <div className="nav-cta">
+          <a className="btn ghost" href="https://app.micert.cl">Iniciar sesión</a>
           <a className="btn primary" href="/demo">Agenda una demo</a>
         </div>
       </div>
