@@ -581,6 +581,111 @@ export const RESOURCE_ARTICLES: ResourceArticle[] = [
       },
     ],
   },
+  {
+    slug: "certificados-prevencion-de-riesgos",
+    tipo: "Normativa",
+    temas: ["SENCE", "QR"],
+    title:
+      "Certificados para OTEC de prevención de riesgos: por qué tienen que ser verificables",
+    excerpt:
+      "En prevención de riesgos, un certificado no acredita una asistencia: acredita que alguien puede hacer un trabajo peligroso sin ponerse en riesgo. Por eso, que se pueda comprobar no es un detalle administrativo, es seguridad.",
+    author: "Equipo MiCert",
+    date: "24 de junio de 2026",
+    dateISO: "2026-06-24",
+    featured: false,
+    relatedSlugs: ["certificados-qr-otec", "detectar-certificados-otec-falsos"],
+    metaTitle: "Certificados para OTEC de prevención de riesgos | MiCert",
+    metaDescription:
+      "En prevención de riesgos, un certificado falso es un riesgo real. Cómo emitir certificados verificables con QR que las empresas mandantes puedan comprobar.",
+    sections: [
+      {
+        id: "en-prevencion-el-certificado-no-es-un-tramite",
+        title: "En prevención, el certificado no es un trámite",
+        paragraphs: [
+          'En la mayoría de las capacitaciones, un certificado falso es un problema de honestidad. En prevención de riesgos es, además, un problema de seguridad. El certificado de un curso de trabajo en altura, espacios confinados o uso de equipos de protección no dice solo "esta persona asistió": dice "esta persona está habilitada para hacer una tarea que, mal hecha, puede costarle la vida a ella o a otros".',
+          "Cuando ese documento se puede falsificar, el riesgo deja de ser abstracto. Un trabajador con un certificado adulterado puede terminar en una faena haciendo algo para lo que nunca se entrenó. El daño potencial no es reputacional: es físico. Por eso, en este sector, la verificabilidad del certificado pesa más que en casi cualquier otro.",
+        ],
+      },
+      {
+        id: "quien-comprueba-estos-certificados",
+        title: "Quién comprueba estos certificados, y cuándo",
+        paragraphs: [
+          "Los certificados de prevención no se quedan guardados: circulan y se revisan. Una empresa mandante exige a sus contratistas que su gente acredite las capacitaciones de seguridad antes de ingresar a faena. El área de prevención del contratista junta esos certificados y los presenta. El supervisor que controla el acceso a la obra verifica que estén al día.",
+          'En cada uno de esos pasos, alguien necesita confiar en un documento que no emitió. Hoy, con certificados en PDF, esa confianza se basa en cómo se ve el papel. Y como un PDF se edita en pocos clics, ese papel no prueba gran cosa. La pregunta "¿este certificado es real?" aparece justo en el momento de más presión: el ingreso a una faena.',
+        ],
+      },
+      {
+        id: "riesgo-concreto-del-pdf-editable",
+        title: "El riesgo concreto del PDF editable en este sector",
+        paragraphs: [
+          "Un certificado de prevención en PDF editable hereda todos los problemas del formato, pero con consecuencias más graves. Se puede tomar uno legítimo y cambiarle el nombre para que otra persona ingrese a faena. Se puede modificar una fecha de vencimiento para que un curso caducado parezca vigente. Y nadie en la cadena —ni la empresa mandante, ni el supervisor— tiene cómo detectarlo a tiempo si el único criterio es la apariencia.",
+          "Para el OTEC que emitió el original, el riesgo es doble: que falsifiquen sus certificados usando su nombre, y que no tenga cómo demostrar cuáles emitió de verdad cuando alguien se lo pregunte.",
+        ],
+      },
+      {
+        id: "que-necesita-un-otec-de-prevencion",
+        title: "Qué necesita un OTEC de prevención al emitir",
+        paragraphs: [
+          "Este sector tiene una característica que define lo que necesita: volumen y rotación. Los OTEC de prevención suelen dictar muchos cursos cortos, a muchos trabajadores, de forma frecuente. Emitir esos certificados a mano, uno por uno, no escala.",
+          "Lo que necesitan es poder emitir rápido y en lote desde la lista de participantes que ya tienen, que cada certificado sea verificable de inmediato, y que quede registro de todo lo emitido —incluido lo que se anula o caduca—. Es decir: velocidad, verificación y trazabilidad, las tres juntas.",
+        ],
+      },
+      {
+        id: "como-lo-resuelve-micert",
+        title: "Cómo lo resuelve MiCert para un OTEC de prevención",
+        paragraphs: [
+          "MiCert está pensado exactamente para ese flujo. Cargas la planilla de Excel con los participantes del curso y emites un certificado por persona, sin reescribir nada. Cada certificado lleva un código único y un QR que apunta a tu página de verificación pública: la empresa mandante o el supervisor de faena lo escanean y confirman en segundos que es auténtico y que lo emitió tu OTEC.",
+          "Cada emisión queda registrada, y los certificados se revocan en vez de borrarse, así que siempre hay historial de lo vigente y lo anulado. El trabajador, además, puede sumar su certificado a LinkedIn, con tu OTEC como emisor. Para un OTEC de prevención, eso significa emitir al ritmo que el sector exige, sin sacrificar la comprobabilidad que el sector necesita.",
+        ],
+      },
+      {
+        id: "marco-de-seguridad-laboral",
+        title: "El marco de seguridad laboral, en simple",
+        paragraphs: [
+          "Chile tiene un marco de seguridad y salud en el trabajo de larga data —la Ley 16.744 sobre accidentes del trabajo es su pilar— y, en la práctica, las empresas trasladan esas exigencias a sus contratistas pidiendo respaldo documentado de las capacitaciones. No vamos a interpretar aquí cada obligación, porque eso lo ve cada OTEC con su asesoría. Lo transversal es simple: en todos los casos hay que poder demostrar que la capacitación ocurrió y que el certificado es real. La verificación con QR resuelve justamente esa parte.",
+        ],
+      },
+      {
+        id: "preguntas-frecuentes",
+        title: "Preguntas frecuentes",
+        faq: [
+          {
+            question:
+              "¿Por qué un certificado de prevención de riesgos debería ser verificable?",
+            answer:
+              "Porque acredita que una persona está habilitada para una tarea peligrosa. Si se puede falsificar, alguien sin entrenamiento puede terminar haciendo ese trabajo. La verificación permite confirmar que el certificado es real antes de que eso pase.",
+          },
+          {
+            question: "¿Quién suele pedir comprobar estos certificados?",
+            answer:
+              "Las empresas mandantes a sus contratistas, las áreas de prevención y los supervisores que controlan el ingreso a faena. Todos necesitan confiar en documentos que no emitieron.",
+          },
+          {
+            question:
+              "¿Un certificado de trabajo en altura o espacios confinados se puede falsificar?",
+            answer:
+              "Si está en PDF editable, sí: se le puede cambiar el nombre o la fecha de vencimiento. Un certificado verificable con QR evita eso, porque la autenticidad se comprueba contra el registro del OTEC, no contra la apariencia del documento.",
+          },
+          {
+            question:
+              "¿Cómo verifica una empresa mandante un certificado emitido con MiCert?",
+            answer:
+              "Escanea el QR del certificado, que abre la página de verificación pública del OTEC y confirma en segundos si es auténtico y a quién corresponde.",
+          },
+          {
+            question: "¿Sirve para OTEC que emiten muchos cursos cortos?",
+            answer:
+              "Sí. Se importa la planilla de participantes y se emite en lote, lo que se ajusta al volumen y la rotación típicos del sector.",
+          },
+          {
+            question: "¿MiCert reemplaza la acreditación SENCE de mi OTEC?",
+            answer:
+              "No. MiCert no es un sello oficial ni reemplaza tu acreditación ni tus obligaciones. Es la herramienta para emitir certificados verificables y demostrar su trazabilidad.",
+          },
+        ],
+      },
+    ],
+  },
 ];
 
 export function getArticleBySlug(slug: string): ResourceArticle | undefined {
