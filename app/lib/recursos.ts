@@ -164,36 +164,95 @@ export const RESOURCE_ARTICLES: ResourceArticle[] = [
     slug: "certificados-qr-otec",
     tipo: "Producto",
     temas: ["QR", "NCh 2728"],
-    title: "Certificados digitales con QR que cualquiera puede verificar",
+    title:
+      "Certificados con QR verificable: cómo funcionan y por qué tu OTEC los necesita",
     excerpt:
-      "Cada certificado que emites con MiCert lleva un código único y un QR que apunta a una página de verificación pública. El alumno, su empleador o un auditor confirman la autenticidad en segundos.",
+      "Un código QR en un certificado no es un adorno: es lo que lo vuelve comprobable. Te explicamos cómo funciona la verificación, qué confirma realmente quien escanea el código y por qué esto cambia la forma en que tu OTEC respalda lo que emite.",
     author: "Equipo MiCert",
     date: "18 de junio de 2026",
     dateISO: "2026-06-18",
     relatedSlugs: ["software-para-otec", "auditoria-sence"],
-    metaTitle: "Certificados digitales con QR para OTEC | MiCert",
+    metaTitle:
+      "Certificados con QR para OTEC: cómo funciona la verificación | MiCert",
     metaDescription:
-      "Emite certificados con código único y verificación pública por QR. Importa desde Excel, diseña una vez y entrega un PDF validable.",
+      "Cómo funciona un certificado digital con QR verificable, por qué evita la falsificación y qué confirma quien lo escanea. Guía para OTEC en Chile.",
     sections: [
       {
-        id: "como-funciona",
-        title: "Cómo funciona",
+        id: "que-es-un-certificado-con-qr-verificable",
+        title: "Qué es un certificado con QR verificable",
         paragraphs: [
-          "Tres pasos. Cargas tu Excel con RUT, nombre, email y calificación, un certificado por fila. Diseñas el certificado en el editor, configurando los campos: nombre, RUT, curso, código, QR y firmas. Emites y entregas: se genera el PDF de cada participante con su QR único, listo para descargar.",
+          "Un certificado verificable es un documento que cualquiera puede comprobar como auténtico sin tener que llamarte ni confiar en tu palabra. El código QR es la puerta de entrada a esa comprobación: al escanearlo, lleva a una página de verificación pública donde se confirma que el certificado existe, que lo emitió tu OTEC y a quién corresponde.",
+          "La diferencia con un PDF normal es de fondo. Un PDF es una imagen del certificado; el QR verificable es un enlace a la fuente de verdad. El documento que el alumno descarga y la página de verificación son dos cosas conectadas: el papel puede circular, pero la verdad sobre su validez vive en un solo lugar que tú controlas.",
         ],
       },
       {
-        id: "que-hace-unico",
-        title: "Qué hace único a cada certificado",
+        id: "como-funciona-la-verificacion",
+        title: "Cómo funciona la verificación, paso a paso",
         paragraphs: [
-          "Un código único asociado al certificado, imposible de duplicar sin que el sistema lo detecte. Un QR de verificación pública que lleva a una página donde se confirma quién lo emitió y a quién. Y el botón \"Agregar a LinkedIn\", con el que el alumno suma el certificado a su perfil figurando tu OTEC como emisor.",
+          "El mecanismo es más simple de lo que parece, y esa simpleza es justamente lo que lo hace confiable.",
+          "Cuando tu OTEC emite un certificado, el sistema le asigna un código único, imposible de duplicar sin que se detecte. Ese código queda asociado a los datos del certificado —quién, qué curso, qué fecha— y se incrusta en el QR.",
+          "Cuando alguien escanea el QR, su teléfono abre la página de verificación pública. Esa página consulta el código y muestra el resultado: si el certificado es auténtico, aparece confirmado, con el OTEC emisor. Si el código no corresponde a nada emitido, no hay nada que mostrar, y eso por sí solo delata un documento falso.",
+          "No hace falta una app especial ni que el alumno se registre en nada. Cualquier cámara de celular abre el QR, y cualquier persona —el alumno, su empleador, un auditor— puede hacer la comprobación.",
         ],
       },
       {
-        id: "el-contraste",
-        title: "El contraste",
+        id: "por-que-evita-la-falsificacion",
+        title: "Por qué esto evita la falsificación",
         paragraphs: [
-          "Un PDF editable se modifica en dos clics y no tiene cómo comprobarse. Un certificado de MiCert tiene una fuente de verdad: la página de verificación. Si alguien altera el PDF, la verificación lo delata.",
+          "Un PDF editable se altera en dos clics: se cambia un nombre, una nota, una fecha, y el documento sigue viéndose legítimo. El problema no es solo que se pueda falsificar, sino que no hay forma rápida de demostrar cuál es el real.",
+          "Con un certificado verificable, alterar el PDF descargado no sirve de nada. Si alguien modifica el documento, la página de verificación sigue mostrando los datos originales que tu OTEC emitió —o directamente no encuentra coincidencia—. El intento de falsificación queda en evidencia al primer escaneo. La autenticidad deja de depender de cómo se ve el papel y pasa a depender de lo que dice la fuente que tú controlas.",
+        ],
+      },
+      {
+        id: "que-gana-tu-otec",
+        title: "Qué gana tu OTEC, más allá de la seguridad",
+        paragraphs: [
+          "La verificación con QR resuelve el problema de la falsificación, pero abre otras ventajas concretas.",
+          "Para el alumno, el certificado se vuelve algo que puede mostrar con respaldo. Con MiCert, además, puede sumarlo a su perfil de LinkedIn, con tu OTEC como emisor: tu marca viaja con cada certificado que tus alumnos comparten.",
+          "Para tu OTEC, cada emisión queda registrada. Cuando una empresa o un auditor te pide comprobar algo, no buscas en carpetas ni en correos: hay una fuente única. Y como los certificados se revocan en lugar de borrarse, existe historial de lo que se emitió y de lo que se anuló, que es exactamente lo que una auditoría necesita ver.",
+        ],
+      },
+      {
+        id: "como-se-emite-con-micert",
+        title: "Cómo se emite con MiCert",
+        paragraphs: [
+          "En la práctica, generar certificados con QR no agrega trabajo: lo quita. Cargas tu planilla de Excel con los participantes, diseñas el certificado una vez configurando sus campos —nombre, RUT, curso, código, QR y firmas— y emites. Cada participante recibe su certificado con su QR único, listo para descargar en PDF. El código y la página de verificación se generan solos, en el mismo paso.",
+        ],
+      },
+      {
+        id: "preguntas-frecuentes",
+        title: "Preguntas frecuentes",
+        faq: [
+          {
+            question: "¿Qué pasa exactamente cuando alguien escanea el QR?",
+            answer:
+              "Su teléfono abre una página de verificación pública que confirma si el certificado es auténtico y qué OTEC lo emitió. No necesita instalar ninguna app.",
+          },
+          {
+            question: "¿Se necesita una aplicación especial para verificar?",
+            answer:
+              "No. Cualquier cámara de celular lee el QR y abre la página de verificación en el navegador.",
+          },
+          {
+            question: "¿Qué pasa si alguien edita el PDF del certificado?",
+            answer:
+              "La verificación seguirá mostrando los datos originales que emitió el OTEC, o no encontrará coincidencia. La alteración queda en evidencia al escanear.",
+          },
+          {
+            question: "¿El alumno puede usar el certificado en LinkedIn?",
+            answer:
+              "Sí. Con MiCert puede agregarlo a su perfil, figurando tu OTEC como emisor.",
+          },
+          {
+            question: "¿Qué pasa si un certificado se anula?",
+            answer:
+              "Se revoca y queda registrado en el historial; no se elimina. La verificación refleja su estado.",
+          },
+          {
+            question: "¿Esto reemplaza algún registro oficial de SENCE?",
+            answer:
+              "No. La verificación con QR respalda la autenticidad de los certificados que tu OTEC emite; no es un sello oficial ni reemplaza tus obligaciones ante SENCE.",
+          },
         ],
       },
     ],
