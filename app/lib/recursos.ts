@@ -803,6 +803,119 @@ export const RESOURCE_ARTICLES: ResourceArticle[] = [
       },
     ],
   },
+  {
+    slug: "rudo-sence-como-usar-registro-otec",
+    tipo: "Normativa",
+    temas: ["SENCE", "QR"],
+    title:
+      "RUDO SENCE: cómo verificar si un OTEC está vigente (y qué no te dice el registro)",
+    excerpt:
+      "El RUDO es el registro oficial de SENCE para comprobar si un OTEC existe y está vigente. Es el primer filtro antes de contratar una capacitación o confiar en un certificado. Pero tiene un límite importante que conviene conocer.",
+    author: "Equipo MiCert",
+    date: "28 de junio de 2026",
+    dateISO: "2026-06-28",
+    featured: false,
+    relatedSlugs: ["detectar-certificados-otec-falsos", "certificados-qr-otec"],
+    metaTitle: "RUDO SENCE: cómo verificar si un OTEC está vigente | MiCert",
+    metaDescription:
+      "Qué es el RUDO SENCE, cómo buscar un OTEC y leer su estado, qué hacer si no aparece o está suspendido, y por qué RUDO no basta para validar un certificado.",
+    sections: [
+      {
+        id: "que-es-el-rudo",
+        title: "Qué es el RUDO y qué confirma",
+        paragraphs: [
+          "RUDO significa Registro Unificado de Organismos. Es la plataforma oficial de SENCE —el Servicio Nacional de Capacitación y Empleo— donde están registrados los OTEC de Chile. Es, además, la plataforma digital que reemplazó la antigua forma de registro y actualización de estos organismos.",
+          "Para una empresa o un área de RRHH, el RUDO funciona como el primer filtro antes de contratar capacitación: ahí compruebas si el OTEC existe como organismo reconocido y si está vigente. Para un trabajador, sirve para confirmar que el organismo que emitió su certificado es legítimo. Y para el propio OTEC, mantener su estado al día en el RUDO es parte de poder operar formalmente. Lo que el registro confirma es la existencia y el estado del organismo, no más que eso.",
+        ],
+      },
+      {
+        id: "como-acceder-y-buscar",
+        title: "Cómo acceder y buscar un OTEC",
+        paragraphs: [
+          "La puerta de entrada es el sitio oficial de SENCE (sence.gob.cl), en la sección de Organismos, o la ficha del trámite OTEC en ChileAtiende. Conviene partir desde ahí y no desde enlaces de terceros, porque la plataforma se digitalizó recientemente y su interfaz puede cambiar.",
+          "Un punto a tener presente sobre el acceso: según la ficha oficial de ChileAtiende, la consulta del registro se realiza con ClaveÚnica o Clave Tributaria del SII, filtrando por nombre o RUT de la empresa. La búsqueda por RUT es la más confiable, porque evita confusiones con nombres parecidos o razones sociales que cambiaron. Como el detalle de la interfaz puede variar, lo más seguro es seguir el flujo que indique el propio sitio de SENCE al momento de tu consulta.",
+        ],
+      },
+      {
+        id: "que-mirar-en-la-ficha",
+        title: "Qué mirar en la ficha del OTEC",
+        paragraphs: [
+          "Cuando llegues a la ficha del organismo, hay un dato que manda sobre todos los demás: el estado. Si el OTEC no figura vigente, lo demás pierde relevancia. Un organismo con su acreditación suspendida o dada de baja no está en condiciones de operar formalmente, y conviene detenerse ahí antes de avanzar.",
+          "Después del estado, vale la pena cruzar tres cosas con los documentos que te haya entregado el OTEC: que el RUT y la razón social coincidan exactamente con los de la cotización, el contrato o el certificado; que los datos de contacto y la región correspondan a un organismo real y ubicable; y que las fechas de inscripción y actualización sean coherentes con la trayectoria que el OTEC dice tener. Cualquier descalce entre lo que dice el registro y lo que te presentan es una señal para pedir aclaraciones antes de seguir.",
+        ],
+      },
+      {
+        id: "que-hacer-si-no-aparece",
+        title: "Qué hacer si el OTEC no aparece o no está vigente",
+        paragraphs: [
+          'Si buscas y no aparece nada, primero descarta lo simple: prueba variantes del nombre (con y sin "OTEC", con y sin la razón social completa) o busca directamente por RUT. Si aun así no figura con ninguna variante, pídele al OTEC su certificado de vigencia emitido por SENCE, con fecha reciente, y no aceptes capturas antiguas o documentos sin fecha verificable. Ante la duda, consulta directamente a SENCE por sus canales oficiales, citando el RUT y el nombre del organismo.',
+          "Si aparece pero con su acreditación suspendida o cancelada, conviene no avanzar hasta entender la situación: pídele al OTEC una explicación y, si dice haber regularizado, un documento oficial que lo respalde. Para efectos formales, como una capacitación con franquicia tributaria, lo prudente es confirmar el estado con SENCE antes de contratar.",
+        ],
+      },
+      {
+        id: "el-limite-del-rudo",
+        title: "El límite del RUDO: confirma el organismo, no el certificado",
+        paragraphs: [
+          "Acá está el punto que mucha gente no ve, y es el más importante de toda esta guía. El RUDO te confirma que el OTEC existe y está vigente. No te confirma que el certificado específico que tienes en la mano sea auténtico.",
+          "Son dos cosas distintas. Un OTEC puede estar perfectamente vigente en el RUDO y, aun así, alguien puede haber falsificado un certificado usando su nombre: tomar uno legítimo y cambiarle la persona, el curso o la nota. El registro no detecta eso, porque no guarda los certificados individuales ni los datos de cada participante. Verificar el organismo y verificar el documento son capas diferentes, y el RUDO solo cubre la primera.",
+        ],
+      },
+      {
+        id: "verificacion-a-nivel-de-certificado",
+        title: "Cómo se cierra ese vacío: verificación a nivel de certificado",
+        paragraphs: [
+          "La capa que falta es la verificación del certificado individual, y ahí es donde entra la verificación con código QR. Cuando un OTEC emite sus certificados con un sistema que les asigna un código único y un QR de verificación pública, cualquiera puede comprobar ese documento en particular: escanea el QR y confirma contra el registro del OTEC si el certificado existe, a quién corresponde y de qué curso es.",
+          'Combinadas, las dos capas dan confianza completa: el RUDO confirma que el organismo es legítimo, y la verificación por QR confirma que ese certificado puntual es real. Una responde "¿este OTEC existe?"; la otra, "¿este certificado lo emitió de verdad?".',
+        ],
+      },
+      {
+        id: "si-eres-un-otec",
+        title: "Si eres un OTEC: por qué te conviene ser verificable",
+        paragraphs: [
+          "Para un OTEC, esto es una ventaja concreta frente a sus clientes. Estar vigente en el RUDO es lo mínimo, pero no es algo que te diferencie: lo cumplen todos los organismos serios. Lo que sí te distingue es que tus certificados se puedan verificar uno a uno.",
+          "Con MiCert, cada certificado que emite tu OTEC lleva un código único y un QR que apunta a tu página de verificación pública. Una empresa mandante que recibe el certificado de un trabajador puede comprobarlo en segundos, sin llamarte. Importante ser preciso sobre el alcance: MiCert hace verificables los certificados que tu OTEC emite con MiCert, y la verificación se hace en línea, en la página pública del certificado. No reemplaza al RUDO ni valida documentos de terceros: es la capa que el RUDO no cubre, la del certificado individual, para lo que tú emites. Para un OTEC que trabaja con empresas que verifican credenciales, poder ofrecer esa comprobación es un argumento de venta real.",
+        ],
+      },
+      {
+        id: "preguntas-frecuentes",
+        title: "Preguntas frecuentes",
+        faq: [
+          {
+            question: "¿Qué es el RUDO SENCE?",
+            answer:
+              "Es el Registro Unificado de Organismos: la plataforma oficial de SENCE donde están registrados los OTEC de Chile. Permite comprobar si un organismo de capacitación existe y está vigente.",
+          },
+          {
+            question: "¿Necesito ClaveÚnica para consultar el RUDO?",
+            answer:
+              "Según la ficha oficial de ChileAtiende, la consulta del registro se realiza con ClaveÚnica o Clave Tributaria del SII, filtrando por nombre o RUT. Como la plataforma se actualizó hace poco, conviene seguir el flujo que indique el sitio de SENCE al momento de consultar.",
+          },
+          {
+            question:
+              "¿El RUDO confirma que un certificado específico es auténtico?",
+            answer:
+              "No. El RUDO confirma que el OTEC existe y su estado, pero no guarda los certificados individuales. Un OTEC puede estar vigente y aun así existir certificados falsificados a su nombre. Para eso se necesita verificar el documento, no solo el organismo.",
+          },
+          {
+            question: "¿Qué hago si un OTEC aparece suspendido o no aparece?",
+            answer:
+              "Si no aparece, prueba variantes del nombre o busca por RUT, y pide su certificado de vigencia emitido por SENCE. Si aparece suspendido o cancelado, pide una explicación y confirma el estado con SENCE antes de contratar, sobre todo para efectos formales.",
+          },
+          {
+            question: "¿Sirve un certificado de un OTEC que no está vigente?",
+            answer:
+              "Para efectos formales, como capacitación con franquicia tributaria, conviene confirmar con SENCE, porque un OTEC sin vigencia no está en condiciones de operar formalmente. Si el certificado es antiguo, hay que verificar que el OTEC estuviera vigente en la fecha del curso.",
+          },
+          {
+            question:
+              "Soy un OTEC: ¿cómo hago que mis certificados se puedan verificar, más allá del RUDO?",
+            answer:
+              "Emitiéndolos con verificación a nivel de certificado. Con MiCert, cada certificado lleva un código único y un QR de verificación pública, así una empresa puede comprobar ese documento puntual. El RUDO confirma tu organismo; esto confirma cada certificado que emites.",
+          },
+        ],
+      },
+    ],
+  },
 ];
 
 export function getArticleBySlug(slug: string): ResourceArticle | undefined {
