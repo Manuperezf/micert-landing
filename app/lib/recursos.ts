@@ -375,43 +375,102 @@ export const RESOURCE_ARTICLES: ResourceArticle[] = [
     slug: "auditoria-sence",
     tipo: "Normativa",
     temas: ["SENCE"],
-    title: "Cuando llega la auditoría SENCE, el PDF editable no te respalda",
+    title:
+      "Auditoría en tu OTEC: por qué el certificado en PDF editable no te respalda",
     excerpt:
-      "Un PDF que cualquiera puede modificar no es evidencia. Así te da MiCert la trazabilidad para demostrar qué emitiste, a quién y cuándo.",
+      "El día que alguien te pide demostrar que un certificado es auténtico, un PDF suelto en una carpeta no alcanza. Esta es la diferencia entre tener documentos y tener evidencia, y por qué la trazabilidad es lo que de verdad protege a tu OTEC.",
     author: "Equipo MiCert",
     date: "12 de junio de 2026",
     dateISO: "2026-06-12",
     relatedSlugs: ["alternativa-excel-canva", "certificados-qr-otec"],
-    metaTitle: "Certificados verificables para auditoría SENCE | MiCert",
+    metaTitle:
+      "Auditoría SENCE: por qué el PDF editable no te respalda | MiCert",
     metaDescription:
-      "Demuestra qué emitiste, a quién y cuándo. MiCert da trazabilidad y QR verificable a los certificados de tu OTEC. Agenda una demo.",
+      "Cuando llega una auditoría, un PDF editable no es evidencia. Qué significa respaldar un certificado y cómo la trazabilidad protege a tu OTEC.",
     sections: [
       {
-        id: "el-problema",
-        title: "El problema",
+        id: "el-momento-en-que-el-pdf-te-falla",
+        title: "El momento en que el PDF te falla",
         paragraphs: [
-          "El certificado en PDF editable se modifica en dos clics y no tiene cómo comprobarse. Cuando llega una auditoría, no existe forma rápida de demostrar qué se emitió, a quién y bajo qué curso. Eso vuelve la auditoría un problema de papeleo y de credibilidad.",
+          "Mientras todo va bien, el certificado en PDF parece suficiente. El problema aparece en un momento puntual: cuando una empresa contratante, un fiscalizador o una auditoría te piden comprobar que un certificado que circula por ahí fue realmente emitido por tu OTEC, a esa persona, por ese curso.",
+          "Ahí el PDF muestra su límite. Es una imagen del certificado, no una prueba. No tiene cómo confirmarse contra una fuente, y como se edita en pocos clics, tampoco puedes demostrar cuál es el original. En ese momento, lo que parecía un trámite resuelto se vuelve un problema de papeleo y de credibilidad.",
         ],
       },
       {
-        id: "que-cambia",
-        title: "Qué cambia con MiCert",
+        id: "que-significa-respaldar-un-certificado",
+        title: 'Qué significa "respaldar" un certificado',
         paragraphs: [
-          "Cada certificado queda registrado con un código único y un QR de verificación pública. La autenticidad no depende de tu palabra: cualquiera la confirma escaneando. Y el historial es inmutable, porque los certificados se revocan, no se borran.",
+          "Respaldar no es tener el archivo guardado. Es poder demostrar, rápido y sin ambigüedad, cuatro cosas: qué se emitió, a quién, bajo qué curso y en qué fecha. Y poder hacerlo de una forma que no dependa de tu palabra, sino de un registro que cualquiera pueda verificar.",
+          "Un PDF en una carpeta no cumple ninguna de esas condiciones por sí solo. Puedes tener el archivo, pero si te piden comprobar su autenticidad ante un tercero, no tienes con qué. Respaldar es justamente lo que falta cuando solo tienes el documento.",
         ],
       },
       {
-        id: "que-demuestras",
-        title: "Qué demuestras",
+        id: "que-necesita-ver-una-auditoria",
+        title: "Qué necesita ver una auditoría, en la práctica",
         paragraphs: [
-          "En un solo lugar ves todo lo que emitiste, en vez de buscar archivos sueltos por correo y carpetas. Esa es la diferencia entre reconstruir evidencia a mano y mostrar una fuente de verdad.",
+          "Más allá de los detalles formales de cada proceso, lo que una revisión busca es consistencia y rastro. Que lo que dices haber emitido coincida con un registro. Que exista historial de lo que se generó y de lo que, en su momento, se anuló. Que no haya documentos sueltos imposibles de contrastar.",
+          "El método manual falla precisamente acá: los certificados viven repartidos en correos, carpetas y planillas, sin una fuente única. Reconstruir esa evidencia a mano, bajo presión y contra el reloj, es trabajo que nadie quiere estar haciendo el día de una auditoría.",
         ],
       },
       {
-        id: "por-que-aplica",
-        title: "Por qué aplica a tu OTEC",
+        id: "la-trazabilidad",
+        title: "La trazabilidad: nada se borra, todo se archiva",
         paragraphs: [
-          "MiCert no te certifica ante SENCE ni es un sello oficial; es la herramienta que te deja demostrar lo que hiciste cuando te lo piden. Eso vale para cualquier OTEC que emita certificados.",
+          "Acá está el principio que cambia la situación. Un sistema de certificados pensado para respaldar no elimina información: la archiva. Si un certificado se anula, no desaparece, se revoca y queda registrado como tal. El historial completo se mantiene.",
+          "Esto importa porque una auditoría no solo mira lo vigente, sino también lo que cambió. Poder mostrar que un certificado fue emitido, y que otro fue revocado en tal fecha y por tal motivo, es exactamente el tipo de rastro que da confianza. Borrar es perder evidencia; archivar es conservarla.",
+        ],
+      },
+      {
+        id: "donde-encaja-la-normativa",
+        title: "Dónde encaja la normativa",
+        paragraphs: [
+          "Los OTEC en Chile operan bajo la supervisión de SENCE y, en materia de calidad y documentación, existen normas de referencia como la NCh 2728. No vamos a entrar a interpretar sus detalles aquí, porque cada OTEC debe revisarlos con su propia asesoría. Lo que sí es transversal a cualquier exigencia es esto: en todas, tarde o temprano, hay que poder demostrar lo que se hizo.",
+          "Por eso la trazabilidad no es un requisito de una norma puntual, sino la base que cualquier exigencia de respaldo termina pidiendo. Resolver bien la trazabilidad te deja en mejor pie frente a cualquiera de ellas.",
+        ],
+      },
+      {
+        id: "que-aporta-micert",
+        title: "Qué aporta MiCert (y qué no)",
+        paragraphs: [
+          "MiCert le da a cada certificado que emite tu OTEC un código único y un QR de verificación pública: la autenticidad se comprueba escaneando, sin depender de tu palabra. Cada emisión queda registrada en un solo lugar, y los certificados se revocan en vez de borrarse, manteniendo el historial.",
+          "Conviene ser claro sobre el alcance: MiCert no te certifica ante SENCE, no es un sello oficial y no reemplaza tus obligaciones ni el trabajo de tu asesoría. Es la herramienta que te permite demostrar, con trazabilidad y verificación, lo que tu OTEC efectivamente emitió, el día que te lo pidan.",
+        ],
+      },
+      {
+        id: "preguntas-frecuentes",
+        title: "Preguntas frecuentes",
+        faq: [
+          {
+            question: "¿MiCert me certifica ante SENCE o es un sello oficial?",
+            answer:
+              "No. MiCert no es un sello oficial ni reemplaza tus obligaciones ante SENCE. Te da trazabilidad y verificación de los certificados que tu OTEC emite, para poder demostrarlos cuando te lo pidan.",
+          },
+          {
+            question: "¿Por qué un PDF no sirve como respaldo en una auditoría?",
+            answer:
+              "Porque es una imagen del certificado, no una prueba. Se edita en pocos clics y no se puede contrastar contra una fuente, así que no permite demostrar con certeza qué se emitió ni a quién.",
+          },
+          {
+            question: "¿Qué pasa con un certificado emitido por error?",
+            answer:
+              "Se revoca y queda registrado en el historial; no se elimina. La trazabilidad se mantiene, que es justo lo que una auditoría espera ver.",
+          },
+          {
+            question: "¿Puedo ver todo lo que mi OTEC ha emitido?",
+            answer:
+              "Sí. Cada emisión queda registrada en un solo lugar, en vez de quedar repartida en correos y carpetas.",
+          },
+          {
+            question:
+              "¿La verificación con QR es la misma evidencia que pide una auditoría?",
+            answer:
+              "La verificación demuestra la autenticidad de cada certificado. Sumada al historial de emisiones y revocaciones, es el tipo de trazabilidad que respalda lo que tu OTEC hizo.",
+          },
+          {
+            question: "¿Esto me garantiza pasar una auditoría?",
+            answer:
+              "No existe una garantía así, y desconfía de quien la prometa. Lo que la trazabilidad hace es dejarte en mejor pie: poder demostrar lo que emitiste, rápido y sin reconstruir nada a mano.",
+          },
         ],
       },
     ],
