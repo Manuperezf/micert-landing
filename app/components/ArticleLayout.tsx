@@ -81,6 +81,21 @@ export default function ArticleLayout({ article }: ArticleLayoutProps) {
                 {section.paragraphs?.map((paragraph, i) => (
                   <p key={i}>{paragraph}</p>
                 ))}
+                {section.faq && (
+                  <div className="article-faq">
+                    {section.faq.map((item) => (
+                      <details key={item.question} name={`faq-${section.id}`}>
+                        <summary>
+                          {item.question}
+                          <span className="article-faq-toggle" aria-hidden="true">
+                            +
+                          </span>
+                        </summary>
+                        <p>{item.answer}</p>
+                      </details>
+                    ))}
+                  </div>
+                )}
               </section>
             ))}
 

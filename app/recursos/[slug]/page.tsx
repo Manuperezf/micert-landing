@@ -6,11 +6,30 @@ import ArticleLayout from "../../components/ArticleLayout";
 import {
   RESOURCE_ARTICLES,
   getArticleBySlug,
+  type ResourceArticle,
 } from "../../lib/recursos";
 
 type PageProps = {
   params: { slug: string };
 };
+
+function buildFaqPageSchema(article: ResourceArticle) {
+  const faqItems = article.sections.flatMap((section) => section.faq ?? []);
+  if (faqItems.length === 0) return null;
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqItems.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.answer,
+      },
+    })),
+  };
+}
 
 export function generateStaticParams() {
   return RESOURCE_ARTICLES.map((article) => ({ slug: article.slug }));
@@ -37,8 +56,16 @@ export default function RecursoArticlePage({ params }: PageProps) {
   const article = getArticleBySlug(params.slug);
   if (!article) notFound();
 
+  const faqSchema = buildFaqPageSchema(article);
+
   return (
     <>
+      {faqSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+      )}
       <Nav />
       <ArticleLayout article={article} />
       <Footer />

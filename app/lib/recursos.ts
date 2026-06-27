@@ -6,11 +6,17 @@ export type ArticleTable = {
   rows: string[][];
 };
 
+export type ArticleFaqItem = {
+  question: string;
+  answer: string;
+};
+
 export type ArticleSection = {
   id: string;
   title: string;
   paragraphs?: string[];
   table?: ArticleTable;
+  faq?: ArticleFaqItem[];
 };
 
 export type ResourceArticle = {
@@ -54,44 +60,102 @@ export const RESOURCE_ARTICLES: ResourceArticle[] = [
     slug: "software-para-otec",
     tipo: "Producto",
     temas: ["Excel", "SENCE"],
-    title: "Software para OTEC que emite certificados con QR verificable",
+    title:
+      "Software para OTEC: la guía para emitir certificados verificables y dejar atrás el PDF editable",
     excerpt:
-      "Carga tu Excel, diseña el certificado una vez y emite documentos con un código QR único que cualquiera puede validar. Pensado para los OTEC que todavía dependen del PDF editable.",
+      "Si tu OTEC todavía arma los certificados a mano y los entrega en PDF, esta guía es para ti. Repasamos qué problemas trae ese método, qué debería tener un buen software de certificados y cómo se ve el flujo completo de emisión con código QR verificable.",
     author: "Equipo MiCert",
     date: "20 de junio de 2026",
     dateISO: "2026-06-20",
     featured: true,
     relatedSlugs: ["certificados-qr-otec", "alternativa-excel-canva"],
-    metaTitle: "Software para OTEC: certificados con QR | MiCert",
+    metaTitle: "Software para OTEC: cómo elegir y emitir con QR | MiCert",
     metaDescription:
-      "Plataforma chilena para que los OTEC emitan certificados digitales con QR verificable desde Excel, sin conocimientos técnicos. Agenda una demo.",
+      "Guía para elegir un software de certificados para tu OTEC: qué problemas resuelve, qué debe tener y cómo emitir documentos con QR verificable desde Excel.",
     sections: [
       {
-        id: "el-problema",
-        title: "El problema",
+        id: "por-que-el-pdf-editable-se-volvio-un-problema",
+        title: "Por qué el PDF editable se volvió un problema",
         paragraphs: [
-          "El certificado en PDF editable es un riesgo. Se modifica en dos clics, no tiene cómo comprobarse y, cuando llega una auditoría, no existe forma rápida de demostrar qué se emitió, a quién y cuándo. La emisión manual además consume horas administrativas por cada curso.",
+          "Durante años, el flujo de la mayoría de los OTEC fue el mismo: armar el certificado en Word, Canva o una plantilla de PDF, escribir los datos de cada alumno a mano y enviarlo por correo. Funciona hasta que deja de funcionar, y deja de funcionar por tres razones.",
+          "La primera es que un PDF se edita en dos clics. Cualquiera con una herramienta gratuita puede cambiar un nombre, una nota o una fecha, y el documento sigue viéndose legítimo. Para el alumno honesto no es un problema; para tu OTEC sí, porque no tienes cómo demostrar cuál es el certificado real que tú emitiste.",
+          "La segunda es el tiempo. Emitir treinta certificados a mano —copiar nombre, RUT, curso y fecha uno por uno— consume horas administrativas por cada curso. Ese tiempo es trabajo que no se factura y que se repite en cada generación.",
+          "La tercera, y la que más pesa cuando aprieta, es la trazabilidad. Cuando llega una auditoría o una empresa te pide comprobar que un certificado es auténtico, un PDF suelto en una carpeta no es evidencia. No hay forma rápida de demostrar qué se emitió, a quién, bajo qué curso y en qué fecha.",
         ],
       },
       {
-        id: "como-funciona",
-        title: "Cómo funciona",
+        id: "que-hace-un-software-de-certificados",
+        title: "Qué hace un software de certificados (y qué no)",
         paragraphs: [
-          "MiCert reemplaza ese flujo por uno trazable y verificable. Importas desde Excel: subes la planilla con RUT, nombre, email y calificación, y se genera un certificado por participante. Diseñas una vez: el editor te deja configurar los campos del certificado —nombre, RUT, curso, código, QR y firmas— y se aplica a todo el curso. Cada certificado lleva un QR único que apunta a una página de verificación pública. El alumno descarga su PDF y puede sumarlo a su perfil de LinkedIn, con tu OTEC como emisor.",
+          "Conviene aclararlo de entrada para no confundir categorías. Un software de certificados para OTEC se encarga de emitir, diseñar y validar los certificados de tus cursos. No es un LMS: no dicta clases, no gestiona contenidos pedagógicos ni evalúa alumnos dentro de la plataforma. Son herramientas distintas que resuelven problemas distintos.",
+          "Si lo que necesitas es ordenar y dar respaldo a los documentos que entregas al final de cada curso, un software de certificados es lo que buscas. Si necesitas además una plataforma para impartir los cursos en línea, eso es un LMS y es otra conversación.",
         ],
       },
       {
-        id: "por-que-importa",
-        title: "Por qué importa para un OTEC",
+        id: "que-deberia-tener-un-buen-software",
+        title: "Qué debería tener un buen software de certificados para OTEC",
         paragraphs: [
-          "Menos tiempo administrativo por curso. Un certificado que no se puede falsificar sin que se note. Trazabilidad para auditoría: los certificados se revocan, nunca se borran, así queda historial. Y todo sin instalar nada ni saber de tecnología, porque funciona en el navegador.",
+          "No todos resuelven lo mismo. Estos son los criterios que de verdad importan al evaluar uno.",
+          "Que parta desde tu Excel. Ya tienes la lista de participantes en una planilla. Un buen software la importa directo —RUT, nombre, email, calificación— y genera un certificado por persona, en vez de obligarte a reescribir todo a mano.",
+          "Que cada certificado sea verificable. Esta es la diferencia de fondo con el PDF. Cada documento debería llevar un código único y un QR que apunte a una página de verificación pública, donde cualquiera —el alumno, su empleador, un auditor— confirme la autenticidad en segundos, sin depender de tu palabra.",
+          "Que el diseño sea configurable, pero una sola vez. Debe permitirte definir cómo se ve el certificado —nombre, RUT, curso, código, QR, firmas— y aplicar ese diseño a todo el curso, no rehacerlo en cada emisión.",
+          "Que deje rastro. Para auditoría, lo importante no es solo emitir, sino poder demostrar después. Un buen sistema no borra: archiva. Si un certificado se anula, se revoca y queda historial, en vez de desaparecer.",
+          "Que no exija conocimientos técnicos. Quien emite certificados en un OTEC suele ser un coordinador o administrativo, no un programador. La herramienta debe funcionar en el navegador, sin instalar nada.",
         ],
       },
       {
-        id: "que-no-es-micert",
-        title: "Qué no es MiCert",
+        id: "como-se-ve-el-flujo-con-micert",
+        title: "Cómo se ve el flujo con MiCert",
         paragraphs: [
-          "MiCert no es un LMS y no gestiona el contenido de tus cursos. Hace una cosa y la hace bien: emitir, diseñar y validar certificados.",
+          "MiCert es una plataforma chilena construida sobre estos criterios. El flujo completo son tres pasos.",
+          "Primero, importas desde Excel: subes tu planilla con RUT, nombre, email y calificación, y se genera un certificado por participante. No reescribes nada.",
+          "Segundo, diseñas una vez. El editor te deja configurar los campos del certificado —nombre, RUT, curso, código, QR y firmas— y ese diseño se aplica a todo el curso.",
+          "Tercero, emites y entregas. Cada certificado se genera con su código único y su QR, listo para descargar en PDF. El alumno puede sumarlo a su perfil de LinkedIn, con tu OTEC como emisor.",
+          "Lo que cambia respecto al PDF editable es que cada certificado tiene ahora una fuente de verdad: la página de verificación pública a la que apunta el QR. Si alguien altera el documento descargado, la verificación lo delata. Y como los certificados se revocan en lugar de borrarse, queda el historial que una auditoría necesita.",
+        ],
+      },
+      {
+        id: "cuando-conviene-dar-el-paso",
+        title: "Cuándo conviene dar el paso",
+        paragraphs: [
+          "No todos los OTEC lo necesitan al mismo tiempo. Tiene más sentido cuando emites volumen de certificados de forma regular, cuando trabajas en sectores donde el certificado falso es un problema caro —construcción, minería, seguridad privada, salud— o cuando ya te ha pasado que no pudiste comprobar rápido la autenticidad de algo que emitiste. Si te identificas con alguno de esos casos, el PDF editable ya te está costando más de lo que parece.",
+        ],
+      },
+      {
+        id: "preguntas-frecuentes",
+        title: "Preguntas frecuentes",
+        faq: [
+          {
+            question:
+              "¿Un software de certificados reemplaza a SENCE o emite certificados oficiales SENCE?",
+            answer:
+              "No. MiCert no es un sello oficial ni reemplaza tus obligaciones ante SENCE. Es la herramienta que te permite emitir tus propios certificados de forma verificable y demostrar su trazabilidad cuando te lo pidan.",
+          },
+          {
+            question: "¿Necesito saber de tecnología para usarlo?",
+            answer:
+              "No. Funciona en el navegador, sin instalar nada. Cargas tu Excel y diseñas el certificado desde la misma plataforma.",
+          },
+          {
+            question: "¿Qué pasa cuando alguien escanea el QR de un certificado?",
+            answer:
+              "Llega a una página de verificación pública que confirma que el certificado es auténtico y fue emitido por tu OTEC.",
+          },
+          {
+            question: "¿Puedo seguir usando mi planilla de Excel?",
+            answer:
+              "Sí. Excel sigue siendo tu punto de partida: MiCert importa la planilla con los datos de los participantes y genera un certificado por cada uno.",
+          },
+          {
+            question: "¿Qué pasa si emito un certificado por error?",
+            answer:
+              "Se revoca. Queda registrado en el historial y no se elimina, lo que mantiene la trazabilidad para auditoría.",
+          },
+          {
+            question: "¿Es lo mismo que un LMS?",
+            answer:
+              "No. Un LMS sirve para dictar y gestionar cursos en línea. MiCert se enfoca solo en emitir, diseñar y validar los certificados de esos cursos.",
+          },
         ],
       },
     ],
