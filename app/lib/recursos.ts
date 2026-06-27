@@ -262,25 +262,50 @@ export const RESOURCE_ARTICLES: ResourceArticle[] = [
     tipo: "Comparativa",
     temas: ["Excel"],
     title:
-      "Excel, Word y Canva hacen el certificado bonito. No lo hacen verificable.",
+      "Excel, Word y Canva vs software de certificados: la comparación honesta para tu OTEC",
     excerpt:
-      "Si hoy armas tus certificados a mano, ya tienes la materia prima: tu planilla de Excel. MiCert la toma y la convierte en certificados con QR que se pueden validar.",
+      "Si hoy armas tus certificados en Excel, Word o Canva, no lo estás haciendo mal: estás usando lo que tienes a mano. La pregunta es hasta cuándo te alcanza. Comparamos los dos caminos sin exagerar, para que decidas con criterio.",
     author: "Equipo MiCert",
     date: "15 de junio de 2026",
     dateISO: "2026-06-15",
     relatedSlugs: ["software-para-otec", "certificados-qr-otec"],
-    metaTitle: "¿Certificados en Excel, Word o Canva? | MiCert",
+    metaTitle: "Excel y Canva vs software de certificados OTEC | MiCert",
     metaDescription:
-      "Excel, Word y Canva no verifican ni dejan rastro. MiCert emite certificados con QR validable desde tu misma planilla. Compara y agenda una demo.",
+      "Comparativa honesta entre hacer certificados en Excel, Word o Canva y un software con QR verificable. Qué pierdes con el método manual y cuándo conviene cambiar.",
     sections: [
       {
-        id: "la-comparacion",
-        title: "La comparación",
+        id: "para-que-sirven-bien",
+        title: "Para qué sirven bien Excel, Word y Canva",
+        paragraphs: [
+          "Empecemos por lo justo. Estas herramientas son buenas en lo suyo. Canva diseña certificados que se ven profesionales. Word y Excel los tienes instalados, los sabes usar y no cuestan nada extra. Para un OTEC que emite pocos certificados al año y al que nadie le ha pedido nunca comprobar la autenticidad de uno, el método manual puede ser suficiente.",
+          "No hace falta complicar lo que funciona. Si ese es tu caso, esta comparación quizá no es para ti todavía. El punto de quiebre llega cuando el volumen sube o cuando alguien, por primera vez, te pide demostrar que un certificado es real.",
+        ],
+      },
+      {
+        id: "donde-el-metodo-manual-cuesta-caro",
+        title: "Dónde el método manual empieza a costar caro",
+        paragraphs: [
+          "El primer costo es el tiempo, y es el más fácil de subestimar. Armar treinta certificados a mano significa copiar nombre, RUT, curso y fecha treinta veces, revisar que no haya errores y enviarlos uno por uno. Ese trabajo se repite íntegro en cada curso. No se ve en una factura, pero son horas administrativas que se van.",
+          "El segundo costo es invisible hasta que aparece: no puedes comprobar nada. Un certificado hecho en Canva o Word es una imagen. Cuando una empresa contratante o un auditor te pregunta si un certificado que circula por ahí es auténtico, no tienes cómo responder con certeza ni rapidez. Y como esos archivos se editan en dos clics, tampoco puedes demostrar cuál es el original que tú emitiste.",
+          "El tercer costo es el riesgo reputacional. Si un certificado tuyo es falsificado —cambiándole el nombre o la nota a uno legítimo— el problema no es solo del impostor: es de tu OTEC, porque tu nombre queda asociado a un documento que no controlas.",
+        ],
+      },
+      {
+        id: "verificable-vs-editable",
+        title: "La diferencia de fondo: verificable vs editable",
+        paragraphs: [
+          "Acá está el punto que lo cambia todo. Un documento hecho en Excel, Word o Canva es editable y no deja rastro: quien lo modifica no deja huella, y no hay una fuente contra la cual contrastar.",
+          "Un certificado emitido con un software como MiCert es verificable. Lleva un código único y un QR que apunta a una página de verificación pública. El documento que circula es solo la cara visible; la verdad sobre su validez vive en un lugar que tú controlas. Si alguien altera el PDF, la verificación lo delata. Esa es la línea que separa \"un certificado bonito\" de \"un certificado comprobable\".",
+        ],
+      },
+      {
+        id: "comparacion-lado-a-lado",
+        title: "Comparación lado a lado",
         table: {
           headers: ["", "Excel / Word / Canva", "MiCert"],
           rows: [
             ["Diseño del certificado", "Sí", "Sí, con editor de campos"],
-            ["Desde tu Excel", "Lo escribes a mano", "Importación masiva"],
+            ["Parte desde tu Excel", "Lo escribes a mano", "Importación masiva"],
             ["Código único por certificado", "No", "Sí"],
             ["QR de verificación", "No", "Sí"],
             ["Página pública de validación", "No", "Sí"],
@@ -289,22 +314,59 @@ export const RESOURCE_ARTICLES: ResourceArticle[] = [
               "No",
               "Sí (revocación con historial)",
             ],
+            ["Agregar a LinkedIn", "No", "Sí, con tu OTEC como emisor"],
             ["Se puede editar sin dejar rastro", "Sí", "No"],
           ],
         },
       },
       {
-        id: "por-que-cuesta-caro",
-        title: "Por qué el método manual te cuesta caro",
+        id: "no-tienes-que-abandonar-excel",
+        title: "No tienes que abandonar Excel",
         paragraphs: [
-          "No es solo el tiempo de armar cada certificado uno por uno. Es que cuando un empleador o un auditor te pide comprobar que un certificado es real, no tienes cómo. Con MiCert, la prueba es el QR.",
+          "Una aclaración importante, porque suele ser la duda número uno. Cambiar a un software no significa dejar tu planilla. Al revés: tu Excel es el punto de partida. MiCert importa esa misma planilla —RUT, nombre, email, calificación— y genera un certificado por participante. El trabajo que ya hiciste en Excel no se pierde; se aprovecha. Lo único que cambia es que el resultado, en vez de un PDF editable, es un certificado con QR que se puede comprobar.",
         ],
       },
       {
-        id: "lo-honesto",
-        title: "Lo honesto",
+        id: "cuando-conviene-dar-el-paso",
+        title: "Cuándo conviene dar el paso",
         paragraphs: [
-          "Si lo único que necesitas es un diploma decorativo para imprimir, Canva te sobra. MiCert es para los OTEC que necesitan que sus certificados se puedan comprobar.",
+          "La señal más clara es haber pasado por alguna de estas situaciones: emites certificados con frecuencia y el armado manual ya te quita horas; trabajas en sectores donde un certificado falso es caro —construcción, minería, seguridad privada, salud—; o ya te tocó no poder comprobar rápido si algo que emitiste era auténtico. Si te reconoces en alguna, el método manual ya te está costando más de lo que ahorra.",
+        ],
+      },
+      {
+        id: "preguntas-frecuentes",
+        title: "Preguntas frecuentes",
+        faq: [
+          {
+            question: "¿Tengo que dejar de usar Excel si cambio a un software?",
+            answer:
+              "No. Tu planilla de Excel sigue siendo el punto de partida: el software la importa y genera un certificado por participante.",
+          },
+          {
+            question: "¿Qué tiene de malo hacer certificados en Canva o Word?",
+            answer:
+              "Nada, si solo necesitas un documento que se vea bien. El límite es que no son verificables: se editan sin dejar rastro y no puedes comprobar después cuál es el original que emitiste.",
+          },
+          {
+            question: "¿Un certificado en PDF se puede falsificar?",
+            answer:
+              "Sí. Un PDF se edita en pocos clics. Por eso un certificado verificable con QR es más seguro: la autenticidad no depende del archivo, sino de una página de verificación que controla el OTEC.",
+          },
+          {
+            question: "¿Cuánto tiempo ahorra dejar el método manual?",
+            answer:
+              "Depende del volumen, pero el ahorro está en no reescribir los datos de cada alumno ni enviar uno por uno: se importa la planilla y se emite en lote.",
+          },
+          {
+            question: "¿Es complicado migrar desde Excel?",
+            answer:
+              "No. Si ya tienes la planilla de participantes, la mayor parte del trabajo está hecha; solo se importa.",
+          },
+          {
+            question: "¿Esto reemplaza algún registro de SENCE?",
+            answer:
+              "No. Un software de certificados respalda y da trazabilidad a lo que tu OTEC emite; no es un sello oficial ni reemplaza obligaciones ante SENCE.",
+          },
         ],
       },
     ],
