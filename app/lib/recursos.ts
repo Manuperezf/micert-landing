@@ -686,6 +686,123 @@ export const RESOURCE_ARTICLES: ResourceArticle[] = [
       },
     ],
   },
+  {
+    slug: "ley-21659-conserjes-condominios",
+    tipo: "Normativa",
+    temas: ["SENCE", "QR"],
+    title:
+      "Ley 21.659 y conserjes de condominios: ¿es obligatorio el curso de seguridad?",
+    excerpt:
+      "La respuesta corta es: depende de lo que haga el trabajador, no de cómo se llame su cargo. Te explicamos qué dice realmente la ley sobre los conserjes, dónde está el riesgo para los condominios y qué rol cumple —y cuál no— un OTEC en todo esto.",
+    author: "Equipo MiCert",
+    date: "26 de junio de 2026",
+    dateISO: "2026-06-26",
+    featured: false,
+    relatedSlugs: [
+      "certificados-prevencion-de-riesgos",
+      "certificados-qr-otec",
+    ],
+    metaTitle:
+      "Ley 21.659: ¿es obligatorio el curso para conserjes? | MiCert",
+    metaDescription:
+      "Qué dice la Ley 21.659 sobre la capacitación de conserjes de condominios: cuándo es obligatoria, cuándo es voluntaria y qué debe hacer un OTEC. Guía clara y actualizada.",
+    sections: [
+      {
+        id: "la-respuesta-corta",
+        title: "La respuesta corta para conserjes de condominio",
+        paragraphs: [
+          "Si un trabajador cumple funciones puramente administrativas y de recepción —recibir paquetes, anotar visitas, abrir el portón a residentes, asistir en emergencias básicas— la Ley 21.659 no le exige certificarse. Para ese conserje, la capacitación es voluntaria.",
+          "La obligación de certificarse aparece cuando el trabajador ejerce funciones de seguridad: rondas, vigilancia activa, control estricto de acceso, respuesta ante delitos. Ahí ya no se trata de un conserje en sentido estricto, y la ley sí exige formación y autorización. La distinción, entonces, no es el nombre del cargo, sino lo que la persona hace en la práctica.",
+        ],
+      },
+      {
+        id: "que-dice-realmente-la-ley",
+        title: "Qué dice realmente la ley sobre los conserjes",
+        paragraphs: [
+          "La Ley 21.659 sobre seguridad privada está vigente desde fines de 2025, con su reglamento ya publicado. En su artículo 55, la ley regula a los porteros, nocheros y rondines: quienes cumplan funciones de seguridad privada deben cursar una capacitación especializada, diferenciada de la de los guardias, según la naturaleza y el riesgo de su labor.",
+          "Sobre los conserjes, la ley es explícita: podrán someterse voluntariamente a ese régimen de capacitación, en caso de que desempeñen funciones de seguridad. Es decir, para el conserje que solo hace tareas administrativas, no hay obligación. La capacitación pasa a ser una opción —que un condominio puede elegir para subir el estándar de su edificio— no un requisito legal.",
+        ],
+      },
+      {
+        id: "la-distincion-que-importa",
+        title: "La distinción que importa: la función, no el cargo",
+        paragraphs: [
+          'Acá está el punto donde muchos condominios se equivocan. Contratar a alguien como "conserje" pero pedirle en la práctica que haga rondas nocturnas, controle activamente cámaras para detectar delitos o enfrente a personas sospechosas, es ponerlo a ejercer funciones de seguridad. Y esas funciones, por ley, requieren formación y autorización que un conserje no tiene.',
+          "El riesgo no es solo administrativo. Si a un trabajador se le exigen labores para las que no está habilitado, el condominio queda expuesto frente a un accidente o un incidente. La forma correcta de tener vigilancia activa no es pedírsela al conserje: es contar con personal habilitado para esa función.",
+          "Este es terreno de interpretación legal y cada comunidad debería revisarlo con su asesoría. Lo que es claro en la ley es la lógica de fondo: lo que define las obligaciones es la función real, no la etiqueta del contrato.",
+        ],
+      },
+      {
+        id: "quien-emite-la-certificacion-oficial",
+        title: "Quién emite la certificación oficial (y quién no)",
+        paragraphs: [
+          "Este es el punto donde hay que ser muy preciso, porque circula mucha confusión. Para las funciones de seguridad privada, la certificación oficial no la emite cualquier plataforma ni el certificado interno de un OTEC.",
+          "Según la ley, los programas y planes de estudio deben estar aprobados por la Subsecretaría de Prevención del Delito, los cursos finalizan con un examen ante Carabineros de Chile, y es la Subsecretaría la que entrega la certificación a través de su propia plataforma informática. Un OTEC participa dictando la capacitación autorizada, pero la credencial oficial de seguridad privada sale de ese circuito estatal, no de un certificado emitido por su cuenta.",
+          "Conviene tener esto claro antes de contratar cualquier solución: ningún software privado emite ni reemplaza la credencial oficial de la Ley 21.659. Quien lo prometa, está prometiendo algo que la ley no permite.",
+        ],
+      },
+      {
+        id: "la-oportunidad-real-para-tu-otec",
+        title: "La oportunidad real para tu OTEC",
+        paragraphs: [
+          "Entonces, ¿dónde está el negocio para un OTEC en este escenario? En dos planos distintos que conviene no mezclar.",
+          "Por un lado, está la formación conducente a la credencial oficial de seguridad privada, que se rige por el circuito de la Subsecretaría y Carabineros descrito arriba. Si tu OTEC está autorizado para eso, opera dentro de ese marco.",
+          'Por otro lado —y esto es lo que muchos pasan por alto— está toda la formación que tu OTEC emite por su cuenta y que no es la credencial oficial: los cursos voluntarios de profesionalización para conserjes (atención a residentes, manejo de conflictos sin uso de fuerza, protocolos básicos de emergencia), la formación complementaria que piden los condominios y las constancias de capacitación de tu organismo. Ahí el certificado lo emite tu OTEC, y ahí es donde necesitas que sea claro, verificable y bien presentado.',
+          'La oportunidad comercial, además, es de educación: muchos administradores siguen creyendo que "el curso de conserje" es obligatorio sí o sí. El OTEC que explica bien la diferencia —obligatorio para funciones de seguridad, voluntario para el conserje administrativo— gana la confianza de las comunidades, en vez de venderles un curso como ineludible cuando no lo es.',
+        ],
+      },
+      {
+        id: "donde-encaja-micert",
+        title: "Dónde encaja MiCert",
+        paragraphs: [
+          "Seamos claros sobre el alcance, porque es lo que te protege con tus clientes: MiCert no emite la credencial oficial de seguridad privada. Esa la entrega la Subsecretaría de Prevención del Delito.",
+          "MiCert sirve para los certificados que tu OTEC emite por su cuenta: los cursos voluntarios de profesionalización de conserjes, la formación complementaria para condominios y las constancias de tu organismo. Esos certificados, con MiCert, llevan un código único y un QR de verificación pública: una administración o un comité de edificio puede comprobar en segundos que el certificado es auténtico y que lo emitió tu OTEC. Además, cada emisión queda registrada con historial, lo que te da trazabilidad de todo lo que has formado. Para un OTEC que trabaja con condominios, eso significa entregar documentos que se sostienen, sin invadir el terreno de la credencial oficial.",
+          "Nota: este artículo es informativo y no constituye asesoría legal. La Ley 21.659 y su reglamento tienen detalles que cada OTEC y cada condominio debe revisar con su propia asesoría.",
+        ],
+      },
+      {
+        id: "preguntas-frecuentes",
+        title: "Preguntas frecuentes",
+        faq: [
+          {
+            question:
+              "¿Es obligatorio que un conserje de condominio haga el curso de seguridad?",
+            answer:
+              "No, si el conserje cumple solo funciones administrativas y de recepción. Según la Ley 21.659, los conserjes pueden capacitarse de forma voluntaria, y la obligación aplica únicamente cuando desempeñan funciones de seguridad.",
+          },
+          {
+            question:
+              "¿Cuál es la diferencia entre un conserje y un guardia según la ley?",
+            answer:
+              "La función, no el cargo. Un conserje hace tareas administrativas y de recepción. Quien ejerce vigilancia activa, rondas o control de seguridad está cumpliendo funciones de seguridad privada, que sí requieren formación y autorización.",
+          },
+          {
+            question:
+              "¿Quién emite la certificación oficial de seguridad privada?",
+            answer:
+              "La Subsecretaría de Prevención del Delito, a través de su plataforma, tras un examen ante Carabineros de Chile. Ningún software privado ni certificado interno de un OTEC reemplaza esa credencial oficial.",
+          },
+          {
+            question:
+              "¿Qué riesgo corre un condominio que le exige funciones de seguridad a un conserje?",
+            answer:
+              "Queda expuesto, porque está pidiendo labores para las que el trabajador no está habilitado. Lo correcto, si se necesita vigilancia activa, es contar con personal habilitado para esa función. Conviene revisar cada caso con asesoría legal.",
+          },
+          {
+            question:
+              "¿Las credenciales obtenidas antes de la nueva ley siguen siendo válidas?",
+            answer:
+              "La ley contempla disposiciones transitorias: las autorizaciones vigentes se mantienen hasta su vencimiento conforme a la normativa con la que se otorgaron, con plazos de adecuación. Como es un punto sujeto a detalle reglamentario, conviene confirmar el estado actual con tu asesoría.",
+          },
+          {
+            question: "¿MiCert emite la credencial oficial de la Ley 21.659?",
+            answer:
+              "No. MiCert no emite ni reemplaza la credencial oficial. Sirve para los certificados que tu OTEC emite por su cuenta —cursos voluntarios y formación complementaria—, haciéndolos verificables con QR y trazables.",
+          },
+        ],
+      },
+    ],
+  },
 ];
 
 export function getArticleBySlug(slug: string): ResourceArticle | undefined {
