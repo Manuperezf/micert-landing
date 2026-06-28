@@ -102,14 +102,15 @@ export default function PrivacidadPage() {
         </ul>
         <p>En ambos casos la notificación incluirá la naturaleza de la vulneración, los datos afectados, las posibles consecuencias y las medidas adoptadas. MiCert mantiene un registro de las vulneraciones de que toma conocimiento.</p>
         <h3>5.5 Período de Retención</h3>
-        <p>Certificados y registros de trazabilidad: dado que la normativa SENCE exige trazabilidad y auditoría de los certificados de capacitación, estos registros se conservan por el plazo necesario para cumplir dichas obligaciones y las demás obligaciones legales aplicables (por ejemplo, tributarias). Por su naturaleza de trazabilidad, estos registros se archivan en lugar de eliminarse; cuando deja de existir un fundamento legal que justifique su conservación, se anonimizan o bloquean.</p>
-        <p>Datos de cuenta y de usuarios administradores: tras la cancelación de la cuenta, durante los días 1 a 30 el Cliente puede solicitar la exportación de sus datos; los días 31 a 90 constituyen un período de gracia; a partir del día 90 se suprimen los datos operacionales, salvo aquellos cuya conservación exija la ley.</p>
+        <p>MiCert conserva los datos personales solo durante el tiempo necesario para cumplir las finalidades de esta Política y las obligaciones legales aplicables. No conservamos datos de forma indefinida: una vez cumplidos los plazos legales correspondientes, y cuando no exista otro fundamento legal que justifique su conservación, los datos se suprimen, anonimizan o bloquean.</p>
+        <p>Certificados y registros de trazabilidad: se conservan mientras exista una obligación legal que lo justifique, principalmente la normativa SENCE de trazabilidad y auditoría de los certificados de capacitación y las obligaciones tributarias asociadas, que conforme a los plazos de prescripción aplicables pueden extenderse hasta seis años. Vencidos esos plazos, los registros se anonimizan o se suprimen.</p>
+        <p>Datos de cuenta y de usuarios administradores: tras la cancelación de la cuenta, durante los días 1 a 30 el Cliente puede solicitar la exportación de sus datos; los días 31 a 90 constituyen un período de gracia; a partir del día 90 se suprimen los datos operacionales, salvo aquellos cuya conservación exija la ley por los plazos legales correspondientes.</p>
 
         <h2>6. Compartir Información con Terceros</h2>
         <p>MiCert no vende, alquila ni transfiere datos personales a terceros con fines comerciales propios. Solo compartimos información con:</p>
         <ul>
           <li>Proveedores de infraestructura necesarios para operar el servicio: Supabase (base de datos y almacenamiento), Vercel (alojamiento) y Resend (envío de correo transaccional), bajo contrato de tratamiento.</li>
-          <li>En el sitio de marketing, proveedores de formularios y analítica, como HubSpot (formulario de contacto y demo) y Google Analytics (ver Sección 8).</li>
+          <li>En el sitio de marketing, proveedores de formularios, analítica y atención, como HubSpot (formulario de contacto y demo), Google Analytics (analítica) y Brevo Conversations (chat de atención al visitante) (ver Sección 8).</li>
           <li>Autoridades, cuando sea obligatorio por ley u orden judicial, incluida la Agencia de Protección de Datos Personales.</li>
           <li>Cuando sea necesario para prevenir fraude o proteger la seguridad de la plataforma.</li>
         </ul>
@@ -127,7 +128,7 @@ export default function PrivacidadPage() {
 
         <h2>8. Cookies y Tecnologías Similares</h2>
         <p>En la plataforma (app.micert.cl) utilizamos únicamente cookies esenciales: de sesión (para mantener la sesión activa), de seguridad (para proteger la cuenta y prevenir ataques) y funcionales (para recordar preferencias de visualización).</p>
-        <p>En el sitio de marketing (micert.cl) utilizamos Google Analytics para medir el uso del sitio de forma agregada y mejorar su contenido. Esta herramienta puede instalar cookies de analítica. El usuario puede configurar su navegador para rechazar cookies; rechazar las cookies esenciales puede afectar la funcionalidad de la plataforma, especialmente las funciones de sesión y seguridad.</p>
+        <p>En el sitio de marketing (micert.cl) utilizamos Google Analytics para medir el uso del sitio de forma agregada y mejorar su contenido, y Brevo Conversations para ofrecer un chat de atención a los visitantes. Estas herramientas pueden instalar cookies de analítica y de funcionamiento del chat, respectivamente. El usuario puede configurar su navegador para rechazar cookies; rechazar las cookies esenciales puede afectar la funcionalidad de la plataforma, especialmente las funciones de sesión y seguridad.</p>
         <p>MiCert no utiliza cookies de publicidad de terceros ni de perfilamiento comercial.</p>
 
         <h2>9. Datos de Menores de Edad</h2>
