@@ -916,6 +916,130 @@ export const RESOURCE_ARTICLES: ResourceArticle[] = [
       },
     ],
   },
+  {
+    slug: "requisitos-formar-otec-chile",
+    tipo: "Normativa",
+    temas: ["SENCE", "NCh 2728"],
+    title:
+      "Requisitos para formar una OTEC en Chile 2026: la guía paso a paso",
+    excerpt:
+      "Crear una OTEC en Chile no es solo constituir una empresa. Es demostrar, ante SENCE y ante un organismo certificador, que tienes un sistema de gestión real. Esta guía ordena los requisitos, en el orden en que conviene abordarlos, para que no te trabes en RUDO ni en una auditoría.",
+    author: "Equipo MiCert",
+    date: "30 de junio de 2026",
+    dateISO: "2026-06-30",
+    featured: false,
+    relatedSlugs: [
+      "rudo-sence-como-usar-registro-otec",
+      "certificados-qr-otec",
+    ],
+    metaTitle: "Requisitos para formar una OTEC en Chile 2026 | MiCert",
+    metaDescription:
+      "Guía 2026 con los requisitos para crear una OTEC en Chile: constitución legal, NCh 2728, certificación, registro en RUDO y los errores que atrasan la acreditación.",
+    sections: [
+      {
+        id: "por-que-crear-una-otec-sigue-teniendo-sentido-en-2026",
+        title: "Por qué crear una OTEC sigue teniendo sentido en 2026",
+        paragraphs: [
+          "La capacitación laboral sigue siendo una vía importante en sectores como construcción, minería, logística y servicios, y buena parte de esa demanda pasa por OTEC acreditados por SENCE. Para quien lo hace bien, el mercado es atractivo: empresas que quieren usar franquicia tributaria, programas financiados por el Estado y mandantes que buscan proveedores confiables.",
+          "Al mismo tiempo, el proceso se ha profesionalizado. SENCE y los organismos certificadores endurecieron controles, así que hoy no basta con un OTEC \"de papel\": se exige un sistema de gestión que funcione de verdad. Eso hace más largo el camino de entrada, pero también deja fuera a los improvisados, lo que beneficia a quien entra en serio.",
+        ],
+      },
+      {
+        id: "requisito-1-persona-juridica-con-objeto-social-de-capacitacion",
+        title: "Requisito 1: Persona jurídica con objeto social de capacitación",
+        paragraphs: [
+          "El primer paso es tener una empresa legalmente constituida en Chile —una sociedad o empresa individual— cuyo objeto social esté centrado en la prestación de servicios de capacitación. Este punto parece menor, pero es una fuente frecuente de observaciones: un objeto social disperso o poco claro puede generar problemas al inscribirse. Conviene que la actividad de capacitación y formación laboral figure de forma explícita como el giro principal.",
+          "Además de la escritura, necesitarás RUT, inicio de actividades ante el SII y un representante legal vigente. Esa documentación forma la base del expediente que SENCE revisará más adelante.",
+        ],
+      },
+      {
+        id: "requisito-2-oficina-administrativa-y-capacidad-operativa",
+        title: "Requisito 2: Oficina administrativa y capacidad operativa",
+        paragraphs: [
+          "SENCE exige una oficina administrativa real, con una dirección física, donde se gestione la documentación, se atiendan auditorías y se coordinen las actividades. No es un requisito de forma: dentro del proceso de RUDO se contempla una visita técnica a esa oficina con el encargado regional de SENCE.",
+          "Incluso si tu modelo es principalmente e-learning o ejecución en dependencias del cliente, igual debes demostrar capacidad operativa: acuerdos con salas, plataformas tecnológicas y procedimientos que aseguren el control de asistencia, las evaluaciones y la emisión de certificados. No poder demostrarlo se traduce en observaciones o en el rechazo de la solicitud.",
+        ],
+      },
+      {
+        id: "requisito-3-implementar-el-sistema-de-gestion-nch-2728",
+        title: "Requisito 3: Implementar el sistema de gestión NCh 2728",
+        paragraphs: [
+          "La NCh 2728:2015 es la norma chilena que define el sistema de gestión de calidad de los OTEC, y es de cumplimiento obligatorio para acreditarse ante SENCE. Cubre el diseño y la planificación de cursos, la provisión de recursos, la ejecución y evaluación, el manejo de reclamos, el control de documentos y registros, y la mejora continua.",
+          "Implementarla no es escribir manuales y guardarlos. Es que existan procedimientos vivos: selección de relatores, elaboración de programas, listas de asistencia, registro de evaluaciones y emisión controlada de certificados. Muchos proyectos se traban porque intentan llegar a la auditoría con formularios que nadie usa, y eso deriva en No Conformidades que obligan a rehacer trabajo. Aquí conviene, incluso, correr uno o dos cursos piloto para tener registros reales que mostrar.",
+        ],
+      },
+      {
+        id: "requisito-4-certificar-la-nch-2728-con-un-organismo-acreditado",
+        title: "Requisito 4: Certificar la NCh 2728 con un organismo acreditado",
+        paragraphs: [
+          "Con el sistema implementado, contratas a un organismo de certificación acreditado por el INN para auditar la NCh 2728. La auditoría inicial suele tener dos etapas: una revisión documental del sistema y una auditoría en terreno, donde se toman muestras de cursos y se entrevista al equipo.",
+          "Si aparecen No Conformidades, debes presentar un plan de acciones correctivas con evidencias, dentro de plazos definidos, antes de obtener el certificado. Esta certificación tiene un ciclo de tres años, con auditorías de seguimiento anuales, y es la pieza que habilita el paso siguiente: sin NCh 2728 vigente, no se puede avanzar al registro en RUDO.",
+        ],
+      },
+      {
+        id: "requisito-5-inscripcion-en-rudo-y-obtencion-de-vigencia",
+        title: "Requisito 5: Inscripción en RUDO y obtención de vigencia",
+        paragraphs: [
+          "RUDO es el Registro Unificado de Organismos de SENCE, la plataforma digital donde se formaliza la existencia y vigencia de los OTEC. Se cargan los antecedentes legales, el certificado NCh 2728, los datos del representante legal, las áreas de capacitación y la demás documentación del manual de RUDO. Dentro del trámite se coordina la visita técnica a la oficina, y los documentos originales son visados por el funcionario de SENCE.",
+          "SENCE revisa, puede pedir aclaraciones y finalmente asigna un estado. Solo con estado vigente el OTEC puede ejecutar capacitación imputable a franquicia tributaria y aparecer como legítimo en las consultas públicas del registro. A esto se suman, como parte del sistema, tener una nómina de relatores y al menos un curso codificado.",
+        ],
+      },
+      {
+        id: "cuanto-demora-y-los-errores-que-mas-atrasan",
+        title: "Cuánto demora y los errores que más atrasan",
+        paragraphs: [
+          "De la implementación del sistema a la vigencia en RUDO suele pasar entre 6 y 12 meses, según qué tan ordenada esté la documentación de entrada. Lo que más atrasa es casi siempre lo mismo: subestimar la implementación real de la NCh 2728, declarar giros dispersos en el SII, no preparar la oficina para la visita técnica, y descuidar la gestión documental desde el inicio. Ese último punto —los registros— es el que más pesa después, porque una auditoría vive de evidencia.",
+        ],
+      },
+      {
+        id: "donde-encaja-micert",
+        title: "Dónde encaja MiCert",
+        paragraphs: [
+          "Seamos claros sobre el alcance: MiCert no reemplaza la Ley 19.518, ni la certificación NCh 2728, ni el registro en RUDO. Ninguna plataforma lo hace; ese camino hay que recorrerlo.",
+          "Donde MiCert sí ayuda es en uno de los puntos más sensibles de la NCh 2728 y de cualquier auditoría: el control y la trazabilidad de los certificados. La norma espera que cada certificado pueda rastrearse hasta un curso, una lista de asistencia y una evaluación; cuando eso vive en PDFs sueltos y planillas informales, aparecen No Conformidades. Una OTEC nueva que emite desde el día uno con MiCert tiene certificados con código único y QR, vinculados a los datos del curso y del participante, con registro de qué se emitió, a quién y cuándo. Eso convierte uno de los flancos más débiles del sistema en algo ordenado y verificable, y además funciona como argumento comercial frente a empresas mandantes, que reciben certificados comprobables en línea. No sustituye ningún requisito formal; fortalece el que más se revisa.",
+          "Nota: esta guía es informativa y no constituye asesoría legal ni de acreditación. Los requisitos de la NCh 2728, del INN y de SENCE deben confirmarse con las fuentes oficiales y, cuando corresponda, con asesoría especializada.",
+        ],
+      },
+      {
+        id: "preguntas-frecuentes",
+        title: "Preguntas frecuentes",
+        faq: [
+          {
+            question:
+              "¿Es obligatoria la certificación NCh 2728 para inscribirse en RUDO?",
+            answer:
+              "Sí. La certificación NCh 2728 vigente, otorgada por un organismo acreditado por el INN, es un requisito para registrarse como OTEC en RUDO, y perderla puede implicar la suspensión o baja del registro.",
+          },
+          {
+            question: "¿Cuánto demora formar y acreditar una OTEC en Chile?",
+            answer:
+              "En promedio, entre 6 y 12 meses desde la implementación del sistema de gestión hasta la certificación NCh 2728 y la vigencia en RUDO, según qué tan ordenada esté la documentación previa.",
+          },
+          {
+            question: "¿Puedo crear una OTEC solo para e-learning?",
+            answer:
+              "Sí, pero igual debes demostrar estructura administrativa, recursos tecnológicos y procedimientos de gestión que exige la NCh 2728, incluido el control de asistencia, evaluaciones y registros.",
+          },
+          {
+            question: "¿Cada cuánto se renueva la certificación NCh 2728?",
+            answer:
+              "El ciclo es de tres años, con auditorías de seguimiento anuales y una renovación completa al final del ciclo, donde se verifica el mantenimiento y la mejora del sistema.",
+          },
+          {
+            question: "¿Qué pasa si dejo vencer la certificación NCh 2728?",
+            answer:
+              "Es un requisito permanente. Si el certificado vence o se reprueba una auditoría, SENCE puede suspender o caducar el registro del OTEC.",
+          },
+          {
+            question:
+              "¿MiCert reemplaza algún requisito de SENCE o de la NCh 2728?",
+            answer:
+              "No. MiCert no reemplaza la Ley 19.518, la NCh 2728 ni el registro en RUDO. Ayuda a cumplir mejor el requisito de control y trazabilidad de los certificados emitidos, lo que facilita auditorías y da confianza a las empresas.",
+          },
+        ],
+      },
+    ],
+  },
 ];
 
 export function getArticleBySlug(slug: string): ResourceArticle | undefined {
