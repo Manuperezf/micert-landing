@@ -1040,6 +1040,106 @@ export const RESOURCE_ARTICLES: ResourceArticle[] = [
       },
     ],
   },
+  {
+    slug: "certificados-moodle-vs-micert",
+    tipo: "Comparativa",
+    temas: ["QR", "Excel"],
+    title:
+      "Certificados en Moodle vs MiCert: por qué tu LMS no es tu emisor de certificados",
+    excerpt:
+      "Casi todos los OTEC usan Moodle, y Moodle puede generar certificados. Entonces, ¿para qué MiCert? Porque son dos trabajos distintos: Moodle corre tus cursos; MiCert emite y valida el certificado. Te explicamos dónde termina uno y empieza el otro, sin exagerar.",
+    author: "Equipo MiCert",
+    date: "2 de julio de 2026",
+    dateISO: "2026-07-02",
+    featured: false,
+    relatedSlugs: ["certificados-qr-otec", "alternativa-excel-canva"],
+    metaTitle:
+      "Certificados en Moodle vs MiCert: qué hace cada uno | MiCert",
+    metaDescription:
+      "Moodle es tu LMS y puede generar certificados, pero no está hecho para emitir desde Excel ni para verificación pública rica en datos. Cómo se complementan Moodle y MiCert.",
+    sections: [
+      {
+        id: "moodle-es-tu-lms-no-tu-emisor-de-certificados",
+        title: "Moodle es tu LMS, no tu emisor de certificados",
+        paragraphs: [
+          "Moodle es una excelente plataforma para dictar y gestionar cursos: inscripciones, contenidos, evaluaciones, seguimiento. Ese es su trabajo y lo hace bien. Con el plugin Custom Certificate, además, puede generar certificados en PDF: tiene un editor visual, permite poner el nombre del alumno, el curso, la nota, la fecha, un código y hasta un QR.",
+          "Así que seamos justos de entrada: Moodle sí emite certificados. La pregunta no es si puede, sino si está hecho para lo que un OTEC necesita cuando el certificado sale de la plataforma y tiene que sostenerse solo frente a una empresa, un alumno o un auditor. Ahí es donde el plugin muestra sus límites.",
+        ],
+      },
+      {
+        id: "donde-el-plugin-de-certificados-de-moodle-se-queda-corto",
+        title: "Dónde el plugin de certificados de Moodle se queda corto",
+        paragraphs: [
+          "Cuatro límites concretos, documentados en la propia comunidad de Moodle, que importan para un OTEC.",
+          "Los certificados nacen dentro del curso. El plugin emite a los alumnos inscritos según su avance o finalización en el LMS. Si necesitas emitir a partir de una lista de Excel —personas que hiciste una capacitación presencial, un curso cerrado en empresa, o simplemente datos que tienes en una planilla— no es su terreno: los certificados salen de la data del curso en Moodle, no de una lista que cargas.",
+          "La emisión masiva no escala bien. Cada alumno suele tener que entrar y generar su propio certificado, y la descarga masiva de un curso empieza a fallar con unos pocos cientos de certificados (errores de tiempo de espera y de servidor están reportados en el propio Moodle). Para un OTEC con volumen, eso convierte la entrega en un problema.",
+          "La verificación pública es técnica. Existe, pero comprobar un código suele implicar navegar a una URL específica y, según la configuración, iniciar sesión. Que cualquiera pueda verificar sin login requiere activar ajustes de administrador y habilitarlo certificado por certificado. No es la experiencia pública, simple y con tu marca que espera quien recibe el documento.",
+          "Requiere mantención técnica. Instalar y actualizar plugins, y a veces subir fuentes o archivos al servidor, exige acceso y conocimientos que un coordinador administrativo no tiene por qué manejar.",
+        ],
+      },
+      {
+        id: "la-diferencia-de-fondo-que-muestra-el-verificador",
+        title: "La diferencia de fondo: qué muestra el verificador",
+        paragraphs: [
+          "Acá está el punto que más pesa, y es el foco de MiCert. Cuando alguien escanea el QR de un certificado emitido con MiCert, no llega a una pantalla que dice \"válido\" y nada más. Llega a una página de verificación pública con los datos reales del certificado: el OTEC emisor, el curso, el código único, las horas, la asistencia, los módulos evaluados y su calificación, las fechas y el estado de vigencia (vigente, vencido o revocado).",
+          "Eso cambia lo que significa \"verificar\". No solo confirma que el certificado es auténtico; muestra qué respalda: qué hizo la persona, cuántas horas, qué se evaluó y con qué resultado. Es trazabilidad total, legible por cualquiera —una empresa mandante, un alumno, un auditor— sin depender de tu palabra ni de entrar a tu plataforma. El certificado deja de ser una imagen bonita y pasa a ser un documento que se explica solo.",
+        ],
+      },
+      {
+        id: "el-certificado-que-trabaja-para-tu-otec-linkedin-de-un-clic",
+        title: "El certificado que trabaja para tu OTEC: LinkedIn de un clic",
+        paragraphs: [
+          "Hay un segundo diferenciador que Moodle no cubre y que convierte cada certificado en marketing. Con MiCert, el alumno puede agregar su certificado a su perfil de LinkedIn con un clic, figurando tu OTEC como emisor.",
+          "Piensa en lo que eso significa multiplicado por cada persona que capacitas: tu OTEC aparece, con su nombre, en los perfiles profesionales de todos tus alumnos, frente a sus contactos y sus empleadores. Es visibilidad orgánica que no pagas y que Moodle, por sí solo, no genera. Cada certificado emitido se vuelve una pequeña vitrina de tu OTEC.",
+        ],
+      },
+      {
+        id: "no-reemplazas-moodle-lo-complementas",
+        title: "No reemplazas Moodle: lo complementas",
+        paragraphs: [
+          "La conclusión no es \"deja Moodle\". Si Moodle te sirve para dictar tus cursos, sigue con Moodle. La idea es separar los dos trabajos: Moodle es el LMS que corre la capacitación; MiCert es la capa que emite el certificado y lo hace verificable, rico en datos y compartible.",
+          "Cargas tu lista en MiCert —la misma que ya tienes en Excel—, diseñas el certificado una vez, y emites en minutos con QR, envío automático por email y verificación pública. Sin plugins, sin servidor, sin depender de que cada alumno entre a generarlo. Moodle sigue haciendo lo suyo; MiCert resuelve lo que al plugin de certificados le queda grande.",
+          "Nota: las capacidades de Moodle dependen de la versión, los plugins instalados y la configuración de cada sitio. Este artículo describe el comportamiento típico del plugin de certificados más usado.",
+        ],
+      },
+      {
+        id: "preguntas-frecuentes",
+        title: "Preguntas frecuentes",
+        faq: [
+          {
+            question: "¿Moodle puede emitir certificados?",
+            answer:
+              "Sí. Con el plugin Custom Certificate, Moodle genera certificados en PDF con editor visual, código y hasta QR. El punto no es si puede, sino que está pensado para certificados que salen de la finalización del curso dentro del LMS, no para emitir desde una lista de Excel ni para verificación pública rica en datos.",
+          },
+          {
+            question: "¿Se puede verificar públicamente un certificado de Moodle?",
+            answer:
+              "Existe una página de verificación, pero por defecto comprobar un código implica navegar a una URL y, según la configuración, iniciar sesión. Que cualquiera verifique sin login requiere activar ajustes de administrador. No es una verificación pública lista para usar.",
+          },
+          {
+            question: "¿Puedo emitir certificados masivos desde Excel en Moodle?",
+            answer:
+              "No de forma nativa: los certificados se generan a partir de los alumnos y su avance dentro del curso en el LMS. MiCert, en cambio, emite desde tu planilla de Excel, estén o no esas personas inscritas en un LMS.",
+          },
+          {
+            question: "¿Qué muestra el verificador de MiCert?",
+            answer:
+              "Los datos reales del certificado: OTEC emisor, curso, código único, horas, asistencia, módulos evaluados y calificación, fechas y estado de vigencia. Da trazabilidad total, no solo un \"válido/no válido\".",
+          },
+          {
+            question: "¿El alumno puede sumar el certificado a LinkedIn?",
+            answer:
+              "Sí, con un clic y con tu OTEC como emisor. Eso le da a tu OTEC visibilidad orgánica en los perfiles de todos tus alumnos, algo que Moodle no genera por sí solo.",
+          },
+          {
+            question: "¿Tengo que dejar Moodle si uso MiCert?",
+            answer:
+              "No. Se complementan: Moodle corre tus cursos y MiCert emite y valida los certificados. Puedes usar los dos.",
+          },
+        ],
+      },
+    ],
+  },
 ];
 
 export function getArticleBySlug(slug: string): ResourceArticle | undefined {
