@@ -60,6 +60,11 @@ export default function RootLayout({
   })(document, window, 'BrevoConversations');`,
           }}
         />
+        <Script
+          id="hs-script-loader"
+          src="https://js-eu1.hs-scripts.com/148767528.js"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   );
