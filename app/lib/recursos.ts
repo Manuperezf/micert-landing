@@ -1236,6 +1236,122 @@ export const RESOURCE_ARTICLES: ResourceArticle[] = [
       },
     ],
   },
+  {
+    slug: "como-elegir-software-certificados-otec",
+    tipo: "Comparativa",
+    temas: ["QR", "Excel"],
+    title:
+      "Cómo elegir un software de certificados para tu OTEC: la guía de compra",
+    excerpt:
+      "Si ya decidiste dejar de hacer certificados a mano y estás comparando herramientas, esta guía es para ti. Repasamos los criterios que de verdad importan al elegir, para que no pagues por lo que no necesitas ni te falte lo que sí.",
+    author: "Equipo MiCert",
+    date: "5 de julio de 2026",
+    dateISO: "2026-07-05",
+    featured: false,
+    relatedSlugs: ["software-para-otec", "emitir-certificados-masivos-excel"],
+    metaTitle:
+      "Cómo elegir un software de certificados para OTEC | MiCert",
+    metaDescription:
+      "Guía para elegir un software de certificados para tu OTEC: los criterios que de verdad importan, las preguntas que debes hacer y los errores que se pagan caro.",
+    sections: [
+      {
+        id: "primero-define-que-problema-estas-resolviendo",
+        title: "Primero, define qué problema estás resolviendo",
+        paragraphs: [
+          "Antes de comparar herramientas, ten claro qué necesitas, porque no todas hacen lo mismo. Un software de certificados emite, diseña y valida los certificados de tus cursos. No es un LMS: no dicta clases ni gestiona contenidos pedagógicos. Si lo que buscas es ordenar y dar respaldo a los documentos que entregas al final de cada capacitación, estás en la categoría correcta. Si además necesitas una plataforma para impartir los cursos, eso es otra herramienta.",
+          "Con eso claro, estos son los criterios con los que conviene medir cualquier opción.",
+        ],
+      },
+      {
+        id: "criterio-1-que-emita-desde-tu-excel-en-masa",
+        title: "Criterio 1: Que emita desde tu Excel, en masa",
+        paragraphs: [
+          "El primer filtro es cómo carga los datos. Ya tienes la lista de participantes en una planilla; un buen software la importa directo —RUT, nombre, email, calificación— y genera un certificado por persona. Desconfía de cualquier herramienta que te obligue a reescribir los datos uno por uno: ahí no estás ahorrando tiempo, solo cambiaste de lugar el trabajo manual. Pregunta siempre si la emisión es masiva desde Excel o individual.",
+        ],
+      },
+      {
+        id: "criterio-2-que-el-certificado-sea-verificable",
+        title: "Criterio 2: Que el certificado sea verificable, no solo bonito",
+        paragraphs: [
+          "Este es el criterio que separa un diploma decorativo de un certificado serio. El documento debe llevar un código único y un QR que apunte a una página de verificación pública, donde cualquiera —una empresa mandante, un alumno, un auditor— confirme su autenticidad sin depender de tu palabra. Un PDF que solo se ve bien pero no se puede comprobar te deja igual de expuesto que antes. Pregunta: ¿el certificado se puede verificar en línea?, ¿la página de verificación muestra los datos reales del curso o solo un \"válido\"?",
+        ],
+      },
+      {
+        id: "criterio-3-que-respete-los-campos-que-exige-sence",
+        title: "Criterio 3: Que respete los campos que exige SENCE",
+        paragraphs: [
+          "Los certificados de cursos con código SENCE deben incluir ciertos campos obligatorios, definidos por SENCE. Conviene aclarar algo que se confunde seguido: esos campos los rige SENCE, no la NCh 2728, que es un sistema de gestión de calidad, no un formato de certificado. Un buen software te deja configurar esos campos —curso, código, horas, identificación del alumno y del OTEC— sin pelear con la herramienta. Pregunta si el editor permite ajustar los campos a lo que tu tipo de curso necesita.",
+        ],
+      },
+      {
+        id: "criterio-4-que-no-exija-conocimientos-tecnicos",
+        title: "Criterio 4: Que no exija conocimientos técnicos",
+        paragraphs: [
+          "Quien emite certificados en un OTEC suele ser un coordinador o administrativo, no un programador. La herramienta debería funcionar en el navegador, sin instalar plugins ni tocar servidores, con un editor visual para diseñar el certificado. Si para usarla necesitas soporte técnico cada vez, el ahorro de tiempo se evapora. Pregunta: ¿lo puede operar mi equipo administrativo solo?",
+        ],
+      },
+      {
+        id: "criterio-5-que-deje-trazabilidad-y-permita-anular",
+        title: "Criterio 5: Que deje trazabilidad y permita anular",
+        paragraphs: [
+          "Para cualquier revisión posterior, importa poder demostrar qué emitiste y poder corregir errores sin borrar el historial. Un buen sistema registra cada emisión y permite revocar un certificado —dejándolo marcado como anulado— en vez de eliminarlo. Pregunta si hay historial de lo emitido y si se pueden anular certificados, individual o en lote.",
+        ],
+      },
+      {
+        id: "criterio-6-que-el-precio-sea-claro",
+        title: "Criterio 6: Que el precio sea claro y calce con tu volumen",
+        paragraphs: [
+          "Desconfía de quien no publica precios o te deriva a una reunión solo para saber cuánto cuesta. Un software pensado para OTEC cobra por volumen de emisión y te deja ver los planes antes de comprometerte. Fíjate en cuántos certificados incluye cada plan al mes y si puedes probarlo antes de pagar. Pregunta: ¿hay una prueba o demo sin costo para verlo con mis propios cursos?",
+        ],
+      },
+      {
+        id: "como-se-mide-micert-con-estos-criterios",
+        title: "Cómo se mide MiCert con estos criterios",
+        paragraphs: [
+          "Con la vara puesta, así responde MiCert. Emite en masa desde tu Excel, con validación de los datos al importar. Cada certificado lleva código único y QR, con una página de verificación pública que muestra los datos reales del curso —incluidos horas, asistencia y módulos evaluados— no solo un \"válido\". El editor visual permite configurar los campos, y todo funciona en el navegador, sin conocimientos técnicos. Registra lo emitido y permite revocar individual o masivamente. Y los planes tienen precio público, con un demo sin costo para probarlo con tus propios cursos. Como extra, el alumno puede sumar su certificado a LinkedIn con tu OTEC como emisor.",
+          "No es la única herramienta del mercado, y algunos de estos criterios los cumplen otras. La diferencia está en cumplirlos todos, juntos, sin pedirte que sepas de tecnología.",
+        ],
+      },
+      {
+        id: "preguntas-frecuentes",
+        title: "Preguntas frecuentes",
+        faq: [
+          {
+            question:
+              "¿Qué debo mirar al elegir un software de certificados para mi OTEC?",
+            answer:
+              "Que emita en masa desde Excel, que el certificado sea verificable con QR contra una página pública, que respete los campos que exige SENCE, que lo pueda operar tu equipo sin conocimientos técnicos, que deje trazabilidad y permita anular, y que tenga precio claro por volumen.",
+          },
+          {
+            question: "¿Un software de certificados es lo mismo que un LMS?",
+            answer:
+              "No. Un LMS sirve para dictar y gestionar cursos. Un software de certificados se enfoca en emitir, diseñar y validar los certificados de esos cursos. Son herramientas distintas.",
+          },
+          {
+            question:
+              "¿Los campos obligatorios del certificado los define la NCh 2728?",
+            answer:
+              "No. Los campos obligatorios de los certificados de cursos SENCE los rige SENCE. La NCh 2728 es un sistema de gestión de calidad del OTEC, no un formato de certificado.",
+          },
+          {
+            question: "¿Cómo sé si un software emite de verdad en masa?",
+            answer:
+              "Debe importar tu lista de Excel y generar un certificado por participante en una sola operación. Si te obliga a cargar los datos uno por uno, no es emisión masiva.",
+          },
+          {
+            question: "¿Conviene un software que no publica precios?",
+            answer:
+              "Es una señal de alerta. Un software pensado para OTEC publica sus planes por volumen y ofrece una demo o prueba sin costo para evaluarlo antes de pagar.",
+          },
+          {
+            question: "¿Puedo probar antes de decidir?",
+            answer:
+              "Con MiCert sí: hay un demo sin costo para emitir certificados reales con tus plantillas antes de contratar un plan.",
+          },
+        ],
+      },
+    ],
+  },
 ];
 
 export function getArticleBySlug(slug: string): ResourceArticle | undefined {
