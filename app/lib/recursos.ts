@@ -1140,6 +1140,102 @@ export const RESOURCE_ARTICLES: ResourceArticle[] = [
       },
     ],
   },
+  {
+    slug: "emitir-certificados-masivos-excel",
+    tipo: "Producto",
+    temas: ["Excel", "QR"],
+    title:
+      "Cómo emitir certificados masivos desde Excel (y dejar de hacerlos uno por uno)",
+    excerpt:
+      "Si armas los certificados de tus cursos a mano —copiando nombre, RUT y curso en una plantilla, uno por uno— estás gastando horas en algo que puede tomar minutos. Te mostramos cuánto te cuesta ese método y cómo emitir en masa desde la misma planilla de Excel que ya tienes.",
+    author: "Equipo MiCert",
+    date: "4 de julio de 2026",
+    dateISO: "2026-07-04",
+    featured: false,
+    relatedSlugs: ["alternativa-excel-canva", "certificados-qr-otec"],
+    metaTitle: "Cómo emitir certificados masivos desde Excel | MiCert",
+    metaDescription:
+      "Deja de hacer certificados uno por uno. Aprende a emitir certificados de capacitación en masa desde tu Excel, en minutos, con código QR verificable.",
+    sections: [
+      {
+        id: "el-costo-escondido-de-hacer-certificados-a-mano",
+        title: "El costo escondido de hacer certificados a mano",
+        paragraphs: [
+          "Hacer un certificado a mano no parece caro hasta que lo multiplicas. Piensa en el proceso real: abrir la plantilla, copiar el nombre del alumno, su RUT, el curso, la fecha, revisar que no haya un error de tipeo, exportar el PDF, renombrarlo y enviarlo. Un par de minutos por certificado, siendo optimistas.",
+          "Ahora haz el cálculo con tu propia realidad. Multiplica esos minutos por la cantidad de alumnos de un curso, y eso por la cantidad de cursos que cierras en un mes. El resultado son horas de trabajo administrativo que no facturas, que se repiten cada mes y que además traen errores: un RUT mal copiado, un nombre con una letra cambiada, un certificado que hay que rehacer. Ese es el costo escondido: no es un gasto en una factura, es tiempo de tu equipo que se va en una tarea mecánica.",
+        ],
+      },
+      {
+        id: "por-que-excel-solo-no-basta",
+        title: "Por qué Excel solo no basta",
+        paragraphs: [
+          "Lo interesante es que ya tienes la parte difícil resuelta. Tu lista de participantes vive en un Excel: nombres, RUT, correos, calificaciones. El dato ya está ordenado. El cuello de botella no son los datos, es el puente entre esa planilla y el certificado terminado.",
+          "Excel guarda la información, pero no la convierte en documentos. Alguien tiene que tomar cada fila y llevarla a un diseño, una por una. Ahí es donde se pierde el tiempo. La solución no es dejar Excel —es todo lo contrario— sino conectar esa planilla directamente con la emisión, para que las cien filas se transformen en cien certificados sin copiar nada a mano.",
+        ],
+      },
+      {
+        id: "como-emitir-certificados-masivos-desde-excel-paso-a-paso",
+        title: "Cómo emitir certificados masivos desde Excel, paso a paso",
+        paragraphs: [
+          "La forma rápida de emitir certificados en masa es importar tu lista de Excel a una plataforma que genere un certificado por fila, con código único y verificación. Con MiCert son cuatro pasos:",
+          "Primero, preparas tu Excel. Una fila por participante, con las columnas que ya usas: RUT, nombre, email y calificación. No necesitas un formato especial ni reordenar nada raro.",
+          "Segundo, lo importas. Subes la planilla y MiCert genera un certificado por participante. Al importar, valida los datos y te avisa si hay filas con problemas —un RUT mal formado, un campo vacío— antes de emitir, así no descubres el error después de mandar todo.",
+          "Tercero, diseñas el certificado una sola vez. En el editor visual arrastras y ubicas los campos —nombre, RUT, curso, código, QR, firmas, horas— y ese diseño se aplica a todo el curso. Lo haces una vez, no cien.",
+          "Cuarto, emites y entregas. Se genera el PDF de cada participante, con su QR único, y lo descargas individual o todo junto en un ZIP. Después envías el enlace de verificación por email a los alumnos, individual o en lote, con seguimiento de qué se envió. Lo que antes tomaba una tarde, toma minutos.",
+        ],
+      },
+      {
+        id: "lo-que-ganas-ademas-del-tiempo",
+        title: "Lo que ganas además del tiempo",
+        paragraphs: [
+          "Automatizar la emisión resuelve el tiempo, pero de paso te da cosas que el método manual no tenía. Cada certificado sale con un código único y un QR que apunta a una página de verificación pública: deja de ser un PDF editable y pasa a ser un documento comprobable. La validación de los datos al importar elimina los errores de tipeo que antes se colaban. Y el alumno puede sumar su certificado a LinkedIn con tu OTEC como emisor, lo que te da visibilidad sin que hagas nada. El mismo trabajo que te quitaba horas ahora te devuelve tiempo, trazabilidad y hasta difusión.",
+        ],
+      },
+      {
+        id: "cuando-conviene-dar-el-paso",
+        title: "Cuándo conviene dar el paso",
+        paragraphs: [
+          "La señal es simple: si emites certificados con cierta frecuencia y el armado manual ya te consume horas, el método a mano te está costando más de lo que crees. No hace falta cambiar cómo llevas tus listas —sigues en Excel— solo cómo las conviertes en certificados. Ese es el punto en que pasar a la emisión masiva se paga solo.",
+        ],
+      },
+      {
+        id: "preguntas-frecuentes",
+        title: "Preguntas frecuentes",
+        faq: [
+          {
+            question: "¿Cómo emito muchos certificados de una vez desde Excel?",
+            answer:
+              "Importas tu planilla de participantes a MiCert —una fila por persona, con RUT, nombre, email y calificación— y se genera un certificado por fila con código único y QR. Diseñas el certificado una sola vez y emites todo el curso en minutos.",
+          },
+          {
+            question: "¿Necesito un formato especial de Excel?",
+            answer:
+              "No. Usas las columnas que ya manejas (RUT, nombre, email, calificación). Al importar, MiCert valida los datos y te avisa si alguna fila tiene un problema antes de emitir.",
+          },
+          {
+            question: "¿Puedo descargar todos los certificados juntos?",
+            answer:
+              "Sí. Puedes descargarlos individualmente en PDF o todos juntos en un archivo ZIP.",
+          },
+          {
+            question: "¿Cómo les llega el certificado a los alumnos?",
+            answer:
+              "Puedes enviar el enlace de verificación por email a cada alumno o en lote, con seguimiento del estado de cada envío. El alumno accede a su certificado y puede sumarlo a LinkedIn.",
+          },
+          {
+            question: "¿Los certificados emitidos en masa son verificables?",
+            answer:
+              "Sí. Cada uno lleva un código único y un QR que abre una página de verificación pública, donde se confirma su autenticidad y los datos del curso.",
+          },
+          {
+            question: "¿Necesito saber de tecnología para hacer esto?",
+            answer:
+              "No. Todo funciona en el navegador: cargas el Excel, diseñas el certificado con un editor visual y emites. Sin instalar nada.",
+          },
+        ],
+      },
+    ],
+  },
 ];
 
 export function getArticleBySlug(slug: string): ResourceArticle | undefined {
