@@ -1352,6 +1352,108 @@ export const RESOURCE_ARTICLES: ResourceArticle[] = [
       },
     ],
   },
+  {
+    slug: "certificados-otec-mineria",
+    tipo: "Normativa",
+    temas: ["SENCE", "QR"],
+    title:
+      "Certificados para OTEC que capacitan para minería: por qué la verificación decide",
+    excerpt:
+      "En minería, el certificado de tu curso no se archiva: se revisa en la puerta. Si un OTEC capacita trabajadores que van a faena, la diferencia entre un certificado que se verifica al instante y uno que genera dudas puede ser la diferencia entre que tu cliente entre a trabajar o se quede afuera.",
+    author: "Equipo MiCert",
+    date: "7 de julio de 2026",
+    dateISO: "2026-07-07",
+    featured: false,
+    relatedSlugs: [
+      "certificados-prevencion-de-riesgos",
+      "detectar-certificados-otec-falsos",
+    ],
+    metaTitle:
+      "Certificados para OTEC que capacitan para minería | MiCert",
+    metaDescription:
+      "En minería, el certificado se verifica en la puerta de faena. Cómo un OTEC puede emitir certificados verificables con QR que pasen la acreditación del mandante.",
+    sections: [
+      {
+        id: "en-mineria-el-certificado-se-revisa-en-la-puerta",
+        title: "En minería, el certificado se revisa en la puerta",
+        paragraphs: [
+          "La minería es el sector con los estándares de acceso más estrictos del país, y por buenas razones: los riesgos son altos y las mandantes no negocian la seguridad. Cada gran minera —Codelco, BHP, Antofagasta Minerals, SQM, Freeport, entre otras— tiene su propio sistema de acreditación de contratistas y trabajadores, con el Decreto Supremo 594 como base y requisitos adicionales según su estándar de riesgos críticos.",
+          "Lo relevante para un OTEC es lo que ocurre con sus certificados dentro de ese proceso. Cuando una empresa contratista quiere ingresar a su gente a faena, carga los certificados de los cursos de seguridad en la plataforma de acreditación del mandante, y ahí alguien los revisa. El certificado que emitiste deja de ser un documento guardado y pasa a ser evidencia que un tercero examina, bajo presión y contra el reloj.",
+        ],
+      },
+      {
+        id: "que-mira-quien-acredita",
+        title: "Qué mira quien acredita",
+        paragraphs: [
+          "El revisor de acreditación —o el área de prevención del contratista— tiene una tarea concreta: confirmar que cada certificado es real, corresponde a la persona y está vigente. Para eso hacen dos cosas que conviene tener presentes: revisan que el OTEC emisor esté vigente en el registro de SENCE, y usan el verificador en línea o el código QR del certificado, cuando está disponible, para comprobar su autenticidad.",
+          "Ahí se separa un certificado que fluye de uno que se traba. Un documento con QR verificable se confirma en segundos. Uno sin forma de comprobarse obliga a llamadas, esperas y desconfianza, y en un proceso donde los plazos de acreditación ya son largos, esa fricción tiene costo. A eso se suma un detalle que en minería es determinante: los certificados vencidos no sirven para ingresar a faena, así que la vigencia tiene que estar clara y al día.",
+        ],
+      },
+      {
+        id: "el-problema-del-pdf-editable-en-este-contexto",
+        title: "El problema del PDF editable en este contexto",
+        paragraphs: [
+          "Un certificado de curso en PDF editable arrastra a la minería todos sus problemas, amplificados. Se puede alterar sin dejar rastro, no se puede comprobar contra una fuente, y cuando el revisor de faena no tiene cómo validarlo, lo más probable es que lo devuelva o pida respaldo adicional. Para el contratista eso significa un trabajador que no entra; para tu OTEC, un cliente molesto que asocia la traba a tus certificados.",
+          "En un sector donde documentación débil o poco verificable aleja del acceso a faena y genera observaciones en auditorías de contratos, emitir en un formato que no se puede comprobar es un riesgo que se traslada directo a tu reputación como OTEC.",
+        ],
+      },
+      {
+        id: "que-necesita-el-otec-que-capacita-para-mineria",
+        title: "Qué necesita el OTEC que capacita para minería",
+        paragraphs: [
+          "Puesto en positivo, un OTEC que trabaja con el sector necesita que sus certificados cumplan cuatro cosas. Que sean verificables al instante, con un QR que abra una página pública donde el revisor confirme la autenticidad sin depender de tu palabra. Que muestren datos completos y consistentes —curso, horas, asistencia, evaluación, identificación del alumno y del OTEC— porque un formato estándar y claro es justamente lo que los revisores de faena esperan. Que tengan vigencia y vencimiento controlados, para que nadie llegue a la puerta con un certificado caducado. Y que se emitan en volumen, porque capacitar para minería significa muchos trabajadores, muchos cursos y renovaciones constantes.",
+        ],
+      },
+      {
+        id: "donde-encaja-micert-y-donde-no",
+        title: "Dónde encaja MiCert (y dónde no)",
+        paragraphs: [
+          "Seamos claros sobre el alcance, porque acá es fácil prometer de más. MiCert no acredita trabajadores para faena, no reemplaza el sistema de acreditación de la minera, ni la inducción homologada de SERNAGEOMIN, ni ningún requisito del DS 594. Ese proceso lo maneja cada mandante con sus propias plataformas y reglas.",
+          "Lo que MiCert hace es que el certificado de tu OTEC llegue a ese proceso siendo exactamente lo que el revisor quiere ver. Emites desde tu Excel, en volumen, y cada certificado sale con un código único y un QR que abre una página de verificación pública con los datos reales del curso: emisor, horas, asistencia, módulos evaluados, fechas y estado de vigencia. Controlas la validez y el vencimiento, y puedes revocar un certificado si corresponde, dejando historial. En la práctica, tu certificado deja de ser un flanco en la acreditación y pasa a ser un punto fuerte: se verifica en segundos, muestra lo que respalda y no da lugar a dudas. Para un OTEC, poder ofrecer eso a sus clientes contratistas es un argumento comercial concreto para ganar y retener contratos en el sector.",
+          "Nota: esta guía es informativa. Cada empresa minera define sus propios requisitos de acreditación; conviene confirmarlos con el área de prevención del mandante correspondiente.",
+        ],
+      },
+      {
+        id: "preguntas-frecuentes",
+        title: "Preguntas frecuentes",
+        faq: [
+          {
+            question:
+              "¿Qué certificados exige la minería para ingresar a faena?",
+            answer:
+              "Depende del mandante. Todas las grandes mineras exigen los certificados de seguridad del DS 594 como base y agregan requisitos según su estándar de riesgos críticos. Cada operación tiene su propio sistema de acreditación, así que conviene revisar los requisitos de la faena específica.",
+          },
+          {
+            question: "¿Las mineras verifican los certificados de los cursos?",
+            answer:
+              "Sí. En la acreditación revisan que el OTEC emisor esté vigente en el registro de SENCE y usan el verificador en línea o el QR del certificado, cuando existe, para confirmar su autenticidad.",
+          },
+          {
+            question: "¿MiCert acredita a mi gente para entrar a faena?",
+            answer:
+              "No. La acreditación la maneja cada empresa minera con sus propias plataformas y reglas. MiCert hace que el certificado que emite tu OTEC sea verificable, con datos completos y vigencia clara, para que pase esa revisión sin fricción.",
+          },
+          {
+            question: "¿Por qué importa el QR verificable en minería?",
+            answer:
+              "Porque el certificado se revisa en la puerta, bajo plazos ajustados. Un QR que se confirma en segundos evita llamadas, esperas y rechazos; un certificado que no se puede verificar traba el ingreso del trabajador.",
+          },
+          {
+            question:
+              "¿MiCert controla la vigencia y el vencimiento de los certificados?",
+            answer:
+              "Sí. Puedes definir validez y vencimiento por curso, algo clave en minería, donde un certificado caducado no sirve para ingresar a faena. También puedes revocar certificados dejando historial.",
+          },
+          {
+            question:
+              "¿MiCert reemplaza la inducción de SERNAGEOMIN o de la minera?",
+            answer:
+              "No. No reemplaza la inducción homologada ni la acreditación del mandante. Es la herramienta para que los certificados de tu OTEC sean verificables y trazables dentro de esos procesos.",
+          },
+        ],
+      },
+    ],
+  },
 ];
 
 export function getArticleBySlug(slug: string): ResourceArticle | undefined {
