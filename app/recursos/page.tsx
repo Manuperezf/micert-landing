@@ -7,6 +7,7 @@ import { RECURSOS_HUB_METADATA } from "../lib/recursos";
 export const metadata: Metadata = {
   title: RECURSOS_HUB_METADATA.title,
   description: RECURSOS_HUB_METADATA.description,
+  alternates: { canonical: "/recursos" },
   openGraph: {
     title: RECURSOS_HUB_METADATA.title,
     description: RECURSOS_HUB_METADATA.description,

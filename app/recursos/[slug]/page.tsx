@@ -42,6 +42,7 @@ export function generateMetadata({ params }: PageProps): Metadata {
   return {
     title: article.metaTitle,
     description: article.metaDescription,
+    alternates: { canonical: `/recursos/${article.slug}` },
     openGraph: {
       title: article.metaTitle,
       description: article.metaDescription,

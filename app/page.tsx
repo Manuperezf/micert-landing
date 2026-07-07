@@ -1,5 +1,10 @@
+import type { Metadata } from "next";
 import Footer from "./components/Footer";
 import Nav from "./components/Nav";
+
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+};
 
 export default function Home() {
   return (

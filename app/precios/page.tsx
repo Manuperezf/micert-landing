@@ -8,6 +8,7 @@ import { PLANS_PAGE, PRECIOS_METADATA } from "../lib/plans";
 export const metadata: Metadata = {
   title: PRECIOS_METADATA.title,
   description: PRECIOS_METADATA.description,
+  alternates: { canonical: "/precios" },
   openGraph: {
     title: PRECIOS_METADATA.title,
     description: PRECIOS_METADATA.description,
