@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import DemoBanner from "./DemoBanner";
 import ArticleShare from "./ArticleShare";
@@ -31,6 +32,19 @@ export default function ArticleLayout({ article }: ArticleLayoutProps) {
             <time dateTime={article.dateISO}>{article.date}</time>
           </div>
         </div>
+
+        {article.coverImage && (
+          <div className="article-cover">
+            <Image
+              src={article.coverImage}
+              alt={article.title}
+              width={1200}
+              height={630}
+              priority
+              className="article-cover-img"
+            />
+          </div>
+        )}
 
         <div className="article-layout">
           <aside className="article-toc" aria-label="En esta entrada">

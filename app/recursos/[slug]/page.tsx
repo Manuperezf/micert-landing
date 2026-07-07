@@ -49,6 +49,16 @@ export function generateMetadata({ params }: PageProps): Metadata {
       url: `https://micert.cl/recursos/${article.slug}`,
       type: "article",
       publishedTime: article.dateISO,
+      ...(article.coverImage && {
+        images: [
+          {
+            url: article.coverImage,
+            width: 1200,
+            height: 630,
+            alt: article.title,
+          },
+        ],
+      }),
     },
   };
 }

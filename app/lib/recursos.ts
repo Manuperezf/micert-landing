@@ -32,6 +32,7 @@ export type ResourceArticle = {
   relatedSlugs?: string[];
   metaTitle: string;
   metaDescription: string;
+  coverImage?: string;
   sections: ArticleSection[];
 };
 
@@ -58,6 +59,7 @@ export const RECURSOS_HUB_METADATA = {
 export const RESOURCE_ARTICLES: ResourceArticle[] = [
   {
     slug: "software-para-otec",
+    coverImage: "/recursos/software-para-otec.jpg",
     tipo: "Producto",
     temas: ["Excel", "SENCE"],
     title:
@@ -162,6 +164,7 @@ export const RESOURCE_ARTICLES: ResourceArticle[] = [
   },
   {
     slug: "certificados-qr-otec",
+    coverImage: "/recursos/certificados-qr-otec.jpg",
     tipo: "Producto",
     temas: ["QR", "NCh 2728"],
     title:
@@ -259,6 +262,7 @@ export const RESOURCE_ARTICLES: ResourceArticle[] = [
   },
   {
     slug: "alternativa-excel-canva",
+    coverImage: "/recursos/alternativa-excel-canva.jpg",
     tipo: "Comparativa",
     temas: ["Excel"],
     title:
@@ -373,6 +377,7 @@ export const RESOURCE_ARTICLES: ResourceArticle[] = [
   },
   {
     slug: "auditoria-sence",
+    coverImage: "/recursos/auditoria-sence.jpg",
     tipo: "Normativa",
     temas: ["SENCE"],
     title:
@@ -477,6 +482,7 @@ export const RESOURCE_ARTICLES: ResourceArticle[] = [
   },
   {
     slug: "detectar-certificados-otec-falsos",
+    coverImage: "/recursos/detectar-certificados-otec-falsos.jpg",
     tipo: "Normativa",
     temas: ["SENCE", "QR"],
     title:
@@ -583,6 +589,7 @@ export const RESOURCE_ARTICLES: ResourceArticle[] = [
   },
   {
     slug: "certificados-prevencion-de-riesgos",
+    coverImage: "/recursos/certificados-prevencion-de-riesgos.jpg",
     tipo: "Normativa",
     temas: ["SENCE", "QR"],
     title:
@@ -688,6 +695,7 @@ export const RESOURCE_ARTICLES: ResourceArticle[] = [
   },
   {
     slug: "ley-21659-conserjes-condominios",
+    coverImage: "/recursos/ley-21659-conserjes-condominios.jpg",
     tipo: "Normativa",
     temas: ["SENCE", "QR"],
     title:
@@ -805,6 +813,7 @@ export const RESOURCE_ARTICLES: ResourceArticle[] = [
   },
   {
     slug: "rudo-sence-como-usar-registro-otec",
+    coverImage: "/recursos/rudo-sence-como-usar-registro-otec.jpg",
     tipo: "Normativa",
     temas: ["SENCE", "QR"],
     title:
@@ -918,6 +927,7 @@ export const RESOURCE_ARTICLES: ResourceArticle[] = [
   },
   {
     slug: "requisitos-formar-otec-chile",
+    coverImage: "/recursos/requisitos-formar-otec-chile.jpg",
     tipo: "Normativa",
     temas: ["SENCE", "NCh 2728"],
     title:
@@ -1042,6 +1052,7 @@ export const RESOURCE_ARTICLES: ResourceArticle[] = [
   },
   {
     slug: "certificados-moodle-vs-micert",
+    coverImage: "/recursos/certificados-moodle-vs-micert.jpg",
     tipo: "Comparativa",
     temas: ["QR", "Excel"],
     title:
@@ -1142,6 +1153,7 @@ export const RESOURCE_ARTICLES: ResourceArticle[] = [
   },
   {
     slug: "emitir-certificados-masivos-excel",
+    coverImage: "/recursos/emitir-certificados-masivos-excel.jpg",
     tipo: "Producto",
     temas: ["Excel", "QR"],
     title:
@@ -1238,6 +1250,7 @@ export const RESOURCE_ARTICLES: ResourceArticle[] = [
   },
   {
     slug: "como-elegir-software-certificados-otec",
+    coverImage: "/recursos/como-elegir-software-certificados-otec.jpg",
     tipo: "Comparativa",
     temas: ["QR", "Excel"],
     title:
@@ -1354,6 +1367,7 @@ export const RESOURCE_ARTICLES: ResourceArticle[] = [
   },
   {
     slug: "certificados-otec-mineria",
+    coverImage: "/recursos/certificados-otec-mineria.jpg",
     tipo: "Normativa",
     temas: ["SENCE", "QR"],
     title:

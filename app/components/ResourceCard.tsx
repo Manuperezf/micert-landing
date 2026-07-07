@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import type { ResourceArticle } from "../lib/recursos";
 
@@ -16,10 +17,22 @@ export default function ResourceCard({ article }: ResourceCardProps) {
           <h3>{article.title}</h3>
           <p>{article.excerpt}</p>
         </div>
-        <div className="resource-list-thumb ph" aria-hidden="true">
-          <span className="lbl">{article.tipo}</span>
-          <span className="dim">Imagen próximamente</span>
-        </div>
+        {article.coverImage ? (
+          <div className="resource-list-thumb">
+            <Image
+              src={article.coverImage}
+              alt={article.title}
+              width={1200}
+              height={630}
+              className="resource-list-thumb-img"
+            />
+          </div>
+        ) : (
+          <div className="resource-list-thumb ph" aria-hidden="true">
+            <span className="lbl">{article.tipo}</span>
+            <span className="dim">Imagen próximamente</span>
+          </div>
+        )}
       </Link>
     </article>
   );
