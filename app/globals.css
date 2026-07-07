@@ -190,6 +190,9 @@
   .foot-brand{max-width:280px;display:flex;flex-direction:column;gap:12px}
   .foot-brand .brand{font-size:17px}
   .foot-tag{color:var(--muted);font-size:14px;line-height:1.5;margin:0}
+  .foot-social{display:flex;gap:14px;margin-top:16px}
+  .foot-social a{color:inherit;opacity:0.7;transition:opacity 0.15s ease;display:inline-flex}
+  .foot-social a:hover{opacity:1}
   .foot-cols{display:flex;gap:56px;flex-wrap:wrap}
   .foot-col{display:flex;flex-direction:column;gap:12px}
   .foot-col h4{font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--faint);font-weight:600;margin:0 0 4px}
