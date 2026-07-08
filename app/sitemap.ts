@@ -25,10 +25,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(article.dateISO),
       priority: 0.7,
     })),
-    {
-      url: "https://micert.cl/demo",
-      lastModified,
-      priority: 0.8,
-    },
   ];
 }
