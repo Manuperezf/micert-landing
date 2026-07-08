@@ -3,33 +3,15 @@ import { notFound } from "next/navigation";
 import Footer from "../../components/Footer";
 import Nav from "../../components/Nav";
 import ArticleLayout from "../../components/ArticleLayout";
+import { buildFaqPageSchema } from "../../lib/faq-schema";
 import {
   RESOURCE_ARTICLES,
   getArticleBySlug,
-  type ResourceArticle,
 } from "../../lib/recursos";
 
 type PageProps = {
   params: { slug: string };
 };
-
-function buildFaqPageSchema(article: ResourceArticle) {
-  const faqItems = article.sections.flatMap((section) => section.faq ?? []);
-  if (faqItems.length === 0) return null;
-
-  return {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: faqItems.map((item) => ({
-      "@type": "Question",
-      name: item.question,
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: item.answer,
-      },
-    })),
-  };
-}
 
 export function generateStaticParams() {
   return RESOURCE_ARTICLES.map((article) => ({ slug: article.slug }));
@@ -67,7 +49,8 @@ export default function RecursoArticlePage({ params }: PageProps) {
   const article = getArticleBySlug(params.slug);
   if (!article) notFound();
 
-  const faqSchema = buildFaqPageSchema(article);
+  const faqItems = article.sections.flatMap((section) => section.faq ?? []);
+  const faqSchema = buildFaqPageSchema(faqItems);
 
   return (
     <>

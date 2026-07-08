@@ -65,3 +65,36 @@ export const PRECIOS_METADATA = {
   description:
     "Conoce los planes de MiCert para emitir certificados con QR en tu OTEC. Demo sin costo de 5 certificados, sin tarjeta. Agenda una demo.",
 };
+
+export const PRECIOS_FAQ = [
+  {
+    question: "¿Puedo cambiar de plan después?",
+    answer:
+      "Sí. Puedes subir o bajar de plan cuando quieras, según las necesidades de tu OTEC. El cambio se refleja en tu próximo ciclo de facturación.",
+  },
+  {
+    question: "¿Qué pasa si supero mi cuota mensual?",
+    answer:
+      "Te avisamos cuando te acercas al límite. Si necesitas más certificados en un mes puntual, puedes comprar un pack adicional sin cambiar de plan. Si el volumen extra es constante, conviene subir de plan.",
+  },
+  {
+    question: "¿Los precios incluyen IVA?",
+    answer:
+      "No. Los valores publicados son netos. Al ser una operación entre empresas, se agrega el IVA correspondiente en la factura.",
+  },
+  {
+    question: "¿Hay contrato de permanencia?",
+    answer:
+      "No. Los planes son mensuales y sin permanencia. Puedes cancelar cuando quieras.",
+  },
+  {
+    question: "¿Necesito conocimientos técnicos para usar MiCert?",
+    answer:
+      "No. Cargas tus datos desde un Excel, eliges el diseño del certificado y emites. Todo desde el navegador, sin instalar nada.",
+  },
+  {
+    question: "¿Puedo probar antes de contratar?",
+    answer:
+      "Sí. El plan Demo te permite emitir 5 certificados de prueba sin costo para que veas el flujo completo antes de decidir.",
+  },
+];

@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import Footer from "../components/Footer";
 import Nav from "../components/Nav";
 import DemoBanner from "../components/DemoBanner";
+import FaqSection from "../components/FaqSection";
 import PlansGrid from "../components/PlansGrid";
-import { PLANS_PAGE, PRECIOS_METADATA } from "../lib/plans";
+import { buildFaqPageSchema } from "../lib/faq-schema";
+import { PLANS_PAGE, PRECIOS_FAQ, PRECIOS_METADATA } from "../lib/plans";
 
 export const metadata: Metadata = {
   title: PRECIOS_METADATA.title,
@@ -16,9 +19,35 @@ export const metadata: Metadata = {
   },
 };
 
+const preciosFaqItems = PRECIOS_FAQ.map((item, index) => {
+  if (index === PRECIOS_FAQ.length - 1) {
+    return {
+      question: item.question,
+      answer: (
+        <>
+          Sí. El{" "}
+          <Link href="/demo">plan Demo</Link> te permite emitir 5 certificados
+          de prueba sin costo para que veas el flujo completo antes de decidir.
+        </>
+      ),
+    };
+  }
+  return item;
+});
+
+const preciosFaqSchema = buildFaqPageSchema(PRECIOS_FAQ);
+
 export default function PreciosPage() {
   return (
     <>
+      {preciosFaqSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(preciosFaqSchema),
+          }}
+        />
+      )}
       <Nav />
 
       <header className="hero hero-compact">
@@ -26,6 +55,15 @@ export default function PreciosPage() {
           <span className="eyebrow">Planes</span>
           <h1>{PLANS_PAGE.heading}</h1>
           <p className="lead">{PLANS_PAGE.subheading}</p>
+          <p className="lead">
+            Todos los planes incluyen emisión masiva desde Excel, editor visual
+            de certificados, validación pública con QR y envío de certificados
+            por email. La diferencia entre planes es el volumen de certificados
+            que emites al mes. Si recién partes o tienes cursos esporádicos,
+            Básico te alcanza. Si emites en varios cursos al mes o trabajas con
+            volumen constante, Estándar o Pro te dan holgura sin que tengas que
+            estar pendiente de la cuota. Los precios no incluyen IVA.
+          </p>
         </div>
       </header>
 
@@ -45,6 +83,8 @@ export default function PreciosPage() {
           </div>
         </div>
       </section>
+
+      <FaqSection items={preciosFaqItems} />
 
       <Footer />
     </>
