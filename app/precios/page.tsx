@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
 import Footer from "../components/Footer";
@@ -19,21 +20,31 @@ export const metadata: Metadata = {
   },
 };
 
-const preciosFaqItems = PRECIOS_FAQ.map((item, index) => {
-  if (index === PRECIOS_FAQ.length - 1) {
-    return {
-      question: item.question,
-      answer: (
-        <>
-          Sí. El{" "}
-          <Link href="/demo">plan Demo</Link> te permite emitir 5 certificados
-          de prueba sin costo para que veas el flujo completo antes de decidir.
-        </>
-      ),
-    };
-  }
-  return item;
-});
+const PRECIOS_FAQ_LINKED_ANSWERS: Record<number, ReactNode> = {
+  4: (
+    <>
+      No. Cargas tus datos desde un Excel, eliges el diseño del certificado y
+      emites. Todo desde el navegador, sin instalar nada. ¿Recién formas tu
+      OTEC? Mira los{" "}
+      <Link href="/recursos/requisitos-formar-otec-chile">
+        requisitos para formar una OTEC en Chile
+      </Link>
+      .
+    </>
+  ),
+  5: (
+    <>
+      Sí. El{" "}
+      <Link href="/demo">plan Demo</Link> te permite emitir 5 certificados de
+      prueba sin costo para que veas el flujo completo antes de decidir.
+    </>
+  ),
+};
+
+const preciosFaqItems = PRECIOS_FAQ.map((item, index) => ({
+  question: item.question,
+  answer: PRECIOS_FAQ_LINKED_ANSWERS[index] ?? item.answer,
+}));
 
 const preciosFaqSchema = buildFaqPageSchema(PRECIOS_FAQ);
 

@@ -940,7 +940,7 @@ export const RESOURCE_ARTICLES: ResourceArticle[] = [
     featured: false,
     relatedSlugs: [
       "rudo-sence-como-usar-registro-otec",
-      "certificados-qr-otec",
+      "certificados-otec-mineria",
     ],
     metaTitle: "Requisitos para formar una OTEC en Chile 2026 | MiCert",
     metaDescription:
@@ -1063,7 +1063,10 @@ export const RESOURCE_ARTICLES: ResourceArticle[] = [
     date: "2 de julio de 2026",
     dateISO: "2026-07-02",
     featured: false,
-    relatedSlugs: ["certificados-qr-otec", "alternativa-excel-canva"],
+    relatedSlugs: [
+      "como-elegir-software-certificados-otec",
+      "alternativa-excel-canva",
+    ],
     metaTitle:
       "Certificados en Moodle vs MiCert: qué hace cada uno | MiCert",
     metaDescription:
@@ -1261,7 +1264,10 @@ export const RESOURCE_ARTICLES: ResourceArticle[] = [
     date: "5 de julio de 2026",
     dateISO: "2026-07-05",
     featured: false,
-    relatedSlugs: ["software-para-otec", "emitir-certificados-masivos-excel"],
+    relatedSlugs: [
+      "certificados-moodle-vs-micert",
+      "software-para-otec",
+    ],
     metaTitle:
       "Cómo elegir un software de certificados para OTEC | MiCert",
     metaDescription:
@@ -1380,7 +1386,7 @@ export const RESOURCE_ARTICLES: ResourceArticle[] = [
     featured: false,
     relatedSlugs: [
       "certificados-prevencion-de-riesgos",
-      "detectar-certificados-otec-falsos",
+      "requisitos-formar-otec-chile",
     ],
     metaTitle:
       "Certificados para OTEC que capacitan para minería | MiCert",

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import Footer from "./components/Footer";
 import Nav from "./components/Nav";
 
@@ -242,12 +243,12 @@ export default function Home() {
         <div className="wrap">
           <div className="section-head center"><span className="eyebrow">Preguntas frecuentes</span><h2>Lo que más nos preguntan.</h2></div>
           <div className="faq">
-            <details name="faq"><summary>¿MiCert es una plataforma de cursos (LMS)? <span className="pm">+</span></summary><p>No. MiCert no dicta ni gestiona cursos en lo pedagógico. Hace una cosa y la hace bien: emitir, diseñar y validar certificados. Convive sin problema con el LMS o el sistema que ya uses.</p></details>
+            <details name="faq"><summary>¿MiCert es una plataforma de cursos (LMS)? <span className="pm">+</span></summary><p>No. MiCert no dicta ni gestiona cursos en lo pedagógico. Hace una cosa y la hace bien: emitir, diseñar y validar certificados. Convive sin problema con el LMS o el sistema que ya uses. Si dudas entre tu LMS y una herramienta dedicada, revisa <Link href="/recursos/certificados-moodle-vs-micert">Moodle vs MiCert</Link>.</p></details>
             <details name="faq"><summary>¿Necesito saber de tecnología para usarlo? <span className="pm">+</span></summary><p>No. Si sabes manejar una planilla de Excel, sabes usar MiCert. Cargas la lista, eliges el diseño y emites. El QR, el código y la página de verificación se generan solos.</p></details>
             <details name="faq"><summary>¿Cómo se valida un certificado? <span className="pm">+</span></summary><p>Cada certificado lleva un QR y un código corto. Al escanearlo o ingresar el código se abre una página pública con el estado actual y los datos del curso. No hace falta crear cuenta.</p></details>
             <details name="faq"><summary>¿Sirve para auditorías de SENCE? <span className="pm">+</span></summary><p>MiCert está pensado con la trazabilidad en mente: nada se borra. Los cursos se archivan, los certificados se anulan y la vigencia queda fija desde la emisión. Tienes un registro claro de qué se emitió, a quién y cuándo.</p></details>
             <details name="faq"><summary>¿Qué pasa si emito un certificado con un error? <span className="pm">+</span></summary><p>Lo anulas. La anulación es definitiva y queda registrada; luego emites el corregido. La página de verificación deja de mostrar el anulado como válido al instante.</p></details>
-            <details name="faq"><summary>¿Cuánto cuesta? <span className="pm">+</span></summary><p>Tres planes según el volumen mensual: Básico ($29.990 + IVA, 80 certificados), Estándar ($49.990 + IVA, 200) y Pro ($89.990 + IVA, 500). Además, una demo sin costo de 5 certificados para partir.</p></details>
+            <details name="faq"><summary>¿Cuánto cuesta? <span className="pm">+</span></summary><p>Tres planes según el volumen mensual: Básico ($29.990 + IVA, 80 certificados), Estándar ($49.990 + IVA, 200) y Pro ($89.990 + IVA, 500). Además, una demo sin costo de 5 certificados para partir. ¿Comparando opciones? Te ayuda esta guía para <Link href="/recursos/como-elegir-software-certificados-otec">elegir un software de certificados</Link>.</p></details>
           </div>
         </div>
       </section>
