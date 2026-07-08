@@ -107,7 +107,11 @@ export default function ArticleShare({ slug }: ArticleShareProps) {
               className="article-share-btn"
               href={item.href}
               target="_blank"
-              rel="noopener noreferrer"
+              rel={
+                item.id === "whatsapp"
+                  ? "noopener noreferrer nofollow"
+                  : "noopener noreferrer"
+              }
               aria-label={`Compartir en ${item.label}`}
             >
               {item.icon}
