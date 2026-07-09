@@ -5,6 +5,7 @@ import Footer from "../components/Footer";
 import Nav from "../components/Nav";
 import DemoBanner from "../components/DemoBanner";
 import FaqSection from "../components/FaqSection";
+import PlanFeatures from "../components/PlanFeatures";
 import PlansGrid from "../components/PlansGrid";
 import { buildFaqPageSchema } from "../lib/faq-schema";
 import { PLANS_PAGE, PRECIOS_FAQ, PRECIOS_METADATA } from "../lib/plans";
@@ -66,21 +67,13 @@ export default function PreciosPage() {
           <span className="eyebrow">Planes</span>
           <h1>{PLANS_PAGE.heading}</h1>
           <p className="lead">{PLANS_PAGE.subheading}</p>
-          <p className="lead">
-            Todos los planes incluyen emisión masiva desde Excel, editor visual
-            de certificados, validación pública con QR y envío de certificados
-            por email. La diferencia entre planes es el volumen de certificados
-            que emites al mes. Si recién partes o tienes cursos esporádicos,
-            Básico te alcanza. Si emites en varios cursos al mes o trabajas con
-            volumen constante, Estándar o Pro te dan holgura sin que tengas que
-            estar pendiente de la cuota. Los precios no incluyen IVA.
-          </p>
         </div>
       </header>
 
       <section className="section tight">
         <div className="wrap">
           <PlansGrid />
+          <PlanFeatures />
           <DemoBanner />
           <div className="plans-foot">
             <span>
