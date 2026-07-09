@@ -63,22 +63,22 @@ const FEATURES = [
 export default function PlanFeatures() {
   return (
     <div className="plan-features">
-      <p className="plan-features-head">Todos los planes incluyen</p>
+      <div className="plan-features-head">
+        <span className="eyebrow">Todos los planes incluyen</span>
+        <p>
+          Si recién partes o tienes cursos esporádicos, Básico te alcanza. Con
+          volumen constante, Estándar o Pro te dan holgura sin estar pendiente
+          de la cuota.
+        </p>
+      </div>
       <div className="plan-features-grid">
         {FEATURES.map((feature) => (
           <div key={feature.label} className="plan-features-item">
-            <div className="plan-features-ic">{feature.icon}</div>
+            <span className="plan-features-icon">{feature.icon}</span>
             <span className="plan-features-label">{feature.label}</span>
           </div>
         ))}
       </div>
-      <p className="plan-features-foot">
-        La diferencia entre planes es el volumen de certificados que emites al
-        mes. Si recién partes o tienes cursos esporádicos, Básico te alcanza.
-        Si emites en varios cursos al mes o trabajas con volumen constante,
-        Estándar o Pro te dan holgura sin que tengas que estar pendiente de la
-        cuota. Los precios no incluyen IVA.
-      </p>
     </div>
   );
 }
