@@ -71,8 +71,8 @@ export default function PreciosPage() {
             </div>
             <div className="hero-aside">
               <p className="lead">
-                {PLANS_PAGE.subheading} Pagas por volumen de emisión, sin
-                sorpresas en la factura.
+                Sin instalación ni costos ocultos. Pagas por volumen de emisión,
+                sin sorpresas en la factura.
               </p>
               <div className="hero-flex-note">
                 <svg
