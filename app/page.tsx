@@ -167,7 +167,7 @@ export default function Home() {
             <p className="lead">Puedes partir con una demo, validar el flujo con tus propias plantillas y escalar según el volumen de certificados que emitas al mes.</p>
           </div>
           <PlansGrid />
-          <div className="demo-band">
+          <div className="demo-band home-demo-band">
             <div className="demo-band-copy">
               <span className="eyebrow">Demo sin costo</span>
               <h3>Pruébalo con 5 certificados antes de decidir</h3>
