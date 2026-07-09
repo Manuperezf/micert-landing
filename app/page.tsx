@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Footer from "./components/Footer";
 import Nav from "./components/Nav";
+import PlansGrid from "./components/PlansGrid";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/" },
@@ -165,44 +166,7 @@ export default function Home() {
             <h2>Planes simples para empezar sin complicarte.</h2>
             <p className="lead">Puedes partir con una demo, validar el flujo con tus propias plantillas y escalar según el volumen de certificados que emitas al mes.</p>
           </div>
-          <div className="plans">
-            <div className="plan">
-              <span className="tier">Básico</span>
-              <div className="price">$29.990 <small>+ IVA / mes</small></div>
-              <div className="vol">80 certificados al mes</div>
-              <ul>
-                <li><span className="ck">✓</span>Plantillas reutilizables</li>
-                <li><span className="ck">✓</span>Verificación pública con QR</li>
-                <li><span className="ck">✓</span>Emisión masiva e historial</li>
-                <li><span className="ck">✓</span>1 usuario administrador</li>
-              </ul>
-              <a className="btn ghost" href="/demo">Agenda una demo</a>
-            </div>
-            <div className="plan featured">
-              <span className="tier">Estándar · recomendado</span>
-              <div className="price">$49.990 <small>+ IVA / mes</small></div>
-              <div className="vol">200 certificados al mes</div>
-              <ul>
-                <li><span className="ck">✓</span>Todo lo del plan Básico</li>
-                <li><span className="ck">✓</span>Mayor volumen mensual</li>
-                <li><span className="ck">✓</span>Vigencia y anulación por lote</li>
-                <li><span className="ck">✓</span>Varios usuarios del equipo</li>
-              </ul>
-              <a className="btn" href="/demo">Agenda una demo</a>
-            </div>
-            <div className="plan">
-              <span className="tier">Pro</span>
-              <div className="price">$89.990 <small>+ IVA / mes</small></div>
-              <div className="vol">500 certificados al mes</div>
-              <ul>
-                <li><span className="ck">✓</span>Todo lo del plan Estándar</li>
-                <li><span className="ck">✓</span>Alto volumen de emisión</li>
-                <li><span className="ck">✓</span>Reportes y trazabilidad</li>
-                <li><span className="ck">✓</span>Soporte por correo</li>
-              </ul>
-              <a className="btn ghost" href="/demo">Agenda una demo</a>
-            </div>
-          </div>
+          <PlansGrid />
           <div className="demo-band">
             <div className="demo-band-copy">
               <span className="eyebrow">Demo sin costo</span>
