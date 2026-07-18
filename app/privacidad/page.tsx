@@ -30,7 +30,7 @@ export default function PrivacidadPage() {
 
       <div className="legal-wrap">
         <h1>Política de Privacidad</h1>
-        <p className="updated">Última actualización: 27 de junio de 2026</p>
+        <p className="updated">Última actualización: 18 de julio de 2026</p>
 
         <div className="legal-summary">
           <h2>En resumen</h2>
@@ -86,6 +86,7 @@ export default function PrivacidadPage() {
         <p>MiCert se apoya en proveedores de infraestructura cloud profesionales para operar la plataforma: la base de datos, la autenticación y el almacenamiento de archivos se gestionan a través de Supabase; el alojamiento y la entrega de la aplicación, a través de Vercel; y el envío de correos electrónicos transaccionales (notificaciones y enlaces de verificación a los titulares), a través de Resend. Los datos se alojan en servidores ubicados fuera de Chile, principalmente en Estados Unidos.</p>
         <h3>5.2 Transferencia Internacional de Datos</h3>
         <p>El almacenamiento de datos en infraestructura ubicada fuera de Chile constituye una transferencia internacional de datos personales, que se realiza procurando cumplir los requisitos de los artículos 27 y 28, mediante garantías contractuales con los proveedores de infraestructura, medidas técnicas y organizativas equivalentes a las exigidas en Chile, y las cláusulas contractuales tipo que apruebe la Agencia de Protección de Datos Personales una vez que estén disponibles.</p>
+        <p>Asimismo, cuando un visitante nos contacta a través de WhatsApp Business, sus datos de contacto y el contenido del mensaje son tratados por Meta Platforms, Inc., con infraestructura ubicada fuera de Chile. Dicha transferencia se ampara en el consentimiento del titular al iniciar voluntariamente la conversación por ese canal.</p>
         <h3>5.3 Medidas de Seguridad</h3>
         <ul>
           <li>Cifrado en tránsito: todas las comunicaciones entre el navegador y los servidores están protegidas mediante SSL/TLS.</li>
@@ -110,7 +111,7 @@ export default function PrivacidadPage() {
         <p>MiCert no vende, alquila ni transfiere datos personales a terceros con fines comerciales propios. Solo compartimos información con:</p>
         <ul>
           <li>Proveedores de infraestructura necesarios para operar el servicio: Supabase (base de datos y almacenamiento), Vercel (alojamiento) y Resend (envío de correo transaccional), bajo contrato de tratamiento.</li>
-          <li>En el sitio de marketing, proveedores de formularios, analítica y atención, como HubSpot (formulario de contacto y demo), Google Analytics (analítica) y Brevo Conversations (chat de atención al visitante) (ver Sección 8).</li>
+          <li>En el sitio de marketing, proveedores de formularios, analítica y atención, como HubSpot (formulario de contacto y demo), Google Analytics (analítica) y WhatsApp Business, operado por Meta Platforms, Inc. (canal de contacto directo con visitantes) (ver Secciones 5 y 8).</li>
           <li>Autoridades, cuando sea obligatorio por ley u orden judicial, incluida la Agencia de Protección de Datos Personales.</li>
           <li>Cuando sea necesario para prevenir fraude o proteger la seguridad de la plataforma.</li>
         </ul>
@@ -128,7 +129,7 @@ export default function PrivacidadPage() {
 
         <h2>8. Cookies y Tecnologías Similares</h2>
         <p>En la plataforma (app.micert.cl) utilizamos únicamente cookies esenciales: de sesión (para mantener la sesión activa), de seguridad (para proteger la cuenta y prevenir ataques) y funcionales (para recordar preferencias de visualización).</p>
-        <p>En el sitio de marketing (micert.cl) utilizamos Google Analytics para medir el uso del sitio de forma agregada y mejorar su contenido, y Brevo Conversations para ofrecer un chat de atención a los visitantes. Estas herramientas pueden instalar cookies de analítica y de funcionamiento del chat, respectivamente. El usuario puede configurar su navegador para rechazar cookies; rechazar las cookies esenciales puede afectar la funcionalidad de la plataforma, especialmente las funciones de sesión y seguridad.</p>
+        <p>En el sitio de marketing (micert.cl) utilizamos Google Analytics para medir el uso del sitio de forma agregada y mejorar su contenido, lo que puede instalar cookies de analítica. El contacto por WhatsApp se realiza mediante un enlace directo que abre la aplicación de WhatsApp fuera de nuestro sitio, por lo que no instala cookies en micert.cl. El usuario puede configurar su navegador para rechazar cookies; rechazar las cookies esenciales puede afectar la funcionalidad de la plataforma, especialmente las funciones de sesión y seguridad.</p>
         <p>MiCert no utiliza cookies de publicidad de terceros ni de perfilamiento comercial.</p>
 
         <h2>9. Datos de Menores de Edad</h2>
@@ -149,7 +150,7 @@ export default function PrivacidadPage() {
         <p>Esta Política de Privacidad complementa los Términos y Condiciones de Uso. En caso de conflicto entre ambos documentos en materia de privacidad y protección de datos, prevalece esta Política. Ambos documentos deben leerse conjuntamente y forman parte del acuerdo entre el Cliente y MiCert.</p>
 
         <h2>13. Contacto</h2>
-        <p>Para consultas o el ejercicio de derechos relacionados con esta Política: hola@micert.cl</p>
+        <p>Puedes contactarnos en hola@micert.cl o por WhatsApp al +56 9 5068 6974.</p>
 
         <h2>14. Marco Legal Aplicable</h2>
         <ul>
