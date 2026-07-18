@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import Script from "next/script";
 import { Inter_Tight, JetBrains_Mono } from "next/font/google";
+import WhatsAppFloat from "@/src/components/whatsapp-float";
 import "./globals.css";
 
 const interTight = Inter_Tight({
@@ -44,23 +45,8 @@ export default function RootLayout({
     <html lang="es-CL" className={`${interTight.variable} ${jetbrainsMono.variable}`}>
       <body>
         {children}
+        <WhatsAppFloat />
         <GoogleAnalytics gaId="G-V9KQKJL8X7" />
-        <Script
-          id="brevo-conversations"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `(function(d, w, c) {
-      w.BrevoConversationsID = '6a3d246c2595ac86c80bcbb1';
-      w[c] = w[c] || function() {
-          (w[c].q = w[c].q || []).push(arguments);
-      };
-      var s = d.createElement('script');
-      s.async = true;
-      s.src = 'https://conversations-widget.brevo.com/brevo-conversations.js';
-      if (d.head) d.head.appendChild(s);
-  })(document, window, 'BrevoConversations');`,
-          }}
-        />
         <Script
           id="hs-script-loader"
           src="https://js-eu1.hs-scripts.com/148767528.js"

@@ -385,3 +385,7 @@
   .article-table{font-size:13.5px}
   .article-table th,.article-table td{padding:10px 12px}
 }
+
+.whatsapp-float{position:fixed;bottom:24px;right:24px;z-index:100;display:flex;align-items:center;justify-content:center;width:56px;height:56px;flex:none;border-radius:50%;background:#25D366;color:#fff;box-shadow:0 10px 24px rgba(0,0,0,.12);transition:transform .2s ease}
+.whatsapp-float:hover{transform:scale(1.05)}
+.whatsapp-float svg{display:block;flex:none}
