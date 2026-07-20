@@ -1,7 +1,8 @@
 export type Plan = {
   id: string;
   name: string;
-  price: string;
+  priceMonthly: number;
+  priceAnnual: number;
   volume: string;
   features: string[];
   featured?: boolean;
@@ -12,42 +13,47 @@ export const PLANS_PAGE = {
   subheading: "Sin instalación ni costos ocultos. Pagas por volumen de emisión.",
 };
 
+// 2 meses gratis en el plan anual: se paga el equivalente a 10 meses.
 export const PLANS: Plan[] = [
   {
     id: "basico",
     name: "Básico",
-    price: "$29.990",
+    priceMonthly: 29990,
+    priceAnnual: 299900,
     volume: "80 certificados al mes",
     features: [
-      "Plantillas reutilizables",
+      "Emisión masiva desde Excel",
       "Verificación pública con QR",
-      "Emisión masiva e historial",
-      "1 usuario administrador",
+      "Envío de certificados por correo",
+      "Plantillas reutilizables",
+      "2 usuarios del equipo",
     ],
   },
   {
     id: "estandar",
     name: "Estándar",
-    price: "$49.990",
+    priceMonthly: 49990,
+    priceAnnual: 499900,
     volume: "200 certificados al mes",
     featured: true,
     features: [
       "Todo lo del plan Básico",
-      "Mayor volumen mensual",
-      "Vigencia y anulación por lote",
-      "Varios usuarios del equipo",
+      "Vigencia y revocación por lote",
+      "Dashboard con indicadores",
+      "5 usuarios del equipo",
     ],
   },
   {
     id: "pro",
     name: "Pro",
-    price: "$89.990",
+    priceMonthly: 89990,
+    priceAnnual: 899900,
     volume: "500 certificados al mes",
     features: [
       "Todo lo del plan Estándar",
-      "Alto volumen de emisión",
-      "Reportes y trazabilidad",
-      "Soporte por correo",
+      "Mayor volumen de emisión mensual",
+      "10 usuarios del equipo",
+      "Soporte prioritario por correo",
     ],
   },
 ];
