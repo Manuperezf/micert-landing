@@ -129,11 +129,12 @@
   .billing-toggle{
     display:inline-flex;
     gap:4px;
-    margin:38px auto 0;
-    padding:4px;
-    background:var(--bone);
+    margin:40px auto 44px;
+    padding:5px;
+    background:#fff;
     border:1px solid var(--line);
     border-radius:99px;
+    box-shadow:0 1px 3px rgba(38,38,38,.04);
   }
   .billing-toggle button{
     font-family:var(--sans);
@@ -154,10 +155,9 @@
   }
   .billing-toggle button:hover{color:var(--ink)}
   .billing-toggle button.active{
-    background:#fff;
-    color:var(--ink);
-    border-color:var(--line-strong);
-    box-shadow:0 1px 2px rgba(38,38,38,.06);
+    background:var(--ink);
+    color:#fff;
+    border-color:var(--ink);
   }
   .billing-save{
     font-size:11.5px;
@@ -168,15 +168,18 @@
     padding:2px 8px;
     border-radius:99px;
   }
-  .billing-toggle button.active .billing-save{color:var(--azul)}
+  .billing-toggle button.active .billing-save{
+    background:var(--verde);
+    color:var(--ink);
+  }
 
   @media(max-width:520px){
-    .billing-toggle{width:100%;justify-content:center}
+    .billing-toggle{width:100%;justify-content:center;margin:32px auto 32px}
     .billing-toggle button{padding:8px 12px;font-size:12.5px}
     .billing-save{display:none}
   }
 
-  .plans{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:22px;align-items:start}
+  .plans{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:0;align-items:stretch}
   .plan{border:1px solid var(--line);border-radius:var(--radius);padding:30px 28px;background:#fff;display:flex;flex-direction:column;position:relative;transition:transform .2s ease,box-shadow .2s ease}
   .plan:hover{transform:translateY(-4px);box-shadow:0 12px 28px rgba(38,38,38,.10)}
   .plan.featured{background:var(--azul);color:#fff;border-color:var(--azul);box-shadow:0 0 0 2px var(--azul-soft)}
