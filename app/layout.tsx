@@ -27,11 +27,19 @@ export const metadata: Metadata = {
   openGraph: {
     title: "MiCert — Certificados digitales verificables para OTEC",
     description:
-      "Emite certificados digitales con código QR único desde Excel, en minutos. Verificables y con trazabilidad para auditorías SENCE.",
+      "Emite certificados digitales con código QR único desde Excel, en minutos. Verificables, con trazabilidad para auditorías SENCE. Sin PDF editables ni conocimientos técnicos.",
     url: "https://micert.cl",
     siteName: "MiCert",
     locale: "es_CL",
     type: "website",
+    images: [
+      {
+        url: "/opengraph-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Certificados digitales verificables con QR, en minutos — MiCert",
+      },
+    ],
   },
   twitter: { card: "summary_large_image" },
 };
