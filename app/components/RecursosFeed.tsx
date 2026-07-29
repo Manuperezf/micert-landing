@@ -23,7 +23,7 @@ export default function RecursosFeed() {
       if (tipo && article.tipo !== tipo) return false;
       if (tema && !article.temas.includes(tema)) return false;
       return true;
-    });
+    }).sort((a, b) => b.dateISO.localeCompare(a.dateISO));
   }, [tipo, tema]);
 
   return (
