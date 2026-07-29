@@ -1474,6 +1474,141 @@ export const RESOURCE_ARTICLES: ResourceArticle[] = [
       },
     ],
   },
+  {
+    slug: "ley-21719-otec-proteccion-datos",
+    tipo: "Normativa",
+    temas: ["SENCE"],
+    title:
+      "Ley 21.719 y tu OTEC: qué cambia el 1 de diciembre y qué conviene ordenar",
+    excerpt:
+      "Todo OTEC trata datos personales: el RUT, el nombre, el correo y las notas de cada alumno que pasa por sus cursos. Hasta ahora eso tenía pocas consecuencias prácticas. Desde diciembre, deja de ser así.",
+    author: "Equipo MiCert",
+    date: "29 de julio de 2026",
+    dateISO: "2026-07-29",
+    featured: false,
+    relatedSlugs: ["auditoria-sence", "certificados-qr-otec"],
+    metaTitle: "Ley 21.719 para OTEC: qué cambia en diciembre | MiCert",
+    metaDescription:
+      "La Ley 21.719 entra en vigencia el 1 de diciembre de 2026. Qué significa para un OTEC que maneja RUT, nombres y notas de sus alumnos, y qué conviene ordenar antes.",
+    sections: [
+      {
+        id: "que-pasa-el-1-de-diciembre-de-2026",
+        title: "Qué pasa el 1 de diciembre de 2026",
+        paragraphs: [
+          "La Ley 21.719 fue publicada en diciembre de 2024 y entra en plena vigencia el 1 de diciembre de 2026, tras un período de adaptación de veinticuatro meses. Reforma a fondo la Ley 19.628, que regía desde 1999 con sanciones bajas y prácticamente sin fiscalización.",
+          "Lo que cambia no es tanto qué se considera un dato personal, sino qué pasa cuando no lo cuidas. Nace la Agencia de Protección de Datos Personales, un organismo con facultades reales: puede investigar de oficio, multar, ordenar la suspensión de un tratamiento y publicar un registro de sanciones. Las multas llegan hasta 20.000 UTM —una cifra que, según el valor que tenga la UTM, se ubica en el orden de los mil millones de pesos— y en casos de reincidencia pueden calcularse sobre un porcentaje de los ingresos anuales.",
+          "Se suman derechos concretos para los titulares: acceso, rectificación, supresión, oposición y portabilidad, además de la obligación de notificar las brechas de seguridad. El marco de referencia es el reglamento europeo de protección de datos, así que quien haya visto cómo funciona el GDPR reconocerá la lógica.",
+        ],
+      },
+      {
+        id: "por-que-esto-le-llega-de-lleno-a-un-otec",
+        title: "Por qué esto le llega de lleno a un OTEC",
+        paragraphs: [
+          "La ley aplica a toda organización que trate datos personales, sin importar su tamaño. Y un OTEC trata datos personales todos los días, aunque no lo piense en esos términos.",
+          "La lista de participantes de un curso es una base de datos personales: nombres, RUT, correos, a veces teléfono. Si además registras asistencia, notas o resultados de evaluación, estás tratando información sobre el desempeño de una persona. Todo eso está cubierto.",
+          "Y no es solo la planilla. Son los certificados emitidos, los correos donde circularon esas listas, las carpetas compartidas del equipo, los respaldos, y cualquier plataforma donde hayas cargado esa información. Ahí es donde suele estar el desorden real: no en un sistema, sino repartido en muchos.",
+        ],
+      },
+      {
+        id: "lo-que-se-fiscaliza-no-son-las-politicas",
+        title: "Lo que se fiscaliza no son las políticas",
+        paragraphs: [
+          "Este es el punto que más se subestima. Tener una política de privacidad publicada no es cumplimiento; es una parte del cumplimiento. Lo que una fiscalización busca es evidencia operativa: registros, inventarios, trazas datadas. Poder mostrar qué datos tienes, de dónde salieron, quién accedió, cuánto tiempo los conservas y con qué fundamento.",
+          'Dicho de otro modo, el salto no es de "no tener política" a "tener política". Es de "tenemos buenas intenciones" a "podemos demostrar lo que hicimos". Para un OTEC acostumbrado a la lógica de auditoría SENCE, la idea no debería ser ajena: es el mismo principio de poder probar, aplicado a los datos de las personas en lugar de a los certificados.',
+        ],
+      },
+      {
+        id: "responsable-y-encargado-el-rol-que-te-toca",
+        title: "Responsable y encargado: el rol que te toca",
+        paragraphs: [
+          "La ley distingue dos roles y conviene tenerlos claros, porque determinan quién responde por qué.",
+          "El responsable decide para qué y cómo se tratan los datos. Cuando tu OTEC capacita a un grupo de personas y emite sus certificados, ese responsable eres tú: tú definiste el curso, recolectaste los datos y decides qué hacer con ellos.",
+          "El encargado es quien trata esos datos por cuenta del responsable, siguiendo sus instrucciones. Ahí entran tus proveedores: la plataforma donde emites certificados, el sistema donde guardas las listas, el servicio de correo que usas para enviarlos.",
+          "La consecuencia práctica es directa. Frente a un alumno que reclama, o frente a la Agencia, el responsable eres tú. No se traspasa esa responsabilidad por usar un software de un tercero. Lo que sí exige la ley es que la relación con ese tercero esté formalizada por escrito.",
+        ],
+      },
+      {
+        id: "el-punto-ciego-los-contratos-con-tus-proveedores",
+        title: "El punto ciego: los contratos con tus proveedores",
+        paragraphs: [
+          "Cuando un OTEC trata datos personales a través de un proveedor, la ley exige un contrato de encargo de tratamiento —lo que se conoce como DPA— entre el responsable y el encargado. Es un documento que define qué datos se tratan, con qué finalidad, por cuánto tiempo, qué medidas de seguridad se aplican y qué pasa al terminar la relación.",
+          "Vale la pena revisar con qué proveedores tienes ese contrato firmado hoy. No es un trámite decorativo: es la pieza que documenta que el tratamiento está ordenado, y es de lo primero que se pide cuando alguien quiere ver evidencia. Si un proveedor procesa datos de tus alumnos y no te ofrece un DPA, ahí hay un vacío que te toca a ti, no a él.",
+        ],
+      },
+      {
+        id: "el-choque-que-nadie-ha-resuelto-supresion-versus-trazabilidad",
+        title: "El choque que nadie ha resuelto: supresión versus trazabilidad",
+        paragraphs: [
+          "Acá aparece una tensión concreta que todo OTEC va a enfrentar tarde o temprano.",
+          "Un exalumno ejerce su derecho de supresión y pide que borres todos sus datos. Al mismo tiempo, la normativa SENCE exige mantener trazabilidad de los certificados emitidos, y las obligaciones tributarias imponen sus propios plazos de conservación. ¿Qué haces?",
+          "La respuesta corta es que el derecho de supresión no es absoluto: cuando existe una obligación legal de conservar la información, esa obligación limita la eliminación. Lo que corresponde no es borrar sin más ni negarse sin explicación, sino saber exactamente qué se conserva, con qué fundamento y por cuánto tiempo, e informárselo al titular.",
+          "Por eso el inventario y los plazos de retención importan más de lo que parece. Sin ellos, la respuesta a ese alumno es una improvisación. Con ellos, es un procedimiento.",
+        ],
+      },
+      {
+        id: "que-conviene-ordenar-antes-de-diciembre",
+        title: "Qué conviene ordenar antes de diciembre",
+        paragraphs: [
+          "Un punto de partida razonable, en este orden.",
+          "Primero, el inventario: qué datos de alumnos tienes, en qué lugares viven —planillas, correos, plataformas, respaldos— y quién tiene acceso a cada uno. Sin este paso, los demás son a ciegas.",
+          "Segundo, el fundamento: por qué tratas cada uno de esos datos. Ejecutar el servicio de capacitación, cumplir obligaciones ante SENCE, emitir la documentación tributaria. Conviene tenerlo escrito.",
+          "Tercero, los plazos: cuánto tiempo conservas cada cosa y qué pasa cuando ese plazo se cumple. Aquí es donde se resuelve el choque de la sección anterior.",
+          "Cuarto, los proveedores: con quiénes tienes DPA firmado y con quiénes no.",
+          "Quinto, los derechos: cómo responderás si mañana un alumno pide acceso a sus datos o su eliminación, quién lo atiende y en qué plazo.",
+          "Y sexto, la seguridad y las brechas: control de acceso a la información y un procedimiento mínimo de qué hacer si ocurre un incidente.",
+          "Una nota que baja la ansiedad sin bajar la urgencia: las empresas de menor tamaño cuentan con un período inicial en el que las primeras infracciones se sancionan con amonestación escrita en lugar de multa. La mayoría de los OTEC entra en esa categoría. No es una excusa para no hacer nada, pero sí una ventana para ordenarse.",
+        ],
+      },
+      {
+        id: "donde-encaja-micert-y-donde-no",
+        title: "Dónde encaja MiCert (y dónde no)",
+        paragraphs: [
+          "Conviene ser preciso, porque en este tema abunda la promesa fácil. MiCert no hace que tu OTEC cumpla la Ley 21.719. El cumplimiento es del responsable, y ese eres tú. Ninguna herramienta reemplaza el inventario de tus datos, tus bases de licitud ni tu procedimiento de derechos.",
+          "Lo que MiCert sí resuelve son dos piezas concretas. La primera es la evidencia sobre lo que emitiste: cada certificado queda registrado con su código, su fecha y su estado, y los certificados se revocan en lugar de borrarse, de modo que existe una traza consultable en un solo lugar en vez de repartida entre correos y carpetas. La segunda es la relación contractual: MiCert opera como encargado de tratamiento, con contrato de encargo disponible para sus clientes, subprocesadores declarados y una política de privacidad que detalla qué se trata y por cuánto tiempo.",
+          "Puesto simple: tu OTEC sigue siendo responsable de sus datos, pero al menos la parte de los certificados deja de ser un punto ciego y pasa a ser algo que puedes mostrar.",
+          "Nota: este artículo es informativo y no constituye asesoría legal. La Ley 21.719 tiene alcances que cada organización debe revisar con su propia asesoría.",
+        ],
+      },
+      {
+        id: "preguntas-frecuentes",
+        title: "Preguntas frecuentes",
+        faq: [
+          {
+            question: "¿La Ley 21.719 aplica a un OTEC pequeño?",
+            answer:
+              "Sí. La ley aplica a toda organización que trate datos personales, sin importar su tamaño. Las empresas de menor tamaño cuentan con un período inicial en que las primeras infracciones se sancionan con amonestación escrita en vez de multa, pero la obligación de cumplir existe igual.",
+          },
+          {
+            question: "¿Qué datos de mis alumnos están cubiertos por la ley?",
+            answer:
+              "El nombre, el RUT, el correo, el teléfono y cualquier información que permita identificar a una persona. También los datos de asistencia, notas y resultados de evaluación asociados a esa persona.",
+          },
+          {
+            question: "¿Mi OTEC es responsable o encargado del tratamiento?",
+            answer:
+              "Responsable. Tú decides para qué se tratan los datos de tus alumnos. Los proveedores que procesan esa información por cuenta tuya —plataformas, sistemas de correo— actúan como encargados.",
+          },
+          {
+            question:
+              "¿Necesito un contrato con los proveedores que manejan datos de mis alumnos?",
+            answer:
+              "Sí. La ley exige un contrato de encargo de tratamiento (DPA) entre el responsable y el encargado, donde se define qué datos se tratan, con qué finalidad, por cuánto tiempo y con qué medidas de seguridad.",
+          },
+          {
+            question:
+              "Un alumno me pide borrar sus datos, pero SENCE exige trazabilidad. ¿Qué hago?",
+            answer:
+              "El derecho de supresión no es absoluto: cuando una obligación legal exige conservar información, esa obligación limita la eliminación. Lo que corresponde es saber qué se conserva, con qué fundamento y por cuánto tiempo, e informárselo al titular.",
+          },
+          {
+            question: "¿Una plataforma de certificados me hace cumplir la ley?",
+            answer:
+              "No. El cumplimiento es del responsable, es decir, del OTEC. Una plataforma puede aportar trazabilidad de los certificados emitidos y el contrato de encargo que necesitas tener con ella, pero no reemplaza el inventario de tus datos ni tus procedimientos internos.",
+          },
+        ],
+      },
+    ],
+  },
 ];
 
 export function getArticleBySlug(slug: string): ResourceArticle | undefined {
