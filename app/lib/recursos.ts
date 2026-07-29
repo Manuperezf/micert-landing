@@ -1610,6 +1610,114 @@ export const RESOURCE_ARTICLES: ResourceArticle[] = [
       },
     ],
   },
+  {
+    slug: "vencimiento-renovacion-certificados",
+    coverImage: "/recursos/vencimientos-certificados.jpg",
+    tipo: "Normativa",
+    temas: ["SENCE", "QR"],
+    title:
+      "Vencimiento de certificados: cuánto duran, quién lo decide y qué hacer con las renovaciones",
+    excerpt:
+      "Una de las preguntas más frecuentes que recibe un OTEC es cuánto dura el certificado que acaba de emitir. La respuesta corta incomoda: depende. Y entender de qué depende es lo que separa a un OTEC que reacciona de uno que se anticipa.",
+    author: "Equipo MiCert",
+    date: "30 de julio de 2026",
+    dateISO: "2026-07-30",
+    featured: false,
+    relatedSlugs: [
+      "certificados-otec-mineria",
+      "certificados-prevencion-de-riesgos",
+    ],
+    metaTitle:
+      "Vencimiento y renovación de certificados de capacitación | MiCert",
+    metaDescription:
+      "¿Cuánto dura un certificado de capacitación en Chile? Quién define la vigencia, qué pasa cuando vence y cómo un OTEC puede gestionar las renovaciones.",
+    sections: [
+      {
+        id: "en-chile-no-hay-una-fecha-de-caducidad-unica",
+        title: "En Chile no hay una fecha de caducidad única",
+        paragraphs: [
+          'Conviene partir por aclarar algo que genera confusión. Los cursos de capacitación en Chile no tienen, como regla general, un plazo de caducidad fijado por ley que aplique a todos por igual. No existe un "los certificados duran dos años" que sirva de respuesta universal.',
+          "Lo que sí existe son tres fuentes distintas que definen hasta cuándo sirve un certificado, y suelen operar al mismo tiempo. La primera es la normativa específica del tipo de curso, cuando la hay. La segunda son las buenas prácticas del área: en materias de seguridad, por ejemplo, es habitual que se recomiende reentrenamiento periódico, porque una competencia que no se practica se pierde. Y la tercera, que en la práctica es la que más manda, es lo que exige el mandante.",
+        ],
+      },
+      {
+        id: "el-mandante-suele-ser-quien-decide-de-verdad",
+        title: "El mandante suele ser quien decide de verdad",
+        paragraphs: [
+          "Este es el punto que a veces sorprende. En sectores como minería, construcción o industria, cada empresa mandante define en su reglamento de contratistas qué certificados exige y con qué vigencia. Esa exigencia puede ser más estricta que cualquier recomendación general, y es la que se aplica en la puerta.",
+          "La consecuencia práctica es directa: el mismo certificado, emitido por el mismo OTEC, puede ser aceptado en una faena y rechazado en otra por antigüedad. No porque el curso haya sido malo, sino porque cada operación fija su propio criterio de vigencia.",
+          'Para un OTEC esto significa que la pregunta "¿cuánto dura mi certificado?" no tiene una sola respuesta correcta. Lo que sí puede hacer es dejar la vigencia explícita en el documento, para que quien lo revise no tenga que adivinar.',
+        ],
+      },
+      {
+        id: "que-pasa-cuando-un-certificado-vence",
+        title: "Qué pasa cuando un certificado vence",
+        paragraphs: [
+          "En un proceso de acreditación, un documento vencido no es un detalle administrativo: detiene el trámite. Si falta un certificado o está fuera de plazo, el proceso se frena hasta que se regularice, y mientras tanto la persona no entra a trabajar.",
+          "Ahí el problema deja de ser del trabajador y se reparte. La empresa contratista pierde días de un trabajador que no puede ingresar. El mandante suma una acreditación incompleta. Y el OTEC que emitió ese certificado suele ser el primero al que llaman, muchas veces con urgencia y para un curso que podría haberse renovado con calma semanas antes.",
+        ],
+      },
+      {
+        id: "lo-que-casi-nadie-mira-el-vencimiento-es-una-agenda-comercial",
+        title: "Lo que casi nadie mira: el vencimiento es una agenda comercial",
+        paragraphs: [
+          "Acá está el giro que vale la pena para un OTEC. Todo certificado con fecha de vencimiento es, mirado de otra forma, una renovación agendada.",
+          "Si un OTEC sabe qué certificados emitió, a quiénes y con qué vigencia, tiene algo bastante valioso: una lista de personas y empresas que van a necesitar volver a capacitarse, con fecha estimada. Eso permite avisar antes de que el problema ocurra, en lugar de esperar el llamado de urgencia. Es la diferencia entre vender una renovación planificada y apagar un incendio.",
+          "Además, un reentrenamiento suele ser más corto que el curso inicial, lo que lo hace más fácil de coordinar para el cliente y más rentable de operar. La condición para todo esto es simple: tener la información ordenada. Sin eso, la lista de renovaciones existe en teoría, pero no se puede usar.",
+        ],
+      },
+      {
+        id: "como-se-gestiona-esto-con-micert",
+        title: "Cómo se gestiona esto con MiCert",
+        paragraphs: [
+          "En MiCert la validez y el vencimiento se definen a nivel del curso, así que cada certificado emitido queda con su vigencia registrada desde el inicio. Esa vigencia no vive solo en un archivo interno: aparece en la página pública de verificación, donde el estado del certificado se muestra como vigente, vencido o anulado.",
+          "Eso resuelve dos cosas al mismo tiempo. Del lado de quien revisa —una empresa mandante, un área de prevención— no hay que calcular fechas ni interpretar: el estado está a la vista al escanear. Y del lado del OTEC, la información de qué se emitió y con qué vigencia queda en un solo lugar, en vez de repartida entre planillas y correos, que es la condición mínima para poder anticipar renovaciones.",
+          "Vale ser preciso con el alcance: MiCert registra la vigencia y refleja el estado; el seguimiento comercial de esas renovaciones lo hace el OTEC. Lo que cambia es que deja de depender de la memoria.",
+          "Nota: este artículo es informativo. Las exigencias de vigencia varían según el tipo de curso, la normativa aplicable y el reglamento de cada empresa mandante; conviene confirmarlas con la fuente que corresponda en cada caso.",
+        ],
+      },
+      {
+        id: "preguntas-frecuentes",
+        title: "Preguntas frecuentes",
+        faq: [
+          {
+            question:
+              "¿Cuánto dura un certificado de capacitación en Chile?",
+            answer:
+              "No hay un plazo único fijado por ley que aplique a todos los cursos. La vigencia depende del tipo de curso, de la normativa específica cuando existe y, sobre todo, de lo que exija cada empresa mandante en su reglamento de contratistas.",
+          },
+          {
+            question: "¿Quién define la vigencia de un certificado?",
+            answer:
+              "En la práctica, el mandante suele ser quien fija el criterio que se aplica al momento de acreditar. Un mismo certificado puede ser aceptado en una faena y rechazado en otra por antigüedad.",
+          },
+          {
+            question:
+              "¿Qué pasa si un trabajador llega con un certificado vencido?",
+            answer:
+              "En un proceso de acreditación, el trámite se detiene hasta que se regularice. Mientras tanto, la persona no puede ingresar a faena.",
+          },
+          {
+            question:
+              "¿Un reentrenamiento es lo mismo que hacer el curso de nuevo?",
+            answer:
+              "No necesariamente. En varias materias existe la modalidad de actualización o reentrenamiento, más breve que el curso inicial, orientada a refrescar contenidos y verificar competencias de quien ya está certificado.",
+          },
+          {
+            question:
+              "¿Cómo sabe un OTEC qué certificados están por vencer?",
+            answer:
+              "Necesita tener registrado qué emitió, a quién y con qué vigencia. Si esa información está dispersa en planillas y correos, la lista de renovaciones es imposible de armar; si está en un solo lugar, se puede anticipar.",
+          },
+          {
+            question: "¿MiCert avisa cuándo vence un certificado?",
+            answer:
+              "MiCert permite definir la validez y el vencimiento por curso, y el estado del certificado —vigente, vencido o anulado— se muestra en la página pública de verificación. El seguimiento comercial de las renovaciones lo hace el OTEC con esa información.",
+          },
+        ],
+      },
+    ],
+  },
 ];
 
 export function getArticleBySlug(slug: string): ResourceArticle | undefined {
