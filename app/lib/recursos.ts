@@ -1476,6 +1476,7 @@ export const RESOURCE_ARTICLES: ResourceArticle[] = [
   },
   {
     slug: "ley-21719-otec-proteccion-datos",
+    coverImage: "/recursos/Ley-21719-y-OTEC.jpg",
     tipo: "Normativa",
     temas: ["SENCE"],
     title:
