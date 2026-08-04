@@ -1718,6 +1718,118 @@ export const RESOURCE_ARTICLES: ResourceArticle[] = [
       },
     ],
   },
+  {
+    slug: "cuanto-cuesta-software-certificados",
+    coverImage: "/recursos/busqueda-software-certificados-digitales.jpg",
+    tipo: "Comparativa",
+    temas: ["Excel", "QR"],
+    title:
+      "¿Cuánto cuesta un software de certificados digitales para OTEC?",
+    excerpt:
+      "Si estás comparando herramientas para dejar de hacer certificados a mano, la primera pregunta es obvia: ¿cuánto cuesta? Repasamos qué determina el precio, qué modelos de cobro encontrarás en el mercado y cuánto cuestan los planes de MiCert, con cifras públicas.",
+    author: "Equipo MiCert",
+    date: "1 de agosto de 2026",
+    dateISO: "2026-08-01",
+    featured: false,
+    relatedSlugs: [
+      "como-elegir-software-certificados-otec",
+      "emitir-certificados-masivos-excel",
+    ],
+    metaTitle:
+      "¿Cuánto cuesta un software de certificados para OTEC? | MiCert",
+    metaDescription:
+      "Guía de precios de software de certificados para OTEC: qué determina el costo, modelos de cobro del mercado y planes de MiCert con precio público según volumen de emisión.",
+    sections: [
+      {
+        id: "por-que-el-precio-no-es-lo-primero-que-encuentras",
+        title: "Por qué el precio no es lo primero que encuentras",
+        paragraphs: [
+          "Buscar cuánto cuesta un software de certificados para OTEC suele terminar en una reunión comercial. Muchas herramientas no publican precios: te piden agendar una demo, contar tu volumen y recién ahí te mandan una cotización. Eso no es casualidad —es un modelo de venta—, pero complica la comparación cuando solo quieres saber si calza con tu presupuesto.",
+          "El problema de fondo es que no estás comprando lo mismo en todos lados. Un software que emite PDFs bonitos no cuesta lo mismo que uno con verificación QR, emisión masiva desde Excel y trazabilidad para auditoría. Comparar solo el número de la factura, sin mirar qué incluye, es la forma más rápida de pagar de más o quedarte corto.",
+        ],
+      },
+      {
+        id: "que-determina-cuanto-cuesta",
+        title: "Qué determina cuánto cuesta",
+        paragraphs: [
+          "En la práctica, el precio de un software de certificados para OTEC se mueve por cuatro variables.",
+          "La primera es el volumen de emisión. Casi todos cobran según cuántos certificados generas al mes. Un OTEC que cierra dos cursos pequeños al mes no tiene las mismas necesidades que uno que capacita cientos de trabajadores en minería o construcción.",
+          "La segunda es la verificación. Emitir un PDF descargable cuesta menos que mantener una página de verificación pública por cada certificado, con código único y QR. Esa infraestructura es lo que convierte un diploma decorativo en un documento comprobable.",
+          "La tercera son las funciones de gestión: revocación con historial, envío por correo, vigencia y vencimiento, usuarios del equipo. No todas las herramientas las incluyen, y las que sí suelen cobrarlas en planes superiores.",
+          "La cuarta es el modelo de contrato. Suscripción mensual sin permanencia, pago anual con descuento, packs de certificados sueltos o licencias anuales fijas. Cada uno tiene sentido según tu volumen y tu previsibilidad.",
+        ],
+      },
+      {
+        id: "modelos-de-cobro-mas-comunes",
+        title: "Los modelos de cobro más comunes",
+        paragraphs: [
+          "Al comparar opciones, vas a encontrar tres esquemas recurrentes.",
+          "Suscripción por volumen mensual. Pagas un monto fijo al mes que incluye un cupo de certificados —ochenta, doscientos, quinientos—. Si te pasas, compras un pack adicional o subes de plan. Es el modelo más transparente para un OTEC con emisión regular.",
+          "Cobro por certificado emitido. Sin cuota mensual: pagas cada vez que generas uno. Puede parecer barato al principio, pero si emites en volumen el costo por unidad sube rápido y la factura se vuelve impredecible.",
+          "Cotización a medida. Precio cerrado tras una reunión comercial, a menudo con contrato anual y funciones empaquetadas que quizá no necesitas. Funciona para operaciones grandes, pero dificulta saber si estás pagando de más.",
+          "La señal de alerta más clara: quien no publica precios ni ofrece una prueba antes de comprometerte. Un software pensado para OTEC debería dejarte ver los planes y probar el flujo con tus propios cursos.",
+        ],
+      },
+      {
+        id: "cuanto-cuestan-los-planes-de-micert",
+        title: "Cuánto cuestan los planes de MiCert",
+        paragraphs: [
+          "MiCert publica sus precios y cobra por volumen de emisión mensual, sin permanencia. Los valores son netos —se agrega IVA en la factura— y hay tres planes:",
+          "Plan Básico: $29.990 al mes, incluye 80 certificados. Cubre emisión masiva desde Excel, verificación pública con QR, envío por correo, plantillas reutilizables y 2 usuarios del equipo.",
+          "Plan Estándar: $49.990 al mes, incluye 200 certificados. Suma vigencia y revocación por lote, dashboard con indicadores y 5 usuarios del equipo.",
+          "Plan Pro: $89.990 al mes, incluye 500 certificados. Agrega mayor volumen, 10 usuarios del equipo y soporte prioritario por correo.",
+          "Además, hay una demo sin costo de 5 certificados para probar el flujo completo con tus plantillas, sin tarjeta de crédito. Y si necesitas más certificados en un mes puntual, puedes comprar un pack adicional sin cambiar de plan; si el volumen extra es constante, conviene subir de plan.",
+          "El plan anual ofrece dos meses gratis: pagas el equivalente a diez meses. Puedes cambiar de plan cuando quieras; el ajuste se refleja en tu próximo ciclo de facturación.",
+        ],
+      },
+      {
+        id: "como-elegir-el-plan-que-calza",
+        title: "Cómo elegir el plan que calza con tu OTEC",
+        paragraphs: [
+          "La forma más directa de decidir es contar cuántos certificados emites al mes en un mes típico —no el mejor ni el peor, sino el promedio— y elegir el plan cuyo cupo te deja un margen razonable.",
+          "Si estás empezando o tu volumen es bajo, el Básico cubre la emisión regular de un OTEC pequeño. Si cierras varios cursos al mes o trabajas con empresas que exigen trazabilidad y revocación en lote, el Estándar suele ser el punto de equilibrio. El Pro tiene sentido cuando la emisión es alta y varias personas del equipo operan la plataforma.",
+          "Antes de contratar, usa la demo: emite certificados reales con tu Excel y tu diseño. Así ves si el flujo te ahorra el tiempo que esperas y si la verificación con QR resuelve el problema que te trajo a buscar un software.",
+        ],
+      },
+      {
+        id: "preguntas-frecuentes",
+        title: "Preguntas frecuentes",
+        faq: [
+          {
+            question:
+              "¿Cuánto cuesta MiCert al mes?",
+            answer:
+              "Tres planes según volumen: Básico ($29.990 + IVA, 80 certificados), Estándar ($49.990 + IVA, 200) y Pro ($89.990 + IVA, 500). Los valores son netos y no hay permanencia.",
+          },
+          {
+            question: "¿Hay una prueba antes de pagar?",
+            answer:
+              "Sí. La demo sin costo permite emitir 5 certificados reales con tus plantillas, sin tarjeta de crédito. Tras tu solicitud, activamos la cuenta y te enviamos las credenciales.",
+          },
+          {
+            question: "¿Qué pasa si supero mi cuota mensual?",
+            answer:
+              "Te avisamos cuando te acercas al límite. Puedes comprar un pack adicional sin cambiar de plan o subir de plan si el volumen extra es constante.",
+          },
+          {
+            question: "¿Los precios incluyen IVA?",
+            answer:
+              "No. Los valores publicados son netos. Al ser una operación entre empresas, se agrega el IVA correspondiente en la factura.",
+          },
+          {
+            question: "¿Puedo cambiar de plan después?",
+            answer:
+              "Sí. Puedes subir o bajar de plan cuando quieras. El cambio se refleja en tu próximo ciclo de facturación.",
+          },
+          {
+            question: "¿Hay contrato de permanencia?",
+            answer:
+              "No. Los planes son mensuales y puedes cancelar cuando quieras. El plan anual es opcional y ofrece dos meses gratis.",
+          },
+        ],
+      },
+    ],
+  },
 ];
 
 export function getArticleBySlug(slug: string): ResourceArticle | undefined {
