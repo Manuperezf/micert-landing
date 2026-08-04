@@ -2095,6 +2095,125 @@ export const RESOURCE_ARTICLES: ResourceArticle[] = [
       },
     ],
   },
+  {
+    slug: "como-verificar-certificado-capacitacion",
+    coverImage: "/recursos/verificacion-certificados-digitales.jpg",
+    tipo: "Normativa",
+    temas: ["QR", "SENCE"],
+    title:
+      "Cómo verificar un certificado de capacitación: guía para quien tiene que comprobarlo",
+    excerpt:
+      "Te llegó un certificado y necesitas saber si es real. Puede ser el de un postulante, el de un trabajador que va a ingresar a una obra o el de un proveedor de capacitación. Esta guía ordena qué revisar y en qué orden, sin depender de que el documento \"se vea bien\".",
+    author: "Equipo MiCert",
+    date: "6 de agosto de 2026",
+    dateISO: "2026-08-06",
+    featured: false,
+    relatedSlugs: [
+      "detectar-certificados-otec-falsos",
+      "rudo-sence-como-usar-registro-otec",
+    ],
+    metaTitle: "Cómo verificar un certificado de capacitación | MiCert",
+    metaDescription:
+      "Guía práctica para comprobar si un certificado de capacitación es auténtico: qué verificar primero, cómo usar el código QR y qué hacer si no hay forma de validarlo.",
+    sections: [
+      {
+        id: "verificar-un-certificado-son-dos-preguntas-distintas",
+        title: "Verificar un certificado son dos preguntas distintas",
+        paragraphs: [
+          "Antes del procedimiento, conviene separar algo que suele confundirse, porque determina qué se puede comprobar y dónde.",
+          "La primera pregunta es sobre el organismo: ¿existe la institución que emitió este certificado y está vigente? La segunda es sobre el documento: ¿este certificado en particular lo emitió efectivamente esa institución, a esta persona y por este curso?",
+          "Son verificaciones independientes y ninguna reemplaza a la otra. Una institución puede estar perfectamente vigente y, aun así, existir documentos falsificados que usan su nombre. Comprobar solo el organismo deja esa puerta abierta.",
+          "Y hay una tercera pregunta que a veces se mezcla con las anteriores, sobre todo en salud: si una persona está habilitada para ejercer su profesión. Eso no lo responde ningún certificado de curso; se consulta en otro lugar, como se explica más abajo.",
+        ],
+      },
+      {
+        id: "paso-1-comprobar-el-organismo-emisor",
+        title: "Paso 1: comprobar el organismo emisor",
+        paragraphs: [
+          "Si el certificado viene de un OTEC, el registro oficial es el RUDO de SENCE, donde figuran los organismos de capacitación y su estado. Ahí se confirma que el OTEC existe y si está vigente. Ten presente que la consulta del registro se realiza con ClaveÚnica o Clave Tributaria del SII.",
+          "Lo que conviene cruzar es simple: que el nombre y el RUT del organismo que aparecen en el certificado coincidan exactamente con los del registro. Una diferencia en la razón social o un RUT que no calza no siempre es fraude —a veces es un error administrativo— pero siempre amerita preguntar antes de dar el documento por bueno.",
+          "Si el certificado no viene de un OTEC sino de una universidad, una clínica o una sociedad científica, el equivalente es verificar que la institución existe y que efectivamente dicta ese programa.",
+        ],
+      },
+      {
+        id: "paso-2-comprobar-el-certificado-mismo",
+        title: "Paso 2: comprobar el certificado mismo",
+        paragraphs: [
+          "Acá está la parte que realmente resuelve la pregunta, y depende de cómo fue emitido el documento.",
+          "Si el certificado tiene un código QR o un código único de verificación, ese es el camino directo. Escanea el QR con la cámara del teléfono o ingresa el código en la página de verificación que indique el documento. Deberías llegar a una página que muestre los datos del certificado: a quién corresponde, qué curso, qué institución lo emitió y en qué estado se encuentra.",
+          "Al hacerlo, revisa tres cosas. Que los datos que muestra la verificación coincidan con los del papel que tienes al frente: si el PDF dice una cosa y la verificación otra, el documento fue alterado. Que el estado sea vigente y no vencido o anulado. Y que la página de verificación pertenezca al dominio de la institución emisora, no a un sitio genérico.",
+          "Si el certificado no tiene forma de verificarse, el único camino que queda es contactar directamente a la institución emisora y pedirle confirmación por escrito. Es más lento y depende de que alguien conteste, pero es la única alternativa cuando el documento no ofrece nada mejor.",
+        ],
+      },
+      {
+        id: "el-caso-especial-de-la-habilitacion-profesional",
+        title: "El caso especial de la habilitación profesional",
+        paragraphs: [
+          "Cuando se trata de personal de salud, hay una verificación adicional que no se resuelve con ningún certificado de curso.",
+          "La habilitación legal para ejercer una profesión de salud en Chile se consulta en el Registro Nacional de Prestadores Individuales de Salud, que lleva la Superintendencia de Salud. Ese registro da fe pública sobre si una persona está habilitada, e incluye las especialidades y subespecialidades médicas y odontológicas cuando están certificadas.",
+          "Un certificado de capacitación, por muy verificable que sea, acredita que alguien hizo un curso. No acredita que esté habilitado para ejercer ni que tenga una especialidad. Son verificaciones distintas, en fuentes distintas.",
+        ],
+      },
+      {
+        id: "que-hacer-si-algo-no-calza",
+        title: "Qué hacer si algo no calza",
+        paragraphs: [
+          "Si la verificación no coincide con el documento, si el estado aparece como anulado o vencido, o si el organismo no figura vigente, lo razonable es no dar el certificado por válido y pedir aclaración antes de avanzar. Muchas veces hay una explicación administrativa; otras no.",
+          "Si el certificado resultó ser falso, conviene avisar a la institución que figura como emisora. Le sirve saber que están usando su nombre, y suele ser la parte más interesada en que eso se corte.",
+          "Y si la revisión es parte de un proceso formal —una acreditación, una contratación, una auditoría interna— vale la pena dejar registro de que la verificación se hizo, con fecha. Eso protege a quien revisó.",
+        ],
+      },
+      {
+        id: "si-emites-certificados-hazte-facil-de-verificar",
+        title: "Si emites certificados: hazte fácil de verificar",
+        paragraphs: [
+          "Esta guía está escrita para quien revisa, pero tiene una lectura obvia para el otro lado del mostrador.",
+          "Cada vez que alguien recibe un certificado emitido por tu organización y no tiene cómo comprobarlo, el resultado es una llamada a tu equipo, una demora en un proceso ajeno, o —peor— que decidan por su cuenta si te creen o no. Un certificado que se verifica solo elimina esa fricción completa.",
+          "Con MiCert, cada certificado que emite una institución lleva un código único y un QR que abre una página de verificación pública con los datos del curso y el estado actual del documento. Quien lo revisa resuelve en segundos, sin contactar a nadie. Conviene ser preciso con el alcance: esa verificación aplica a los certificados emitidos con MiCert, no es un verificador universal de documentos de terceros.",
+          "Si además quieres reconocer un certificado dudoso a simple vista, revisa nuestra guía sobre cómo detectar un certificado falso, y si necesitas el detalle del registro de OTEC, la guía del RUDO.",
+          "Nota: este artículo es informativo. Los procedimientos de verificación pueden variar según la institución emisora y el tipo de certificado.",
+        ],
+      },
+      {
+        id: "preguntas-frecuentes",
+        title: "Preguntas frecuentes",
+        faq: [
+          {
+            question:
+              "¿Cómo puedo verificar si un certificado de capacitación es auténtico?",
+            answer:
+              "Hay dos verificaciones. Primero, comprobar que el organismo emisor existe y está vigente: si es un OTEC, en el registro RUDO de SENCE. Segundo, comprobar el documento mismo: si tiene código QR o código único, escanearlo o ingresarlo en la página de verificación del emisor y confirmar que los datos coinciden con el papel y que el estado es vigente.",
+          },
+          {
+            question: "¿Qué hago si el certificado no tiene código ni QR?",
+            answer:
+              "No hay forma de comprobarlo por cuenta propia. La única alternativa es contactar directamente a la institución emisora y pedir confirmación por escrito de que ese certificado fue emitido a esa persona por ese curso.",
+          },
+          {
+            question: "¿Basta con verificar que el OTEC está vigente?",
+            answer:
+              "No. El registro confirma que el organismo existe y su estado, pero no guarda los certificados individuales. Un OTEC vigente puede tener documentos falsificados a su nombre, y el registro no lo detectaría.",
+          },
+          {
+            question: "¿Qué debo mirar al escanear el QR de un certificado?",
+            answer:
+              "Tres cosas: que los datos que muestra la verificación coincidan con los del documento impreso, que el estado sea vigente y no vencido o anulado, y que la página de verificación pertenezca al dominio de la institución emisora.",
+          },
+          {
+            question:
+              "¿Un certificado de curso sirve para saber si un profesional está habilitado?",
+            answer:
+              "No. Un certificado de capacitación acredita que la persona hizo un curso. La habilitación legal para ejercer una profesión de salud se consulta en el Registro Nacional de Prestadores Individuales de Salud de la Superintendencia de Salud.",
+          },
+          {
+            question: "¿MiCert verifica certificados de cualquier institución?",
+            answer:
+              "No. MiCert permite verificar los certificados emitidos a través de MiCert, mediante su código único y QR. No es un verificador universal de documentos emitidos por terceros con otros sistemas.",
+          },
+        ],
+      },
+    ],
+  },
 ];
 
 export function getArticleBySlug(slug: string): ResourceArticle | undefined {
