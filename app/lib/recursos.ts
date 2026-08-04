@@ -1941,6 +1941,160 @@ export const RESOURCE_ARTICLES: ResourceArticle[] = [
       },
     ],
   },
+  {
+    slug: "certificados-digitales-capacitacion-salud",
+    coverImage: "/recursos/competencias-certificaciones-area-salud.jpg",
+    tipo: "Normativa",
+    temas: ["QR", "Excel"],
+    title:
+      "Certificados digitales para capacitación en salud: emisión, trazabilidad y verificación",
+    excerpt:
+      "La formación continua en salud no para: IAAS, RCP, seguridad del paciente, protocolos internos, inducciones clínicas. Cada curso termina en un certificado, y esos certificados suelen gestionarse a mano. Esta guía explica qué necesita una institución para emitirlos, verificarlos y poder demostrarlos después.",
+    author: "Equipo MiCert",
+    date: "5 de agosto de 2026",
+    dateISO: "2026-08-05",
+    featured: false,
+    relatedSlugs: [
+      "certificados-qr-otec",
+      "vencimiento-renovacion-certificados",
+    ],
+    metaTitle:
+      "Certificados digitales para capacitación en salud | MiCert",
+    metaDescription:
+      "Emite certificados digitales para cursos de salud con QR, código único y trazabilidad. Cómo ordenar la gestión documental de tus capacitaciones clínicas.",
+    sections: [
+      {
+        id: "por-que-los-certificados-de-capacitacion-importan-en-salud",
+        title: "Por qué los certificados de capacitación importan en salud",
+        paragraphs: [
+          "En un hospital, una clínica o un centro de formación, el certificado de un curso cumple una función que va más allá del recuerdo del participante. Es la evidencia de que una capacitación efectivamente ocurrió, con quién, cuándo y con qué resultado.",
+          "Esa evidencia se pide en varios momentos. En procesos internos de calidad, cuando hay que demostrar que el personal recibió la formación que corresponde a su función. En auditorías, donde no basta con afirmar que se hizo una capacitación: hay que poder mostrarla. En contrataciones, cuando una institución revisa los antecedentes de formación de alguien que postula. Y en el día a día del área de capacitación, cuando un participante escribe pidiendo el certificado de un curso que hizo hace dos años.",
+          "El problema aparece cuando esa evidencia vive dispersa. Certificados armados en Word o Canva, listas de participantes en planillas repartidas entre correos, envíos uno por uno, y ningún registro central de qué se emitió. En ese escenario, responder \"¿quién aprobó este curso y cuándo?\" implica reconstruir información en vez de consultarla.",
+        ],
+      },
+      {
+        id: "que-tipos-de-instituciones-emiten-certificados-de-capacitacion-en-salud",
+        title:
+          "Qué tipos de instituciones emiten certificados de capacitación en salud",
+        paragraphs: [
+          "El universo es más amplio de lo que parece a primera vista, y todas comparten el mismo desafío operativo.",
+          "Están los OTEC que dictan cursos dirigidos a personal de salud, con volumen y periodicidad. Las universidades, institutos y centros de formación con programas de educación continua, diplomados y cursos de actualización. Las clínicas, hospitales, centros médicos y redes de salud que capacitan a su propio personal en protocolos internos, inducciones y actualización de competencias. Los centros de simulación clínica, donde cada entrenamiento genera su propio registro. Y las sociedades científicas y entidades que organizan jornadas, congresos y talleres.",
+          "En todos los casos, la institución emisora es la que responde por el certificado: quién lo emitió, a quién y por qué curso. Esa responsabilidad no cambia según el tamaño de la organización.",
+        ],
+      },
+      {
+        id: "cursos-donde-la-trazabilidad-es-especialmente-util",
+        title: "Cursos donde la trazabilidad es especialmente útil",
+        paragraphs: [
+          "Hay capacitaciones donde poder demostrar la formación pesa más, porque se conectan directamente con la seguridad de la atención.",
+          "Los cursos de prevención y control de infecciones asociadas a la atención de salud (IAAS) son un caso típico: son parte de la gestión de calidad y se revisan. Lo mismo ocurre con la formación en reanimación, como RCP, BLS y uso de desfibrilador externo automático (DEA), donde además la vigencia importa porque son competencias que se pierden si no se practican.",
+          "A eso se suman las capacitaciones en seguridad del paciente, los cursos sobre procedimientos y protocolos clínicos, las inducciones de personal nuevo y los entrenamientos en centros de simulación. En todos, la pregunta que aparece después es la misma: ¿quién hizo este curso, cuándo y con qué resultado?",
+        ],
+      },
+      {
+        id: "que-debe-incluir-un-certificado-digital-de-capacitacion-en-salud",
+        title:
+          "Qué debe incluir un certificado digital de capacitación en salud",
+        paragraphs: [
+          "Un certificado sirve si contiene lo necesario para responder solo, sin que nadie tenga que llamar a preguntar. En concreto, debería incluir:",
+          "La identificación del participante, con su nombre completo y un identificador como el RUT. La institución emisora claramente señalada. El nombre del curso o programa. La cantidad de horas. Las fechas de realización y de emisión. El resultado o la condición: aprobado, participante, asistente, según corresponda. Un identificador único del certificado, que permita distinguirlo de cualquier otro. Un código QR o enlace de consulta que lleve a verificarlo. Y el estado del certificado en el momento de la consulta.",
+          "Ese último punto es el que suele faltar. Un certificado impreso muestra el estado del día en que se emitió; uno verificable muestra el estado de hoy.",
+        ],
+      },
+      {
+        id: "que-significa-trazabilidad-de-un-certificado",
+        title: "Qué significa trazabilidad de un certificado",
+        paragraphs: [
+          "Trazabilidad no es tener un QR. Un código que no consulta ningún registro solo lleva a una imagen o a una página estática, y eso no prueba nada.",
+          "La trazabilidad real es que exista un registro consultable donde el certificado tenga historia. Que se sepa cuándo se emitió y a quién. Que quede constancia si tuvo que reemitirse porque el participante perdió el archivo. Que se registre si hubo una corrección de datos. Que se pueda revocar si se emitió por error, quedando marcado como tal en vez de desaparecer. Y que la vigencia, cuando aplica, esté reflejada.",
+          "Puesto simple: un certificado trazable permite responder no solo \"¿esto es auténtico?\", sino también \"¿qué pasó con este documento desde que se emitió?\". Esa segunda pregunta es la que aparece en auditorías y en procesos de calidad.",
+        ],
+      },
+      {
+        id: "diferencia-entre-habilitacion-profesional-certificacion-de-competencias-y-certificado-de-capacitacion",
+        title:
+          "Diferencia entre habilitación profesional, certificación de competencias y certificado de capacitación",
+        paragraphs: [
+          "Esta distinción es importante y conviene tenerla clara, porque son tres cosas distintas que a veces se mezclan en la conversación.",
+          "La habilitación profesional es la que permite ejercer legalmente una profesión de salud en Chile. La otorga el título profesional y se consulta en el Registro Nacional de Prestadores Individuales de Salud, que lleva la Superintendencia de Salud. Ese registro da fe pública de que una persona está legalmente habilitada, e incluye también las especialidades y subespecialidades médicas y odontológicas cuando están certificadas por las entidades correspondientes. Ninguna plataforma privada reemplaza ese registro ni puede habilitar a nadie.",
+          "La certificación de competencias laborales es otra cosa: reconoce formalmente que una persona domina las competencias de un perfil ocupacional, con evaluación de por medio. En Chile ese sistema opera a través de ChileValora y sus centros acreditados. Tampoco es algo que una institución emisora pueda otorgar por su cuenta.",
+          "El certificado de capacitación es el que emite una institución para dar cuenta de que una persona participó o aprobó un curso que ella dictó. Acredita la formación entregada, con sus horas y su resultado. No habilita para ejercer una profesión, no reemplaza un título ni una especialidad, y no equivale a una certificación de competencias.",
+          "Los tres conviven, pero responden preguntas diferentes. MiCert opera exclusivamente en el tercero: ayuda a emitir, verificar y dar trazabilidad a los certificados que emite la propia institución.",
+        ],
+      },
+      {
+        id: "como-micert-ayuda-a-instituciones-de-salud-a-emitir-certificados",
+        title: "Cómo MiCert ayuda a instituciones de salud a emitir certificados",
+        paragraphs: [
+          "El flujo está pensado para el momento en que un curso termina y hay una nómina final que convertir en certificados.",
+          "Se carga la nómina desde Excel, con los datos que la institución ya tiene: nombre, RUT, correo, resultado. Desde ahí se genera un certificado por participante, en lote, sin reescribir información. El diseño se configura una vez con los campos que correspondan —institución, curso, horas, fechas, firmas— y se aplica a todo el grupo.",
+          "Cada certificado sale con un código único y un QR que lleva a una página de verificación pública. Ahí, quien consulta ve los datos del certificado y su estado actual, sin necesidad de contactar a la institución. Los certificados se descargan en PDF, individualmente o todos juntos, y el enlace de verificación se envía por correo a los participantes en un clic, de forma individual o masiva, con seguimiento del estado de cada envío.",
+          "Todo lo emitido queda registrado en un solo lugar. Eso resuelve el pedido de reemisión que llega meses después, la consulta de un empleador y la pregunta de una auditoría interna, sin revolver carpetas ni correos antiguos. Si un certificado se emitió con un error, se revoca y queda constancia, en vez de borrarse.",
+          "Puedes ver cómo funciona la verificación con QR y el detalle de la emisión masiva desde Excel en las guías correspondientes.",
+        ],
+      },
+      {
+        id: "casos-de-uso-para-instituciones-de-salud",
+        title: "Casos de uso para instituciones de salud",
+        paragraphs: [
+          "Cinco situaciones donde el problema se ve claro.",
+          "Una universidad con educación continua cierra un diplomado con ochenta participantes. Necesita emitir certificados con las horas y el resultado de cada uno, entregarlos y poder reemitirlos cuando alguien los pida el próximo año.",
+          "Una clínica que capacita a su personal interno dicta inducciones y actualizaciones de protocolo durante todo el año. Su área de calidad necesita poder demostrar, en cualquier momento, qué personal recibió qué formación y cuándo.",
+          "Un OTEC que dicta cursos IAAS trabaja con varias instituciones a la vez. Sus certificados los revisan terceros que no lo conocen, así que necesita que se puedan verificar sin llamadas.",
+          "Un centro de simulación clínica entrena a grupos en procedimientos específicos. Cada sesión genera constancia, y esas constancias tienen que estar ordenadas y ser consultables.",
+          "Una sociedad científica organiza jornadas anuales con cientos de asistentes. Emitir sus certificados a mano no escala; hacerlo desde la nómina final, sí.",
+          "En todos estos casos el problema no es dictar el curso, es lo que viene después. Si tu institución emite certificados de capacitación y hoy los gestiona a mano, conocer los planes o probar la plataforma con un curso real es la forma más rápida de ver si esto le sirve.",
+          "Nota: este artículo es informativo. La habilitación profesional en salud se consulta en el Registro Nacional de Prestadores Individuales de Salud de la Superintendencia de Salud, y la certificación de competencias laborales, cuando corresponde, se realiza a través del sistema ChileValora.",
+        ],
+      },
+      {
+        id: "preguntas-frecuentes",
+        title: "Preguntas frecuentes",
+        faq: [
+          {
+            question:
+              "¿Un certificado de curso habilita a una persona para ejercer en salud?",
+            answer:
+              "No. Un certificado de capacitación acredita que una persona participó o aprobó un curso dictado por una institución. La habilitación legal para ejercer una profesión de salud proviene del título profesional y se consulta en el Registro Nacional de Prestadores Individuales de Salud de la Superintendencia de Salud.",
+          },
+          {
+            question:
+              "¿Qué diferencia existe entre un título profesional y un certificado de capacitación?",
+            answer:
+              "El título profesional lo otorga una institución de educación superior reconocida y es la base de la habilitación para ejercer. El certificado de capacitación da cuenta de un curso específico —sus horas, fechas y resultado— dictado por una institución emisora, y no reemplaza al título ni habilita para ejercer.",
+          },
+          {
+            question: "¿Cómo puede una institución verificar un certificado de curso?",
+            answer:
+              "Si el certificado tiene un código único y un QR asociado a un registro consultable, se verifica escaneando o ingresando el código en la página de verificación de la institución emisora. Ahí se confirma la autenticidad, los datos del curso y el estado actual del certificado.",
+          },
+          {
+            question:
+              "¿Qué datos debería contener un certificado digital de capacitación?",
+            answer:
+              "La identificación del participante, la institución emisora, el nombre del curso, las horas, las fechas de realización y emisión, el resultado o condición, un identificador único y un QR o enlace de consulta que permita verificarlo.",
+          },
+          {
+            question: "¿Un certificado con QR puede ser reemitido o revocado?",
+            answer:
+              "Sí. Con MiCert un certificado puede reemitirse si el participante lo perdió y revocarse si se emitió por error. En ambos casos queda registro, y el estado se refleja en la página de verificación en lugar de que el documento desaparezca.",
+          },
+          {
+            question:
+              "¿MiCert reemplaza el Registro Nacional de Prestadores Individuales de Salud?",
+            answer:
+              "No. Ese registro es de la Superintendencia de Salud y da fe pública sobre la habilitación legal para ejercer. MiCert permite emitir, verificar y dar trazabilidad a los certificados de capacitación que emite una institución, que son documentos de otra naturaleza.",
+          },
+          {
+            question:
+              "¿MiCert sirve para cursos IAAS, RCP, BLS y capacitaciones internas?",
+            answer:
+              "Sí. MiCert es independiente del contenido del curso: sirve para cualquier capacitación que una institución dicte y necesite certificar, incluidas las de prevención de infecciones, reanimación, protocolos internos e inducciones.",
+          },
+        ],
+      },
+    ],
+  },
 ];
 
 export function getArticleBySlug(slug: string): ResourceArticle | undefined {
