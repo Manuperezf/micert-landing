@@ -1830,6 +1830,117 @@ export const RESOURCE_ARTICLES: ResourceArticle[] = [
       },
     ],
   },
+  {
+    slug: "certificados-otec-construccion",
+    coverImage: "/recursos/certificados-trabajadores-construccion.jpg",
+    tipo: "Normativa",
+    temas: ["SENCE", "QR"],
+    title:
+      "Certificados para OTEC que capacitan en construcción: el documento que viaja con el trabajador",
+    excerpt:
+      "En construcción, un certificado de capacitación no se queda en una carpeta. Acompaña al trabajador de una obra a otra, y en cada ingreso alguien lo revisa. Para el OTEC que lo emitió, eso cambia lo que significa entregar un certificado.",
+    author: "Equipo MiCert",
+    date: "4 de agosto de 2026",
+    dateISO: "2026-08-04",
+    featured: false,
+    relatedSlugs: [
+      "vencimiento-renovacion-certificados",
+      "certificados-otec-mineria",
+    ],
+    metaTitle:
+      "Certificados para OTEC que capacitan en construcción | MiCert",
+    metaDescription:
+      "En construcción, el certificado de capacitación viaja con el trabajador de obra en obra. Qué implica eso para un OTEC y por qué la verificación y la vigencia importan.",
+    sections: [
+      {
+        id: "la-rotacion-es-la-caracteristica-que-lo-define-todo",
+        title: "La rotación es la característica que lo define todo",
+        paragraphs: [
+          "Construcción tiene una dinámica que otros sectores no: la obra empieza, la obra termina. Un trabajador puede pasar por varias faenas en un mismo año, con empresas distintas, cada una con su proceso de ingreso.",
+          "Y en cada uno de esos ingresos hay que armar de nuevo la carpeta del trabajador: contrato, registro de la obligación de informar los riesgos del puesto, adhesión a la mutual, y los certificados de las capacitaciones que la obra exija. Ese último grupo es el que emite un OTEC.",
+          "La consecuencia para el OTEC es directa. El certificado que entregas hoy no lo va a revisar solo tu cliente. Lo van a revisar las áreas de prevención y administración de todas las obras por las que pase esa persona en los próximos años, gente que no te conoce y que solo tiene el documento al frente.",
+        ],
+      },
+      {
+        id: "la-cadena-de-subcontratacion-multiplica-quien-revisa",
+        title: "La cadena de subcontratación multiplica quién revisa",
+        paragraphs: [
+          "A la rotación se suma otra particularidad. En construcción es habitual la cadena mandante, contratista y subcontratista, y la Ley 20.123 hace que la empresa principal responda solidariamente por las obligaciones de sus contratistas, responsabilidad que puede atenuarse a subsidiaria si ejerce sus derechos de información y control.",
+          "Ese marco empuja a que todo se revise, en cada eslabón. La documentación de los trabajadores se controla desde arriba y desde el medio de la cadena, no solo en la empresa que contrató directamente.",
+          "Conviene aquí distinguir dos cosas que se confunden seguido. Los certificados F30 y F30-1 acreditan cumplimiento de obligaciones laborales y previsionales, los emite la Dirección del Trabajo y no tienen relación con la capacitación. Los certificados de capacitación son otra cosa: acreditan que una persona hizo un curso, y esos los emite el OTEC. Ambos conviven en el control documental de una obra, pero vienen de mundos distintos.",
+        ],
+      },
+      {
+        id: "el-vencimiento-golpea-mas-fuerte-cuando-hay-rotacion",
+        title: "El vencimiento golpea más fuerte cuando hay rotación",
+        paragraphs: [
+          "Un certificado vencido detiene un ingreso. Eso pasa en cualquier sector, pero en construcción tiene un efecto multiplicador: como el mismo trabajador ingresa a varias obras al año, un certificado desactualizado no falla una vez, falla en cada ingreso hasta que se renueve.",
+          "A eso se suma que cada mandante puede fijar requisitos adicionales a los mínimos legales, incluida su propia exigencia de vigencia. El mismo certificado puede pasar en una obra y quedar corto en la siguiente.",
+          "Para el OTEC, esto convierte los vencimientos en algo más que un tema administrativo. Es un flujo constante de renovaciones que, bien gestionado, es trabajo recurrente; mal gestionado, es una seguidilla de llamados de urgencia.",
+        ],
+      },
+      {
+        id: "que-necesita-el-otec-que-capacita-para-construccion",
+        title: "Qué necesita el OTEC que capacita para construcción",
+        paragraphs: [
+          "Del cruce entre rotación, cadena de revisión y vigencias salen cuatro necesidades bastante concretas.",
+          "Emitir en volumen y rápido, porque se capacita a cuadrillas completas y los plazos de una obra no esperan.",
+          "Que el certificado se pueda verificar sin llamarte, porque quien lo revisa está en otra empresa, no te conoce y tiene que resolver el ingreso en poco tiempo.",
+          "Que la vigencia esté clara en el documento, para que nadie tenga que calcular fechas ni interpretar.",
+          "Y tener registro de lo emitido, para saber qué se entregó, a quién y con qué vigencia, sin depender de buscar en correos antiguos cuando un trabajador pide un duplicado tres obras después.",
+        ],
+      },
+      {
+        id: "donde-encaja-micert-y-donde-no",
+        title: "Dónde encaja MiCert (y dónde no)",
+        paragraphs: [
+          "Conviene ser preciso con el alcance. MiCert no emite certificados F30 ni F30-1, no acredita trabajadores para ingresar a una obra, no gestiona carpetas de contratista y no reemplaza el sistema de control documental del mandante. Todo eso corre por otros carriles.",
+          "Lo que MiCert hace es que los certificados de capacitación que emite tu OTEC lleguen a esos procesos en buena forma. Emites desde tu planilla de Excel, en volumen, y cada certificado sale con código único y un QR que abre una página de verificación pública con los datos del curso: horas, asistencia, módulos evaluados, fechas y estado de vigencia. Quien revisa en la obra escanea y confirma en segundos, sin llamar a nadie. Y como todo lo emitido queda registrado, el trabajador que pide un duplicado dos obras después no obliga a nadie a revolver correos.",
+          "Para un OTEC de construcción, eso significa que su certificado deja de ser un punto de fricción en el ingreso y pasa a ser algo que se resuelve solo. Es un argumento concreto frente a constructoras y contratistas que viven peleando con documentación.",
+          "Nota: este artículo es informativo. Los requisitos de ingreso a obra varían según la empresa mandante y la normativa aplicable; conviene confirmarlos caso a caso.",
+        ],
+      },
+      {
+        id: "preguntas-frecuentes",
+        title: "Preguntas frecuentes",
+        faq: [
+          {
+            question:
+              "¿Qué certificados de capacitación se exigen para ingresar a una obra?",
+            answer:
+              "Depende de la obra y del mandante. Existen requisitos legales de base, como el registro de la obligación de informar los riesgos del puesto, y cada empresa principal puede exigir capacitaciones adicionales según los riesgos de la faena.",
+          },
+          {
+            question:
+              "¿Los certificados F30 y F30-1 son lo mismo que un certificado de capacitación?",
+            answer:
+              "No. El F30 y el F30-1 acreditan cumplimiento de obligaciones laborales y previsionales y los emite la Dirección del Trabajo. Los certificados de capacitación acreditan que una persona hizo un curso y los emite el OTEC. Conviven en el control documental de una obra, pero son documentos distintos.",
+          },
+          {
+            question: "¿Por qué la verificación importa más en construcción?",
+            answer:
+              "Por la rotación. El mismo trabajador ingresa a varias obras al año, y en cada ingreso alguien de otra empresa revisa sus certificados. Un documento verificable se confirma sin contactar al OTEC que lo emitió.",
+          },
+          {
+            question:
+              "¿Qué pasa si un trabajador llega con un certificado vencido?",
+            answer:
+              "El ingreso se detiene hasta regularizar. En construcción el efecto se multiplica, porque ese mismo certificado va a fallar en cada obra a la que postule hasta que se renueve.",
+          },
+          {
+            question: "¿Todas las obras piden lo mismo?",
+            answer:
+              "No. Cada empresa mandante puede fijar requisitos adicionales a los mínimos legales, incluida su propia exigencia de vigencia. Por eso el mismo certificado puede ser aceptado en una obra y quedar corto en otra.",
+          },
+          {
+            question: "¿MiCert acredita trabajadores para entrar a una obra?",
+            answer:
+              "No. La acreditación y el control documental los maneja cada mandante o contratista con sus propios sistemas. MiCert hace que los certificados de capacitación que emite tu OTEC sean verificables, con vigencia clara y registro de lo emitido.",
+          },
+        ],
+      },
+    ],
+  },
 ];
 
 export function getArticleBySlug(slug: string): ResourceArticle | undefined {
