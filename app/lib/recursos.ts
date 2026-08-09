@@ -2214,6 +2214,123 @@ export const RESOURCE_ARTICLES: ResourceArticle[] = [
       },
     ],
   },
+  {
+    slug: "certificados-linkedin-visibilidad-otec",
+    coverImage: "/recursos/certificado-otec-linkedin.jpg",
+    tipo: "Producto",
+    temas: ["QR"],
+    title:
+      "Certificados en LinkedIn: el canal de visibilidad que la mayoría de los OTEC deja pasar",
+    excerpt:
+      "Un certificado en PDF termina en la carpeta de descargas de alguien. Uno que se puede sumar a LinkedIn queda en el perfil profesional de esa persona, con el nombre de tu OTEC al lado. Es la misma capacitación, con un alcance completamente distinto.",
+    author: "Equipo MiCert",
+    date: "9 de agosto de 2026",
+    dateISO: "2026-08-09",
+    featured: false,
+    relatedSlugs: ["certificados-qr-otec", "emitir-certificados-masivos-excel"],
+    metaTitle: "Certificados en LinkedIn: visibilidad para tu OTEC | MiCert",
+    metaDescription:
+      "Cuando un alumno suma su certificado a LinkedIn, tu OTEC aparece en su perfil. Qué necesitas tener listo para que eso ocurra bien y qué gana tu institución.",
+    sections: [
+      {
+        id: "donde-termina-un-certificado",
+        title: "Dónde termina un certificado",
+        paragraphs: [
+          "Piensa en el recorrido habitual. Un curso cierra, se emite el certificado, se envía por correo y el alumno lo descarga. Después de eso, el documento vive en su computador. Quizás lo imprima, quizás lo mande cuando postule a un trabajo. Para el OTEC que lo emitió, ahí se acaba la historia.",
+          "Existe otro recorrido posible, y no requiere hacer nada distinto en la capacitación. LinkedIn tiene una sección de perfil llamada Licencias y certificaciones, pensada exactamente para esto: que una persona muestre la formación que ha completado, indicando qué institución se la entregó.",
+          "La diferencia entre un recorrido y otro es que en el segundo, el nombre de tu OTEC queda visible en el perfil de esa persona, frente a sus contactos, sus colegas y quien la esté evaluando para un trabajo.",
+        ],
+      },
+      {
+        id: "como-funciona-la-seccion-de-certificaciones-de-linkedin",
+        title: "Cómo funciona la sección de certificaciones de LinkedIn",
+        paragraphs: [
+          "Conviene entender el mecanismo, porque de ahí salen las condiciones para que funcione bien.",
+          "Cuando alguien agrega una certificación a su perfil, LinkedIn le pide el nombre del curso, la organización emisora, la fecha de expedición, la fecha de caducidad si la tiene, un identificador de la credencial y una URL de la credencial.",
+          "Hay dos detalles que importan especialmente. El primero: al escribir la organización emisora, LinkedIn despliega un menú de empresas, y si la persona selecciona la página oficial de la institución, el logotipo de esa institución aparece junto a la certificación en su perfil. Es decir, tu marca no queda solo como texto, queda como imagen.",
+          "El segundo: el campo de URL de la credencial está pensado para enlazar a una página donde se pueda comprobar el certificado. Cuando esa URL existe, la certificación deja de ser una afirmación y pasa a ser algo verificable por quien la mire.",
+        ],
+      },
+      {
+        id: "por-que-esto-le-sirve-a-tu-otec",
+        title: "Por qué esto le sirve a tu OTEC",
+        paragraphs: [
+          "El beneficio es acumulativo y opera en tres frentes.",
+          "El primero es presencia de marca. Cada persona que suma un certificado tuyo pone el nombre y el logo de tu OTEC en su perfil profesional, en un contexto de credibilidad: no es publicidad, es alguien mostrando su formación.",
+          "El segundo es audiencia calificada. Quien mira el perfil de un trabajador suele ser un reclutador, un jefe de área o un colega del mismo rubro. Es exactamente el tipo de persona que decide o influye en dónde se capacita su equipo.",
+          "El tercero es búsqueda. LinkedIn funciona como un buscador interno: los nombres de las certificaciones y de las organizaciones emisoras inciden en cómo se encuentran los perfiles. Un OTEC que aparece consistentemente como emisor en muchos perfiles construye una presencia difícil de replicar con publicidad.",
+          "Nada de esto reemplaza tu estrategia comercial. Pero es de las pocas cosas que trabajan solas después de que ya hiciste el trabajo de capacitar.",
+        ],
+      },
+      {
+        id: "que-necesitas-tener-listo-para-que-funcione-bien",
+        title: "Qué necesitas tener listo para que funcione bien",
+        paragraphs: [
+          "Acá está la parte accionable, y son tres cosas concretas.",
+          "Una página oficial de tu OTEC en LinkedIn. Sin ella, cuando el alumno escriba el nombre de tu institución no va a poder seleccionarla del menú, y la certificación aparecerá sin logotipo. Es el paso que más se pasa por alto y el que más impacto visual tiene.",
+          "Un nombre institucional consistente. El que uses en tus certificados debería ser el mismo de tu página de LinkedIn. Si en el certificado dice una razón social y en LinkedIn otra, la asociación se pierde.",
+          "Una URL de verificación para cada certificado. Es lo que permite completar el campo de credencial y lo que convierte la certificación en algo comprobable. Si tus certificados son PDF sin página de verificación, ese campo queda vacío.",
+          "Y una condición previa a las tres: que agregar el certificado sea fácil. Nadie va a llenar seis campos a mano por gusto.",
+        ],
+      },
+      {
+        id: "como-lo-resuelve-micert",
+        title: "Cómo lo resuelve MiCert",
+        paragraphs: [
+          "Cada certificado emitido con MiCert tiene su propia página de verificación pública, con código único y QR. Desde esa página, el alumno encuentra un botón para agregar el certificado a su perfil de LinkedIn, con tu OTEC como emisor. En lugar de tener que copiar datos de un PDF a un formulario, el paso queda a un clic.",
+          "Eso resuelve la fricción, que es lo que en la práctica define si alguien lo hace o no. Y como la página de verificación existe, el campo de URL de la credencial deja de estar vacío: quien mire ese perfil puede comprobar el certificado en el momento.",
+          "Vale ser claro con el alcance: MiCert facilita el paso, no decide por el alumno. Lo que sí cambia es que deja de haber una barrera entre la intención y la acción.",
+        ],
+      },
+      {
+        id: "lo-que-gana-el-alumno-y-por-que-tambien-te-conviene",
+        title: "Lo que gana el alumno, y por qué también te conviene",
+        paragraphs: [
+          "Hay un ángulo que suele olvidarse: esto no es solo marketing para el OTEC, es un beneficio real para quien se capacitó.",
+          "Un certificado que vive en un PDF no aporta nada a la carrera de esa persona hasta que ella lo busque, lo adjunte y alguien le crea. Uno que está en su perfil de LinkedIn, con emisor identificado y verificable, trabaja permanentemente a su favor.",
+          "Para tu OTEC, ofrecer eso es un argumento de venta hacia el alumno y hacia las empresas que contratan capacitación: no solo entregas formación, entregas algo que la persona puede mostrar y respaldar. En un mercado donde varios OTEC dictan cursos parecidos, esa diferencia se nota.",
+        ],
+      },
+      {
+        id: "preguntas-frecuentes",
+        title: "Preguntas frecuentes",
+        faq: [
+          {
+            question:
+              "¿Cómo agrego un certificado de curso a mi perfil de LinkedIn?",
+            answer:
+              "En tu perfil, usa Añadir sección y elige Licencias y certificaciones. Completa el nombre del curso, la organización emisora —seleccionándola del menú para que aparezca su logotipo—, la fecha de expedición, la de caducidad si corresponde, el identificador y la URL de la credencial. Si tu certificado tiene página de verificación, esa es la URL que va ahí.",
+          },
+          {
+            question:
+              "¿Por qué aparece el logo de la institución en algunas certificaciones y en otras no?",
+            answer:
+              "Porque el logotipo aparece solo cuando se selecciona la página oficial de la institución desde el menú que despliega LinkedIn. Si la institución no tiene página en LinkedIn o no se selecciona del menú, la certificación queda sin logo.",
+          },
+          {
+            question: "¿Qué es la URL de la credencial en LinkedIn?",
+            answer:
+              "Es un campo opcional para enlazar a una página donde el certificado se pueda comprobar. Cuando existe, quien mira el perfil puede verificar la certificación en lugar de solo leerla.",
+          },
+          {
+            question: "¿Qué necesita un OTEC para aprovechar esto?",
+            answer:
+              "Tres cosas: tener página oficial en LinkedIn, usar el mismo nombre institucional en sus certificados y en esa página, y emitir certificados que tengan una URL de verificación.",
+          },
+          {
+            question: "¿MiCert publica automáticamente en LinkedIn?",
+            answer:
+              "No. MiCert incluye un botón en la página de verificación del certificado para que el alumno lo agregue a su perfil con tu OTEC como emisor. La decisión de hacerlo siempre es de la persona.",
+          },
+          {
+            question: "¿Sirve para cualquier tipo de curso?",
+            answer:
+              "Sí. La sección de licencias y certificaciones de LinkedIn admite cursos, entrenamientos y credenciales de cualquier área, con o sin fecha de vencimiento.",
+          },
+        ],
+      },
+    ],
+  },
 ];
 
 export function getArticleBySlug(slug: string): ResourceArticle | undefined {
