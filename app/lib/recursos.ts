@@ -70,10 +70,10 @@ export const RESOURCE_ARTICLES: ResourceArticle[] = [
     date: "20 de junio de 2026",
     dateISO: "2026-06-20",
     featured: true,
-    relatedSlugs: ["certificados-qr-otec", "alternativa-excel-canva"],
-    metaTitle: "Software para OTEC: cómo elegir y emitir con QR | MiCert",
+    relatedSlugs: ["emitir-certificados-masivos-excel", "cuanto-cuesta-software-certificados"],
+    metaTitle: "Software para OTEC: emitir certificados con QR desde Excel",
     metaDescription:
-      "Guía para elegir un software de certificados para tu OTEC: qué problemas resuelve, qué debe tener y cómo emitir documentos con QR verificable desde Excel.",
+      "Qué problemas resuelve un software de certificados para OTEC, qué debe tener y cómo emitir documentos verificables con QR desde una planilla Excel.",
     sections: [
       {
         id: "por-que-el-pdf-editable-se-volvio-un-problema",
@@ -174,7 +174,7 @@ export const RESOURCE_ARTICLES: ResourceArticle[] = [
     author: "Equipo MiCert",
     date: "18 de junio de 2026",
     dateISO: "2026-06-18",
-    relatedSlugs: ["software-para-otec", "auditoria-sence"],
+    relatedSlugs: ["como-verificar-certificado-capacitacion", "software-para-otec"],
     metaTitle:
       "Certificados con QR para OTEC: cómo funciona la verificación | MiCert",
     metaDescription:
@@ -272,7 +272,7 @@ export const RESOURCE_ARTICLES: ResourceArticle[] = [
     author: "Equipo MiCert",
     date: "15 de junio de 2026",
     dateISO: "2026-06-15",
-    relatedSlugs: ["software-para-otec", "certificados-qr-otec"],
+    relatedSlugs: ["emitir-certificados-masivos-excel", "cuanto-cuesta-software-certificados"],
     metaTitle: "Excel y Canva vs software de certificados OTEC | MiCert",
     metaDescription:
       "Comparativa honesta entre hacer certificados en Excel, Word o Canva y un software con QR verificable. Qué pierdes con el método manual y cuándo conviene cambiar.",
@@ -387,7 +387,7 @@ export const RESOURCE_ARTICLES: ResourceArticle[] = [
     author: "Equipo MiCert",
     date: "12 de junio de 2026",
     dateISO: "2026-06-12",
-    relatedSlugs: ["alternativa-excel-canva", "certificados-qr-otec"],
+    relatedSlugs: ["ley-21719-otec-proteccion-datos", "software-para-otec"],
     metaTitle:
       "Auditoría SENCE: por qué el PDF editable no te respalda | MiCert",
     metaDescription:
@@ -493,7 +493,7 @@ export const RESOURCE_ARTICLES: ResourceArticle[] = [
     date: "22 de junio de 2026",
     dateISO: "2026-06-22",
     featured: false,
-    relatedSlugs: ["certificados-qr-otec", "auditoria-sence"],
+    relatedSlugs: ["como-verificar-certificado-capacitacion", "rudo-sence-como-usar-registro-otec"],
     metaTitle: "Cómo detectar un certificado OTEC falso en Chile | MiCert",
     metaDescription:
       "Guía práctica para saber si un certificado de un OTEC es auténtico o falso: las señales de alerta y la forma confiable de verificarlo en segundos.",
@@ -600,7 +600,7 @@ export const RESOURCE_ARTICLES: ResourceArticle[] = [
     date: "24 de junio de 2026",
     dateISO: "2026-06-24",
     featured: false,
-    relatedSlugs: ["certificados-qr-otec", "detectar-certificados-otec-falsos"],
+    relatedSlugs: ["ley-21659-conserjes-condominios", "certificados-otec-mineria"],
     metaTitle: "Certificados para OTEC de prevención de riesgos | MiCert",
     metaDescription:
       "En prevención de riesgos, un certificado falso es un riesgo real. Cómo emitir certificados verificables con QR que las empresas mandantes puedan comprobar.",
@@ -708,12 +708,11 @@ export const RESOURCE_ARTICLES: ResourceArticle[] = [
     featured: false,
     relatedSlugs: [
       "certificados-prevencion-de-riesgos",
-      "certificados-qr-otec",
+      "emitir-certificados-masivos-excel",
     ],
-    metaTitle:
-      "Ley 21.659: ¿es obligatorio el curso para conserjes? | MiCert",
+    metaTitle: "Ley 21.659: ¿es obligatorio el curso para conserjes?",
     metaDescription:
-      "Qué dice la Ley 21.659 sobre la capacitación de conserjes de condominios: cuándo es obligatoria, cuándo es voluntaria y qué debe hacer un OTEC. Guía clara y actualizada.",
+      "Qué dice la Ley 21.659 sobre la capacitación de conserjes: cuándo es obligatoria, cuándo es voluntaria y qué le corresponde hacer a un OTEC.",
     sections: [
       {
         id: "la-respuesta-corta",
@@ -824,7 +823,7 @@ export const RESOURCE_ARTICLES: ResourceArticle[] = [
     date: "28 de junio de 2026",
     dateISO: "2026-06-28",
     featured: false,
-    relatedSlugs: ["detectar-certificados-otec-falsos", "certificados-qr-otec"],
+    relatedSlugs: ["requisitos-formar-otec-chile", "como-verificar-certificado-capacitacion"],
     metaTitle: "RUDO SENCE: cómo verificar si un OTEC está vigente | MiCert",
     metaDescription:
       "Qué es el RUDO SENCE, cómo buscar un OTEC y leer su estado, qué hacer si no aparece o está suspendido, y por qué RUDO no basta para validar un certificado.",
@@ -940,11 +939,11 @@ export const RESOURCE_ARTICLES: ResourceArticle[] = [
     featured: false,
     relatedSlugs: [
       "rudo-sence-como-usar-registro-otec",
-      "certificados-otec-mineria",
+      "software-para-otec",
     ],
-    metaTitle: "Requisitos para formar una OTEC en Chile 2026 | MiCert",
+    metaTitle: "Requisitos para crear un OTEC en Chile: guía 2026",
     metaDescription:
-      "Guía 2026 con los requisitos para crear una OTEC en Chile: constitución legal, NCh 2728, certificación, registro en RUDO y los errores que atrasan la acreditación.",
+      "Constitución legal, NCh 2728, certificación y registro en RUDO: los requisitos reales para crear un OTEC en Chile y los errores que atrasan la acreditación.",
     sections: [
       {
         id: "por-que-crear-una-otec-sigue-teniendo-sentido-en-2026",
@@ -1065,12 +1064,11 @@ export const RESOURCE_ARTICLES: ResourceArticle[] = [
     featured: false,
     relatedSlugs: [
       "como-elegir-software-certificados-otec",
-      "alternativa-excel-canva",
+      "emitir-certificados-masivos-excel",
     ],
-    metaTitle:
-      "Certificados en Moodle vs MiCert: qué hace cada uno | MiCert",
+    metaTitle: "Certificados en Moodle: qué puede y qué no puede hacer",
     metaDescription:
-      "Moodle es tu LMS y puede generar certificados, pero no está hecho para emitir desde Excel ni para verificación pública rica en datos. Cómo se complementan Moodle y MiCert.",
+      "Moodle genera certificados, pero no está hecho para emitir desde Excel ni para verificación pública. Dónde termina el LMS y dónde parte el emisor.",
     sections: [
       {
         id: "moodle-es-tu-lms-no-tu-emisor-de-certificados",
@@ -1167,10 +1165,10 @@ export const RESOURCE_ARTICLES: ResourceArticle[] = [
     date: "4 de julio de 2026",
     dateISO: "2026-07-04",
     featured: false,
-    relatedSlugs: ["alternativa-excel-canva", "certificados-qr-otec"],
-    metaTitle: "Cómo emitir certificados masivos desde Excel | MiCert",
+    relatedSlugs: ["cuanto-cuesta-software-certificados", "alternativa-excel-canva"],
+    metaTitle: "Certificados masivos desde Excel: cómo emitirlos en minutos",
     metaDescription:
-      "Deja de hacer certificados uno por uno. Aprende a emitir certificados de capacitación en masa desde tu Excel, en minutos, con código QR verificable.",
+      "Deja de hacer certificados uno por uno. Cómo emitir cientos de certificados de capacitación desde tu Excel, en minutos, con código QR verificable.",
     sections: [
       {
         id: "el-costo-escondido-de-hacer-certificados-a-mano",
@@ -1265,13 +1263,12 @@ export const RESOURCE_ARTICLES: ResourceArticle[] = [
     dateISO: "2026-07-05",
     featured: false,
     relatedSlugs: [
+      "cuanto-cuesta-software-certificados",
       "certificados-moodle-vs-micert",
-      "software-para-otec",
     ],
-    metaTitle:
-      "Cómo elegir un software de certificados para OTEC | MiCert",
+    metaTitle: "Cómo elegir un software de certificados para tu OTEC",
     metaDescription:
-      "Guía para elegir un software de certificados para tu OTEC: los criterios que de verdad importan, las preguntas que debes hacer y los errores que se pagan caro.",
+      "Los criterios que de verdad importan al elegir un software de certificados, las preguntas que conviene hacer y los errores que se pagan caro.",
     sections: [
       {
         id: "primero-define-que-problema-estas-resolviendo",
@@ -1385,8 +1382,8 @@ export const RESOURCE_ARTICLES: ResourceArticle[] = [
     dateISO: "2026-07-07",
     featured: false,
     relatedSlugs: [
-      "certificados-prevencion-de-riesgos",
-      "requisitos-formar-otec-chile",
+      "certificados-otec-construccion",
+      "vencimiento-renovacion-certificados",
     ],
     metaTitle:
       "Certificados para OTEC que capacitan para minería | MiCert",
@@ -1487,7 +1484,7 @@ export const RESOURCE_ARTICLES: ResourceArticle[] = [
     date: "29 de julio de 2026",
     dateISO: "2026-07-29",
     featured: false,
-    relatedSlugs: ["auditoria-sence", "certificados-qr-otec"],
+    relatedSlugs: ["auditoria-sence", "certificados-digitales-capacitacion-salud"],
     metaTitle: "Ley 21.719 para OTEC: qué cambia en diciembre | MiCert",
     metaDescription:
       "La Ley 21.719 entra en vigencia el 1 de diciembre de 2026. Qué significa para un OTEC que maneja RUT, nombres y notas de sus alumnos, y qué conviene ordenar antes.",
@@ -1624,8 +1621,8 @@ export const RESOURCE_ARTICLES: ResourceArticle[] = [
     dateISO: "2026-07-30",
     featured: false,
     relatedSlugs: [
-      "certificados-otec-mineria",
-      "certificados-prevencion-de-riesgos",
+      "certificados-otec-construccion",
+      "certificados-linkedin-visibilidad-otec",
     ],
     metaTitle:
       "Vencimiento y renovación de certificados de capacitación | MiCert",
@@ -1733,7 +1730,7 @@ export const RESOURCE_ARTICLES: ResourceArticle[] = [
     featured: false,
     relatedSlugs: [
       "como-elegir-software-certificados-otec",
-      "emitir-certificados-masivos-excel",
+      "software-para-otec",
     ],
     metaTitle:
       "¿Cuánto cuesta un software de certificados para OTEC? | MiCert",
@@ -1844,8 +1841,8 @@ export const RESOURCE_ARTICLES: ResourceArticle[] = [
     dateISO: "2026-08-04",
     featured: false,
     relatedSlugs: [
-      "vencimiento-renovacion-certificados",
-      "certificados-otec-mineria",
+      "certificados-prevencion-de-riesgos",
+      "emitir-certificados-masivos-excel",
     ],
     metaTitle:
       "Certificados para OTEC que capacitan en construcción | MiCert",
@@ -1955,7 +1952,7 @@ export const RESOURCE_ARTICLES: ResourceArticle[] = [
     dateISO: "2026-08-05",
     featured: false,
     relatedSlugs: [
-      "certificados-qr-otec",
+      "certificados-linkedin-visibilidad-otec",
       "vencimiento-renovacion-certificados",
     ],
     metaTitle:
@@ -2110,7 +2107,7 @@ export const RESOURCE_ARTICLES: ResourceArticle[] = [
     featured: false,
     relatedSlugs: [
       "detectar-certificados-otec-falsos",
-      "rudo-sence-como-usar-registro-otec",
+      "certificados-qr-otec",
     ],
     metaTitle: "Cómo verificar un certificado de capacitación | MiCert",
     metaDescription:
