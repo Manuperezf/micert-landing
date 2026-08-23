@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { RESOURCE_ARTICLES } from "./lib/recursos";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const lastModified = new Date();
+  const lastModified = new Date("2026-08-23");
 
   return [
     {
