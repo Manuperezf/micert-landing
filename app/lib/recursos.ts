@@ -2328,6 +2328,126 @@ export const RESOURCE_ARTICLES: ResourceArticle[] = [
       },
     ],
   },
+  {
+    slug: "certificados-asistencia-webinar",
+    coverImage: "/recursos/webinar-otec.jpg",
+    tipo: "Producto",
+    temas: ["Excel", "QR"],
+    title:
+      "Certificados de asistencia a webinars: cómo emitirlos sin tratar el evento como un curso",
+    excerpt:
+      "Un webinar no tiene notas, ni módulos, ni siempre RUT. Así se emiten los certificados de asistencia sin forzar la plantilla de un curso.",
+    author: "Equipo MiCert",
+    date: "23 de septiembre de 2026",
+    dateISO: "2026-09-23",
+    featured: false,
+    relatedSlugs: [
+      "emitir-certificados-masivos-excel",
+      "certificados-linkedin-visibilidad-otec",
+    ],
+    metaTitle: "Certificados de asistencia a webinar: cómo emitirlos",
+    metaDescription:
+      "Cómo emitir certificados de asistencia a webinars y charlas sin pedir RUT, con la duración exacta y QR verificable. Desde Excel o uno a uno.",
+    sections: [
+      {
+        id: "el-webinar-termino-ahora-faltan-los-certificados",
+        title: "El webinar terminó. Ahora faltan los certificados",
+        paragraphs: [
+          "La charla salió bien: una hora y media, buena conexión y varias preguntas al final. Al día siguiente llegan los correos de los asistentes pidiendo su certificado.",
+          "Si el OTEC emite certificados con la misma plantilla que usa para sus cursos, el problema aparece rápido. La plantilla pide RUT, calificación y porcentaje de asistencia, datos que un webinar no tiene. Queda una planilla con guiones en la mitad de las columnas, o un PDF editable que alguien completa nombre por nombre.",
+          "Con 30 asistentes es una tarde perdida. Con 200, es una semana con la cola de correos creciendo.",
+        ],
+      },
+      {
+        id: "un-certificado-de-webinar-no-es-un-certificado-de-curso",
+        title: "Un certificado de webinar no es un certificado de curso",
+        paragraphs: [
+          "El certificado de un curso acredita que una persona completó una capacitación, con su identificación, sus horas y, cuando corresponde, su calificación. Si el curso es SENCE, además tiene que llevar los campos que SENCE exige.",
+          "El de un webinar acredita algo más simple: que alguien asistió a una actividad de cierta duración, en cierta fecha. No hay nota que registrar.",
+          "La identificación también cambia. No todos los formularios de inscripción piden RUT, y pedirlo solo para poder emitir el certificado le agrega un paso más al registro. En un webinar abierto también pueden participar personas de otros países, que no tienen RUT.",
+          "Por eso conviene separar las dos cosas desde el origen, en lugar de adaptar la plantilla del curso cada vez que hay una charla.",
+        ],
+      },
+      {
+        id: "que-lleva-el-certificado-de-un-evento",
+        title: "Qué lleva el certificado de un evento",
+        table: {
+          headers: ["Campo", "Cómo funciona en un evento"],
+          rows: [
+            [
+              "Identificación (RUT o pasaporte)",
+              "Opcional. Si la tienes, la cargas; si no, el certificado se emite igual.",
+            ],
+            [
+              "Duración",
+              "Horas y minutos por separado. Una charla de 45 minutos dice 45 minutos, no \"1 hora\".",
+            ],
+            ["Modalidad", "Los eventos en línea aparecen como \"Online\"."],
+            [
+              "Descripción",
+              "Opcional, para dar contexto sobre el tema o el expositor.",
+            ],
+            [
+              "Nombre y email del participante",
+              "El nombre va impreso en el certificado; el email se usa para enviarlo.",
+            ],
+          ],
+        },
+      },
+      {
+        id: "de-la-lista-de-asistentes-al-certificado-enviado",
+        title: "De la lista de asistentes al certificado enviado",
+        paragraphs: [
+          "Primero se crea el evento con su nombre, fecha, duración y modalidad. Después se cargan los participantes, desde un Excel si son muchos o uno a uno si son pocos o si alguien se sumó tarde.",
+          "La lista la defines tú. Puede salir del reporte de asistencia de la plataforma donde hiciste el webinar, si lo entrega, o de tu propio registro. Quién cuenta como asistente es una decisión del organizador, no del sistema.",
+          "Con los participantes cargados, se emiten los certificados. Cada uno lleva su código y un QR único.",
+          "El envío se hace con un botón, de a uno o a toda la lista. El correo no adjunta el PDF: lleva un enlace a la ficha verificable del certificado. Desde ahí el participante lo descarga y, si quiere, lo agrega a su perfil de LinkedIn.",
+        ],
+      },
+      {
+        id: "donde-encaja-micert-y-donde-no",
+        title: "Dónde encaja MiCert (y dónde no)",
+        paragraphs: [
+          "MiCert no es una plataforma de webinars. No transmite el evento, no registra quién se conectó ni cuánto tiempo estuvo. La lista de asistentes la trae el OTEC.",
+          "Lo que sí hace es tomar esa lista y convertirla en certificados emitidos, enviados y verificables, sin inventar datos para rellenar campos de curso. Los eventos viven en un apartado propio, separado de los cursos. El historial de capacitaciones SENCE no se mezcla con el de charlas y seminarios.",
+          "Los certificados de eventos descuentan de la misma cuota del plan que los cursos, sin cobro adicional.",
+        ],
+      },
+      {
+        id: "preguntas-frecuentes",
+        title: "Preguntas frecuentes",
+        faq: [
+          {
+            question: "¿Tengo que pedir el RUT a los asistentes?",
+            answer:
+              "No. En los eventos la identificación es opcional. Si tienes el RUT o el pasaporte de alguien, lo cargas; si no, el certificado se emite igual con nombre y email.",
+          },
+          {
+            question: "¿Cómo se verifica un certificado que no tiene RUT?",
+            answer:
+              "Con el QR. Cada certificado tiene uno único que lleva a su ficha en la página de verificación de MiCert, donde se ven el evento, la fecha y el estado del certificado.",
+          },
+          {
+            question: "¿Los certificados de eventos se cobran aparte?",
+            answer:
+              "No. Descuentan de la misma cuota del plan que los certificados de cursos.",
+          },
+          {
+            question:
+              "¿Puedo emitir un certificado para una charla de menos de una hora?",
+            answer:
+              "Sí. La duración se ingresa en horas y minutos por separado, así que un webinar de 45 minutos queda registrado con su duración real.",
+          },
+          {
+            question:
+              "¿Un certificado de webinar reemplaza a un certificado de curso SENCE?",
+            answer:
+              "No. Es un certificado de asistencia a un evento. Si la actividad es un curso que debe cumplir los requisitos de SENCE, corresponde emitirlo como curso.",
+          },
+        ],
+      },
+    ],
+  },
 ];
 
 export function getArticleBySlug(slug: string): ResourceArticle | undefined {
