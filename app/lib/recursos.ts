@@ -2334,9 +2334,9 @@ export const RESOURCE_ARTICLES: ResourceArticle[] = [
     tipo: "Producto",
     temas: ["Excel", "QR"],
     title:
-      "Certificados de asistencia a webinars: cómo emitirlos sin tratar el evento como un curso",
+      "Certificado de asistencia a un webinar: qué debe decir y cómo emitirlo para todos los asistentes",
     excerpt:
-      "Un webinar no tiene notas, ni módulos, ni siempre RUT. Así se emiten los certificados de asistencia sin forzar la plantilla de un curso.",
+      "Qué acredita, qué datos lleva y cómo pasar del informe de Zoom o Meet a un certificado verificable para cada persona que se conectó.",
     author: "Equipo MiCert",
     date: "23 de septiembre de 2026",
     dateISO: "2026-09-23",
@@ -2345,72 +2345,207 @@ export const RESOURCE_ARTICLES: ResourceArticle[] = [
       "emitir-certificados-masivos-excel",
       "certificados-linkedin-visibilidad-otec",
     ],
-    metaTitle: "Certificados de asistencia a webinar: cómo emitirlos",
+    metaTitle: "Certificado de asistencia a webinar: cómo emitirlo",
     metaDescription:
-      "Cómo emitir certificados de asistencia a webinars y charlas sin pedir RUT, con la duración exacta y QR verificable. Desde Excel o uno a uno.",
+      "Qué debe decir un certificado de asistencia a un webinar, cómo sacar la lista real de asistentes desde Zoom o Meet y cómo emitirlos para todos desde Excel.",
     sections: [
       {
-        id: "el-webinar-termino-ahora-faltan-los-certificados",
-        title: "El webinar terminó. Ahora faltan los certificados",
+        id: "respuesta-corta",
+        title: "Respuesta corta",
         paragraphs: [
-          "La charla salió bien: una hora y media, buena conexión y varias preguntas al final. Al día siguiente llegan los correos de los asistentes pidiendo su certificado.",
-          "Si el OTEC emite certificados con la misma plantilla que usa para sus cursos, el problema aparece rápido. La plantilla pide RUT, calificación y porcentaje de asistencia, datos que un webinar no tiene. Queda una planilla con guiones en la mitad de las columnas, o un PDF editable que alguien completa nombre por nombre.",
-          "Con 30 asistentes es una tarde perdida. Con 200, es una semana con la cola de correos creciendo.",
+          "Un certificado de asistencia a un webinar acredita que una persona estuvo presente en una actividad en línea, en una fecha determinada y durante un tiempo determinado. No acredita que haya aprobado nada.",
+          "Para emitirlo a todos los asistentes necesitas la lista real de quienes se conectaron, sacada del informe de la plataforma y no del formulario de inscripción, y una forma de generar un certificado por persona. Con 15 asistentes se puede hacer a mano. Con 150, conviene emitir desde una planilla Excel y enviar a cada uno un enlace donde su certificado se pueda verificar.",
         ],
       },
       {
-        id: "un-certificado-de-webinar-no-es-un-certificado-de-curso",
-        title: "Un certificado de webinar no es un certificado de curso",
-        paragraphs: [
-          "El certificado de un curso acredita que una persona completó una capacitación, con su identificación, sus horas y, cuando corresponde, su calificación. Si el curso es SENCE, además tiene que llevar los campos que SENCE exige.",
-          "El de un webinar acredita algo más simple: que alguien asistió a una actividad de cierta duración, en cierta fecha. No hay nota que registrar.",
-          "La identificación también cambia. No todos los formularios de inscripción piden RUT, y pedirlo solo para poder emitir el certificado le agrega un paso más al registro. En un webinar abierto también pueden participar personas de otros países, que no tienen RUT.",
-          "Por eso conviene separar las dos cosas desde el origen, en lugar de adaptar la plantilla del curso cada vez que hay una charla.",
-        ],
-      },
-      {
-        id: "que-lleva-el-certificado-de-un-evento",
-        title: "Qué lleva el certificado de un evento",
+        id: "tipos-de-certificado",
+        title: "Asistencia, participación o aprobación: no son lo mismo",
         table: {
-          headers: ["Campo", "Cómo funciona en un evento"],
+          headers: [
+            "Tipo",
+            "Qué acredita",
+            "¿Requiere evaluación?",
+            "Cuándo corresponde",
+          ],
           rows: [
             [
-              "Identificación (RUT o pasaporte)",
-              "Opcional. Si la tienes, la cargas; si no, el certificado se emite igual.",
+              "Asistencia",
+              "Que la persona estuvo presente en la actividad",
+              "No",
+              "Webinars, charlas, seminarios",
             ],
             [
-              "Duración",
-              "Horas y minutos por separado. Una charla de 45 minutos dice 45 minutos, no \"1 hora\".",
-            ],
-            ["Modalidad", "Los eventos en línea aparecen como \"Online\"."],
-            [
-              "Descripción",
-              "Opcional, para dar contexto sobre el tema o el expositor.",
+              "Participación",
+              "Que la persona cumplió un rol o actividades dentro del evento (expositor, panelista, taller)",
+              "No necesariamente",
+              "Expositores, jornadas con trabajo práctico",
             ],
             [
-              "Nombre y email del participante",
-              "El nombre va impreso en el certificado; el email se usa para enviarlo.",
+              "Aprobación",
+              "Que la persona rindió una evaluación y la superó",
+              "Sí",
+              "Cursos con nota o examen",
             ],
           ],
         },
-      },
-      {
-        id: "de-la-lista-de-asistentes-al-certificado-enviado",
-        title: "De la lista de asistentes al certificado enviado",
         paragraphs: [
-          "Primero se crea el evento con su nombre, fecha, duración y modalidad. Después se cargan los participantes, desde un Excel si son muchos o uno a uno si son pocos o si alguien se sumó tarde.",
-          "La lista la defines tú. Puede salir del reporte de asistencia de la plataforma donde hiciste el webinar, si lo entrega, o de tu propio registro. Quién cuenta como asistente es una decisión del organizador, no del sistema.",
-          "Con los participantes cargados, se emiten los certificados. Cada uno lleva su código y un QR único.",
-          "El envío se hace con un botón, de a uno o a toda la lista. El correo no adjunta el PDF: lleva un enlace a la ficha verificable del certificado. Desde ahí el participante lo descarga y, si quiere, lo agrega a su perfil de LinkedIn.",
+          "La tabla refleja el uso habitual de cada nombre, no una norma: en Chile no existe una definición legal única para cada tipo de certificado en actividades abiertas como un webinar.",
+          "\"Participación\" a veces se usa como sinónimo de asistencia. No es grave, pero conviene reservar cada palabra para lo que significa: quien lee un certificado lo toma literal.",
+          "El error que sí importa es emitir un certificado \"de aprobación\" para un webinar sin evaluación. Promete algo que no ocurrió, y el certificado pierde valor justamente frente a quien lo revisa.",
         ],
       },
       {
-        id: "donde-encaja-micert-y-donde-no",
+        id: "que-debe-decir",
+        title: "Qué debe decir un certificado de asistencia",
+        table: {
+          headers: ["Dato", "¿Lo incluyes?", "Detalle"],
+          rows: [
+            [
+              "Nombre completo del asistente",
+              "Siempre",
+              "Tómalo del registro, no del nombre que la persona usó en la plataforma de video.",
+            ],
+            [
+              "Tipo de certificado",
+              "Siempre",
+              "Que diga \"de asistencia\" de forma explícita.",
+            ],
+            [
+              "Nombre del evento",
+              "Siempre",
+              "El mismo título con que se difundió.",
+            ],
+            ["Fecha", "Siempre", "La fecha en que se realizó."],
+            [
+              "Duración",
+              "Siempre",
+              "La real, en horas y minutos. Una charla de 50 minutos no es \"1 hora\".",
+            ],
+            [
+              "Organizador o emisor",
+              "Siempre",
+              "El mismo nombre institucional que usas en tu web y en LinkedIn.",
+            ],
+            ["Modalidad", "Recomendado", "\"Online\" si fue en línea."],
+            [
+              "Firma",
+              "Recomendado",
+              "De quien responde por la actividad.",
+            ],
+            [
+              "Código o QR de verificación",
+              "Recomendado",
+              "Permite comprobar el certificado sin escribirle al organizador.",
+            ],
+            [
+              "RUT o pasaporte",
+              "Opcional",
+              "Solo si lo pediste en el registro.",
+            ],
+          ],
+        },
+        paragraphs: [
+          "Lo que no lleva: calificación, porcentaje de aprobación ni módulos. Si la plantilla que usas para tus cursos los trae, un webinar no es el lugar para rellenarlos con guiones.",
+        ],
+      },
+      {
+        id: "criterio-de-asistencia",
+        title: "Antes del webinar: define quién recibe certificado",
+        paragraphs: [
+          "La pregunta que más conviene resolver antes y no después es quién cuenta como asistente. ¿Todos los inscritos? ¿Todos los que se conectaron, aunque sea un minuto? ¿Solo los que estuvieron gran parte de la sesión?",
+          "No hay una regla. Es una decisión del organizador, pero tiene que estar tomada antes del evento y escrita en la invitación. Por ejemplo: \"Recibirán certificado de asistencia quienes permanezcan al menos 45 de los 60 minutos\". Así, cuando alguien reclame, la respuesta ya estaba publicada.",
+          "Dos cosas más que se definen antes. En el formulario de inscripción, pide el nombre tal como la persona quiere que aparezca en el certificado, y el correo al que se lo vas a enviar. Pide el RUT solo si de verdad lo necesitas: es un dato personal más que tendrás que resguardar.",
+          "Si usas Google Meet, activa el seguimiento de asistencia en la configuración del evento antes de que empiece. Si no, no vas a tener el informe.",
+        ],
+      },
+      {
+        id: "lista-de-asistentes",
+        title: "Después del webinar: cómo sacar la lista real de asistentes",
+        paragraphs: [
+          "El formulario de inscripción te dice quién quería venir. El informe de la plataforma te dice quién vino. El certificado sale del segundo.",
+          "En Zoom, las cuentas de pago generan un informe de participantes que se exporta como CSV, con nombre, correo (si la persona inició sesión), hora de entrada, hora de salida y duración. El informe de registro y el de asistencia son distintos: alguien puede aparecer inscrito y no haber entrado nunca. Si una persona se desconectó y volvió a entrar, puede aparecer en varias filas; la opción \"Mostrar usuarios únicos\" las consolida.",
+          "En Google Meet, el seguimiento de asistencia está disponible en ediciones elegibles de Google Workspace, no en cuentas gratuitas de Gmail. Al terminar la reunión, el organizador recibe por correo una hoja de cálculo con los nombres, correos y tiempo que cada persona estuvo en la llamada. Quien entra por teléfono aparece con dígitos de su número en vez de su nombre.",
+          "En otras plataformas, revisa si exportan la lista de asistentes con su duración. Si no lo hacen, tu registro manual pasa a ser la fuente.",
+          "Descarga el informe el mismo día. Ninguna de estas plataformas guarda el registro de forma indefinida.",
+          "Con el informe en mano, cruza por correo con tu formulario de inscripción. El nombre que alguien escribe al entrar a una videollamada puede no ser el que quiere en su certificado, y el del formulario sí lo es. Aplica tu criterio de duración y quédate con una planilla limpia: nombre, correo y, si lo tienes, RUT o pasaporte. Esa planilla es tu base de emisión.",
+        ],
+      },
+      {
+        id: "paso-a-paso",
+        title: "Cómo emitir los certificados paso a paso",
+        table: {
+          headers: ["Paso", "Qué haces", "Cuándo"],
+          rows: [
+            [
+              "1",
+              "Defines el criterio de asistencia y lo publicas en la invitación",
+              "Antes",
+            ],
+            [
+              "2",
+              "Pides en el registro nombre para el certificado y correo",
+              "Antes",
+            ],
+            [
+              "3",
+              "Activas o verificas el registro de asistencia de la plataforma",
+              "Antes",
+            ],
+            ["4", "Exportas el informe de asistencia", "El mismo día"],
+            [
+              "5",
+              "Cruzas con la inscripción, aplicas el criterio y limpias duplicados",
+              "Después",
+            ],
+            [
+              "6",
+              "Generas un certificado por persona desde la planilla",
+              "Después",
+            ],
+            [
+              "7",
+              "Envías a cada asistente su certificado o el enlace para verificarlo",
+              "Después",
+            ],
+            [
+              "8",
+              "Guardas la planilla final para responder reclamos",
+              "Después",
+            ],
+          ],
+        },
+        paragraphs: [
+          "Los pasos 6 y 7 son los que se comen la tarde cuando se hacen a mano: abrir la plantilla, cambiar el nombre, exportar el PDF, adjuntarlo, enviar, y repetir. Es trabajo mecánico que se puede resolver desde la misma planilla que ya limpiaste en el paso 5.",
+        ],
+      },
+      {
+        id: "errores-frecuentes",
+        title: "Errores frecuentes al certificar un webinar",
+        paragraphs: [
+          "Certificar a los inscritos en vez de a los asistentes. Es lo más cómodo porque el formulario ya existe, pero entrega certificados a gente que no estuvo, y eso le quita valor a los que sí.",
+          "Redondear la duración. Si la charla duró 50 minutos, el certificado dice 50 minutos. Un certificado que infla horas se desarma apenas alguien compara con el programa.",
+          "Usar el nombre de la videollamada. Apodos, nombres de dispositivos o números de teléfono terminan impresos en un documento que la persona quería mostrar.",
+          "Llamarlo \"de aprobación\". Si no hubo evaluación, es de asistencia.",
+          "Mandar un PDF sin forma de comprobarlo. Un PDF se puede editar. Si el certificado no tiene un código o QR que lleve a una página donde se confirme, quien lo recibe no tiene cómo saber si es auténtico sin escribirte.",
+        ],
+      },
+      {
+        id: "validez",
+        title: "¿Qué validez tiene un certificado de asistencia a un webinar?",
+        paragraphs: [
+          "Acredita asistencia. No acredita competencias ni aprobación, y no debería presentarse como si lo hiciera.",
+          "No existe un formato legal único para certificados de eventos abiertos. Lo que le da peso es quién lo emite y si se puede comprobar. Si el certificado tiene un código o QR que lleva a una página del emisor donde se confirma, pasa a ser verificable por un tercero.",
+          "Si la actividad es un curso que debe cumplir requisitos de SENCE, el caso es otro: rigen esos requisitos y corresponde emitirlo como certificado de curso, no como certificado de asistencia a un evento.",
+        ],
+      },
+      {
+        id: "donde-encaja-micert",
         title: "Dónde encaja MiCert (y dónde no)",
         paragraphs: [
-          "MiCert no es una plataforma de webinars. No transmite el evento, no registra quién se conectó ni cuánto tiempo estuvo. La lista de asistentes la trae el OTEC.",
-          "Lo que sí hace es tomar esa lista y convertirla en certificados emitidos, enviados y verificables, sin inventar datos para rellenar campos de curso. Los eventos viven en un apartado propio, separado de los cursos. El historial de capacitaciones SENCE no se mezcla con el de charlas y seminarios.",
-          "Los certificados de eventos descuentan de la misma cuota del plan que los cursos, sin cobro adicional.",
+          "MiCert no es una plataforma de webinars. No transmite el evento, no se conecta con Zoom ni con Meet y no registra quién estuvo ni cuánto tiempo. El criterio de asistencia y la lista final son del organizador.",
+          "Lo que resuelve son los pasos 6 y 7. Los eventos tienen un apartado propio, separado de los cursos, pensado para lo que un webinar sí tiene: la identificación es opcional, la duración se ingresa en horas y minutos, la modalidad en línea aparece como \"Online\" y puedes agregar una descripción.",
+          "Cargas a los asistentes desde la planilla que ya limpiaste o de a uno si alguien quedó fuera. Cada certificado sale con su código y un QR único. El envío se hace con un botón, a una persona o a toda la lista: el correo lleva el enlace a la ficha verificable, desde donde el asistente descarga su PDF y, si quiere, lo agrega a LinkedIn.",
+          "Los certificados de eventos descuentan de la misma cuota del plan que los de cursos, sin cobro adicional.",
         ],
       },
       {
@@ -2418,31 +2553,48 @@ export const RESOURCE_ARTICLES: ResourceArticle[] = [
         title: "Preguntas frecuentes",
         faq: [
           {
+            question:
+              "¿Qué diferencia hay entre un certificado de asistencia y uno de participación?",
+            answer:
+              "El de asistencia acredita que la persona estuvo presente. El de participación suele usarse cuando cumplió un rol o actividades dentro del evento, como exponer o trabajar en un taller. En Chile no hay una definición legal única, así que lo importante es que el nombre del certificado refleje lo que realmente pasó.",
+          },
+          {
+            question:
+              "¿Qué datos debe tener un certificado de asistencia a un webinar?",
+            answer:
+              "Nombre completo del asistente, tipo de certificado, nombre del evento, fecha, duración real, organizador y, recomendablemente, modalidad, firma y un código o QR para verificarlo. El RUT es opcional.",
+          },
+          {
+            question: "¿Cómo sé quién asistió a mi webinar en Zoom?",
+            answer:
+              "En cuentas de pago, desde los informes de Zoom puedes exportar a CSV la lista de participantes con nombre, correo, hora de entrada, hora de salida y duración. Ojo: el informe de registro y el de asistencia son distintos.",
+          },
+          {
+            question: "¿Y en Google Meet?",
+            answer:
+              "En ediciones elegibles de Google Workspace, si activas el seguimiento de asistencia antes de la reunión, al terminar recibes por correo una hoja de cálculo con nombres, correos y tiempo en la llamada. No está disponible en cuentas gratuitas de Gmail.",
+          },
+          {
+            question:
+              "¿Cuánto tiempo tiene que estar alguien para recibir el certificado?",
+            answer:
+              "No hay una regla. Lo define el organizador, idealmente antes del evento y por escrito en la invitación, por ejemplo un mínimo de minutos sobre la duración total.",
+          },
+          {
             question: "¿Tengo que pedir el RUT a los asistentes?",
             answer:
-              "No. En los eventos la identificación es opcional. Si tienes el RUT o el pasaporte de alguien, lo cargas; si no, el certificado se emite igual con nombre y email.",
+              "No. Para un certificado de asistencia basta con el nombre y el correo. Pide el RUT solo si lo necesitas para algo concreto, porque es un dato personal más que tendrás que resguardar.",
           },
           {
-            question: "¿Cómo se verifica un certificado que no tiene RUT?",
+            question: "¿Cómo se verifica un certificado de asistencia?",
             answer:
-              "Con el QR. Cada certificado tiene uno único que lleva a su ficha en la página de verificación de MiCert, donde se ven el evento, la fecha y el estado del certificado.",
-          },
-          {
-            question: "¿Los certificados de eventos se cobran aparte?",
-            answer:
-              "No. Descuentan de la misma cuota del plan que los certificados de cursos.",
+              "Si el certificado tiene un código o QR, lleva a una página del emisor donde se confirma el evento, la fecha y el estado del certificado. Si es solo un PDF, la única forma es preguntarle al organizador.",
           },
           {
             question:
-              "¿Puedo emitir un certificado para una charla de menos de una hora?",
+              "¿Un certificado de asistencia a un webinar sirve como certificado de curso SENCE?",
             answer:
-              "Sí. La duración se ingresa en horas y minutos por separado, así que un webinar de 45 minutos queda registrado con su duración real.",
-          },
-          {
-            question:
-              "¿Un certificado de webinar reemplaza a un certificado de curso SENCE?",
-            answer:
-              "No. Es un certificado de asistencia a un evento. Si la actividad es un curso que debe cumplir los requisitos de SENCE, corresponde emitirlo como curso.",
+              "No. Si la actividad es un curso que debe cumplir requisitos de SENCE, corresponde emitirlo como certificado de curso.",
           },
         ],
       },
