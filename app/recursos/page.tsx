@@ -4,8 +4,8 @@ import SiteFooter from "../components/site/SiteFooter";
 import SiteHeader from "../components/site/SiteHeader";
 import {
   RECURSOS_HUB_METADATA,
-  getFeaturedArticle,
   getGeneralArticles,
+  getLatestArticle,
   pageCountFor,
   slicePage,
 } from "../lib/recursos";
@@ -34,7 +34,7 @@ export default function RecursosPage() {
       <RecursosListing
         heading="Guías para emitir con confianza"
         lede="Artículos sobre producto, comparativas y normativa para los OTEC que quieren modernizar la emisión de certificados."
-        featured={getFeaturedArticle()}
+        featured={getLatestArticle()}
         articles={slicePage(articles, 1)}
         page={1}
         pageCount={pageCountFor(articles.length)}

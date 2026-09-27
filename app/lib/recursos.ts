@@ -2677,10 +2677,14 @@ export function newestDateISO(articles: ResourceArticle[]) {
   return articlesByDateDesc(articles)[0]?.dateISO;
 }
 
+export function getLatestArticle(): ResourceArticle | undefined {
+  return articlesByDateDesc(RESOURCE_ARTICLES)[0];
+}
+
 export function getGeneralArticles() {
-  const featured = getFeaturedArticle();
+  const latest = getLatestArticle();
   return articlesByDateDesc(
-    RESOURCE_ARTICLES.filter((article) => article.slug !== featured?.slug),
+    RESOURCE_ARTICLES.filter((article) => article.slug !== latest?.slug),
   );
 }
 

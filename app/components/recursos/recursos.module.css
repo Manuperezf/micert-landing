@@ -51,6 +51,7 @@
   flex-wrap: wrap;
   gap: 8px;
   margin-top: 32px;
+  margin-bottom: 40px;
 }
 
 .filter {
@@ -88,7 +89,7 @@
   grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
   gap: 48px;
   align-items: center;
-  margin-top: 40px;
+  margin-top: 0;
   padding-bottom: 40px;
   border-bottom: 1px solid var(--line);
 }
@@ -310,6 +311,7 @@
   .filters {
     flex-wrap: nowrap;
     margin-right: -20px;
+    margin-bottom: 28px;
     margin-left: -20px;
     padding: 0 20px 4px;
     overflow-x: auto;
