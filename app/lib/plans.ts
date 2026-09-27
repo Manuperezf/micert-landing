@@ -58,6 +58,103 @@ export const PLANS: Plan[] = [
   },
 ];
 
+export const PACKS = [
+  { size: 25, price: 17990 },
+  { size: 50, price: 32990 },
+  { size: 100, price: 59990 },
+] as const;
+
+export const PLAN_INCLUDES = [
+  "Emisión masiva desde Excel",
+  "Editor visual de certificados",
+  "Verificación pública con QR",
+  "Envío de certificados por correo",
+] as const;
+
+export type ComparisonValue = boolean | number | string;
+
+export type ComparisonRow = {
+  label: string;
+  note?: string;
+  values: {
+    basico: ComparisonValue;
+    estandar: ComparisonValue;
+    pro: ComparisonValue;
+  };
+};
+
+export type ComparisonGroup = {
+  title: string;
+  rows: ComparisonRow[];
+};
+
+export const PLAN_COMPARISON: ComparisonGroup[] = [
+  {
+    title: "Emisión",
+    rows: [
+      {
+        label: "Certificados al mes",
+        values: { basico: 80, estandar: 200, pro: 500 },
+      },
+      {
+        label: "Emisión masiva desde Excel",
+        values: { basico: true, estandar: true, pro: true },
+      },
+      {
+        label: "Editor visual de certificados",
+        values: { basico: true, estandar: true, pro: true },
+      },
+      {
+        label: "Plantillas reutilizables",
+        values: { basico: true, estandar: true, pro: true },
+      },
+      {
+        label: "Envío de certificados por correo",
+        values: { basico: true, estandar: true, pro: true },
+      },
+      {
+        label: "Certificados de eventos y webinars",
+        note: "Descuentan de la misma cuota",
+        values: { basico: true, estandar: true, pro: true },
+      },
+    ],
+  },
+  {
+    title: "Verificación y control",
+    rows: [
+      {
+        label: "Verificación pública con QR",
+        values: { basico: true, estandar: true, pro: true },
+      },
+      {
+        label: "Vigencia y revocación individual",
+        values: { basico: true, estandar: true, pro: true },
+      },
+      {
+        label: "Vigencia y revocación por lote",
+        values: { basico: false, estandar: true, pro: true },
+      },
+      {
+        label: "Dashboard con indicadores",
+        values: { basico: false, estandar: true, pro: true },
+      },
+    ],
+  },
+  {
+    title: "Equipo y soporte",
+    rows: [
+      {
+        label: "Usuarios del equipo",
+        values: { basico: 2, estandar: 5, pro: 10 },
+      },
+      {
+        label: "Soporte por correo",
+        values: { basico: true, estandar: true, pro: "Prioritario" },
+      },
+    ],
+  },
+];
+
 export const DEMO_BLOCK = {
   eyebrow: "Demo sin costo · 5 certificados",
   title: "Pruébalo con 5 certificados antes de decidir",
@@ -91,7 +188,12 @@ export const PRECIOS_FAQ = [
   {
     question: "¿Hay contrato de permanencia?",
     answer:
-      "No. Los planes son mensuales y sin permanencia. Puedes cancelar cuando quieras.",
+      "Los planes mensuales no tienen permanencia: puedes cancelar cuando quieras. El plan anual se contrata por 12 meses.",
+  },
+  {
+    question: "¿Cómo funciona el plan anual?",
+    answer:
+      "Pagas 10 meses y usas 12, con la misma cuota mensual de certificados de tu plan.",
   },
   {
     question: "¿Necesito conocimientos técnicos para usar MiCert?",

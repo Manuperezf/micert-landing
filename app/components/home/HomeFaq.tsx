@@ -1,8 +1,6 @@
-"use client";
-
-import { useState } from "react";
 import Link from "next/link";
-import styles from "./home.module.css";
+import FaqAccordion from "../site/FaqAccordion";
+import styles from "../precios/precios.module.css";
 
 type FaqLink = {
   phrase: string;
@@ -54,19 +52,6 @@ const FAQ: FaqItem[] = [
   },
 ];
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: FAQ.map((item) => ({
-    "@type": "Question",
-    name: item.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: item.text,
-    },
-  })),
-};
-
 function Answer({ item }: { item: FaqItem }) {
   if (!item.link) return item.text;
   const index = item.text.indexOf(item.link.phrase);
@@ -84,58 +69,15 @@ function Answer({ item }: { item: FaqItem }) {
 }
 
 export default function HomeFaq() {
-  const [open, setOpen] = useState<boolean[]>(() => FAQ.map(() => false));
-
   return (
-    <section className={styles.faq} aria-labelledby="faq-title">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
-      <div className={`${styles.shell} ${styles.faqLayout}`}>
-        <h2 className={styles.h2} id="faq-title">
-          Lo que más nos preguntan.
-        </h2>
-        <div className={styles.faqList}>
-          {FAQ.map((item, index) => {
-            const panelId = `faq-panel-${index}`;
-            const expanded = open[index];
-            return (
-              <div className={styles.faqItem} key={item.question}>
-                <button
-                  type="button"
-                  className={styles.faqButton}
-                  aria-expanded={expanded}
-                  aria-controls={panelId}
-                  onClick={() =>
-                    setOpen((current) =>
-                      current.map((value, i) => (i === index ? !value : value)),
-                    )
-                  }
-                >
-                  {item.question}
-                  <span
-                    className={`${styles.faqPlus} ${expanded ? styles.faqPlusOpen : ""}`}
-                    aria-hidden="true"
-                  >
-                    +
-                  </span>
-                </button>
-                <div
-                  className={styles.faqPanel}
-                  id={panelId}
-                  role="region"
-                  hidden={!expanded}
-                >
-                  <p className={styles.faqAnswer}>
-                    <Answer item={item} />
-                  </p>
-                </div>
-              </div>
-            );
-          })}
-        </div>
-      </div>
-    </section>
+    <FaqAccordion
+      id="faq-title"
+      title="Lo que más nos preguntan."
+      items={FAQ.map((item) => ({
+        question: item.question,
+        schemaText: item.text,
+        answer: <Answer item={item} />,
+      }))}
+    />
   );
 }
