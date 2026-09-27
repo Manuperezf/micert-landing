@@ -139,7 +139,7 @@ export default function HomePlans() {
                   className={`${styles.btn} ${plan.featured ? styles.btnPrimary : styles.btnSecondary} ${styles.planCta}`}
                   href={DEMO_URL}
                 >
-                  Empieza con 5 gratis
+                  Contratar {plan.name}
                 </Link>
               </article>
             );
