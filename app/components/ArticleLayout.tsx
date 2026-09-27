@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import DemoBanner from "./DemoBanner";
+import FinalCta from "./site/FinalCta";
 import ArticleShare from "./ArticleShare";
 import ArticleFeedback from "./ArticleFeedback";
 import type { ResourceArticle } from "../lib/recursos";
@@ -143,10 +143,8 @@ export default function ArticleLayout({ article }: ArticleLayoutProps) {
           </div>
         </section>
 
-        <div className="article-demo">
-          <DemoBanner />
-        </div>
       </div>
+      <FinalCta />
     </article>
   );
 }
