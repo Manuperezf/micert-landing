@@ -77,6 +77,9 @@
   height: 40px;
   padding: 0 18px;
   font-size: 14px;
+  text-decoration: none;
+  box-shadow: none;
+  background-image: none;
 }
 
 .header {
@@ -106,6 +109,20 @@
   height: 32px;
 }
 
+.header nav {
+  position: static;
+  top: auto;
+  z-index: auto;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  background-image: none;
+  backdrop-filter: none;
+  border: 0;
+  box-shadow: none;
+}
+
 .nav {
   display: flex;
   align-items: center;
@@ -115,15 +132,30 @@
 
 .nav a,
 .login,
+.logoLink,
 .menuNav a {
   color: var(--ink);
   text-decoration: none;
+  border: 0;
+  box-shadow: none;
+  background-image: none;
 }
 
 .nav a:hover,
 .login:hover,
 .menuNav a:hover {
   color: var(--azul);
+  text-decoration: none;
+  border: 0;
+  box-shadow: none;
+  background-image: none;
+}
+
+.header a:focus-visible,
+.menuBtn:focus-visible {
+  outline: 2px solid var(--azul);
+  outline-offset: 3px;
+  border-radius: 4px;
 }
 
 .headerActions {
@@ -171,7 +203,7 @@
 
 .menuNav a {
   padding: 14px 0;
-  border-bottom: 1px solid var(--line);
+  border: 0;
   font-size: 16px;
 }
 
