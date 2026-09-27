@@ -1,3 +1,22 @@
+/*
+  Botones y enlaces de la home. Reutilizar estas clases en las fases 2 y 3.
+
+  .btn + .btnPrimary
+    Píldora primaria: fondo var(--ink), texto blanco.
+    Hover: fondo y borde var(--azul). Active: scale(0.98).
+  .btn + .btnSecondary
+    Píldora secundaria: borde 1px var(--ink), fondo transparente.
+    Hover: fondo var(--ink) y texto blanco. Active: scale(0.98).
+  .headerBtn (junto con .btn y .btnPrimary o .btnSecondary)
+    Alto 40px y padding 18px; 44px bajo 1024px. Sin esta clase el alto es 48px (50px bajo 768px).
+  .arrowLink + .arrow
+    Enlace de texto "Texto →". La flecha va en un span con la clase .arrow.
+    Hover: el texto pasa a var(--azul) y la flecha se mueve 3px a la derecha.
+  .menuLink
+    Enlaces del menú, de "Iniciar sesión" y del footer de la home.
+    Hover: solo color var(--azul), sin subrayado.
+*/
+
 .home {
   --home-verde-texto: #15803d;
   --home-line-dark: #2c2f35;
@@ -59,6 +78,24 @@
   white-space: nowrap;
   flex-shrink: 0;
   cursor: pointer;
+  transition:
+    background-color 180ms ease,
+    color 180ms ease,
+    border-color 180ms ease,
+    transform 180ms ease;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--azul);
+  outline-offset: 3px;
+}
+
+.btn:active {
+  transform: scale(0.98);
 }
 
 .btnPrimary {
@@ -67,10 +104,78 @@
   border: 1px solid var(--ink);
 }
 
+.btnPrimary:hover {
+  background: var(--azul);
+  border-color: var(--azul);
+  color: #fff;
+}
+
 .btnSecondary {
   background: transparent;
   color: var(--ink);
   border: 1px solid var(--ink);
+}
+
+.btnSecondary:hover {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: #fff;
+}
+
+.arrowLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--ink);
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 180ms ease;
+}
+
+.arrowLink:hover {
+  color: var(--azul);
+  text-decoration: none;
+}
+
+.arrowLink:focus {
+  outline: none;
+}
+
+.arrowLink:focus-visible {
+  outline: 2px solid var(--azul);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.arrow {
+  display: inline-block;
+  transition: transform 180ms ease;
+}
+
+.arrowLink:hover .arrow {
+  transform: translateX(3px);
+}
+
+.menuLink {
+  color: var(--ink);
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 150ms ease;
+}
+
+.menuLink:hover {
+  color: var(--azul);
+  text-decoration: none;
+}
+
+.menuLink:focus {
+  outline: none;
+}
+
+.menuLink:focus-visible {
+  outline: 2px solid var(--azul);
+  outline-offset: 3px;
+  border-radius: 4px;
 }
 
 .headerBtn {
@@ -151,7 +256,10 @@
   background-image: none;
 }
 
-.header a:focus-visible,
+.menuBtn:focus {
+  outline: none;
+}
+
 .menuBtn:focus-visible {
   outline: 2px solid var(--azul);
   outline-offset: 3px;
@@ -716,5 +824,23 @@
 
   .stepBody {
     gap: 6px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn,
+  .btnPrimary,
+  .btnSecondary,
+  .arrowLink,
+  .arrow,
+  .menuLink,
+  .login,
+  .menuBtn {
+    transition: none;
+  }
+
+  .btn:active,
+  .arrowLink:hover .arrow {
+    transform: none;
   }
 }

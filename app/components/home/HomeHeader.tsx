@@ -41,18 +41,22 @@ export default function HomeHeader() {
         <nav className={styles.nav} aria-label="Principal">
           {MENU_LINKS.map((item) =>
             item.href.startsWith("/") ? (
-              <Link key={item.label} href={item.href}>
+              <Link
+                key={item.label}
+                href={item.href}
+                className={styles.menuLink}
+              >
                 {item.label}
               </Link>
             ) : (
-              <a key={item.label} href={item.href}>
+              <a key={item.label} href={item.href} className={styles.menuLink}>
                 {item.label}
               </a>
             ),
           )}
         </nav>
         <div className={styles.headerActions}>
-          <a className={styles.login} href={APP_URL}>
+          <a className={`${styles.login} ${styles.menuLink}`} href={APP_URL}>
             Iniciar sesión
           </a>
           <Link
@@ -112,16 +116,26 @@ export default function HomeHeader() {
         <nav className={styles.menuNav} aria-label="Menú">
           {MENU_LINKS.map((item) =>
             item.href.startsWith("/") ? (
-              <Link key={item.label} href={item.href} onClick={close}>
+              <Link
+                key={item.label}
+                href={item.href}
+                className={styles.menuLink}
+                onClick={close}
+              >
                 {item.label}
               </Link>
             ) : (
-              <a key={item.label} href={item.href} onClick={close}>
+              <a
+                key={item.label}
+                href={item.href}
+                className={styles.menuLink}
+                onClick={close}
+              >
                 {item.label}
               </a>
             ),
           )}
-          <a href={APP_URL} onClick={close}>
+          <a className={styles.menuLink} href={APP_URL} onClick={close}>
             Iniciar sesión
           </a>
         </nav>
