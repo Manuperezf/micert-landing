@@ -181,6 +181,11 @@ export const PRECIOS_FAQ = [
       "Te avisamos cuando te acercas al límite. Si necesitas más certificados en un mes puntual, puedes comprar un pack adicional sin cambiar de plan. Si el volumen extra es constante, conviene subir de plan.",
   },
   {
+    question: "¿Qué cuenta como un certificado?",
+    answer:
+      "Solo se descuentan de tu cuota los certificados que emites. Anular un certificado no descuenta de tu cuota.",
+  },
+  {
     question: "¿Los precios incluyen IVA?",
     answer:
       "No. Los valores publicados son netos. Al ser una operación entre empresas, se agrega el IVA correspondiente en la factura.",
