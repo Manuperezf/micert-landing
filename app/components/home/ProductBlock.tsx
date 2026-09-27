@@ -23,20 +23,20 @@ export default function ProductBlock() {
             alt="Panel principal de MiCert"
             width={2880}
             height={1620}
-            sizes="(max-width: 767px) 460px, (max-width: 1220px) 82vw, 1000px"
+            sizes="(max-width: 767px) 460px, (max-width: 1176px) calc(100vw - 176px), 1000px"
             priority
-            className={styles.shotImg}
+            className={styles.dashboardImg}
           />
-        </div>
-        <div className={styles.ficha}>
-          <Image
-            src="/landing/producto/ficha-verificacion.png"
-            alt="Ficha pública de verificación de un certificado"
-            width={724}
-            height={440}
-            sizes="(max-width: 767px) 280px, 440px"
-            className={styles.shotImg}
-          />
+          <div className={styles.ficha}>
+            <Image
+              src="/landing/producto/ficha-verificacion.png"
+              alt="Ficha pública de verificación de un certificado"
+              width={724}
+              height={440}
+              sizes="(max-width: 767px) 280px, 440px"
+              className={styles.fichaImg}
+            />
+          </div>
         </div>
       </div>
     </section>
