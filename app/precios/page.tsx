@@ -1,8 +1,8 @@
 import type { ReactNode } from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
-import Footer from "../components/Footer";
-import Nav from "../components/Nav";
+import SiteFooter from "../components/site/SiteFooter";
+import SiteHeader from "../components/site/SiteHeader";
 import DemoBanner from "../components/DemoBanner";
 import FaqSection from "../components/FaqSection";
 import PlanFeatures from "../components/PlanFeatures";
@@ -60,7 +60,7 @@ export default function PreciosPage() {
           }}
         />
       )}
-      <Nav />
+      <SiteHeader />
 
       <header className="hero hero-compact">
         <div className="wrap">
@@ -121,7 +121,7 @@ export default function PreciosPage() {
 
       <FaqSection items={preciosFaqItems} />
 
-      <Footer />
+      <SiteFooter />
     </>
   );
 }

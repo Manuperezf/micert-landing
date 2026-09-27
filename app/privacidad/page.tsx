@@ -1,5 +1,5 @@
-import Footer from "../components/Footer";
-import Nav from "../components/Nav";
+import SiteFooter from "../components/site/SiteFooter";
+import SiteHeader from "../components/site/SiteHeader";
 
 export const metadata = {
   title: "Política de Privacidad | MiCert",
@@ -26,7 +26,7 @@ export default function PrivacidadPage() {
         .legal-summary h2{margin-top:0}
       `}</style>
 
-      <Nav />
+      <SiteHeader />
 
       <div className="legal-wrap">
         <h1>Política de Privacidad</h1>
@@ -170,7 +170,7 @@ export default function PrivacidadPage() {
         <p style={{ marginTop: 28, color: "#65645d" }}>Al usar MiCert, el titular confirma que ha leído, comprendido y aceptado esta Política de Privacidad en su totalidad.</p>
       </div>
 
-      <Footer />
+      <SiteFooter />
     </div>
   );
 }

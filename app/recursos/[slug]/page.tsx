@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import Footer from "../../components/Footer";
-import Nav from "../../components/Nav";
+import SiteFooter from "../../components/site/SiteFooter";
+import SiteHeader from "../../components/site/SiteHeader";
 import ArticleLayout from "../../components/ArticleLayout";
 import { buildFaqPageSchema } from "../../lib/faq-schema";
 import {
@@ -60,9 +60,9 @@ export default function RecursoArticlePage({ params }: PageProps) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
         />
       )}
-      <Nav />
+      <SiteHeader />
       <ArticleLayout article={article} />
-      <Footer />
+      <SiteFooter />
     </>
   );
 }

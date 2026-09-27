@@ -1,10 +1,10 @@
 import Link from "next/link";
-import styles from "./home.module.css";
+import styles from "./site.module.css";
 
-export default function HomeFooter() {
+export default function SiteFooter() {
   return (
-    <footer className={styles.homeFooter}>
-      <div className={styles.homeFooterInner}>
+    <footer className={styles.footer}>
+      <div className={styles.footerInner}>
         <div className={styles.footerTop}>
           <div className={styles.footerBrand}>
             <a className={styles.footerLogoLink} href="/">
@@ -59,16 +59,16 @@ export default function HomeFooter() {
           <div className={styles.footerCols}>
             <div className={styles.footerCol}>
               <p className={styles.footerHeading}>Producto</p>
-              <a className={styles.menuLink} href="#como-funciona">
+              <Link className={styles.menuLink} href="/#como-funciona">
                 Cómo funciona
-              </a>
-              <a className={styles.menuLink} href="#como-funciona">
+              </Link>
+              <Link className={styles.menuLink} href="/#como-funciona">
                 Cursos
-              </a>
-              <a className={styles.menuLink} href="#ciclo">
+              </Link>
+              <Link className={styles.menuLink} href="/#ciclo">
                 Eventos
-              </a>
-              <Link className={styles.menuLink} href="/precios">
+              </Link>
+              <Link className={styles.menuLink} href="/#precios">
                 Precios
               </Link>
             </div>

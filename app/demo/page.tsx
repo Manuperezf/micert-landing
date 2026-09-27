@@ -1,8 +1,8 @@
 "use client";
 
 import { useEffect } from "react";
-import Nav from "../components/Nav";
-import Footer from "../components/Footer";
+import SiteFooter from "../components/site/SiteFooter";
+import SiteHeader from "../components/site/SiteHeader";
 
 export default function DemoPage() {
   useEffect(() => {
@@ -45,7 +45,7 @@ export default function DemoPage() {
         }
       `}</style>
 
-      <Nav />
+      <SiteHeader />
 
       <div className="demo-wrap">
         <section className="demo-hero">
@@ -108,7 +108,7 @@ export default function DemoPage() {
         </section>
       </div>
 
-      <Footer />
+      <SiteFooter />
     </div>
   );
 }
