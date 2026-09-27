@@ -71,7 +71,7 @@ function IncludeIcon({ label }: { label: string }) {
 }
 
 const LINKED_ANSWERS: Record<number, ReactNode> = {
-  5: (
+  6: (
     <>
       No. Cargas tus datos desde un Excel, eliges el diseño del certificado y
       emites. Todo desde el navegador, sin instalar nada. ¿Recién formas tu
@@ -82,7 +82,7 @@ const LINKED_ANSWERS: Record<number, ReactNode> = {
       .
     </>
   ),
-  6: (
+  7: (
     <>
       Sí. El{" "}
       <Link className={styles.faqLink} href="/demo">
