@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import Footer from "../components/Footer";
-import Nav from "../components/Nav";
+import SiteFooter from "../components/site/SiteFooter";
+import SiteHeader from "../components/site/SiteHeader";
 import RecursosFeed from "../components/RecursosFeed";
 import { RECURSOS_HUB_METADATA } from "../lib/recursos";
 
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 export default function RecursosPage() {
   return (
     <>
-      <Nav />
+      <SiteHeader />
 
       <header className="hero hero-compact">
         <div className="wrap">
@@ -33,7 +33,7 @@ export default function RecursosPage() {
 
       <RecursosFeed />
 
-      <Footer />
+      <SiteFooter />
     </>
   );
 }

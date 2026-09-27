@@ -2,17 +2,17 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { APP_URL, DEMO_URL, MEET_URL } from "./links";
-import styles from "./home.module.css";
+import { APP_URL, DEMO_URL, MEET_URL } from "../home/links";
+import styles from "./site.module.css";
 
 const MENU_LINKS = [
-  { href: "#como-funciona", label: "Cursos" },
-  { href: "#ciclo", label: "Eventos" },
-  { href: "#precios", label: "Precios" },
+  { href: "/#como-funciona", label: "Cursos" },
+  { href: "/#ciclo", label: "Eventos" },
+  { href: "/#precios", label: "Precios" },
   { href: "/recursos", label: "Recursos" },
 ] as const;
 
-export default function HomeHeader() {
+export default function SiteHeader() {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
@@ -39,21 +39,11 @@ export default function HomeHeader() {
           />
         </a>
         <nav className={styles.nav} aria-label="Principal">
-          {MENU_LINKS.map((item) =>
-            item.href.startsWith("/") ? (
-              <Link
-                key={item.label}
-                href={item.href}
-                className={styles.menuLink}
-              >
-                {item.label}
-              </Link>
-            ) : (
-              <a key={item.label} href={item.href} className={styles.menuLink}>
-                {item.label}
-              </a>
-            ),
-          )}
+          {MENU_LINKS.map((item) => (
+            <Link key={item.label} href={item.href} className={styles.menuLink}>
+              {item.label}
+            </Link>
+          ))}
         </nav>
         <div className={styles.headerActions}>
           <a className={`${styles.login} ${styles.menuLink}`} href={APP_URL}>
@@ -76,7 +66,7 @@ export default function HomeHeader() {
             className={styles.menuBtn}
             aria-label={open ? "Cerrar menú" : "Abrir menú"}
             aria-expanded={open}
-            aria-controls="home-menu"
+            aria-controls="site-menu"
             onClick={() => setOpen((value) => !value)}
           >
             {open ? (
@@ -110,31 +100,20 @@ export default function HomeHeader() {
         </div>
       </div>
       <div
-        id="home-menu"
+        id="site-menu"
         className={`${styles.menuPanel} ${open ? styles.menuPanelOpen : ""}`}
       >
         <nav className={styles.menuNav} aria-label="Menú">
-          {MENU_LINKS.map((item) =>
-            item.href.startsWith("/") ? (
-              <Link
-                key={item.label}
-                href={item.href}
-                className={styles.menuLink}
-                onClick={close}
-              >
-                {item.label}
-              </Link>
-            ) : (
-              <a
-                key={item.label}
-                href={item.href}
-                className={styles.menuLink}
-                onClick={close}
-              >
-                {item.label}
-              </a>
-            ),
-          )}
+          {MENU_LINKS.map((item) => (
+            <Link
+              key={item.label}
+              href={item.href}
+              className={styles.menuLink}
+              onClick={close}
+            >
+              {item.label}
+            </Link>
+          ))}
           <a className={styles.menuLink} href={APP_URL} onClick={close}>
             Iniciar sesión
           </a>

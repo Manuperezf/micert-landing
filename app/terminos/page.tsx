@@ -1,5 +1,5 @@
-import Footer from "../components/Footer";
-import Nav from "../components/Nav";
+import SiteFooter from "../components/site/SiteFooter";
+import SiteHeader from "../components/site/SiteHeader";
 
 export const metadata = {
   title: "Términos y Condiciones | MiCert",
@@ -26,7 +26,7 @@ export default function TerminosPage() {
         .legal-summary h2{margin-top:0}
       `}</style>
 
-      <Nav />
+      <SiteHeader />
 
       <div className="legal-wrap">
         <h1>Términos y Condiciones de Uso</h1>
@@ -240,7 +240,7 @@ export default function TerminosPage() {
         <p style={{ marginTop: 28, color: "#65645d" }}>Al usar MiCert, el Cliente confirma que ha leído, comprendido y aceptado estos Términos y Condiciones en su totalidad.</p>
       </div>
 
-      <Footer />
+      <SiteFooter />
     </div>
   );
 }
