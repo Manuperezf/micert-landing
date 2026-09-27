@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
-import Footer from "./components/Footer";
 import Cycle from "./components/home/Cycle";
 import DataCompliance from "./components/home/DataCompliance";
+import FinalCta from "./components/home/FinalCta";
+import HomeFaq from "./components/home/HomeFaq";
+import HomeFooter from "./components/home/HomeFooter";
 import HomeHeader from "./components/home/HomeHeader";
 import HomeHero from "./components/home/HomeHero";
+import HomePlans from "./components/home/HomePlans";
 import HowItWorks from "./components/home/HowItWorks";
 import Industries from "./components/home/Industries";
 import ProductBlock from "./components/home/ProductBlock";
@@ -26,8 +29,11 @@ export default function Home() {
         <Industries />
         <Cycle />
         <DataCompliance />
+        <HomePlans />
+        <HomeFaq />
+        <FinalCta />
+        <HomeFooter />
       </div>
-      <Footer />
     </>
   );
 }
