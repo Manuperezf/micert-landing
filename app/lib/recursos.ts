@@ -2636,3 +2636,102 @@ export function getRelatedArticles(
 export function getFeaturedArticle(): ResourceArticle | undefined {
   return RESOURCE_ARTICLES.find((a) => a.featured);
 }
+
+export const PAGE_SIZE = 9;
+
+export type CategorySlug = "producto" | "normativa" | "comparativa";
+
+export const CATEGORY_CONTENT: Record<
+  CategorySlug,
+  { tipo: ResourceTipo; h1: string; lede: string; title: string }
+> = {
+  normativa: {
+    tipo: "Normativa",
+    h1: "Normativa",
+    lede: "Lo que tu OTEC necesita saber sobre SENCE, protección de datos y validez de los certificados de capacitación.",
+    title: "Normativa para OTEC: SENCE, Ley 21.719 y certificados | MiCert",
+  },
+  producto: {
+    tipo: "Producto",
+    h1: "Producto",
+    lede: "Guías prácticas para emitir, enviar y verificar certificados digitales con QR en tu OTEC.",
+    title: "Guías para emitir certificados digitales con QR | MiCert",
+  },
+  comparativa: {
+    tipo: "Comparativa",
+    h1: "Comparativas",
+    lede: "Excel, Canva, Moodle o un software dedicado: criterios claros para elegir cómo emitir tus certificados.",
+    title: "Comparativas de software de certificados para OTEC | MiCert",
+  },
+};
+
+export function isCategorySlug(value: string): value is CategorySlug {
+  return Object.prototype.hasOwnProperty.call(CATEGORY_CONTENT, value);
+}
+
+export function articlesByDateDesc(articles: ResourceArticle[]) {
+  return [...articles].sort((a, b) => b.dateISO.localeCompare(a.dateISO));
+}
+
+export function newestDateISO(articles: ResourceArticle[]) {
+  return articlesByDateDesc(articles)[0]?.dateISO;
+}
+
+export function getGeneralArticles() {
+  const featured = getFeaturedArticle();
+  return articlesByDateDesc(
+    RESOURCE_ARTICLES.filter((article) => article.slug !== featured?.slug),
+  );
+}
+
+export function getCategoryArticles(slug: CategorySlug) {
+  const { tipo } = CATEGORY_CONTENT[slug];
+  return articlesByDateDesc(
+    RESOURCE_ARTICLES.filter((article) => article.tipo === tipo),
+  );
+}
+
+export function pageCountFor(total: number) {
+  return Math.max(1, Math.ceil(total / PAGE_SIZE));
+}
+
+export function slicePage(articles: ResourceArticle[], page: number) {
+  const start = (page - 1) * PAGE_SIZE;
+  return articles.slice(start, start + PAGE_SIZE);
+}
+
+export function getFilterCategories() {
+  return (Object.keys(CATEGORY_CONTENT) as CategorySlug[])
+    .map((slug) => ({
+      slug,
+      label: CATEGORY_CONTENT[slug].tipo,
+      count: RESOURCE_ARTICLES.filter(
+        (article) => article.tipo === CATEGORY_CONTENT[slug].tipo,
+      ).length,
+    }))
+    .filter((category) => category.count > 0)
+    .sort((a, b) => b.count - a.count);
+}
+
+export function getGeneralPageParams() {
+  const count = pageCountFor(getGeneralArticles().length);
+  return Array.from({ length: Math.max(0, count - 1) }, (_, index) => ({
+    n: String(index + 2),
+  }));
+}
+
+export function getCategoryParams() {
+  return getFilterCategories().map((category) => ({
+    categoria: category.slug,
+  }));
+}
+
+export function getCategoryPageParams() {
+  return getFilterCategories().flatMap((category) => {
+    const count = pageCountFor(getCategoryArticles(category.slug).length);
+    return Array.from({ length: Math.max(0, count - 1) }, (_, index) => ({
+      categoria: category.slug,
+      n: String(index + 2),
+    }));
+  });
+}

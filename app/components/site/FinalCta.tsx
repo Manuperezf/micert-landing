@@ -1,11 +1,11 @@
 import Link from "next/link";
-import { DEMO_URL, MEET_URL } from "./links";
-import styles from "./home.module.css";
+import { DEMO_URL, MEET_URL } from "../home/links";
+import styles from "./site.module.css";
 
 export default function FinalCta() {
   return (
     <section className={styles.finalCta}>
-      <div className={`${styles.shell} ${styles.finalInner}`}>
+      <div className={styles.finalInner}>
         <h2 className={styles.finalTitle}>Emite tu próximo curso con MiCert.</h2>
         <div className={styles.finalActions}>
           <Link className={`${styles.btn} ${styles.btnPrimary}`} href={DEMO_URL}>

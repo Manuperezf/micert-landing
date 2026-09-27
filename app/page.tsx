@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Cycle from "./components/home/Cycle";
 import DataCompliance from "./components/home/DataCompliance";
-import FinalCta from "./components/home/FinalCta";
+import FinalCta from "./components/site/FinalCta";
 import HomeFaq from "./components/home/HomeFaq";
 import HomeHero from "./components/home/HomeHero";
 import HomePlans from "./components/home/HomePlans";
