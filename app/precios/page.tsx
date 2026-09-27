@@ -1,14 +1,16 @@
 import type { ReactNode } from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
+import FaqAccordion from "../components/site/FaqAccordion";
+import FinalCta from "../components/site/FinalCta";
+import PlanCards from "../components/site/PlanCards";
 import SiteFooter from "../components/site/SiteFooter";
 import SiteHeader from "../components/site/SiteHeader";
-import DemoBanner from "../components/DemoBanner";
-import FaqSection from "../components/FaqSection";
-import PlanFeatures from "../components/PlanFeatures";
-import PlansGrid from "../components/PlansGrid";
-import { buildFaqPageSchema } from "../lib/faq-schema";
-import { PLANS_PAGE, PRECIOS_FAQ, PRECIOS_METADATA } from "../lib/plans";
+import PacksSection from "../components/precios/PacksSection";
+import PlanComparison from "../components/precios/PlanComparison";
+import { DEMO_URL } from "../components/home/links";
+import { PLAN_INCLUDES, PRECIOS_FAQ, PRECIOS_METADATA } from "../lib/plans";
+import styles from "../components/precios/precios.module.css";
 
 export const metadata: Metadata = {
   title: PRECIOS_METADATA.title,
@@ -21,106 +23,142 @@ export const metadata: Metadata = {
   },
 };
 
-const PRECIOS_FAQ_LINKED_ANSWERS: Record<number, ReactNode> = {
-  4: (
+const svgProps = {
+  width: 22,
+  height: 22,
+  viewBox: "0 0 24 24",
+  fill: "none",
+  stroke: "currentColor",
+  strokeWidth: 1.6,
+  strokeLinecap: "round" as const,
+  strokeLinejoin: "round" as const,
+  "aria-hidden": true as const,
+};
+
+function IncludeIcon({ label }: { label: string }) {
+  if (label === "Editor visual de certificados") {
+    return (
+      <svg {...svgProps}>
+        <path d="M4 20h4L19 9l-4-4L4 16z" />
+        <path d="M13 7l4 4" />
+      </svg>
+    );
+  }
+  if (label === "Verificación pública con QR") {
+    return (
+      <svg {...svgProps}>
+        <rect x="3" y="3" width="7" height="7" />
+        <rect x="14" y="3" width="7" height="7" />
+        <rect x="3" y="14" width="7" height="7" />
+        <path d="M14 14h3v3M21 14v7h-7" />
+      </svg>
+    );
+  }
+  if (label === "Envío de certificados por correo") {
+    return (
+      <svg {...svgProps}>
+        <rect x="3" y="5" width="18" height="14" rx="2" />
+        <path d="M3 7l9 6 9-6" />
+      </svg>
+    );
+  }
+  return (
+    <svg {...svgProps}>
+      <rect x="3" y="3" width="18" height="18" rx="2" />
+      <path d="M3 9h18M9 3v18" />
+    </svg>
+  );
+}
+
+const LINKED_ANSWERS: Record<number, ReactNode> = {
+  5: (
     <>
       No. Cargas tus datos desde un Excel, eliges el diseño del certificado y
       emites. Todo desde el navegador, sin instalar nada. ¿Recién formas tu
       OTEC? Mira los{" "}
-      <Link href="/recursos/requisitos-formar-otec-chile">
+      <Link className={styles.faqLink} href="/recursos/requisitos-formar-otec-chile">
         requisitos para formar una OTEC en Chile
       </Link>
       .
     </>
   ),
-  5: (
+  6: (
     <>
       Sí. El{" "}
-      <Link href="/demo">plan Demo</Link> te permite emitir 5 certificados de
-      prueba sin costo para que veas el flujo completo antes de decidir.
+      <Link className={styles.faqLink} href="/demo">
+        plan Demo
+      </Link>{" "}
+      te permite emitir 5 certificados de prueba sin costo para que veas el
+      flujo completo antes de decidir.
     </>
   ),
 };
 
 const preciosFaqItems = PRECIOS_FAQ.map((item, index) => ({
   question: item.question,
-  answer: PRECIOS_FAQ_LINKED_ANSWERS[index] ?? item.answer,
+  schemaText: item.answer,
+  answer: LINKED_ANSWERS[index] ?? item.answer,
 }));
-
-const preciosFaqSchema = buildFaqPageSchema(PRECIOS_FAQ);
 
 export default function PreciosPage() {
   return (
     <>
-      {preciosFaqSchema && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(preciosFaqSchema),
-          }}
-        />
-      )}
       <SiteHeader />
+      <main className={styles.page}>
+        <PlanCards
+          eyebrow="Precios"
+          titleAs="h1"
+          title="Pagas según lo que emites al mes."
+          subtitle="Sin instalación ni costos ocultos. Cambia de plan cuando lo necesites, según el volumen de certificados de tu OTEC."
+          footer={
+            <p>Todos los precios son netos, en pesos chilenos, más IVA.</p>
+          }
+        />
 
-      <header className="hero hero-compact">
-        <div className="wrap">
-          <div className="hero-grid">
-            <div>
-              <span className="eyebrow">Planes</span>
-              <h1>{PLANS_PAGE.heading}</h1>
-            </div>
-            <div className="hero-aside">
-              <p className="lead">
-                Sin instalación ni costos ocultos. Pagas por volumen de emisión,
-                sin sorpresas en la factura.
-              </p>
-              <div className="hero-flex-note">
-                <svg
-                  width="18"
-                  height="18"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="1.75"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  aria-hidden="true"
-                >
-                  <path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8" />
-                  <path d="M21 3v5h-5" />
-                  <path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16" />
-                  <path d="M8 16H3v5" />
-                </svg>
-                <p>
-                  Cambia de plan mes a mes según el volumen de certificados de
-                  tu OTEC. Sin permanencia.
-                </p>
+        <section className={`${styles.shell} ${styles.section}`}>
+          <h2 className={styles.includesTitle}>Todos los planes incluyen</h2>
+          <div className={styles.grid4}>
+            {PLAN_INCLUDES.map((label) => (
+              <div key={label} className={styles.cell}>
+                <span className={styles.cellIcon}>
+                  <IncludeIcon label={label} />
+                </span>
+                <span className={styles.cellLabel}>{label}</span>
               </div>
-            </div>
+            ))}
           </div>
-        </div>
-      </header>
+        </section>
 
-      <section className="section tight">
-        <div className="wrap">
-          <PlansGrid />
-          <PlanFeatures />
-          <DemoBanner />
-          <div className="plans-foot">
-            <span>
-              <b>Packs adicionales:</b> 25, 50 o 100 certificados, vigencia 3
-              meses.
-            </span>
-            <span>
-              <b>¿Más volumen?</b> Plan a medida para alto volumen e
-              integraciones.
-            </span>
+        <PlanComparison />
+        <PacksSection />
+
+        <section className={styles.shell}>
+          <div className={styles.trial}>
+          <div className={styles.trialCopy}>
+            <h2 className={styles.trialTitle}>
+              ¿Prefieres probar antes de contratar?
+            </h2>
+            <p className={styles.trialText}>
+              Emite 5 certificados reales con tus plantillas, sin costo y sin
+              tarjeta de crédito.
+            </p>
           </div>
-        </div>
-      </section>
+          <Link
+            className={`${styles.btn} ${styles.btnPrimary} ${styles.trialBtn}`}
+            href={DEMO_URL}
+          >
+            Solicitar prueba
+          </Link>
+          </div>
+        </section>
 
-      <FaqSection items={preciosFaqItems} />
-
+        <FaqAccordion
+          id="precios-faq"
+          title="Preguntas sobre planes y cobro."
+          items={preciosFaqItems}
+        />
+        <FinalCta />
+      </main>
       <SiteFooter />
     </>
   );
