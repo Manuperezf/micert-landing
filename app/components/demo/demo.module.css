@@ -244,11 +244,102 @@
   min-width: 0;
 }
 
-.codeSelect,
-.codeInput {
-  width: 104px;
+.codeField {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
   flex: none;
-  padding: 0 8px;
+  width: max-content;
+  height: 48px;
+  padding: 0 10px 0 12px;
+  border: 1px solid var(--line-strong);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--ink);
+}
+
+.codeField:focus-within {
+  border-color: var(--azul);
+  outline: 2px solid var(--azul);
+  outline-offset: 2px;
+}
+
+.codeField:has([aria-invalid="true"]) {
+  border-color: #b42318;
+}
+
+.codeFace {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  pointer-events: none;
+}
+
+.flag {
+  display: block;
+  width: 20px;
+  height: 14px;
+  flex: none;
+  box-sizing: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.globe {
+  display: block;
+  width: 20px;
+  height: 14px;
+  flex: none;
+  color: var(--muted);
+}
+
+.codeValue {
+  font-size: 16px;
+  line-height: 1;
+}
+
+.chevron {
+  display: block;
+  width: 12px;
+  height: 12px;
+  flex: none;
+}
+
+.codeSelect {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  opacity: 0;
+  cursor: pointer;
+  appearance: none;
+}
+
+.codeSelect:focus {
+  outline: none;
+}
+
+.codeInput {
+  width: 5ch;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1;
+}
+
+.codeInput:focus {
+  outline: none;
 }
 
 .phoneNumber {

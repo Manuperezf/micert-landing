@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { useFormState, useFormStatus } from "react-dom";
 import Link from "next/link";
 import { sendGAEvent } from "@next/third-parties/google";
+import { AR, CL, CO, ES, MX, PE } from "country-flag-icons/react/3x2";
 import { submitDemo, type DemoFormState } from "../../demo/actions";
 import {
   CONSENT_MARKETING,
@@ -22,13 +23,65 @@ const VOLUMES = [
 ] as const;
 
 const COUNTRY_CODES = [
-  { value: "+56", label: "Chile +56" },
-  { value: "+51", label: "Perú +51" },
-  { value: "+54", label: "Argentina +54" },
-  { value: "+57", label: "Colombia +57" },
-  { value: "+52", label: "México +52" },
-  { value: "+34", label: "España +34" },
+  { value: "+56", label: "Chile +56", Flag: CL },
+  { value: "+51", label: "Perú +51", Flag: PE },
+  { value: "+54", label: "Argentina +54", Flag: AR },
+  { value: "+57", label: "Colombia +57", Flag: CO },
+  { value: "+52", label: "México +52", Flag: MX },
+  { value: "+34", label: "España +34", Flag: ES },
 ] as const;
+
+function GlobeIcon() {
+  return (
+    <svg className={styles.globe} viewBox="0 0 20 14" aria-hidden="true">
+      <circle
+        cx="10"
+        cy="7"
+        r="5.2"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.6"
+      />
+      <ellipse
+        cx="10"
+        cy="7"
+        rx="2.4"
+        ry="5.2"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.6"
+      />
+      <path
+        d="M4.8 7h10.4"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.6"
+      />
+    </svg>
+  );
+}
+
+function CountryFlag({ code }: { code: string }) {
+  const selected = COUNTRY_CODES.find((country) => country.value === code);
+  const Flag = selected?.Flag;
+  if (!Flag) return <GlobeIcon />;
+  return <Flag className={styles.flag} aria-hidden="true" />;
+}
+
+function Chevron() {
+  return (
+    <svg className={styles.chevron} viewBox="0 0 12 12" aria-hidden="true">
+      <path
+        d="M2.5 4.25 6 7.75 9.5 4.25"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.4"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
 
 function digitsOnly(value: string, max: number) {
   return value.replace(/\D/g, "").slice(0, max);
@@ -159,46 +212,56 @@ export default function DemoForm() {
           </label>
           <div className={styles.phoneControls}>
             {codeMode === "otro" ? (
-              <input
-                ref={codeInputRef}
-                className={`${styles.input} ${styles.codeInput}`}
-                name="telefono_codigo"
-                aria-label="Código de país"
-                inputMode="tel"
-                autoComplete="tel-country-code"
-                value={customCode}
-                onChange={(event) => {
-                  const digits = digitsOnly(event.target.value, 3);
-                  setCustomCode(`+${digits}`);
-                }}
-                aria-invalid={errors.telefono ? true : undefined}
-                aria-describedby={phoneErrorId}
-              />
+              <div className={styles.codeField}>
+                <GlobeIcon />
+                <input
+                  ref={codeInputRef}
+                  className={styles.codeInput}
+                  name="telefono_codigo"
+                  aria-label="Código de país"
+                  inputMode="tel"
+                  autoComplete="tel-country-code"
+                  value={customCode}
+                  onChange={(event) => {
+                    const digits = digitsOnly(event.target.value, 3);
+                    setCustomCode(`+${digits}`);
+                  }}
+                  aria-invalid={errors.telefono ? true : undefined}
+                  aria-describedby={phoneErrorId}
+                />
+              </div>
             ) : (
-              <select
-                className={`${styles.input} ${styles.codeSelect}`}
-                name="telefono_codigo"
-                aria-label="Código de país"
-                value={codeMode}
-                onChange={(event) => {
-                  const next = event.target.value;
-                  if (next === "otro") {
-                    setCodeMode("otro");
-                    setCustomCode("+");
-                    return;
-                  }
-                  setCodeMode(next);
-                }}
-                aria-invalid={errors.telefono ? true : undefined}
-                aria-describedby={phoneErrorId}
-              >
-                {COUNTRY_CODES.map((country) => (
-                  <option key={country.value} value={country.value}>
-                    {country.label}
-                  </option>
-                ))}
-                <option value="otro">Otro</option>
-              </select>
+              <div className={styles.codeField}>
+                <span className={styles.codeFace} aria-hidden="true">
+                  <CountryFlag code={codeMode} />
+                  <span className={styles.codeValue}>{codeMode}</span>
+                  <Chevron />
+                </span>
+                <select
+                  className={styles.codeSelect}
+                  name="telefono_codigo"
+                  aria-label="Código de país"
+                  value={codeMode}
+                  onChange={(event) => {
+                    const next = event.target.value;
+                    if (next === "otro") {
+                      setCodeMode("otro");
+                      setCustomCode("+");
+                      return;
+                    }
+                    setCodeMode(next);
+                  }}
+                  aria-invalid={errors.telefono ? true : undefined}
+                  aria-describedby={phoneErrorId}
+                >
+                  {COUNTRY_CODES.map((country) => (
+                    <option key={country.value} value={country.value}>
+                      {country.label}
+                    </option>
+                  ))}
+                  <option value="otro">Otro</option>
+                </select>
+              </div>
             )}
             <input
               className={`${styles.input} ${styles.phoneNumber}`}
