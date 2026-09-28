@@ -1,3 +1,4 @@
+import Link from "next/link";
 import styles from "./home.module.css";
 
 const iconProps = {
@@ -93,6 +94,12 @@ export default function Cycle() {
               <div className={styles.cycleCopy}>
                 <span className={styles.cycleName}>{item.title}</span>
                 <span className={styles.cycleText}>{item.text}</span>
+                {item.title === "Webinars y charlas" ? (
+                  <Link className={styles.arrowLink} href="/eventos">
+                    Ver certificados para eventos{" "}
+                    <span className={styles.arrow}>→</span>
+                  </Link>
+                ) : null}
               </div>
             </article>
           ))}

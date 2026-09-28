@@ -12,8 +12,8 @@ export default function HomePlans() {
       footer={
         <>
           <p>
-            Packs adicionales de 25, 50 o 100 certificados desde $17.990 + IVA,
-            con vigencia de 3 meses. ¿Más volumen? Plan a medida.
+            Packs de 25, 50 o 100 certificados desde $17.990 + IVA, con
+            vigencia de 3 meses, con o sin plan.
           </p>
           <Link className={styles.arrowLink} href="/precios">
             Comparar planes en detalle <span className={styles.arrow}>→</span>
