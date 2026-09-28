@@ -38,15 +38,14 @@ const LIMITS = {
   emailMin: 5,
   emailMax: 160,
   organizacion: 120,
-  telefonoMin: 6,
-  telefonoMax: 30,
   mensaje: 2000,
   origen: 300,
 } as const;
 
 const EMAIL_ERROR = "Revisa el correo";
-const PHONE_ERROR = "Ingresa un teléfono válido, con código de país";
+const PHONE_ERROR = "Ingresa un teléfono válido";
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const PHONE_CODE = /^\+\d{1,3}$/;
 
 const FORM_ERROR =
   "No pudimos enviar tu solicitud. Intenta de nuevo o escríbenos a hola@micert.cl.";
@@ -72,6 +71,16 @@ function isVolume(value: string): value is Volume {
   return (VOLUME_VALUES as readonly string[]).includes(value);
 }
 
+function validPhone(code: string, numero: string): string | null {
+  if (!PHONE_CODE.test(code) || !/^\d+$/.test(numero)) return null;
+  if (code === "+56") {
+    if (numero.length !== 9) return null;
+  } else if (numero.length < 6 || numero.length > 12) {
+    return null;
+  }
+  return `${code} ${numero}`;
+}
+
 export async function submitDemo(
   _prev: DemoFormState,
   formData: FormData,
@@ -89,7 +98,10 @@ export async function submitDemo(
   const apellidos = text(formData, "apellidos");
   const email = emailDraft;
   const organizacion = text(formData, "organizacion");
-  const telefono = text(formData, "telefono");
+  const parsedPhone = validPhone(
+    text(formData, "telefono_codigo"),
+    text(formData, "telefono_numero"),
+  );
   const certificados = text(formData, "certificados_mes");
   const mensaje = text(formData, "mensaje");
   const aceptaTratamiento = formData.get("acepta_tratamiento") === "si";
@@ -122,9 +134,7 @@ export async function submitDemo(
       : "Ingresa el nombre de tu OTEC o empresa.";
   }
 
-  if (telefono.length < LIMITS.telefonoMin || telefono.length > LIMITS.telefonoMax) {
-    fieldErrors.telefono = PHONE_ERROR;
-  }
+  if (!parsedPhone) fieldErrors.telefono = PHONE_ERROR;
 
   if (certificados && !isVolume(certificados)) {
     fieldErrors.certificados_mes = "Elige una opción válida.";
@@ -138,9 +148,11 @@ export async function submitDemo(
     fieldErrors.acepta_tratamiento = "Debes aceptar el tratamiento de datos.";
   }
 
-  if (Object.keys(fieldErrors).length > 0) {
+  if (Object.keys(fieldErrors).length > 0 || !parsedPhone) {
     return { status: "error", fieldErrors };
   }
+
+  const telefono = parsedPhone;
 
   if (origen.length > LIMITS.origen) return generalError();
 

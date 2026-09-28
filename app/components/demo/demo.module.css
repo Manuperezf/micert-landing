@@ -13,9 +13,36 @@
 
 .grid {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-areas:
+    "intro"
+    "form"
+    "after";
   gap: 48px;
   align-items: start;
+}
+
+.left {
+  display: contents;
+}
+
+.intro {
+  grid-area: intro;
+  min-width: 0;
+}
+
+.formPanel {
+  grid-area: form;
+  min-width: 0;
+  align-self: start;
+  padding: 24px;
+  border-radius: 4px;
+  background: var(--bone);
+}
+
+.after {
+  grid-area: after;
+  min-width: 0;
 }
 
 .kicker {
@@ -54,7 +81,7 @@
 }
 
 .steps {
-  margin: 32px 0 0;
+  margin: 0;
   padding: 0;
   list-style: none;
   border-top: 1px solid var(--line);
@@ -81,22 +108,50 @@
 
 .meet {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px 24px;
+  margin-top: 28px;
+  padding: 22px 24px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: #fff;
+}
+
+.meetCopy {
+  display: flex;
+  align-items: center;
   gap: 16px;
-  padding-top: 28px;
+  flex: 1 1 220px;
+  min-width: 0;
+}
+
+.meetIcon {
+  flex: none;
+  width: 24px;
+  height: 24px;
+  color: var(--ink);
 }
 
 .meetTitle {
   margin: 0;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 500;
+  line-height: 1.3;
   letter-spacing: -0.01em;
+}
+
+.meetNote {
+  margin: 2px 0 0;
+  font-size: 14px;
+  line-height: 1.4;
+  color: var(--muted);
 }
 
 .formTitle {
   margin: 0;
-  font-size: 32px;
+  font-size: 30px;
   font-weight: 500;
   line-height: 1.15;
   letter-spacing: -0.02em;
@@ -116,10 +171,17 @@
   gap: 16px;
 }
 
+.row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 16px;
+}
+
 .field {
   display: flex;
   flex-direction: column;
   gap: 6px;
+  min-width: 0;
 }
 
 .label,
@@ -133,7 +195,7 @@
   width: 100%;
   height: 48px;
   padding: 0 14px;
-  border: 1px solid var(--line);
+  border: 1px solid var(--line-strong);
   border-radius: 8px;
   background: #fff;
   color: var(--ink);
@@ -143,8 +205,8 @@
 }
 
 .textarea {
-  height: auto;
-  min-height: 120px;
+  height: 96px;
+  min-height: 96px;
   padding: 12px 14px;
   resize: vertical;
 }
@@ -161,6 +223,38 @@
 
 .input[aria-invalid="true"] {
   border-color: #b42318;
+}
+
+.selectEmpty {
+  color: var(--muted);
+}
+
+.selectEmpty option {
+  color: var(--ink);
+}
+
+.selectEmpty option[value=""] {
+  color: var(--muted);
+}
+
+.phoneControls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+
+.codeSelect,
+.codeInput {
+  width: 104px;
+  flex: none;
+  padding: 0 8px;
+}
+
+.phoneNumber {
+  flex: 1 1 auto;
+  width: auto;
+  min-width: 0;
 }
 
 .error,
@@ -224,14 +318,23 @@
   composes: btnSecondary from "../site/site.module.css";
 }
 
-.submit {
+button.submit {
   width: 100%;
+  height: 52px;
   margin-top: 4px;
 }
 
 .submit:disabled {
   cursor: not-allowed;
   opacity: 0.7;
+}
+
+.reassure {
+  margin: 0;
+  text-align: center;
+  font-size: 13px;
+  line-height: 1.4;
+  color: var(--muted);
 }
 
 .success {
@@ -265,16 +368,58 @@
   border: 0;
 }
 
+@media (max-width: 1023px) {
+  .formPanel {
+    margin-right: -48px;
+    margin-left: -48px;
+    padding: 24px;
+  }
+}
+
+@media (min-width: 768px) {
+  .row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    align-items: end;
+  }
+}
+
 @media (min-width: 1024px) {
   .grid {
-    grid-template-columns: minmax(0, 1.05fr) minmax(280px, 0.95fr);
-    gap: 72px;
+    grid-template-columns: minmax(0, 600px) minmax(616px, 1fr);
+    grid-template-areas: "left form";
+    column-gap: 48px;
+    row-gap: 0;
+  }
+
+  .left {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    grid-area: left;
+    min-width: 0;
+  }
+
+  .intro,
+  .after {
+    grid-area: auto;
+  }
+
+  .formPanel {
+    margin: 0;
+    padding: 48px;
   }
 }
 
 @media (max-width: 767px) {
   .shell {
     padding: 48px 20px 72px;
+  }
+
+  .formPanel {
+    margin-right: -20px;
+    margin-left: -20px;
+    padding: 24px;
   }
 
   .h1 {
@@ -288,6 +433,6 @@
   }
 
   .formTitle {
-    font-size: 28px;
+    font-size: 26px;
   }
 }

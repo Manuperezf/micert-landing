@@ -21,6 +21,19 @@ const VOLUMES = [
   { value: "mas_400", label: "Más de 400" },
 ] as const;
 
+const COUNTRY_CODES = [
+  { value: "+56", label: "Chile +56" },
+  { value: "+51", label: "Perú +51" },
+  { value: "+54", label: "Argentina +54" },
+  { value: "+57", label: "Colombia +57" },
+  { value: "+52", label: "México +52" },
+  { value: "+34", label: "España +34" },
+] as const;
+
+function digitsOnly(value: string, max: number) {
+  return value.replace(/\D/g, "").slice(0, max);
+}
+
 function SubmitButton() {
   const { pending } = useFormStatus();
   return (
@@ -56,7 +69,16 @@ function TreatmentLabel() {
 export default function DemoForm() {
   const [state, formAction] = useFormState(submitDemo, initialState);
   const [loadedAt, setLoadedAt] = useState("");
+  const [codeMode, setCodeMode] = useState("+56");
+  const [customCode, setCustomCode] = useState("+");
+  const [phone, setPhone] = useState("");
+  const [volumeEmpty, setVolumeEmpty] = useState(true);
   const statusRef = useRef<HTMLParagraphElement>(null);
+  const codeInputRef = useRef<HTMLInputElement>(null);
+
+  const activeCode = codeMode === "otro" ? customCode : codeMode;
+  const chile = activeCode === "+56";
+  const phoneMax = chile ? 9 : 12;
 
   useEffect(() => {
     setLoadedAt(String(Date.now()));
@@ -70,6 +92,14 @@ export default function DemoForm() {
     }
   }, [state]);
 
+  useEffect(() => {
+    if (codeMode === "otro") codeInputRef.current?.focus();
+  }, [codeMode]);
+
+  useEffect(() => {
+    setPhone((current) => current.slice(0, phoneMax));
+  }, [phoneMax]);
+
   if (state.status === "success") {
     return (
       <p ref={statusRef} className={styles.success} role="status" tabIndex={-1}>
@@ -80,6 +110,7 @@ export default function DemoForm() {
   }
 
   const errors = state.fieldErrors ?? {};
+  const phoneErrorId = errors.telefono ? "demo-telefono-error" : undefined;
 
   return (
     <form className={styles.form} action={formAction} noValidate>
@@ -94,47 +125,115 @@ export default function DemoForm() {
       </div>
       <input type="hidden" name="cargado_en" value={loadedAt} />
 
-      <Field
-        id="demo-nombre"
-        name="nombre"
-        label="Nombre*"
-        autoComplete="given-name"
-        required
-        error={errors.nombre}
-      />
-      <Field
-        id="demo-apellidos"
-        name="apellidos"
-        label="Apellidos"
-        autoComplete="family-name"
-        error={errors.apellidos}
-      />
-      <Field
-        id="demo-email"
-        name="email"
-        label="Correo de trabajo*"
-        type="email"
-        autoComplete="email"
-        required
-        error={errors.email}
-      />
+      <div className={styles.row}>
+        <Field
+          id="demo-nombre"
+          name="nombre"
+          label="Nombre"
+          autoComplete="given-name"
+          required
+          error={errors.nombre}
+        />
+        <Field
+          id="demo-apellidos"
+          name="apellidos"
+          label="Apellidos"
+          autoComplete="family-name"
+          error={errors.apellidos}
+        />
+      </div>
+
+      <div className={styles.row}>
+        <Field
+          id="demo-email"
+          name="email"
+          label="Correo de trabajo"
+          type="email"
+          autoComplete="email"
+          required
+          error={errors.email}
+        />
+        <div className={styles.field}>
+          <label className={styles.label} htmlFor="demo-telefono">
+            Teléfono o WhatsApp
+          </label>
+          <div className={styles.phoneControls}>
+            {codeMode === "otro" ? (
+              <input
+                ref={codeInputRef}
+                className={`${styles.input} ${styles.codeInput}`}
+                name="telefono_codigo"
+                aria-label="Código de país"
+                inputMode="tel"
+                autoComplete="tel-country-code"
+                value={customCode}
+                onChange={(event) => {
+                  const digits = digitsOnly(event.target.value, 3);
+                  setCustomCode(`+${digits}`);
+                }}
+                aria-invalid={errors.telefono ? true : undefined}
+                aria-describedby={phoneErrorId}
+              />
+            ) : (
+              <select
+                className={`${styles.input} ${styles.codeSelect}`}
+                name="telefono_codigo"
+                aria-label="Código de país"
+                value={codeMode}
+                onChange={(event) => {
+                  const next = event.target.value;
+                  if (next === "otro") {
+                    setCodeMode("otro");
+                    setCustomCode("+");
+                    return;
+                  }
+                  setCodeMode(next);
+                }}
+                aria-invalid={errors.telefono ? true : undefined}
+                aria-describedby={phoneErrorId}
+              >
+                {COUNTRY_CODES.map((country) => (
+                  <option key={country.value} value={country.value}>
+                    {country.label}
+                  </option>
+                ))}
+                <option value="otro">Otro</option>
+              </select>
+            )}
+            <input
+              className={`${styles.input} ${styles.phoneNumber}`}
+              id="demo-telefono"
+              name="telefono_numero"
+              type="tel"
+              inputMode="numeric"
+              autoComplete="tel-national"
+              placeholder={chile ? "9 1234 5678" : "Número"}
+              maxLength={phoneMax}
+              required
+              aria-required="true"
+              value={phone}
+              onChange={(event) => {
+                setPhone(digitsOnly(event.target.value, phoneMax));
+              }}
+              aria-invalid={errors.telefono ? true : undefined}
+              aria-describedby={phoneErrorId}
+            />
+          </div>
+          {errors.telefono ? (
+            <p className={styles.error} id="demo-telefono-error">
+              {errors.telefono}
+            </p>
+          ) : null}
+        </div>
+      </div>
+
       <Field
         id="demo-organizacion"
         name="organizacion"
-        label="OTEC o empresa*"
+        label="OTEC o empresa"
         autoComplete="organization"
         required
         error={errors.organizacion}
-      />
-      <Field
-        id="demo-telefono"
-        name="telefono"
-        label="Teléfono o WhatsApp*"
-        type="tel"
-        autoComplete="tel"
-        placeholder="+56 9 1234 5678"
-        required
-        error={errors.telefono}
       />
 
       <div className={styles.field}>
@@ -142,10 +241,15 @@ export default function DemoForm() {
           ¿Cuántos certificados emites al mes?
         </label>
         <select
-          className={styles.input}
+          className={
+            volumeEmpty
+              ? `${styles.input} ${styles.selectEmpty}`
+              : styles.input
+          }
           id="demo-volumen"
           name="certificados_mes"
           defaultValue=""
+          onChange={(event) => setVolumeEmpty(event.target.value === "")}
           aria-invalid={errors.certificados_mes ? true : undefined}
           aria-describedby={
             errors.certificados_mes ? "demo-volumen-error" : undefined
@@ -173,7 +277,7 @@ export default function DemoForm() {
           className={`${styles.input} ${styles.textarea}`}
           id="demo-mensaje"
           name="mensaje"
-          rows={4}
+          rows={3}
           aria-invalid={errors.mensaje ? true : undefined}
           aria-describedby={errors.mensaje ? "demo-mensaje-error" : undefined}
         />
@@ -193,6 +297,7 @@ export default function DemoForm() {
             type="checkbox"
             value="si"
             required
+            aria-required="true"
             aria-invalid={errors.acepta_tratamiento ? true : undefined}
             aria-describedby={
               errors.acepta_tratamiento ? "demo-tratamiento-error" : undefined
@@ -229,6 +334,9 @@ export default function DemoForm() {
       ) : null}
 
       <SubmitButton />
+      <p className={styles.reassure}>
+        Sin costo · Sin tarjeta de crédito · Con tus propias plantillas
+      </p>
     </form>
   );
 }
@@ -239,7 +347,6 @@ function Field({
   label,
   type = "text",
   autoComplete,
-  placeholder,
   required,
   error,
 }: {
@@ -248,7 +355,6 @@ function Field({
   label: string;
   type?: string;
   autoComplete: string;
-  placeholder?: string;
   required?: boolean;
   error?: string;
 }) {
@@ -264,8 +370,8 @@ function Field({
         name={name}
         type={type}
         autoComplete={autoComplete}
-        placeholder={placeholder}
         required={required}
+        aria-required={required ? true : undefined}
         aria-invalid={error ? true : undefined}
         aria-describedby={error ? errorId : undefined}
       />
