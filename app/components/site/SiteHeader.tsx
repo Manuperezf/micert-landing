@@ -7,7 +7,7 @@ import styles from "./site.module.css";
 
 const MENU_LINKS = [
   { href: "/#como-funciona", label: "Cursos" },
-  { href: "/#ciclo", label: "Eventos" },
+  { href: "/eventos", label: "Eventos" },
   { href: "/precios", label: "Precios" },
   { href: "/recursos", label: "Recursos" },
 ] as const;

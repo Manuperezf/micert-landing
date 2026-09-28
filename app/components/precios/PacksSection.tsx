@@ -19,7 +19,8 @@ export default function PacksSection() {
           Más certificados
         </span>
         <h2 className={styles.h2}>
-          ¿Un mes con más cursos? Suma un pack sin cambiar de plan.
+          Compra un pack sin suscripción, o súmalo a tu plan en un mes con
+          más cursos. Vigencia de 3 meses.
         </h2>
       </div>
       <div className={styles.grid4}>

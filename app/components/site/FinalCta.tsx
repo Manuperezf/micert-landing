@@ -2,11 +2,15 @@ import Link from "next/link";
 import { DEMO_URL, MEET_URL } from "../home/links";
 import styles from "./site.module.css";
 
-export default function FinalCta() {
+export default function FinalCta({
+  title = "Emite tu próximo curso con MiCert.",
+}: {
+  title?: string;
+}) {
   return (
     <section className={styles.finalCta}>
       <div className={styles.finalInner}>
-        <h2 className={styles.finalTitle}>Emite tu próximo curso con MiCert.</h2>
+        <h2 className={styles.finalTitle}>{title}</h2>
         <div className={styles.finalActions}>
           <Link className={`${styles.btn} ${styles.btnPrimary}`} href={DEMO_URL}>
             Prueba con 5 certificados
