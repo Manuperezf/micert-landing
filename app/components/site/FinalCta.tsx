@@ -14,6 +14,8 @@ export default function FinalCta() {
           <Link
             className={`${styles.btn} ${styles.btnSecondary}`}
             href={MEET_URL}
+            target="_blank"
+            rel="noopener noreferrer"
           >
             Agenda una reunión por Meet
           </Link>

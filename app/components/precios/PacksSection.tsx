@@ -36,7 +36,12 @@ export default function PacksSection() {
         <article className={`${styles.cell} ${styles.packCell} ${styles.packCustom}`}>
           <span className={styles.packCustomLabel}>Plan a medida</span>
           <p className={styles.packCustomTitle}>Alto volumen o integraciones</p>
-          <Link className={styles.converse} href={MEET_URL}>
+          <Link
+            className={styles.converse}
+            href={MEET_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Conversemos
           </Link>
         </article>

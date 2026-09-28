@@ -56,8 +56,10 @@ export default function SiteHeader() {
             Prueba gratis
           </Link>
           <Link
-            className={`${styles.btn} ${styles.btnSecondary} ${styles.headerBtn} ${styles.desktopOnly}`}
+            className={`${styles.btn} ${styles.btnSecondary} ${styles.headerBtn} ${styles.desktopOnly} ${styles.headerMeet}`}
             href={MEET_URL}
+            target="_blank"
+            rel="noopener noreferrer"
           >
             Agenda una reunión
           </Link>
@@ -121,6 +123,8 @@ export default function SiteHeader() {
         <Link
           className={`${styles.btn} ${styles.btnSecondary} ${styles.headerBtn} ${styles.menuCta}`}
           href={MEET_URL}
+          target="_blank"
+          rel="noopener noreferrer"
           onClick={close}
         >
           Agenda una reunión
