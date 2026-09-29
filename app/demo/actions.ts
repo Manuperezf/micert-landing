@@ -53,6 +53,8 @@ const FORM_ERROR =
 const MIN_ELAPSED_MS = 3000;
 const RATE_WINDOW_MS = 60 * 60 * 1000;
 const RATE_LIMIT = 3;
+const GLOBAL_SOFT_LIMIT = 10;
+const GLOBAL_HARD_LIMIT = 50;
 
 function text(formData: FormData, name: string) {
   const value = formData.get(name);
@@ -61,6 +63,14 @@ function text(formData: FormData, name: string) {
 
 function fakeSuccess(email: string): DemoFormState {
   return { status: "success", email, saved: false };
+}
+
+function confirmationGreeting(nombre: string) {
+  const name = nombre.trim();
+  if (new RegExp("^[\\p{L}\\p{M}' -]{1,40}$", "u").test(name)) {
+    return "Hola " + name + ",";
+  }
+  return "Hola,";
 }
 
 function generalError(): DemoFormState {
@@ -181,6 +191,19 @@ export async function submitDemo(
 
   if ((count ?? 0) >= RATE_LIMIT) return generalError();
 
+  const { count: globalTotal, error: globalCountError } = await supabase
+    .from("solicitudes_prueba")
+    .select("id", { count: "exact", head: true })
+    .gte("created_at", since);
+
+  if (globalCountError) {
+    console.error("demo rate limit failed", globalCountError.code);
+    return generalError();
+  }
+
+  const globalCount = globalTotal ?? 0;
+  if (globalCount >= GLOBAL_HARD_LIMIT) return fakeSuccess(email);
+
   const { error: insertError } = await supabase.from("solicitudes_prueba").insert({
     nombre,
     apellidos: apellidos || null,
@@ -200,15 +223,30 @@ export async function submitDemo(
     return generalError();
   }
 
-  await notify(email, {
-    nombre,
-    apellidos,
-    organizacion,
-    telefono,
-    certificados: certificados && isVolume(certificados) ? certificados : null,
-    mensaje,
-    aceptaMarketing,
-  });
+  if (globalCount < GLOBAL_SOFT_LIMIT) {
+    await notify(email, {
+      nombre,
+      apellidos,
+      organizacion,
+      telefono,
+      certificados: certificados && isVolume(certificados) ? certificados : null,
+      mensaje,
+      aceptaMarketing,
+    });
+  } else if (globalCount === GLOBAL_SOFT_LIMIT) {
+    const apiKey = process.env.RESEND_API_KEY;
+    const notifyTo = process.env.LEAD_NOTIFY_EMAIL;
+    if (!apiKey || !notifyTo) {
+      console.error("demo email skipped: missing config");
+    } else {
+      await sendEmail(apiKey, {
+        to: notifyTo,
+        subject: "Alerta: tope de solicitudes de prueba alcanzado",
+        text: "En la última hora llegaron más de 10 solicitudes de prueba desde /demo. Hasta que baje el ritmo, las nuevas se guardan en solicitudes_prueba sin enviar correos, y sobre 50 por hora se descartan. Revisa la tabla en Supabase.",
+        label: "global-soft-limit",
+      });
+    }
+  }
 
   return { status: "success", email, saved: true };
 }
@@ -246,7 +284,7 @@ async function notify(email: string, lead: Lead) {
   ].join("\n");
 
   const confirmation = [
-    `Hola ${lead.nombre}, recibimos tu solicitud para probar MiCert con 5 certificados. Te escribimos dentro de 24 horas hábiles con los datos de acceso. Si tienes dudas, responde este correo.`,
+    `${confirmationGreeting(lead.nombre)} recibimos tu solicitud para probar MiCert con 5 certificados. Te escribimos dentro de 24 horas hábiles con los datos de acceso. Si tienes dudas, responde este correo.`,
     "",
     "Equipo MiCert",
   ].join("\n");
