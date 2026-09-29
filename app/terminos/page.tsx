@@ -30,14 +30,14 @@ export default function TerminosPage() {
 
       <div className="legal-wrap">
         <h1>Términos y Condiciones de Uso</h1>
-        <p className="updated">Última actualización: 9 de agosto de 2026</p>
+        <p className="updated">Última actualización: 29 de septiembre de 2026</p>
 
         <div className="legal-summary">
           <h2>En resumen</h2>
           <p>Antes del detalle legal completo, los puntos clave del acuerdo:</p>
           <ul>
             <li><strong>Quién es quién:</strong> MiCert Digital SpA opera la plataforma MiCert; tu organización es el Cliente que la contrata.</li>
-            <li><strong>Qué ofrece MiCert:</strong> emisión masiva, diseño, distribución, validación pública y revocación de certificados digitales, con trazabilidad completa.</li>
+            <li><strong>Qué ofrece MiCert:</strong> emisión masiva, diseño, distribución, validación pública y revocación de certificados digitales de cursos, capacitaciones y eventos, con trazabilidad completa.</li>
             <li><strong>Cómo se valida:</strong> cada certificado lleva un código QR y un código corto únicos que abren una página pública de verificación en línea (app.micert.cl) con los datos del certificado y su estado actual. La verificación requiere conexión a internet.</li>
             <li><strong>Los certificados no se editan:</strong> una vez emitido, un certificado queda fijo. Para corregirlo se revoca y se emite uno nuevo.</li>
             <li><strong>Cómo se paga:</strong> mediante transferencia bancaria, según el plan contratado.</li>
@@ -63,13 +63,14 @@ export default function TerminosPage() {
         <p>CLIENTE: organización (persona jurídica) que contrata los servicios de MiCert. Típicamente un OTEC u organización capacitadora.</p>
         <p>PLAN: paquete de servicios con tarifas, cuota de emisión y funcionalidades específicas, según se publica en el sitio o se acuerda mediante propuesta comercial.</p>
         <p>CUOTA DE EMISIÓN: número de certificados que el Cliente puede mantener vigentes en un período conforme a su Plan.</p>
-        <p>PAQUETE ADICIONAL: certificados que el Cliente adquiere por sobre la cuota de su Plan, con vigencia limitada.</p>
+        <p>PAQUETE ADICIONAL: certificados que el Cliente adquiere con vigencia limitada, como complemento de la cuota de su Plan o de forma independiente, sin Plan contratado.</p>
         <p>USUARIOS: las personas que el Cliente habilita para acceder a su cuenta. La plataforma contempla roles con permisos diferenciados, y el número de usuarios habilitables depende del Plan.</p>
-        <p>CERTIFICADO DIGITAL: documento electrónico generado por la plataforma que acredita la participación o aprobación de un curso o capacitación. Sus datos quedan fijados al momento de la emisión.</p>
+        <p>CERTIFICADO DIGITAL: documento electrónico generado por la plataforma que acredita la participación o aprobación de un curso o capacitación, o la asistencia a un evento. Sus datos quedan fijados al momento de la emisión.</p>
         <p>REEMISIÓN: operación por la cual se revoca un certificado vigente y se emite uno nuevo en su reemplazo, con los datos corregidos y un nuevo código de verificación.</p>
         <p>EMPRESA MANDANTE: organización por cuya cuenta el Cliente imparte una capacitación y que el Cliente puede registrar y asociar a sus cursos.</p>
+        <p>EVENTO: actividad puntual, como un webinar, una charla o un seminario, presencial u online, cuya asistencia el Cliente certifica a través de la plataforma.</p>
         <p>VERIFICACIÓN ONLINE: consulta de un certificado mediante su código QR o código corto, contra la página pública de verificación de MiCert (app.micert.cl). Requiere conexión a internet.</p>
-        <p>TITULAR: persona natural que recibe el certificado digital (participante del curso o capacitación).</p>
+        <p>TITULAR: persona natural que recibe el certificado digital (participante del curso, capacitación o evento).</p>
         <p>TARIFA: precio del plan contratado, expresado en pesos chilenos (CLP) más IVA cuando corresponda.</p>
         <p>DÍAS HÁBILES: días de lunes a viernes, excluyendo feriados legales en Chile.</p>
         <p>TRAZABILIDAD: registro cronológico de las acciones realizadas sobre los certificados en la plataforma.</p>
@@ -84,7 +85,7 @@ export default function TerminosPage() {
           <li>El Contrato de Encargo de Tratamiento de Datos (DPA) cuando aplique</li>
         </ul>
         <h3>3.1 Forma de Aceptación</h3>
-        <p>Al aceptar estos Términos durante el registro, el Cliente confirma que ha leído y comprendido estos términos, que está facultado para representar legalmente a su organización, y que su aceptación tiene carácter de firma electrónica simple conforme a la Ley N° 19.799. Esta aceptación genera el mismo efecto legal que una firma manuscrita y queda registrada con fecha y hora en los sistemas de MiCert.</p>
+        <p>El Cliente acepta estos Términos al suscribir el Contrato de Prestación de Servicios o, en el caso de las cuentas de prueba, al marcar la casilla de aceptación en el formulario de solicitud de prueba del sitio web. Con esa aceptación, el Cliente confirma que ha leído y comprendido estos Términos y que quien acepta está facultado para representar a su organización. La aceptación tiene carácter de firma electrónica simple conforme a la Ley N° 19.799 y queda registrada con fecha y hora en los sistemas de MiCert.</p>
         <h3>3.2 Prelación de Documentos</h3>
         <p>Cuando el Cliente haya suscrito un Contrato de Prestación de Servicios con MiCert, ese contrato y sus Anexos <strong>prevalecen sobre estos Términos</strong> en todo lo que resulte contradictorio, en particular en materia de plazos, vigencia, renovación, cancelación, tarifas y límites de responsabilidad. Estos Términos se aplican en lo no regulado por el contrato y rigen íntegramente para quienes usan la plataforma sin contrato suscrito, incluidas las cuentas de prueba.</p>
         <p>En materia de protección de datos personales prevalece siempre el Contrato de Encargo de Tratamiento de Datos (DPA) y, en su defecto, la Política de Privacidad.</p>
@@ -92,9 +93,10 @@ export default function TerminosPage() {
         <h2>4. Descripción del Servicio</h2>
         <p>MiCert es una plataforma SaaS (Software as a Service) que permite a organizaciones:</p>
         <ul>
-          <li>Cargar participantes desde una planilla Excel y generar certificados digitales con códigos únicos</li>
+          <li>Cargar participantes desde una planilla Excel o de forma individual, y generar certificados digitales con códigos únicos</li>
           <li>Diseñar el certificado mediante un editor visual, con campos arrastrables, logos, firmas y sellos</li>
-          <li>Identificar a cada participante por su cédula nacional de identidad (RUT) o por su número de pasaporte</li>
+          <li>Identificar a cada participante por su cédula nacional de identidad (RUT) o por su número de pasaporte; en los eventos, el documento es opcional y basta el nombre y el correo electrónico</li>
+          <li>Emitir certificados de asistencia a eventos, como webinars, charlas y seminarios, presenciales u online</li>
           <li>Descargar los certificados individualmente en PDF o el curso completo en un archivo ZIP</li>
           <li>Distribuir los certificados por correo electrónico y ponerlos a disposición de los titulares</li>
           <li>Validar la autenticidad mediante una página pública de verificación en línea, accesible por código QR o código corto</li>
@@ -107,7 +109,7 @@ export default function TerminosPage() {
         </ul>
         <p>El alcance funcional disponible depende del Plan contratado. MiCert solo compromete las funcionalidades efectivamente disponibles en la plataforma y no compromete funcionalidades futuras salvo que se pacten por escrito.</p>
         <h3>4.1 Qué muestra la verificación pública</h3>
-        <p>Al escanear el código QR con la cámara del teléfono, o al ingresar el código corto, se abre la página pública de verificación de MiCert. Esa página muestra el nombre del titular, su documento de identidad, la actividad de capacitación, sus fechas y horas, el estado del certificado —vigente, por vencer, vencido o anulado—, la identificación del Cliente como emisor y, cuando el Cliente lo haya configurado, la empresa mandante del curso.</p>
+        <p>Al escanear el código QR con la cámara del teléfono, o al ingresar el código corto, se abre la página pública de verificación de MiCert. Esa página muestra el nombre del titular, su documento de identidad parcialmente enmascarado cuando se haya registrado, la actividad de capacitación o el evento, sus fechas y horas, el estado del certificado —vigente, por vencer, vencido o anulado—, la identificación del Cliente como emisor y, cuando el Cliente lo haya configurado, la empresa mandante del curso. El PDF que se descarga desde la página pública también muestra el documento enmascarado; el Cliente puede descargar desde su panel el certificado con el documento completo.</p>
         <p>El acceso exige conocer el enlace o el código único del certificado. La plataforma no ofrece listados, índices ni buscadores públicos que permitan recorrer los certificados emitidos por un Cliente.</p>
         <p><strong>La verificación por terceros es parte esencial del servicio.</strong> El Cliente reconoce que emitir un certificado a través de MiCert implica ponerlo a disposición para su verificación en los términos descritos, y se obliga a informar de ello a los titulares. Esta validación requiere conexión a internet y depende de la operación continua del servicio.</p>
         <h3>4.2 Inmutabilidad de los certificados emitidos</h3>
@@ -119,13 +121,13 @@ export default function TerminosPage() {
 
         <h2>5. Planes, Tarifas y Pagos</h2>
         <h3>5.1 Planes Disponibles</h3>
-        <p>MiCert ofrece distintos planes según las necesidades del Cliente, incluyendo un plan de prueba (demo) con un número limitado de certificados y planes comerciales con distinta cuota mensual y distinto número de usuarios habilitables. Para organizaciones con requerimientos específicos (alto volumen, integraciones u otros), MiCert puede ofrecer soluciones bajo cotización particular. Las características y eventuales límites de cada plan se publican en el sitio y pueden actualizarse periódicamente.</p>
+        <p>MiCert ofrece distintos planes según las necesidades del Cliente, incluyendo un plan de prueba (demo) con un número limitado de certificados y planes comerciales con distinta cuota mensual y distinto número de usuarios habilitables. Para organizaciones con requerimientos específicos (alto volumen, integraciones u otros), MiCert puede ofrecer soluciones bajo cotización particular. Las características y eventuales límites de cada plan se publican en el sitio y pueden actualizarse periódicamente. Los paquetes adicionales pueden contratarse como complemento de un plan o de forma independiente, sin plan.</p>
         <h3>5.2 Cuota de Emisión y Paquetes Adicionales</h3>
         <ul>
           <li>Cada emisión consume una unidad de la cuota del Plan o del paquete adicional que corresponda.</li>
           <li><strong>La cuota se calcula sobre los certificados vigentes:</strong> la revocación de un certificado libera la unidad consumida dentro del mismo período. La revocación es, en todo caso, definitiva —un certificado revocado no puede reactivarse— y la liberación de la unidad no da derecho a devolución de dinero alguna.</li>
           <li>Como consecuencia de lo anterior, corregir un certificado mediante reemisión no aumenta el consumo neto de la cuota, porque la revocación libera la unidad que la nueva emisión consume.</li>
-          <li>El consumo se imputa primero a la cuota del Plan del período en curso. Agotada esta, se imputa a los paquetes adicionales vigentes, comenzando por el de vencimiento más próximo.</li>
+          <li>El consumo se imputa primero a la cuota del Plan del período en curso. Agotada esta, se imputa a los paquetes adicionales vigentes, comenzando por el de vencimiento más próximo. Si el Cliente no tiene un Plan contratado, el consumo se imputa directamente a sus paquetes vigentes, en el mismo orden.</li>
           <li>No consumen cuota la descarga de certificados, el reenvío de correos, la generación de anexos ni las consultas de verificación pública.</li>
           <li>Salvo pacto en contrario, la cuota no utilizada en un período no se acumula para períodos siguientes.</li>
         </ul>
@@ -208,10 +210,10 @@ export default function TerminosPage() {
         <p>El Cliente es responsable de:</p>
         <ul>
           <li>La veracidad y exactitud de la información contenida en los certificados que emite.</li>
-          <li>Declarar correctamente el tipo de documento de identidad de cada participante —cédula nacional de identidad o pasaporte— y revisar la exactitud de los datos antes de emitir, atendido que el certificado emitido es inmutable y su corrección exige reemisión conforme a la Sección 4.2.</li>
+          <li>Declarar correctamente el tipo de documento de identidad de cada participante —cédula nacional de identidad o pasaporte— cuando lo registre, y revisar la exactitud de los datos antes de emitir, atendido que el certificado emitido es inmutable y su corrección exige reemisión conforme a la Sección 4.2.</li>
           <li>Informar a los titulares que el certificado emitido será verificable por terceros mediante su código único, en los términos de la Sección 4.1.</li>
           <li>Abstenerse de incorporar datos sensibles o datos innecesarios para la finalidad del servicio en los campos de texto libre del diseño del certificado.</li>
-          <li>El cumplimiento de las normativas aplicables (SENCE, Ley N° 19.518, entre otras) y de que las capacitaciones certificadas se hayan realizado efectivamente.</li>
+          <li>El cumplimiento de las normativas aplicables (SENCE, Ley N° 19.518, entre otras) y de que las capacitaciones y eventos certificados se hayan realizado efectivamente.</li>
           <li>Contar con una base de licitud válida para tratar los datos personales de los titulares conforme a la Ley N° 19.628, según su texto modificado por la Ley N° 21.719, e informar a los titulares conforme a la ley.</li>
           <li>Mantener la confidencialidad de las credenciales de sus usuarios y pagar oportunamente las tarifas acordadas.</li>
         </ul>
@@ -223,7 +225,7 @@ export default function TerminosPage() {
         <p>Cuando MiCert actúa como Encargado, conforme al artículo 15 bis debe existir un Contrato de Encargo de Tratamiento de Datos (DPA) firmado entre el Cliente y MiCert. El Cliente puede solicitar la plantilla a hola@micert.cl. En caso de discrepancia en materia de protección de datos entre el DPA, la Política de Privacidad y estos Términos, prevalece el DPA.</p>
 
         <h2>12. Indemnización</h2>
-        <p>El Cliente acepta indemnizar y mantener indemne a MiCert, sus socios, administradores y representantes frente a cualquier reclamación, pérdida o daño (incluidos honorarios razonables de abogados) derivados del incumplimiento de este contrato por el Cliente, la violación de derechos de terceros, el uso indebido de la plataforma, la emisión de certificados sin respaldo de capacitación real, la entrega de información falsa, o el incumplimiento de normativas aplicables.</p>
+        <p>El Cliente acepta indemnizar y mantener indemne a MiCert, sus socios, administradores y representantes frente a cualquier reclamación, pérdida o daño (incluidos honorarios razonables de abogados) derivados del incumplimiento de este contrato por el Cliente, la violación de derechos de terceros, el uso indebido de la plataforma, la emisión de certificados sin respaldo de una capacitación o un evento efectivamente realizados, la entrega de información falsa, o el incumplimiento de normativas aplicables.</p>
 
         <h2>13. Modificaciones</h2>
         <p>MiCert puede actualizar estos Términos ocasionalmente. Los cambios importantes se notificarán con al menos 15 días hábiles de anticipación mediante email a la dirección registrada o aviso en la plataforma al iniciar sesión. El uso continuado después de los cambios constituye aceptación. Si el Cliente no está de acuerdo, puede cancelar su cuenta antes de que entren en vigencia.</p>
