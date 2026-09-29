@@ -11,7 +11,8 @@ export type DemoField =
   | "telefono"
   | "certificados_mes"
   | "mensaje"
-  | "acepta_tratamiento";
+  | "acepta_tratamiento"
+  | "acepta_terminos";
 
 export type DemoFormState = {
   status: "idle" | "success" | "error";
@@ -115,6 +116,7 @@ export async function submitDemo(
   const certificados = text(formData, "certificados_mes");
   const mensaje = text(formData, "mensaje");
   const aceptaTratamiento = formData.get("acepta_tratamiento") === "si";
+  const aceptaTerminos = formData.get("acepta_terminos") === "si";
   const aceptaMarketing = formData.get("acepta_marketing") === "si";
   const origen = "/demo";
 
@@ -156,6 +158,10 @@ export async function submitDemo(
 
   if (!aceptaTratamiento) {
     fieldErrors.acepta_tratamiento = "Debes aceptar el tratamiento de datos.";
+  }
+
+  if (!aceptaTerminos) {
+    fieldErrors.acepta_terminos = "Debes aceptar los Términos y Condiciones";
   }
 
   if (Object.keys(fieldErrors).length > 0 || !parsedPhone) {
@@ -213,6 +219,7 @@ export async function submitDemo(
     certificados_mes: certificados ? certificados : null,
     mensaje: mensaje || null,
     acepta_tratamiento: true,
+    acepta_terminos: true,
     acepta_marketing: aceptaMarketing,
     version_consentimiento: CONSENT_VERSION,
     origen,

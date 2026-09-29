@@ -8,8 +8,10 @@ import { AR, CL, CO, ES, MX, PE } from "country-flag-icons/react/3x2";
 import { submitDemo, type DemoFormState } from "../../demo/actions";
 import {
   CONSENT_MARKETING,
+  CONSENT_TERMS,
   CONSENT_TREATMENT,
   PRIVACY_LINK_PHRASE,
+  TERMS_LINK_PHRASE,
 } from "../../lib/consent";
 import styles from "./demo.module.css";
 
@@ -115,6 +117,25 @@ function TreatmentLabel() {
         {PRIVACY_LINK_PHRASE}
       </Link>
       {CONSENT_TREATMENT.slice(index + PRIVACY_LINK_PHRASE.length)}
+    </>
+  );
+}
+
+function TermsLabel() {
+  const index = CONSENT_TERMS.indexOf(TERMS_LINK_PHRASE);
+  if (index === -1) return CONSENT_TERMS;
+  return (
+    <>
+      {CONSENT_TERMS.slice(0, index)}
+      <Link
+        className={styles.privacyLink}
+        href="/terminos"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {TERMS_LINK_PHRASE}
+      </Link>
+      {CONSENT_TERMS.slice(index + TERMS_LINK_PHRASE.length)}
     </>
   );
 }
@@ -373,6 +394,30 @@ export default function DemoForm() {
         {errors.acepta_tratamiento ? (
           <p className={styles.error} id="demo-tratamiento-error">
             {errors.acepta_tratamiento}
+          </p>
+        ) : null}
+
+        <div className={styles.check}>
+          <input
+            className={styles.checkbox}
+            id="demo-terminos"
+            name="acepta_terminos"
+            type="checkbox"
+            value="si"
+            required
+            aria-required="true"
+            aria-invalid={errors.acepta_terminos ? true : undefined}
+            aria-describedby={
+              errors.acepta_terminos ? "demo-terminos-error" : undefined
+            }
+          />
+          <label className={styles.checkLabel} htmlFor="demo-terminos">
+            <TermsLabel />
+          </label>
+        </div>
+        {errors.acepta_terminos ? (
+          <p className={styles.error} id="demo-terminos-error">
+            {errors.acepta_terminos}
           </p>
         ) : null}
 
