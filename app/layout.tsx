@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { GoogleAnalytics } from "@next/third-parties/google";
-import Script from "next/script";
 import { Inter_Tight, JetBrains_Mono } from "next/font/google";
 import WhatsAppFloat from "@/src/components/whatsapp-float";
 import "./globals.css";
@@ -55,11 +54,6 @@ export default function RootLayout({
         {children}
         <WhatsAppFloat />
         <GoogleAnalytics gaId="G-V9KQKJL8X7" />
-        <Script
-          id="hs-script-loader"
-          src="https://js-eu1.hs-scripts.com/148767528.js"
-          strategy="afterInteractive"
-        />
       </body>
     </html>
   );

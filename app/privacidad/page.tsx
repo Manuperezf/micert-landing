@@ -30,7 +30,7 @@ export default function PrivacidadPage() {
 
       <div className="legal-wrap">
         <h1>Política de Privacidad</h1>
-        <p className="updated">Última actualización: 9 de agosto de 2026</p>
+        <p className="updated">Última actualización: 29 de septiembre de 2026</p>
 
         <div className="legal-summary">
           <h2>En resumen</h2>
@@ -77,6 +77,10 @@ export default function PrivacidadPage() {
         <p>Dirección IP, tipo de navegador y dispositivo, fecha y hora de acceso, y acciones realizadas en la plataforma (registro de auditoría). Además, la plataforma registra información técnica sobre errores de funcionamiento, configurada para excluir el nombre, el documento de identidad, el correo electrónico y el contenido de los certificados.</p>
         <h3>3.4 Base Legal para el Tratamiento</h3>
         <p>Tratamos los datos bajo las siguientes bases de licitud reconocidas por la ley: ejecución de contrato; cumplimiento de una obligación legal (normativa SENCE, obligaciones tributarias y requisitos de auditoría); interés legítimo (seguridad, prevención de fraudes y mejora de la plataforma); consentimiento del titular cuando aplique; e instrucciones del Responsable cuando MiCert actúa como Encargado.</p>
+        <h3>3.5 Datos de Solicitudes de Prueba desde el Sitio Web</h3>
+        <p>Cuando una persona solicita una prueba gratuita en micert.cl, recopilamos su nombre, apellidos, correo electrónico, teléfono, el nombre del OTEC o empresa, el volumen aproximado de certificados que emite al mes y el mensaje que decida escribir. También registramos la fecha de la solicitud, la página desde la que llegó y la versión del texto de consentimiento que aceptó. MiCert es Responsable de estos datos.</p>
+        <p>Los usamos para responder la solicitud, activar la cuenta de prueba y hacer el seguimiento comercial de esa solicitud. La base de licitud es el consentimiento que la persona otorga al enviar el formulario. Si además marca la casilla correspondiente, usamos su correo para enviarle novedades y contenidos de MiCert; puede retirar ese consentimiento en cualquier momento escribiendo a hola@micert.cl.</p>
+        <p>Conservamos estos datos hasta 24 meses desde el último contacto, salvo que la persona solicite antes su supresión o su organización pase a ser Cliente, caso en que se aplica la Sección 5.5.</p>
 
         <h2>4. Cómo Usamos la Información</h2>
         <p>Utilizamos los datos personales exclusivamente para prestar el servicio (generar, distribuir y validar certificados), mantener trazabilidad y auditoría, facilitar el cumplimiento normativo ante SENCE, prestar soporte técnico, mejorar el servicio mediante análisis agregado, y enviar comunicaciones del servicio (notificaciones sobre la cuenta, actualizaciones o cambios en los términos).</p>
@@ -118,7 +122,7 @@ export default function PrivacidadPage() {
         <p>MiCert no vende, alquila ni transfiere datos personales a terceros con fines comerciales propios. Solo compartimos información con:</p>
         <ul>
           <li><strong>Proveedores de infraestructura necesarios para operar el servicio:</strong> Supabase (base de datos y almacenamiento), Vercel (alojamiento), Resend (envío de correo transaccional) y Sentry (monitoreo técnico de errores, sin datos identificatorios de los titulares), bajo contrato de tratamiento.</li>
-          <li><strong>En el sitio de marketing,</strong> proveedores de formularios, analítica, protección antispam y atención: HubSpot (formulario de contacto y demo), Google Analytics (analítica), Google reCAPTCHA (protección del formulario contra envíos automatizados) y WhatsApp Business, operado por Meta Platforms, Inc. (canal de contacto directo con visitantes) (ver Secciones 5 y 8).</li>
+          <li><strong>En el sitio de marketing,</strong> proveedores de analítica y atención: Google Analytics (analítica) y WhatsApp Business, operado por Meta Platforms, Inc. (canal de contacto directo con visitantes). Las solicitudes de prueba enviadas desde el sitio se almacenan en Supabase y los correos asociados se envían mediante Resend, los mismos proveedores indicados en la Sección 5.1 (ver Secciones 3.5, 5 y 8).</li>
           <li><strong>Plataformas profesionales de terceros, solo por decisión del propio titular.</strong> La página de verificación ofrece al titular la posibilidad de agregar su certificado a su perfil profesional. Esa acción la inicia el titular desde su navegador y bajo su exclusiva decisión; MiCert no comunica datos a esas plataformas por cuenta propia ni del Cliente, y no responde del tratamiento que ellas efectúen.</li>
           <li><strong>Autoridades,</strong> cuando sea obligatorio por ley u orden judicial, incluida la Agencia de Protección de Datos Personales.</li>
           <li><strong>Cuando sea necesario</strong> para prevenir fraude o proteger la seguridad de la plataforma.</li>
@@ -137,7 +141,7 @@ export default function PrivacidadPage() {
 
         <h2>8. Cookies y Tecnologías Similares</h2>
         <p>En la plataforma (app.micert.cl) utilizamos únicamente cookies esenciales: de sesión (para mantener la sesión activa), de seguridad (para proteger la cuenta y prevenir ataques) y funcionales (para recordar preferencias de visualización).</p>
-        <p>En el sitio de marketing (micert.cl) utilizamos Google Analytics para medir el uso del sitio de forma agregada y mejorar su contenido, lo que puede instalar cookies de analítica. El formulario de contacto y demo está protegido con Google reCAPTCHA, que puede instalar cookies y recabar datos de navegación con el solo objeto de distinguir a una persona de un envío automatizado. El contacto por WhatsApp se realiza mediante un enlace directo que abre la aplicación de WhatsApp fuera de nuestro sitio, por lo que no instala cookies en micert.cl. El usuario puede configurar su navegador para rechazar cookies; rechazar las cookies esenciales puede afectar la funcionalidad de la plataforma, especialmente las funciones de sesión y seguridad.</p>
+        <p>En el sitio de marketing (micert.cl) utilizamos Google Analytics para medir el uso del sitio de forma agregada y mejorar su contenido, lo que puede instalar cookies de analítica. El formulario de solicitud de prueba no instala cookies y se protege contra envíos automatizados con medidas técnicas propias, sin servicios de terceros. El contacto por WhatsApp se realiza mediante un enlace directo que abre la aplicación de WhatsApp fuera de nuestro sitio, por lo que no instala cookies en micert.cl. El usuario puede configurar su navegador para rechazar cookies; rechazar las cookies esenciales puede afectar la funcionalidad de la plataforma, especialmente las funciones de sesión y seguridad.</p>
         <p>MiCert no utiliza cookies de publicidad de terceros ni de perfilamiento comercial.</p>
 
         <h2>9. Datos de Menores de Edad</h2>
