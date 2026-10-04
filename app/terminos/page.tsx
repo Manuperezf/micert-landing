@@ -30,7 +30,7 @@ export default function TerminosPage() {
 
       <div className="legal-wrap">
         <h1>Términos y Condiciones de Uso</h1>
-        <p className="updated">Última actualización: 29 de septiembre de 2026</p>
+        <p className="updated">Última actualización: 4 de octubre de 2026</p>
 
         <div className="legal-summary">
           <h2>En resumen</h2>
@@ -109,7 +109,7 @@ export default function TerminosPage() {
         </ul>
         <p>El alcance funcional disponible depende del Plan contratado. MiCert solo compromete las funcionalidades efectivamente disponibles en la plataforma y no compromete funcionalidades futuras salvo que se pacten por escrito.</p>
         <h3>4.1 Qué muestra la verificación pública</h3>
-        <p>Al escanear el código QR con la cámara del teléfono, o al ingresar el código corto, se abre la página pública de verificación de MiCert. Esa página muestra el nombre del titular, su documento de identidad parcialmente enmascarado cuando se haya registrado, la actividad de capacitación o el evento, sus fechas y horas, el estado del certificado —vigente, por vencer, vencido o anulado—, la identificación del Cliente como emisor y, cuando el Cliente lo haya configurado, la empresa mandante del curso. El PDF que se descarga desde la página pública también muestra el documento enmascarado; el Cliente puede descargar desde su panel el certificado con el documento completo.</p>
+        <p>Al escanear el código QR con la cámara del teléfono, o al ingresar el código corto, se abre la página pública de verificación de MiCert. Esa página muestra el nombre del titular, su documento de identidad parcialmente enmascarado cuando se haya registrado, la actividad de capacitación o el evento, sus fechas y horas, el estado del certificado —vigente, por vencer o vencido—, la identificación del Cliente como emisor y, cuando el Cliente lo haya configurado, la empresa mandante del curso. El PDF que se descarga desde la página pública también muestra el documento enmascarado; el Cliente puede descargar desde su panel el certificado con el documento completo. Un certificado anulado deja de estar disponible para verificación: la página informa que no hay un certificado disponible, sin mostrar sus datos.</p>
         <p>El acceso exige conocer el enlace o el código único del certificado. La plataforma no ofrece listados, índices ni buscadores públicos que permitan recorrer los certificados emitidos por un Cliente.</p>
         <p><strong>La verificación por terceros es parte esencial del servicio.</strong> El Cliente reconoce que emitir un certificado a través de MiCert implica ponerlo a disposición para su verificación en los términos descritos, y se obliga a informar de ello a los titulares. Esta validación requiere conexión a internet y depende de la operación continua del servicio.</p>
         <h3>4.2 Inmutabilidad de los certificados emitidos</h3>
@@ -166,7 +166,7 @@ export default function TerminosPage() {
         <p>A falta de contrato suscrito, el Cliente puede cancelar su suscripción en cualquier momento enviando un email a hola@micert.cl. En planes mensuales, la cancelación es efectiva al final del período ya pagado. En planes anuales, el Cliente puede cancelar, pero no proceden reembolsos proporcionales por tiempo no utilizado.</p>
         <h3>7.3 Cancelación por MiCert</h3>
         <p>MiCert puede suspender o cancelar la cuenta del Cliente si este incumple estos Términos, realiza actividades fraudulentas o ilegales, no paga las tarifas acordadas tras el procedimiento de la Sección 5.4, o si la continuidad del servicio representa un riesgo para otros clientes o para la plataforma.</p>
-        <p><strong>Cancelación por actividades fraudulentas:</strong> en caso de emisión de certificados falsos o uso fraudulento, MiCert puede revocar inmediatamente los certificados emitidos por el Cliente, incluidos los ya distribuidos, que quedarán marcados como revocados en el sistema de verificación. No proceden reembolsos y MiCert se reserva las acciones legales que correspondan.</p>
+        <p><strong>Cancelación por actividades fraudulentas:</strong> en caso de emisión de certificados falsos o uso fraudulento, MiCert puede revocar inmediatamente los certificados emitidos por el Cliente, incluidos los ya distribuidos, que dejarán de estar disponibles en la página de verificación. No proceden reembolsos y MiCert se reserva las acciones legales que correspondan.</p>
         <h3>7.4 Efectos de la Cancelación</h3>
         <p>Tras la cancelación, el Cliente pierde acceso a la plataforma. Durante los 30 días corridos siguientes, el Cliente puede solicitar la exportación de sus datos y de sus certificados en un formato de uso común. Los días 31 a 90 constituyen un período de gracia. A partir del día 90, los datos operacionales pueden ser eliminados, salvo aquellos cuya conservación exija la ley o resulte necesaria conforme a la Sección 7.5.</p>
         <h3>7.5 Permanencia de Certificados Emitidos</h3>
@@ -174,7 +174,7 @@ export default function TerminosPage() {
         <ul>
           <li><strong>Exportación por el Cliente:</strong> disponible dentro del plazo de la Sección 7.4, en formato PDF individual o ZIP.</li>
           <li><strong>Verificación online:</strong> la consulta del estado de los certificados contra app.micert.cl está sujeta a la operación continua del servicio. MiCert hará esfuerzos razonables por mantenerla disponible, pero no la garantiza más allá del período en que la plataforma esté operativa.</li>
-          <li><strong>Certificados revocados:</strong> la revocación es un cambio de estado y no una eliminación. El registro se conserva revocado para que quien consulte su código pueda constatar que el certificado dejó de ser válido.</li>
+          <li><strong>Certificados revocados:</strong> la revocación es un cambio de estado y no una eliminación. El registro se conserva con estado revocado para fines de trazabilidad, y la página de verificación deja de mostrarlo: quien consulte su código verá que no hay un certificado disponible.</li>
           <li><strong>Trazabilidad histórica:</strong> los registros de trazabilidad y auditoría se conservan por los plazos que exijan las obligaciones legales aplicables —principalmente la normativa SENCE de trazabilidad y auditoría y las obligaciones tributarias asociadas, que conforme a los plazos de prescripción aplicables pueden extenderse hasta seis años— y quedan disponibles para auditorías gubernamentales. Vencidos esos plazos, los registros se anonimizan o se suprimen.</li>
         </ul>
         <h3>7.6 Continuidad ante Cese de Operaciones</h3>

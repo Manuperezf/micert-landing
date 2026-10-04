@@ -30,7 +30,7 @@ export default function PrivacidadPage() {
 
       <div className="legal-wrap">
         <h1>Política de Privacidad</h1>
-        <p className="updated">Última actualización: 29 de septiembre de 2026</p>
+        <p className="updated">Última actualización: 4 de octubre de 2026</p>
 
         <div className="legal-summary">
           <h2>En resumen</h2>
@@ -115,7 +115,7 @@ export default function PrivacidadPage() {
         <h3>5.5 Período de Retención</h3>
         <p>MiCert conserva los datos personales solo durante el tiempo necesario para cumplir las finalidades de esta Política y las obligaciones legales aplicables. No conservamos datos de forma indefinida: una vez cumplidos los plazos legales correspondientes, y cuando no exista otro fundamento legal que justifique su conservación, los datos se suprimen, anonimizan o bloquean.</p>
         <p><strong>Certificados y registros de trazabilidad:</strong> se conservan mientras exista una obligación legal que lo justifique, principalmente la normativa SENCE de trazabilidad y auditoría de los certificados de capacitación y las obligaciones tributarias asociadas, que conforme a los plazos de prescripción aplicables pueden extenderse hasta seis años. Vencidos esos plazos, los registros se anonimizan o se suprimen.</p>
-        <p><strong>Certificados revocados:</strong> la revocación de un certificado es un cambio de estado y no una eliminación. El registro se conserva con estado revocado para que quien consulte su código pueda constatar que el certificado dejó de ser válido, lo que es necesario para la propia finalidad de verificación y para la trazabilidad exigida al Cliente.</p>
+        <p><strong>Certificados revocados:</strong> la revocación de un certificado es un cambio de estado y no una eliminación. El registro se conserva con estado revocado por la trazabilidad exigida al Cliente. La página de verificación deja de mostrar sus datos: quien consulte su código verá que no hay un certificado disponible.</p>
         <p><strong>Datos de cuenta y de los usuarios habilitados por el Cliente:</strong> tras la cancelación de la cuenta, durante los días 1 a 30 el Cliente puede solicitar la exportación de sus datos; los días 31 a 90 constituyen un período de gracia; a partir del día 90 se suprimen los datos operacionales, salvo aquellos cuya conservación exija la ley por los plazos legales correspondientes. La verificación pública de los certificados ya emitidos puede mantenerse después del término del contrato, en función de esas mismas obligaciones de trazabilidad.</p>
 
         <h2>6. Compartir Información con Terceros</h2>
