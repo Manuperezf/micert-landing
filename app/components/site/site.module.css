@@ -261,6 +261,12 @@
   white-space: nowrap;
 }
 
+@media (min-width: 1181px) {
+  .login {
+    margin-left: 32px;
+  }
+}
+
 .menuBtn {
   display: none;
   align-items: center;
