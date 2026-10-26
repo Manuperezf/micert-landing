@@ -5,7 +5,18 @@ import {
   ACTIVIDADES_PRICES,
   formatClp,
 } from "../../lib/actividades";
+import preciosStyles from "../precios/precios.module.css";
 import styles from "./actividades.module.css";
+
+const DEFAULT_TITLE = "Cuánto cuesta MiCert Actividades.";
+const DEFAULT_INTRO =
+  "Un precio fijo, mensual o anual. El anual trae 2 meses gratis. Valores + IVA.";
+
+type ActividadesPricingProps = {
+  title?: string;
+  intro?: string;
+  showLink?: boolean;
+};
 
 const CARDS = [
   {
@@ -24,13 +35,24 @@ const CARDS = [
   },
 ];
 
-export default function ActividadesPricing() {
+export default function ActividadesPricing({
+  title = DEFAULT_TITLE,
+  intro = DEFAULT_INTRO,
+  showLink = false,
+}: ActividadesPricingProps) {
+  const embedded = title !== DEFAULT_TITLE || intro !== DEFAULT_INTRO || showLink;
+
   return (
-    <section className={`${styles.shell} ${styles.block} ${styles.prices}`}>
-      <h2 className={styles.h2}>Cuánto cuesta MiCert Actividades.</h2>
-      <p className={styles.priceNote}>
-        Un precio fijo, mensual o anual. El anual trae 2 meses gratis. Valores
-        + IVA.
+    <section
+      className={
+        embedded
+          ? `${preciosStyles.shell} ${preciosStyles.section}`
+          : `${styles.shell} ${styles.block} ${styles.prices}`
+      }
+    >
+      <h2 className={embedded ? preciosStyles.h2 : styles.h2}>{title}</h2>
+      <p className={embedded ? preciosStyles.actividadesIntro : styles.priceNote}>
+        {intro}
       </p>
       <div className={styles.priceGrid}>
         {CARDS.map((card) => (
@@ -63,13 +85,21 @@ export default function ActividadesPricing() {
           </article>
         ))}
       </div>
-      <p className={styles.plansLine}>
-        ¿Ya emites tus certificados en otra plataforma? Puedes usar solo
-        Actividades.{" "}
-        <Link className={styles.arrowLink} href="/precios">
-          Ver planes de certificados
-        </Link>
-      </p>
+      {showLink ? (
+        <p className={styles.plansLine}>
+          <Link className={styles.arrowLink} href="/actividades">
+            Ver Actividades
+          </Link>
+        </p>
+      ) : (
+        <p className={styles.plansLine}>
+          ¿Ya emites tus certificados en otra plataforma? Puedes usar solo
+          Actividades.{" "}
+          <Link className={styles.arrowLink} href="/precios">
+            Ver planes de certificados
+          </Link>
+        </p>
+      )}
     </section>
   );
 }

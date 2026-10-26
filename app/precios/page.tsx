@@ -6,6 +6,7 @@ import FinalCta from "../components/site/FinalCta";
 import PlanCards from "../components/site/PlanCards";
 import SiteFooter from "../components/site/SiteFooter";
 import SiteHeader from "../components/site/SiteHeader";
+import ActividadesPricing from "../components/actividades/ActividadesPricing";
 import PacksSection from "../components/precios/PacksSection";
 import PlanComparison from "../components/precios/PlanComparison";
 import { DEMO_URL } from "../components/home/links";
@@ -138,6 +139,11 @@ export default function PreciosPage() {
 
         <PlanComparison />
         <PacksSection />
+        <ActividadesPricing
+          title="Actividades: asistencia y encuesta para tus clases."
+          intro="Se contrata aparte de los certificados. Mensual o anual, el anual trae 2 meses gratis. Valores + IVA."
+          showLink
+        />
 
         <section className={styles.shell}>
           <div className={styles.trial}>

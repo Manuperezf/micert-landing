@@ -18,7 +18,7 @@ export default function HomePlans() {
           <div className={homeStyles.plansFootRow}>
             <p>
               Packs de 25, 50 o 100 certificados desde $17.990 + IVA, con
-              vigencia de 3 meses, con o sin plan.
+              vigencia de 3 meses, para sumar a tu plan.
             </p>
             <Link className={styles.arrowLink} href="/precios">
               Comparar planes en detalle <span className={styles.arrow}>→</span>

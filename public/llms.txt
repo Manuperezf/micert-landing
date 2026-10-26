@@ -9,7 +9,7 @@ MiCert Digital SpA. Certificados digitales verificables, sin PDF editables ni co
 - [Inicio](https://micert.cl/): qué es MiCert, para qué sirve y para quién
 - [Eventos](https://micert.cl/eventos): certificados de asistencia para webinars, charlas y seminarios
 - [Actividades](https://micert.cl/actividades): registro de asistencia con QR y encuesta de satisfacción anónima para clases online y presenciales
-- [Planes y precios](https://micert.cl/precios): planes Básico, Estándar y Pro, packs adicionales y demo sin costo
+- [Planes y precios](https://micert.cl/precios): planes Básico, Estándar y Pro, packs adicionales, Actividades y demo sin costo
 - [Recursos](https://micert.cl/recursos): guías sobre certificación digital, SENCE y normativa
 
 ## Recursos

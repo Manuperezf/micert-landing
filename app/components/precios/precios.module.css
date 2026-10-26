@@ -52,6 +52,14 @@
   padding-bottom: 120px;
 }
 
+.actividadesIntro {
+  margin: 14px 0 40px;
+  max-width: 640px;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--muted);
+}
+
 .head {
   display: flex;
   flex-direction: column;
