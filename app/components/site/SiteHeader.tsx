@@ -5,12 +5,28 @@ import Link from "next/link";
 import { APP_URL, DEMO_URL, MEET_URL } from "../home/links";
 import styles from "./site.module.css";
 
-const MENU_LINKS = [
+type MenuLink = {
+  href: string;
+  label: string;
+  badge?: string;
+};
+
+const MENU_LINKS: readonly MenuLink[] = [
   { href: "/#como-funciona", label: "Cursos" },
   { href: "/eventos", label: "Eventos" },
+  { href: "/actividades", label: "Actividades", badge: "Nuevo" },
   { href: "/precios", label: "Precios" },
   { href: "/recursos", label: "Recursos" },
-] as const;
+];
+
+function MenuLinkLabel({ item }: { item: MenuLink }) {
+  return (
+    <>
+      {item.label}
+      {item.badge ? <span className={styles.navBadge}>{item.badge}</span> : null}
+    </>
+  );
+}
 
 export default function SiteHeader() {
   const [open, setOpen] = useState(false);
@@ -41,7 +57,7 @@ export default function SiteHeader() {
         <nav className={styles.nav} aria-label="Principal">
           {MENU_LINKS.map((item) => (
             <Link key={item.label} href={item.href} className={styles.menuLink}>
-              {item.label}
+              <MenuLinkLabel item={item} />
             </Link>
           ))}
         </nav>
@@ -56,7 +72,7 @@ export default function SiteHeader() {
             Prueba gratis
           </Link>
           <Link
-            className={`${styles.btn} ${styles.btnSecondary} ${styles.headerBtn} ${styles.desktopOnly} ${styles.headerMeet}`}
+            className={`${styles.btn} ${styles.btnSecondary} ${styles.headerBtn} ${styles.desktopOnly}`}
             href={MEET_URL}
             target="_blank"
             rel="noopener noreferrer"
@@ -113,7 +129,7 @@ export default function SiteHeader() {
               className={styles.menuLink}
               onClick={close}
             >
-              {item.label}
+              <MenuLinkLabel item={item} />
             </Link>
           ))}
           <a className={styles.menuLink} href={APP_URL} onClick={close}>

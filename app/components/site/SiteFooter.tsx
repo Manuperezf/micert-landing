@@ -68,6 +68,9 @@ export default function SiteFooter() {
               <Link className={styles.menuLink} href="/eventos">
                 Eventos
               </Link>
+              <Link className={styles.menuLink} href="/actividades">
+                Actividades
+              </Link>
               <Link className={styles.menuLink} href="/precios">
                 Precios
               </Link>
