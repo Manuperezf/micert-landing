@@ -2,11 +2,13 @@
 
 > Plataforma chilena para emitir, distribuir y validar certificados digitales con QR para OTEC (Organismos Técnicos de Capacitación). Emisión masiva desde Excel, editor visual, validación pública y trazabilidad para auditorías SENCE.
 
-MiCert Digital SpA. Certificados digitales verificables, sin PDF editables ni conocimientos técnicos. No es un LMS: se especializa en emisión, diseño y validación de certificados.
+MiCert Digital SpA. Certificados digitales verificables, sin PDF editables ni conocimientos técnicos. No es un LMS: se especializa en la emisión, el diseño y la validación de certificados, y en el registro de asistencia y satisfacción de las clases.
 
 ## Principal
 
 - [Inicio](https://micert.cl/): qué es MiCert, para qué sirve y para quién
+- [Eventos](https://micert.cl/eventos): certificados de asistencia para webinars, charlas y seminarios
+- [Actividades](https://micert.cl/actividades): registro de asistencia con QR y encuesta de satisfacción anónima para clases online y presenciales
 - [Planes y precios](https://micert.cl/precios): planes Básico, Estándar y Pro, packs adicionales y demo sin costo
 - [Recursos](https://micert.cl/recursos): guías sobre certificación digital, SENCE y normativa
 
