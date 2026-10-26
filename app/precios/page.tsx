@@ -141,7 +141,7 @@ export default function PreciosPage() {
         <PacksSection />
         <ActividadesPricing
           title="Actividades: asistencia y encuesta para tus clases."
-          intro="Se contrata aparte de los certificados. Mensual o anual, el anual trae 2 meses gratis. Valores + IVA."
+          intro={"Se contrata aparte de los certificados. Mensual o anual, el anual trae 2 meses gratis. Valores +\u00A0IVA."}
           showLink
         />
 

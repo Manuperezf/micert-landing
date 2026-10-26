@@ -1228,7 +1228,7 @@
   font-weight: 600;
 }
 
-@media (max-width: 860px) {
+@media (max-width: 1024px) {
   .actividadesPanel {
     flex-direction: column;
     align-items: stretch;

@@ -850,7 +850,7 @@
   width: 28%;
 }
 
-.table thead th:last-child {
+.table thead th:nth-child(2) {
   background: var(--azul-tint);
   color: var(--azul-hover);
   font-weight: 600;
@@ -862,12 +862,12 @@
   font-weight: 400;
 }
 
-.table td:last-child,
+.table td:nth-child(2),
 .table tbody th {
   color: var(--ink);
 }
 
-.table td:last-child {
+.table td:nth-child(2) {
   background: color-mix(in srgb, var(--azul-tint) 42%, var(--paper));
 }
 

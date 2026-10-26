@@ -29,7 +29,7 @@ const withPlanMonth = formatClp(ACTIVIDADES_PRICES.withPlan.monthly);
 export const ACTIVIDADES_FAQ = [
   {
     question: "¿Necesito un plan de certificados para usar Actividades?",
-    answer: `No. Puedes contratar solo Actividades por ${soloMonth} + IVA al mes. Si ya tienes un plan de certificados, lo sumas por ${withPlanMonth} + IVA.`,
+    answer: `No. Puedes contratar solo Actividades por ${soloMonth} +\u00A0IVA al mes. Si ya tienes un plan de certificados, lo sumas por ${withPlanMonth} +\u00A0IVA.`,
   },
   {
     question: "¿Se conecta con Zoom, Meet o Teams?",
@@ -69,35 +69,35 @@ export const ACTIVIDADES_FAQ = [
 ] as const;
 
 export const COMPARISON_HEADERS = [
+  "MiCert Actividades",
   "Lista de firmas",
   "Formulario en línea",
-  "MiCert Actividades",
 ] as const;
 
 export const COMPARISON_ROWS = [
   {
     feature: "Clase online",
-    values: ["No aplica", "Sí", "Sí"],
+    values: ["Sí", "No aplica", "Sí"],
   },
   {
     feature: "Quien marca estuvo en la clase",
-    values: ["Firma en la sala", "Hay que armar un control", "Código que da el relator"],
+    values: ["Código que da el relator", "Firma en la sala", "Hay que armar un control"],
   },
   {
     feature: "Encuesta anónima con mínimo de respuestas",
-    values: ["Aparte", "Depende de cómo se configure", "Incluida, desde 5 respuestas"],
+    values: ["Incluida, desde 5 respuestas", "Aparte", "Depende de cómo se configure"],
   },
   {
     feature: "Registro en PDF con folio",
-    values: ["Hay que escanearla", "Hay que armarlo", "Incluido"],
+    values: ["Incluido", "Hay que escanearla", "Hay que armarlo"],
   },
   {
     feature: "Correcciones con motivo e historial",
-    values: ["A mano", "Sin historial", "Incluidas"],
+    values: ["Incluidas", "A mano", "Sin historial"],
   },
   {
     feature: "Lista para emitir certificados",
-    values: ["Hay que transcribirla", "Hay que ordenarla", "En el formato de carga de MiCert"],
+    values: ["En el formato de carga de MiCert", "Hay que transcribirla", "Hay que ordenarla"],
   },
 ] as const;
 

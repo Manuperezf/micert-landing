@@ -10,7 +10,7 @@ import styles from "./actividades.module.css";
 
 const DEFAULT_TITLE = "Cuánto cuesta MiCert Actividades.";
 const DEFAULT_INTRO =
-  "Un precio fijo, mensual o anual. El anual trae 2 meses gratis. Valores + IVA.";
+  "Un precio fijo, mensual o anual. El anual trae 2 meses gratis. Valores +\u00A0IVA.";
 
 type ActividadesPricingProps = {
   title?: string;
@@ -64,10 +64,10 @@ export default function ActividadesPricing({
             <p className={styles.cardNote}>{card.note}</p>
             <div className={styles.cardPrice}>
               <span className={styles.amount}>{formatClp(card.monthly)}</span>
-              <span className={styles.period}>+ IVA / mes</span>
+              <span className={styles.period}>+{"\u00A0"}IVA / mes</span>
             </div>
             <p className={styles.annual}>
-              o {formatClp(card.annual)} + IVA al año
+              o {formatClp(card.annual)} +{"\u00A0"}IVA al año
             </p>
             <ul className={styles.features}>
               {ACTIVIDADES_FEATURES.map((feature) => (
