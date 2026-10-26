@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import type { Metadata } from "next";
+import type { Metadata, ResolvingMetadata } from "next";
 import Link from "next/link";
 import FaqAccordion from "../components/site/FaqAccordion";
 import FinalCta from "../components/site/FinalCta";
@@ -12,16 +12,23 @@ import { DEMO_URL } from "../components/home/links";
 import { PLAN_INCLUDES, PRECIOS_FAQ, PRECIOS_METADATA } from "../lib/plans";
 import styles from "../components/precios/precios.module.css";
 
-export const metadata: Metadata = {
-  title: PRECIOS_METADATA.title,
-  description: PRECIOS_METADATA.description,
-  alternates: { canonical: "/precios" },
-  openGraph: {
+export async function generateMetadata(
+  _: Record<string, never>,
+  parent: ResolvingMetadata,
+): Promise<Metadata> {
+  const previous = await parent;
+  return {
     title: PRECIOS_METADATA.title,
     description: PRECIOS_METADATA.description,
-    url: "https://micert.cl/precios",
-  },
-};
+    alternates: { canonical: "/precios" },
+    openGraph: {
+      title: PRECIOS_METADATA.title,
+      description: PRECIOS_METADATA.description,
+      url: "https://micert.cl/precios",
+      images: previous.openGraph?.images,
+    },
+  };
+}
 
 const svgProps = {
   width: 22,

@@ -9,13 +9,15 @@ import styles from "./actividades.module.css";
 
 const CARDS = [
   {
-    name: "Sumado a tu plan de certificados",
+    name: "Si ya usas MiCert para tus certificados",
+    note: "Se suma a tu plan Básico, Estándar o Pro.",
     monthly: ACTIVIDADES_PRICES.withPlan.monthly,
     annual: ACTIVIDADES_PRICES.withPlan.annual,
     featured: true,
   },
   {
-    name: "Solo Actividades",
+    name: "Si solo necesitas Actividades",
+    note: "Sin plan de certificados.",
     monthly: ACTIVIDADES_PRICES.solo.monthly,
     annual: ACTIVIDADES_PRICES.solo.annual,
     featured: false,
@@ -37,6 +39,7 @@ export default function ActividadesPricing() {
             className={`${styles.card} ${card.featured ? styles.cardFeatured : ""}`}
           >
             <div className={styles.cardName}>{card.name}</div>
+            <p className={styles.cardNote}>{card.note}</p>
             <div className={styles.cardPrice}>
               <span className={styles.amount}>{formatClp(card.monthly)}</span>
               <span className={styles.period}>+ IVA / mes</span>

@@ -1,5 +1,3 @@
-import { buildFaqPageSchema } from "./faq-schema";
-
 export const ACTIVIDADES_TITLE =
   "Asistencia y encuesta de satisfacción para OTEC";
 
@@ -103,13 +101,6 @@ export const COMPARISON_ROWS = [
   },
 ] as const;
 
-export const ACTIVIDADES_FAQ_SCHEMA = buildFaqPageSchema(
-  ACTIVIDADES_FAQ.map((item) => ({
-    question: item.question,
-    answer: item.answer,
-  })),
-);
-
 export const ACTIVIDADES_BREADCRUMB_SCHEMA = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -161,7 +152,7 @@ export const ACTIVIDADES_SOFTWARE_SCHEMA = {
   },
   offers: [
     monthlyOffer(
-      "Sumado a un plan de certificados",
+      "Para clientes con plan de certificados MiCert",
       ACTIVIDADES_PRICES.withPlan.monthly,
     ),
     monthlyOffer("Solo Actividades", ACTIVIDADES_PRICES.solo.monthly),
