@@ -290,11 +290,14 @@
   flex: none;
   width: 236px;
   height: 468px;
-  margin: 0 0 40px -72px;
   padding: 9px;
   border-radius: 38px;
   background: var(--ink);
   box-shadow: 0 30px 60px rgba(38, 38, 38, 0.22);
+}
+
+.stageRow .phone {
+  margin: 0 0 40px -72px;
 }
 
 .phoneScreen {
@@ -1067,7 +1070,7 @@
     align-items: center;
   }
 
-  .phone {
+  .stageRow .phone {
     margin: 24px 0 0;
   }
 

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import ActividadesHome from "./components/home/ActividadesHome";
 import Cycle from "./components/home/Cycle";
 import DataCompliance from "./components/home/DataCompliance";
 import FinalCta from "./components/site/FinalCta";
@@ -28,6 +29,7 @@ export default function Home() {
         <HowItWorks />
         <Industries />
         <Cycle />
+        <ActividadesHome />
         <DataCompliance />
         <HomePlans />
         <HomeFaq />
