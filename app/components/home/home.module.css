@@ -1099,18 +1099,21 @@
 .actividadesVisual {
   position: relative;
   display: flex;
-  flex: 1 1 360px;
+  flex: 1 1 432px;
+  align-items: flex-end;
   justify-content: center;
-  min-width: 0;
+  min-width: 432px;
   height: 470px;
 }
 
 .registro {
-  position: absolute;
-  left: 0;
-  bottom: 18px;
+  position: relative;
+  z-index: 1;
+  order: -1;
+  flex: none;
   width: 220px;
   max-width: 100%;
+  margin-right: -24px;
   padding: 16px;
   border: 1px solid var(--line);
   border-radius: 12px;
@@ -1232,7 +1235,18 @@
   }
 
   .actividadesVisual {
+    flex-basis: auto;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
+    min-width: 0;
+    height: auto;
+  }
+
+  .registro {
+    order: 1;
+    margin-right: 0;
+    margin-top: -16px;
   }
 }
 
