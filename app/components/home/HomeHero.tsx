@@ -30,7 +30,18 @@ function CheckIcon() {
 export default function HomeHero() {
   return (
     <section className={`${styles.shell} ${styles.hero}`}>
-      <h1 className={styles.h1}>Todo el curso certificado, en minutos.</h1>
+      <Link className={styles.announce} href="/actividades">
+        <span className={styles.announceBadge}>Nuevo</span>
+        Asistencia y encuesta para tus clases
+        <span className={styles.announceArrow} aria-hidden="true">
+          →
+        </span>
+      </Link>
+      <h1 className={styles.h1}>
+        Todo el curso certificado,
+        <br />
+        en minutos.
+      </h1>
       <p className={styles.lead}>
         Cargas el Excel, emites y cada participante recibe su certificado con
         QR único, verificable por cualquier empresa.

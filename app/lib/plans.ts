@@ -1,3 +1,8 @@
+import { ACTIVIDADES_PRICES, formatClp } from "./actividades";
+
+const actividadesWithPlan = formatClp(ACTIVIDADES_PRICES.withPlan.monthly);
+const actividadesSolo = formatClp(ACTIVIDADES_PRICES.solo.monthly);
+
 export type Plan = {
   id: string;
   name: string;
@@ -209,5 +214,9 @@ export const PRECIOS_FAQ = [
     question: "¿Puedo probar antes de contratar?",
     answer:
       "Sí. El plan Demo te permite emitir 5 certificados de prueba sin costo para que veas el flujo completo antes de decidir.",
+  },
+  {
+    question: "¿Actividades está incluido en los planes?",
+    answer: `No. Actividades se contrata aparte: ${actividadesWithPlan} + IVA al mes si tienes un plan de certificados, o ${actividadesSolo} + IVA al mes si solo usas Actividades.`,
   },
 ];

@@ -10,6 +10,10 @@ const ITEMS = [
     text: "MiCert opera como encargado de tratamiento, con Contrato de servicios y DPA firmados con cada OTEC.",
   },
   {
+    title: "El RUT no queda expuesto",
+    text: "En la ficha pública el RUT aparece parcialmente oculto. El PDF completo se descarga solo después de confirmarlo.",
+  },
+  {
     title: "Hablas con personas",
     text: "Te acompañamos en la puesta en marcha y respondemos por correo y WhatsApp.",
   },

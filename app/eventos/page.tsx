@@ -120,13 +120,6 @@ function clp(value: number) {
   return `$${formatted}`;
 }
 
-function packSizesPhrase(sizes: readonly number[]) {
-  const labels = sizes.map(String);
-  if (labels.length <= 1) return labels[0] ?? "";
-  if (labels.length === 2) return `${labels[0]} o ${labels[1]}`;
-  return `${labels.slice(0, -1).join(", ")} o ${labels[labels.length - 1]}`;
-}
-
 function CheckIcon() {
   return (
     <svg
@@ -271,7 +264,6 @@ function FeatureIcon({ name }: { name: (typeof FEATURES)[number]["icon"] }) {
 
 export default function EventosPage() {
   const basic = PLANS.find((plan) => plan.id === "basico") ?? PLANS[0];
-  const packPhrase = packSizesPhrase(PACKS.map((pack) => pack.size));
   const faqItems = [
     {
       question: "¿Tengo que pedirles el RUT a los asistentes?",
@@ -285,7 +277,8 @@ export default function EventosPage() {
     },
     {
       question: "¿Necesito un plan para certificar un evento?",
-      answer: `No. Puedes comprar un pack de ${packPhrase} certificados sin suscripción, con vigencia de 3 meses.`,
+      answer:
+        "Sí. Los certificados de eventos descuentan de la cuota de tu plan, y si un mes necesitas más, sumas un pack.",
     },
     {
       question: "¿Cómo reciben el certificado los asistentes?",
@@ -491,8 +484,7 @@ export default function EventosPage() {
               ¿Organizas pocos eventos al año?
             </h3>
             <p className={styles.panelText}>
-              Compra un pack sin suscripción. Si ya tienes plan, también lo
-              puedes sumar en un mes con más eventos. Vigencia de 3 meses.
+              Súmalo a tu plan en un mes con más eventos. Vigencia de 3 meses.
             </p>
             <ul className={styles.packList}>
               {PACKS.map((pack) => (

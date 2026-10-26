@@ -16,7 +16,7 @@ type FaqItem = {
 const FAQ: FaqItem[] = [
   {
     question: "¿MiCert es una plataforma de cursos (LMS)?",
-    text: "No. MiCert no dicta ni gestiona cursos en lo pedagógico. Hace una cosa y la hace bien: emitir, diseñar y validar certificados. Convive sin problema con el LMS o el sistema que ya uses. Si dudas entre tu LMS y una herramienta dedicada, revisa Moodle vs MiCert.",
+    text: "No. MiCert no dicta ni gestiona cursos en lo pedagógico. Se dedica a emitir, diseñar y validar certificados, y con Actividades, a registrar la asistencia y la satisfacción de las clases. Convive sin problema con el LMS o el sistema que ya uses. Si dudas entre tu LMS y una herramienta dedicada, revisa Moodle vs MiCert.",
     link: {
       phrase: "Moodle vs MiCert",
       href: "/recursos/certificados-moodle-vs-micert",

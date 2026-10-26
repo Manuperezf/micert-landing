@@ -142,6 +142,19 @@
   border-radius: 4px;
 }
 
+.navBadge {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 7px;
+  padding: 4px 7px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1;
+  background: var(--azul-tint);
+  color: var(--azul-hover);
+}
+
 .headerBtn {
   height: 40px;
   padding: 0 18px;
@@ -246,6 +259,12 @@
   margin-right: 8px;
   font-size: 14px;
   white-space: nowrap;
+}
+
+@media (min-width: 1181px) {
+  .login {
+    margin-left: 32px;
+  }
 }
 
 .menuBtn {
@@ -375,22 +394,7 @@
   font-size: 13px;
 }
 
-@media (min-width: 1024px) and (max-width: 1180px) {
-  .nav {
-    gap: 16px;
-  }
-
-  .headerBtn {
-    padding: 0 12px;
-    white-space: nowrap;
-  }
-
-  .headerMeet {
-    display: none;
-  }
-}
-
-@media (max-width: 1023px) {
+@media (max-width: 1180px) {
   .nav,
   .login,
   .desktopOnly {
