@@ -2627,6 +2627,136 @@ export const RESOURCE_ARTICLES: ResourceArticle[] = [
       },
     ],
   },
+  {
+    slug: "caso-ceprever-otec",
+    coverImage: "/recursos/caso-estudio-ceprever.jpg",
+    tipo: "Caso",
+    temas: ["Excel", "QR"],
+    title:
+      "CEPREVER OTEC: de 4 horas a 5 minutos para certificar cada curso",
+    excerpt:
+      "Dejó de armar sus certificados en Word. Hoy emite todo el curso desde un Excel y cada certificado sale con su QR para verificarlo.",
+    author: "Equipo MiCert",
+    date: "12 de noviembre de 2026",
+    dateISO: "2026-11-12",
+    featured: false,
+    relatedSlugs: [
+      "emitir-certificados-masivos-excel",
+      "como-verificar-certificado-capacitacion",
+    ],
+    metaTitle: "Caso CEPREVER OTEC: de 4 horas a 5 minutos por curso",
+    metaDescription:
+      "CEPREVER OTEC dejó de armar sus certificados en Word. Hoy emite todo el curso desde Excel, con QR, y certificar un curso le toma cerca de 5 minutos.",
+    client: {
+      name: "CEPREVER OTEC",
+      logo: "/landing/clientes/logo-ceprever-otec.svg",
+    },
+    sections: [
+      {
+        id: "en-resumen",
+        title: "En resumen",
+        paragraphs: [
+          "CEPREVER OTEC armaba sus certificados en Word, curso por curso. Con MiCert carga la planilla del curso y emite todos los certificados de una vez, con su diseño ya configurado y un QR en cada uno.",
+          "Según su propia estimación, certificar un curso pasó de unas 4 horas a cerca de 5 minutos.",
+        ],
+      },
+      {
+        id: "el-reto",
+        title: "El reto",
+        paragraphs: [
+          "Entre emitir los certificados y enviarlos, a CEPREVER OTEC se le iban cerca de 4 horas por curso. Los errores en nombres o RUT se repetían, y las empresas y terceros les escribían para validar certificados.",
+          "Lo que buscaban era concreto: «bajar la cantidad de HH y los errores que se cometían». Y no veían otra salida: «Ninguna, no había forma de automatizar».",
+        ],
+      },
+      {
+        id: "la-solucion",
+        title: "La solución",
+        paragraphs: [
+          "Eligieron MiCert «por la seriedad y precios». Estas son las funciones que más usan:",
+        ],
+        bullets: [
+          {
+            lead: "Emisión masiva desde Excel:",
+            text: "todo el curso en una sola carga, un certificado por participante.",
+          },
+          {
+            lead: "Biblioteca de logos, firmas y sellos:",
+            text: "el diseño se define una vez y se reutiliza.",
+          },
+          {
+            lead: "Evaluación por módulos:",
+            text: "las notas de cada módulo quedan en el certificado.",
+          },
+          {
+            lead: "Descarga en PDF y ZIP:",
+            text: "un certificado o el curso completo en un solo archivo.",
+          },
+          {
+            lead: "Verificación pública con QR:",
+            text: "cualquier empresa consulta el certificado sin crear una cuenta.",
+          },
+        ],
+        quote: {
+          text: "Rápido, no demoro nada en lo que me costaba antes",
+          author: "CEPREVER OTEC",
+        },
+      },
+      {
+        id: "los-resultados",
+        title: "Los resultados",
+        intro:
+          "El cambio se mide en el tiempo que toma certificar un curso:",
+        table: {
+          headers: ["", "Antes", "Con MiCert"],
+          rows: [
+            [
+              "Cómo se emite",
+              "En Word, uno por uno",
+              "Desde el Excel del curso",
+            ],
+            ["Tiempo por curso", "Unas 4 horas", "Cerca de 5 minutos"],
+            ["Diseño", "Se arma en cada curso", "Se define una vez"],
+            [
+              "Verificación",
+              "La empresa escribe al OTEC",
+              "QR en cada certificado",
+            ],
+          ],
+        },
+        tableNote: "Tiempos estimados por CEPREVER OTEC.",
+        paragraphs: [
+          "Y sus clientes lo notan: «A una empresa cliente le gustó la plataforma y la encontró más seria y profesional».",
+        ],
+        figure: {
+          src: "/landing/producto/ficha-verificacion.png",
+          alt: "Ficha pública de un certificado verificado en MiCert",
+          caption:
+            "Así ve una empresa el certificado cuando escanea el QR. Ejemplo con datos de muestra.",
+          width: 724,
+          height: 440,
+        },
+      },
+      {
+        id: "que-puede-tomar-otro-otec",
+        title: "Qué puede tomar otro OTEC de este caso",
+        bullets: [
+          {
+            text: "Usar la planilla del curso como única fuente de datos, en vez de copiar nombres y RUT a mano.",
+          },
+          {
+            text: "Dejar el diseño configurado una vez y reutilizarlo en cada curso.",
+          },
+          {
+            text: "Darle a la empresa cliente una forma de verificar el certificado sin escribirle al OTEC.",
+          },
+        ],
+        quote: {
+          text: "Que con esto profesionalizará mucho más su OTEC con los certificados",
+          author: "CEPREVER OTEC, sobre qué le diría a otro OTEC",
+        },
+      },
+    ],
+  },
 ];
 
 export function getArticleBySlug(slug: string): ResourceArticle | undefined {
