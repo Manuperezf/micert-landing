@@ -3,6 +3,10 @@ import { notFound } from "next/navigation";
 import SiteFooter from "../../components/site/SiteFooter";
 import SiteHeader from "../../components/site/SiteHeader";
 import ArticleLayout from "../../components/ArticleLayout";
+import {
+  buildArticleBreadcrumbSchema,
+  buildArticleSchema,
+} from "../../lib/article-schema";
 import { buildFaqPageSchema } from "../../lib/faq-schema";
 import {
   RESOURCE_ARTICLES,
@@ -51,9 +55,19 @@ export default function RecursoArticlePage({ params }: PageProps) {
 
   const faqItems = article.sections.flatMap((section) => section.faq ?? []);
   const faqSchema = buildFaqPageSchema(faqItems);
+  const articleSchema = buildArticleSchema(article);
+  const breadcrumbSchema = buildArticleBreadcrumbSchema(article);
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       {faqSchema && (
         <script
           type="application/ld+json"

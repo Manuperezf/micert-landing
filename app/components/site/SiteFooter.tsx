@@ -80,6 +80,9 @@ export default function SiteFooter() {
               <Link className={styles.menuLink} href="/recursos">
                 Guías para OTEC
               </Link>
+              <Link className={styles.menuLink} href="/recursos/categoria/caso">
+                Casos de clientes
+              </Link>
             </div>
             <div className={styles.footerCol}>
               <p className={styles.footerHeading}>Empresa</p>

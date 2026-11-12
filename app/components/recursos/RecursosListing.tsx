@@ -5,6 +5,7 @@ import site from "../site/site.module.css";
 import {
   RESOURCE_ARTICLES,
   getFilterCategories,
+  tipoLabel,
   type CategorySlug,
   type ResourceArticle,
 } from "../../lib/recursos";
@@ -81,7 +82,7 @@ export default function RecursosListing({
               ) : null}
             </Link>
             <div className={styles.featuredCopy}>
-              <p className={styles.category}>{featured.tipo}</p>
+              <p className={styles.category}>{tipoLabel(featured.tipo)}</p>
               <h2 className={styles.featuredTitle}>{featured.title}</h2>
               <p className={styles.featuredExcerpt}>{featured.excerpt}</p>
               <p className={styles.featuredDate}>{featured.date}</p>
@@ -113,7 +114,7 @@ export default function RecursosListing({
                   />
                 </span>
               ) : null}
-              <p className={styles.category}>{article.tipo}</p>
+              <p className={styles.category}>{tipoLabel(article.tipo)}</p>
               <h2 className={styles.cardTitle}>{article.title}</h2>
               <p className={styles.cardExcerpt}>{article.excerpt}</p>
               <p className={styles.cardDate}>{article.date}</p>

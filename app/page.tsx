@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import ActividadesHome from "./components/home/ActividadesHome";
+import CasosClientes from "./components/home/CasosClientes";
 import Cycle from "./components/home/Cycle";
 import DataCompliance from "./components/home/DataCompliance";
 import FinalCta from "./components/site/FinalCta";
@@ -31,6 +32,7 @@ export default function Home() {
         <Cycle />
         <ActividadesHome />
         <DataCompliance />
+        <CasosClientes />
         <HomePlans />
         <HomeFaq />
         <FinalCta />
