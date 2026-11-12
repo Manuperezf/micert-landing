@@ -424,7 +424,6 @@
 .article-table tbody td:first-child,.article-table tbody th:first-child{font-weight:500;color:var(--ink);min-width:11rem}
 .article-table thead th:first-child{border-top-left-radius:10px}
 .article-table thead th:last-child{border-top-right-radius:10px}
-.article-client-logo{height:20px;width:auto;display:block}
 .article-content p.article-table-note{margin:-6px 0 14px;font-size:13px;line-height:1.45;color:var(--muted)}
 .article-content p.article-table-note:last-child{margin-bottom:0}
 .article-bullets{margin:0 0 14px;padding:0 0 0 1.15em;list-style:disc;color:var(--muted);font-size:16px;line-height:1.65}
@@ -455,3 +454,50 @@
 .whatsapp-float{position:fixed;bottom:24px;right:24px;z-index:100;display:flex;align-items:center;justify-content:center;width:56px;height:56px;flex:none;border-radius:50%;background:#25D366;color:#fff;box-shadow:0 10px 24px rgba(0,0,0,.12);transition:transform .2s ease}
 .whatsapp-float:hover{transform:scale(1.05)}
 .whatsapp-float svg{display:block;flex:none}
+
+.resource-card-logo{display:block;height:32px;width:auto}
+
+.article-steps{list-style:none;margin:8px 0 14px;padding:0}
+.article-steps li{display:flex;align-items:flex-start;gap:14px;padding:18px 0;border-top:1px solid var(--line)}
+.article-steps li:last-child{border-bottom:1px solid var(--line)}
+.article-step-num{display:inline-flex;align-items:center;justify-content:center;flex:none;width:28px;height:28px;border-radius:50%;background:var(--azul-tint);color:var(--azul-hover);font-size:13px;font-weight:600;line-height:1}
+.article-step-copy{display:flex;flex-direction:column;gap:4px;min-width:0;padding-top:3px;font-size:16px;line-height:1.5}
+.article-step-lead{color:var(--ink);font-weight:600}
+.article-step-text{color:var(--muted)}
+
+.case-page{padding-top:0}
+.case-wide{width:100%;max-width:1310px;margin:0 auto;padding-left:48px;padding-right:48px}
+.case-body{margin-top:72px}
+.case-hero{padding-top:72px}
+.case-hero-grid{display:flex;flex-wrap:wrap;align-items:center;gap:48px 64px}
+.case-hero-copy{flex:1 1 480px;min-width:0}
+.case-kicker{display:flex;align-items:center;gap:8px;margin:0;font-size:13px;color:var(--muted)}
+.case-kicker-mark{width:10px;height:10px;flex:none;border-radius:2px;background:var(--azul)}
+.case-logo{display:block;height:56px;width:auto;margin-top:28px}
+.case-hero h1{margin:24px 0 0;font-size:clamp(36px,4.2vw,52px);font-weight:500;line-height:1.05;letter-spacing:-0.03em;color:var(--ink)}
+.case-deck{max-width:540px;margin:18px 0 0;font-size:18px;line-height:1.5;color:var(--muted)}
+.case-meta{margin:22px 0 0;font-size:13px;line-height:1.4;color:var(--muted)}
+.case-hero-photo{position:relative;flex:1 1 460px;min-width:0;aspect-ratio:4/3;border-radius:14px;overflow:hidden}
+.case-hero-img{object-fit:cover;object-position:42% center}
+.case-results{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));margin:64px 0 0;border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.case-results > div{padding:32px 32px 36px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.case-results dt{margin:0;font-size:clamp(36px,3.8vw,50px);font-weight:500;letter-spacing:-0.035em;line-height:1;white-space:nowrap;color:var(--ink)}
+.case-result-arrow{margin:0 0.16em;color:var(--muted)}
+.case-result-to{color:var(--azul)}
+.case-results dd{margin:14px 0 0;font-size:15px;line-height:1.45;color:var(--muted)}
+.case-page .article-layout{padding-bottom:0}
+.case-page .article-content section{padding:48px 0;border-top:1px solid var(--line)}
+.case-page .article-content section:first-child{padding-top:0;border-top:none}
+.case-page .article-content h2{font-size:26px;font-weight:500}
+.case-page .article-toc-title{color:var(--muted)}
+.case-closing{display:flex;flex-wrap:wrap;align-items:center;gap:40px 64px;margin-top:104px;margin-bottom:64px;padding:clamp(40px,6vw,80px);border-radius:14px;background:var(--bone)}
+.case-closing blockquote{flex:1 1 560px;margin:0;font-size:clamp(30px,3.8vw,48px);font-weight:500;line-height:1.12;letter-spacing:-0.03em;color:var(--ink)}
+.case-closing figcaption{flex:0 1 260px;display:flex;flex-direction:column;align-items:flex-start;gap:14px;margin:0;font-size:15px;line-height:1.45;color:var(--muted)}
+.case-closing-logo{display:block;height:52px;width:auto}
+@media(max-width:900px){
+  .case-page{padding-top:0}
+}
+@media(max-width:767px){
+  .case-wide{padding-left:24px;padding-right:24px}
+  .case-logo{height:40px}
+}

@@ -7,9 +7,10 @@ const SLUG = "caso-ceprever-otec";
 
 export default function CasosClientes() {
   const article = getArticleBySlug(SLUG);
-  const quote = article?.sections.find((section) => section.id === "la-solucion")
-    ?.quote;
-  if (!article?.client || !quote) return null;
+  const result = article?.results?.[0];
+  if (!article?.client || !article.coverImage || !article.pullQuote || !result) {
+    return null;
+  }
 
   return (
     <section className={styles.casos}>
@@ -25,75 +26,63 @@ export default function CasosClientes() {
             </h2>
           </div>
           <p className={styles.howNote}>
-            Casos contados por los propios OTEC, con sus cifras y en sus
+            Historias contadas por los propios OTEC, con sus cifras y en sus
             palabras.
           </p>
         </div>
 
         <div className={styles.casosBody}>
-          <article className={styles.casoBox}>
-            <div className={styles.casoMedia}>
-              <div className={styles.casoFrame}>
-                <Image
-                  src="/landing/producto/ficha-verificacion.png"
-                  alt=""
-                  width={724}
-                  height={440}
-                  sizes="(max-width: 900px) calc(100vw - 88px), 640px"
-                  className={styles.casoImg}
-                />
-              </div>
+          <Link
+            className={styles.casoCard}
+            href={`/recursos/${article.slug}`}
+          >
+            <div className={styles.casoPhoto}>
+              <Image
+                src={article.coverImage}
+                alt=""
+                fill
+                sizes="(max-width: 767px) calc(100vw - 40px), 640px"
+                className={styles.casoPhotoImg}
+              />
             </div>
-            <div className={styles.casoCopy}>
-              <p className={styles.casoTag}>Caso de cliente</p>
-              <blockquote className={styles.casoQuote}>
-                {`«${quote.text}»`}
+            <div className={styles.casoPanel}>
+              <img
+                className={styles.casoLogo}
+                src={article.client.logo}
+                alt={article.client.name}
+              />
+              <blockquote className={styles.casoPull}>
+                {`«${article.pullQuote}»`}
               </blockquote>
-              <div className={styles.casoClient}>
-                <img
-                  className={styles.casoLogo}
-                  src={article.client.logo}
-                  alt={article.client.name}
-                />
-                <span className={styles.casoName}>{article.client.name}</span>
+              <p className={styles.casoSummary}>
+                Armaban cada certificado en Word, uno por uno. Hoy emiten el
+                curso completo desde su Excel y cada certificado sale con su
+                QR.
+              </p>
+              <div className={styles.casoResult}>
+                <p className={styles.casoResultValue}>
+                  {result.from ? (
+                    <>
+                      <span>{result.from}</span>
+                      <span className={styles.casoResultArrow} aria-hidden="true">
+                        →
+                      </span>
+                      <span className={styles.casoResultTo}>{result.to}</span>
+                    </>
+                  ) : (
+                    <span>{result.to}</span>
+                  )}
+                </p>
+                <p className={styles.casoResultAside}>
+                  por curso, según su estimación
+                </p>
               </div>
-              <div className={styles.casoFoot}>
-                <div className={styles.casoStats}>
-                  <p className={styles.casoStat}>
-                    <span className={styles.casoStatLabel}>Antes</span>
-                    <span className={styles.casoStatValue}>
-                      4 h
-                      <span className={styles.casoStatUnit}> por curso</span>
-                    </span>
-                  </p>
-                  <p className={styles.casoStat}>
-                    <span className={styles.casoStatLabel}>Con MiCert</span>
-                    <span
-                      className={`${styles.casoStatValue} ${styles.casoStatValueNow}`}
-                    >
-                      5 min
-                      <span className={styles.casoStatUnit}> por curso</span>
-                    </span>
-                  </p>
-                </div>
-                <div className={styles.casoLinks}>
-                  <Link
-                    className={styles.arrowLink}
-                    href={`/recursos/${article.slug}`}
-                  >
-                    Leer el caso <span className={styles.arrow}>→</span>
-                  </Link>
-                  <Link className={styles.casoAll} href="/recursos/categoria/caso">
-                    Ver todos los casos
-                  </Link>
-                </div>
-              </div>
+              <span className={styles.casoCta}>Leer la historia completa →</span>
             </div>
-          </article>
-          <p className={styles.casoNote}>
-            Tiempos estimados por CEPREVER OTEC. Ficha de ejemplo con datos de
-            muestra.
-          </p>
+          </Link>
+          <Link className={styles.casoAll} href="/recursos/categoria/caso">
+            Ver todos los casos
+          </Link>
         </div>
       </div>
     </section>

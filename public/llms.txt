@@ -20,4 +20,4 @@ MiCert Digital SpA. Certificados digitales verificables, sin PDF editables ni co
 - [Requisitos para formar una OTEC en Chile](https://micert.cl/recursos/requisitos-formar-otec-chile)
 - [Certificados para OTEC que capacitan para minería](https://micert.cl/recursos/certificados-otec-mineria)
 - [Casos de clientes](https://micert.cl/recursos/categoria/caso): cómo certifican sus cursos los OTEC que usan MiCert
-- [Caso CEPREVER OTEC: de 4 horas a 5 minutos por curso](https://micert.cl/recursos/caso-ceprever-otec)
+- [Cómo CEPREVER OTEC pasó de 4 horas a 5 minutos para certificar cada curso](https://micert.cl/recursos/caso-ceprever-otec)
