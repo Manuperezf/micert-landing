@@ -114,15 +114,7 @@ export default function RecursosListing({
                   />
                 </span>
               ) : null}
-              {article.tipo === "Caso" && article.client?.logo ? (
-                <img
-                  className="resource-card-logo"
-                  src={article.client.logo}
-                  alt={article.client.name}
-                />
-              ) : (
-                <p className={styles.category}>{tipoLabel(article.tipo)}</p>
-              )}
+              <p className={styles.category}>{tipoLabel(article.tipo)}</p>
               <h2 className={styles.cardTitle}>{article.title}</h2>
               <p className={styles.cardExcerpt}>{article.excerpt}</p>
               <p className={styles.cardDate}>{article.date}</p>

@@ -455,8 +455,6 @@
 .whatsapp-float:hover{transform:scale(1.05)}
 .whatsapp-float svg{display:block;flex:none}
 
-.resource-card-logo{display:block;height:32px;width:auto}
-
 .article-steps{list-style:none;margin:8px 0 14px;padding:0}
 .article-steps li{display:flex;align-items:flex-start;gap:14px;padding:18px 0;border-top:1px solid var(--line)}
 .article-steps li:last-child{border-bottom:1px solid var(--line)}

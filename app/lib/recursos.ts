@@ -2711,8 +2711,8 @@ export const RESOURCE_ARTICLES: ResourceArticle[] = [
           author: "",
         },
         paragraphs: [
-          "Tampoco tenían una alternativa a mano. Cuando les preguntamos qué otras opciones evaluaron, la respuesta fue directa: «Ninguna, no había forma de automatizar».",
-          "Eligieron MiCert, en sus palabras, «por la seriedad y precios».",
+          "Tampoco tenían una alternativa a mano. Cuando les preguntamos qué otras opciones evaluaron, la respuesta fue directa: “Ninguna, no había forma de automatizar”.",
+          "Eligieron MiCert, en sus palabras, “por la seriedad y precios”.",
         ],
       },
       {
@@ -2771,7 +2771,7 @@ export const RESOURCE_ARTICLES: ResourceArticle[] = [
         tableNote: "Tiempos estimados por CEPREVER OTEC.",
         paragraphs: [
           "El cambio también se notó afuera. Según cuentan, a una empresa cliente le gustó la plataforma y la encontró más seria y profesional.",
-          "Cuando les preguntamos qué mejorarían, la respuesta fue corta: «Por ahora nada».",
+          "Cuando les preguntamos qué mejorarían, la respuesta fue corta: “Por ahora nada”.",
         ],
       },
       {

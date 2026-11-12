@@ -1340,6 +1340,7 @@
 
 .casoLogo {
   display: block;
+  align-self: flex-start;
   height: 44px;
   width: auto;
 }
@@ -1364,9 +1365,7 @@
   flex-wrap: wrap;
   align-items: baseline;
   gap: 8px 16px;
-  margin-top: auto;
-  padding-top: 24px;
-  border-top: 1px solid var(--line);
+  margin-top: 32px;
 }
 
 .casoResultValue {

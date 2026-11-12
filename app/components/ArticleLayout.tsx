@@ -36,7 +36,7 @@ function readingMinutes(article: ResourceArticle) {
 function SectionQuote({ quote }: { quote: ArticleQuote }) {
   return (
     <figure className="article-quote">
-      <blockquote>{`«${quote.text}»`}</blockquote>
+      <blockquote>{`“${quote.text}”`}</blockquote>
       {quote.author ? <figcaption>{quote.author}</figcaption> : null}
     </figure>
   );
@@ -286,7 +286,7 @@ export default function ArticleLayout({ article }: ArticleLayoutProps) {
       {isCase && article.closingQuote ? (
         <div className="case-wide">
           <figure className="case-closing">
-            <blockquote>{`«${article.closingQuote.text}»`}</blockquote>
+            <blockquote>{`“${article.closingQuote.text}”`}</blockquote>
             <figcaption>
               {article.client ? (
                 <img

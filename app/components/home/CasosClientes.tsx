@@ -52,7 +52,7 @@ export default function CasosClientes() {
                 alt={article.client.name}
               />
               <blockquote className={styles.casoPull}>
-                {`«${article.pullQuote}»`}
+                {`“${article.pullQuote}”`}
               </blockquote>
               <p className={styles.casoSummary}>
                 Armaban cada certificado en Word, uno por uno. Hoy emiten el
