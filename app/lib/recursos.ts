@@ -11,11 +11,34 @@ export type ArticleFaqItem = {
   answer: string;
 };
 
+export type ArticleBullet = {
+  lead?: string;
+  text: string;
+};
+
+export type ArticleQuote = {
+  text: string;
+  author: string;
+};
+
+export type ArticleFigure = {
+  src: string;
+  alt: string;
+  caption: string;
+  width: number;
+  height: number;
+};
+
 export type ArticleSection = {
   id: string;
   title: string;
+  intro?: string;
   paragraphs?: string[];
+  bullets?: ArticleBullet[];
+  quote?: ArticleQuote;
+  figure?: ArticleFigure;
   table?: ArticleTable;
+  tableNote?: string;
   faq?: ArticleFaqItem[];
 };
 
@@ -33,6 +56,10 @@ export type ResourceArticle = {
   metaTitle: string;
   metaDescription: string;
   coverImage?: string;
+  client?: {
+    name: string;
+    logo: string;
+  };
   sections: ArticleSection[];
 };
 
@@ -2639,11 +2666,17 @@ export function getFeaturedArticle(): ResourceArticle | undefined {
 
 export const PAGE_SIZE = 9;
 
-export type CategorySlug = "producto" | "normativa" | "comparativa";
+export type CategorySlug = "producto" | "normativa" | "comparativa" | "caso";
 
 export const CATEGORY_CONTENT: Record<
   CategorySlug,
-  { tipo: ResourceTipo; h1: string; lede: string; title: string }
+  {
+    tipo: ResourceTipo;
+    h1: string;
+    lede: string;
+    title: string;
+    pill?: string;
+  }
 > = {
   normativa: {
     tipo: "Normativa",
@@ -2663,7 +2696,18 @@ export const CATEGORY_CONTENT: Record<
     lede: "Excel, Canva, Moodle o un software dedicado: criterios claros para elegir cómo emitir tus certificados.",
     title: "Comparativas de software de certificados para OTEC | MiCert",
   },
+  caso: {
+    tipo: "Caso",
+    h1: "Casos de clientes",
+    lede: "Cómo emitían antes, qué cambió y cuánto les toma ahora. Las cifras y las citas son de cada OTEC.",
+    title: "Casos de clientes: OTEC que certifican con MiCert",
+    pill: "Casos",
+  },
 };
+
+export function tipoLabel(tipo: ResourceTipo): string {
+  return tipo === "Caso" ? "Caso de cliente" : tipo;
+}
 
 export function isCategorySlug(value: string): value is CategorySlug {
   return Object.prototype.hasOwnProperty.call(CATEGORY_CONTENT, value);
@@ -2678,7 +2722,9 @@ export function newestDateISO(articles: ResourceArticle[]) {
 }
 
 export function getLatestArticle(): ResourceArticle | undefined {
-  return articlesByDateDesc(RESOURCE_ARTICLES)[0];
+  return articlesByDateDesc(
+    RESOURCE_ARTICLES.filter((article) => article.tipo !== "Caso"),
+  )[0];
 }
 
 export function getGeneralArticles() {
@@ -2708,7 +2754,7 @@ export function getFilterCategories() {
   return (Object.keys(CATEGORY_CONTENT) as CategorySlug[])
     .map((slug) => ({
       slug,
-      label: CATEGORY_CONTENT[slug].tipo,
+      label: CATEGORY_CONTENT[slug].pill ?? CATEGORY_CONTENT[slug].tipo,
       count: RESOURCE_ARTICLES.filter(
         (article) => article.tipo === CATEGORY_CONTENT[slug].tipo,
       ).length,

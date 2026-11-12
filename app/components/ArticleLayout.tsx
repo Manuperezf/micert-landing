@@ -4,7 +4,7 @@ import FinalCta from "./site/FinalCta";
 import ArticleShare from "./ArticleShare";
 import ArticleFeedback from "./ArticleFeedback";
 import type { ResourceArticle } from "../lib/recursos";
-import { getRelatedArticles } from "../lib/recursos";
+import { getRelatedArticles, tipoLabel } from "../lib/recursos";
 
 type ArticleLayoutProps = {
   article: ResourceArticle;
@@ -25,7 +25,14 @@ export default function ArticleLayout({ article }: ArticleLayoutProps) {
 
         <div className="article-byline-row">
           <div className="article-byline-meta">
-            <span>{article.tipo}</span>
+            {article.client ? (
+              <img
+                className="article-client-logo"
+                src={article.client.logo}
+                alt={article.client.name}
+              />
+            ) : null}
+            <span>{tipoLabel(article.tipo)}</span>
             <span className="article-byline-sep" aria-hidden="true">
               ·
             </span>
@@ -68,6 +75,7 @@ export default function ArticleLayout({ article }: ArticleLayoutProps) {
             {article.sections.map((section) => (
               <section key={section.id} id={section.id}>
                 <h2>{section.title}</h2>
+                {section.intro ? <p>{section.intro}</p> : null}
                 {section.table && (
                   <div className="article-table-wrap">
                     <table className="article-table">
@@ -92,9 +100,46 @@ export default function ArticleLayout({ article }: ArticleLayoutProps) {
                     </table>
                   </div>
                 )}
+                {section.tableNote ? (
+                  <p className="article-table-note">{section.tableNote}</p>
+                ) : null}
                 {section.paragraphs?.map((paragraph, i) => (
                   <p key={i}>{paragraph}</p>
                 ))}
+                {section.bullets && section.bullets.length > 0 ? (
+                  <ul className="article-bullets">
+                    {section.bullets.map((item, i) => (
+                      <li key={i}>
+                        {item.lead ? (
+                          <strong className="article-bullet-lead">
+                            {item.lead}
+                          </strong>
+                        ) : null}
+                        {item.lead ? " " : null}
+                        {item.text}
+                      </li>
+                    ))}
+                  </ul>
+                ) : null}
+                {section.quote ? (
+                  <figure className="article-quote">
+                    <blockquote>{`«${section.quote.text}»`}</blockquote>
+                    <figcaption>{section.quote.author}</figcaption>
+                  </figure>
+                ) : null}
+                {section.figure ? (
+                  <figure className="article-figure">
+                    <Image
+                      src={section.figure.src}
+                      alt={section.figure.alt}
+                      width={section.figure.width}
+                      height={section.figure.height}
+                      sizes="(max-width: 900px) 100vw, 640px"
+                      className="article-figure-img"
+                    />
+                    <figcaption>{section.figure.caption}</figcaption>
+                  </figure>
+                ) : null}
                 {section.faq && (
                   <div className="article-faq">
                     {section.faq.map((item) => (
@@ -135,7 +180,7 @@ export default function ArticleLayout({ article }: ArticleLayoutProps) {
                 href={`/recursos/${item.slug}`}
                 className="article-related-card"
               >
-                <span className="resource-tag">{item.tipo}</span>
+                <span className="resource-tag">{tipoLabel(item.tipo)}</span>
                 <h3>{item.title}</h3>
                 <p>{item.excerpt}</p>
               </Link>
