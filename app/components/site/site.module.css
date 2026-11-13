@@ -385,6 +385,14 @@
   color: #fff;
 }
 
+.footer button.menuLink {
+  background: none;
+  border: 0;
+  padding: 0;
+  font: inherit;
+  text-align: left;
+}
+
 .footerBottom {
   display: flex;
   justify-content: space-between;

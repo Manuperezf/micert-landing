@@ -188,7 +188,7 @@ export const PRECIOS_FAQ = [
   {
     question: "¿Qué cuenta como un certificado?",
     answer:
-      "Solo se descuentan de tu cuota los certificados que emites. Anular un certificado no descuenta de tu cuota.",
+      "La cuota se calcula sobre los certificados vigentes. Si anulas uno, la unidad se libera dentro del mismo período, así que corregir un certificado (anular y reemitir) no te gasta una unidad extra. La anulación es definitiva y no da derecho a devolución de dinero. Descargar, reenviar el correo, generar anexos y las consultas de verificación no consumen cuota.",
   },
   {
     question: "¿Los precios incluyen IVA?",
