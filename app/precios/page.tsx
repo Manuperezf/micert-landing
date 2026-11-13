@@ -3,6 +3,7 @@ import type { Metadata, ResolvingMetadata } from "next";
 import Link from "next/link";
 import FaqAccordion from "../components/site/FaqAccordion";
 import FinalCta from "../components/site/FinalCta";
+import JsonLd from "../components/site/JsonLd";
 import PlanCards from "../components/site/PlanCards";
 import SiteFooter from "../components/site/SiteFooter";
 import SiteHeader from "../components/site/SiteHeader";
@@ -10,7 +11,7 @@ import ActividadesPricing from "../components/actividades/ActividadesPricing";
 import PacksSection from "../components/precios/PacksSection";
 import PlanComparison from "../components/precios/PlanComparison";
 import { DEMO_URL } from "../components/home/links";
-import { PLAN_INCLUDES, PRECIOS_FAQ, PRECIOS_METADATA } from "../lib/plans";
+import { PLANS, PLAN_INCLUDES, PRECIOS_FAQ, PRECIOS_METADATA } from "../lib/plans";
 import styles from "../components/precios/precios.module.css";
 
 export async function generateMetadata(
@@ -85,7 +86,7 @@ const LINKED_ANSWERS: Record<number, ReactNode> = {
       emites. Todo desde el navegador, sin instalar nada. ¿Recién formas tu
       OTEC? Mira los{" "}
       <Link className={styles.faqLink} href="/recursos/requisitos-formar-otec-chile">
-        requisitos para formar una OTEC en Chile
+        requisitos para formar un OTEC en Chile
       </Link>
       .
     </>
@@ -108,9 +109,40 @@ const preciosFaqItems = PRECIOS_FAQ.map((item, index) => ({
   answer: LINKED_ANSWERS[index] ?? item.answer,
 }));
 
+const SOFTWARE_SCHEMA = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  name: "MiCert",
+  applicationCategory: "BusinessApplication",
+  operatingSystem: "Web",
+  url: "https://micert.cl",
+  description:
+    "Plataforma para emitir, enviar y verificar certificados digitales con QR único desde un Excel, pensada para OTEC.",
+  offers: PLANS.map((plan) => ({
+    "@type": "Offer",
+    name: `Plan ${plan.name}`,
+    description: `${plan.volume}. Precio neto mensual, más IVA.`,
+    url: "https://micert.cl/precios",
+    price: plan.priceMonthly,
+    priceCurrency: "CLP",
+    priceSpecification: {
+      "@type": "UnitPriceSpecification",
+      price: plan.priceMonthly,
+      priceCurrency: "CLP",
+      valueAddedTaxIncluded: false,
+      referenceQuantity: {
+        "@type": "QuantitativeValue",
+        value: 1,
+        unitCode: "MON",
+      },
+    },
+  })),
+};
+
 export default function PreciosPage() {
   return (
     <>
+      <JsonLd data={SOFTWARE_SCHEMA} />
       <SiteHeader />
       <main className={styles.page}>
         <PlanCards

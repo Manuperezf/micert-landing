@@ -1,12 +1,11 @@
 import { Fragment } from "react";
-import Link from "next/link";
 import {
   PLANS,
   PLAN_COMPARISON,
   type ComparisonRow,
   type ComparisonValue,
 } from "../../lib/plans";
-import { DEMO_URL } from "../home/links";
+import { whatsappContratarUrl } from "../home/links";
 import styles from "./precios.module.css";
 
 function clp(value: number) {
@@ -122,13 +121,15 @@ export default function PlanComparison() {
         <div className={styles.ctaRow}>
           <span />
           {PLANS.map((plan) => (
-            <Link
+            <a
               key={plan.id}
               className={`${styles.btn} ${plan.featured ? styles.btnPrimary : styles.btnSecondary} ${styles.compareBtn}`}
-              href={DEMO_URL}
+              href={whatsappContratarUrl(plan.name)}
+              target="_blank"
+              rel="noopener noreferrer"
             >
               Contratar {plan.name}
-            </Link>
+            </a>
           ))}
         </div>
       </div>

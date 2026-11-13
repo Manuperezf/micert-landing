@@ -973,9 +973,9 @@ export const RESOURCE_ARTICLES: ResourceArticle[] = [
     tipo: "Normativa",
     temas: ["SENCE", "NCh 2728"],
     title:
-      "Requisitos para formar una OTEC en Chile 2026: la guía paso a paso",
+      "Requisitos para formar un OTEC en Chile 2026: la guía paso a paso",
     excerpt:
-      "Crear una OTEC en Chile no es solo constituir una empresa. Es demostrar, ante SENCE y ante un organismo certificador, que tienes un sistema de gestión real. Esta guía ordena los requisitos, en el orden en que conviene abordarlos, para que no te trabes en RUDO ni en una auditoría.",
+      "Crear un OTEC en Chile no es solo constituir una empresa. Es demostrar, ante SENCE y ante un organismo certificador, que tienes un sistema de gestión real. Esta guía ordena los requisitos, en el orden en que conviene abordarlos, para que no te trabes en RUDO ni en una auditoría.",
     author: "Equipo MiCert",
     date: "30 de junio de 2026",
     dateISO: "2026-06-30",
@@ -990,7 +990,7 @@ export const RESOURCE_ARTICLES: ResourceArticle[] = [
     sections: [
       {
         id: "por-que-crear-una-otec-sigue-teniendo-sentido-en-2026",
-        title: "Por qué crear una OTEC sigue teniendo sentido en 2026",
+        title: "Por qué crear un OTEC sigue teniendo sentido en 2026",
         paragraphs: [
           "La capacitación laboral sigue siendo una vía importante en sectores como construcción, minería, logística y servicios, y buena parte de esa demanda pasa por OTEC acreditados por SENCE. Para quien lo hace bien, el mercado es atractivo: empresas que quieren usar franquicia tributaria, programas financiados por el Estado y mandantes que buscan proveedores confiables.",
           "Al mismo tiempo, el proceso se ha profesionalizado. SENCE y los organismos certificadores endurecieron controles, así que hoy no basta con un OTEC \"de papel\": se exige un sistema de gestión que funcione de verdad. Eso hace más largo el camino de entrada, pero también deja fuera a los improvisados, lo que beneficia a quien entra en serio.",
@@ -1048,7 +1048,7 @@ export const RESOURCE_ARTICLES: ResourceArticle[] = [
         title: "Dónde encaja MiCert",
         paragraphs: [
           "Seamos claros sobre el alcance: MiCert no reemplaza la Ley 19.518, ni la certificación NCh 2728, ni el registro en RUDO. Ninguna plataforma lo hace; ese camino hay que recorrerlo.",
-          "Donde MiCert sí ayuda es en uno de los puntos más sensibles de la NCh 2728 y de cualquier auditoría: el control y la trazabilidad de los certificados. La norma espera que cada certificado pueda rastrearse hasta un curso, una lista de asistencia y una evaluación; cuando eso vive en PDFs sueltos y planillas informales, aparecen No Conformidades. Una OTEC nueva que emite desde el día uno con MiCert tiene certificados con código único y QR, vinculados a los datos del curso y del participante, con registro de qué se emitió, a quién y cuándo. Eso convierte uno de los flancos más débiles del sistema en algo ordenado y verificable, y además funciona como argumento comercial frente a empresas mandantes, que reciben certificados comprobables en línea. No sustituye ningún requisito formal; fortalece el que más se revisa.",
+          "Donde MiCert sí ayuda es en uno de los puntos más sensibles de la NCh 2728 y de cualquier auditoría: el control y la trazabilidad de los certificados. La norma espera que cada certificado pueda rastrearse hasta un curso, una lista de asistencia y una evaluación; cuando eso vive en PDFs sueltos y planillas informales, aparecen No Conformidades. Un OTEC nuevo que emite desde el día uno con MiCert tiene certificados con código único y QR, vinculados a los datos del curso y del participante, con registro de qué se emitió, a quién y cuándo. Eso convierte uno de los flancos más débiles del sistema en algo ordenado y verificable, y además funciona como argumento comercial frente a empresas mandantes, que reciben certificados comprobables en línea. No sustituye ningún requisito formal; fortalece el que más se revisa.",
           "Nota: esta guía es informativa y no constituye asesoría legal ni de acreditación. Los requisitos de la NCh 2728, del INN y de SENCE deben confirmarse con las fuentes oficiales y, cuando corresponda, con asesoría especializada.",
         ],
       },
@@ -1063,12 +1063,12 @@ export const RESOURCE_ARTICLES: ResourceArticle[] = [
               "Sí. La certificación NCh 2728 vigente, otorgada por un organismo acreditado por el INN, es un requisito para registrarse como OTEC en RUDO, y perderla puede implicar la suspensión o baja del registro.",
           },
           {
-            question: "¿Cuánto demora formar y acreditar una OTEC en Chile?",
+            question: "¿Cuánto demora formar y acreditar un OTEC en Chile?",
             answer:
               "En promedio, entre 6 y 12 meses desde la implementación del sistema de gestión hasta la certificación NCh 2728 y la vigencia en RUDO, según qué tan ordenada esté la documentación previa.",
           },
           {
-            question: "¿Puedo crear una OTEC solo para e-learning?",
+            question: "¿Puedo crear un OTEC solo para e-learning?",
             answer:
               "Sí, pero igual debes demostrar estructura administrativa, recursos tecnológicos y procedimientos de gestión que exige la NCh 2728, incluido el control de asistencia, evaluaciones y registros.",
           },
