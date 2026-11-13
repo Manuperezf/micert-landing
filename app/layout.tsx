@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import { GoogleAnalytics } from "@next/third-parties/google";
 import localFont from "next/font/local";
 import WhatsAppFloat from "@/src/components/whatsapp-float";
+import CookieConsent from "@/src/components/cookie-consent";
 import "./globals.css";
 
 // Fuentes alojadas en el repo (SIL OFL 1.1), no descargadas de Google en cada build.
@@ -59,7 +59,7 @@ export default function RootLayout({
       <body>
         {children}
         <WhatsAppFloat />
-        <GoogleAnalytics gaId="G-V9KQKJL8X7" />
+        <CookieConsent />
       </body>
     </html>
   );
