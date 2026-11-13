@@ -88,7 +88,7 @@ export default function SiteFooter() {
             <div className={styles.footerCol}>
               <p className={styles.footerHeading}>Empresa</p>
               <Link className={styles.menuLink} href="/demo">
-                Contacto
+                Prueba gratis
               </Link>
               <a className={styles.menuLink} href="mailto:hola@micert.cl">
                 hola@micert.cl
