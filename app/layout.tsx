@@ -1,19 +1,25 @@
 import type { Metadata } from "next";
 import { GoogleAnalytics } from "@next/third-parties/google";
-import { Inter_Tight, JetBrains_Mono } from "next/font/google";
+import localFont from "next/font/local";
 import WhatsAppFloat from "@/src/components/whatsapp-float";
 import "./globals.css";
 
-const interTight = Inter_Tight({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+// Fuentes alojadas en el repo (SIL OFL 1.1), no descargadas de Google en cada build.
+// Con next/font/google, el servidor y el navegador se compilan en procesos separados
+// y cada uno pedía la fuente a Google: si Google respondía distinto, el HTML y el CSS
+// quedaban con nombres de fuente diferentes y el sitio caía en Times.
+const interTight = localFont({
+  src: "./fonts/InterTight-latin-variable.woff2",
+  weight: "400 700",
+  style: "normal",
   variable: "--font-inter-tight",
   display: "swap",
 });
 
-const jetbrainsMono = JetBrains_Mono({
-  subsets: ["latin"],
-  weight: ["500"],
+const jetbrainsMono = localFont({
+  src: "./fonts/JetBrainsMono-latin-500.woff2",
+  weight: "500",
+  style: "normal",
   variable: "--font-jetbrains-mono",
   display: "swap",
 });
