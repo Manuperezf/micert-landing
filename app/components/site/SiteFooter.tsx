@@ -1,4 +1,5 @@
 import Link from "next/link";
+import AskAIFooter from "./AskAIFooter";
 import styles from "./site.module.css";
 
 export default function SiteFooter() {
@@ -112,6 +113,7 @@ export default function SiteFooter() {
             </div>
           </div>
         </div>
+        <AskAIFooter />
         <div className={styles.footerBottom}>
           <span>© 2026 MiCert. Todos los derechos reservados.</span>
           <span>Hecho en Chile</span>
