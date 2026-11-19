@@ -1,5 +1,5 @@
 export const ACTIVIDADES_TITLE =
-  "Asistencia y encuesta de satisfacción para OTEC";
+  "Asistencia y encuesta de satisfacción para OTEC | MiCert";
 
 export const ACTIVIDADES_DESCRIPTION =
   "Registra la asistencia con QR y código al final de cada clase, online o presencial, y aplica una encuesta anónima sobre la clase y el relator.";

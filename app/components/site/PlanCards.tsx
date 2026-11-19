@@ -1,9 +1,8 @@
 "use client";
 
 import { useState, type ReactNode } from "react";
-import Link from "next/link";
 import { PLANS } from "../../lib/plans";
-import { DEMO_URL } from "../home/links";
+import { whatsappContratarUrl } from "../home/links";
 import styles from "./plans.module.css";
 
 function clp(value: number) {
@@ -160,12 +159,14 @@ export default function PlanCards({
                   ))}
                 </ul>
                 <p className={styles.planFeaturesCompact}>{items.join(" · ")}</p>
-                <Link
+                <a
                   className={`${styles.btn} ${plan.featured ? styles.btnPrimary : styles.btnSecondary} ${styles.planCta}`}
-                  href={DEMO_URL}
+                  href={whatsappContratarUrl(plan.name)}
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   Contratar {plan.name}
-                </Link>
+                </a>
               </article>
             );
           })}

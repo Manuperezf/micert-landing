@@ -1,5 +1,6 @@
 import Link from "next/link";
 import AskAIFooter from "./AskAIFooter";
+import CookiePreferencesLink from "@/src/components/cookie-preferences-link";
 import styles from "./site.module.css";
 
 export default function SiteFooter() {
@@ -88,7 +89,7 @@ export default function SiteFooter() {
             <div className={styles.footerCol}>
               <p className={styles.footerHeading}>Empresa</p>
               <Link className={styles.menuLink} href="/demo">
-                Contacto
+                Prueba gratis
               </Link>
               <a className={styles.menuLink} href="mailto:hola@micert.cl">
                 hola@micert.cl
@@ -110,6 +111,7 @@ export default function SiteFooter() {
               <Link className={styles.menuLink} href="/terminos">
                 Términos y condiciones
               </Link>
+              <CookiePreferencesLink className={styles.menuLink} />
             </div>
           </div>
         </div>
